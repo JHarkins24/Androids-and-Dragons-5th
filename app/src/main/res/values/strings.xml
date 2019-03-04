@@ -3,6 +3,10 @@
     <string name="username">Username</string>
     <string name="password">password</string>
     <string name="login">login</string>
-
-
+    <string name="characterCreation">Character Creation</string>
+    <string name="characterSelection">Character Selection</string>
+    <string name="createGame">Create Game</string>
+    <string name="joinGame">Join Game</string>
+    <string name="settings">Settings</string>
+    <string name="help">Help</string>
 </resources>
