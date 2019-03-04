@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Swords and Sorcery 2.0.0</string>
+    <string name="username">Username</string>
+    <string name="password">password</string>
+    <string name="login">login</string>
+
+
+</resources>
