@@ -1,7 +1,10 @@
 package com.version2.swordsandsorcery;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 public class main_menu extends AppCompatActivity {
 
@@ -9,5 +12,55 @@ public class main_menu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+
+        final Button characterCreation = findViewById(R.id.button2);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, characterCreationOverview.class));
+            }
+        });
+
+        final Button characterSelection = findViewById(R.id.button3);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.characterSelection.class));
+            }
+        });
+
+        final Button createGame = findViewById(R.id.button4);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.createGame.class));
+            }
+        });
+
+        final Button joinGame = findViewById(R.id.button5);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.joinGame.class));
+            }
+        });
+
+        final Button settings = findViewById(R.id.button6);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.settings.class));
+            }
+        });
+
+        final Button help = findViewById(R.id.button7);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.help.class));
+            }
+        });
     }
+
+
 }
