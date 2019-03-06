@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".characterChreationClass">
-
-
+    tools:context=".characterCreationBackground">
 
     <Button
         android:id="@+id/button8"
@@ -79,4 +77,5 @@
         android:text="Character View"
         app:layout_constraintStart_toEndOf="@+id/button14"
         app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
