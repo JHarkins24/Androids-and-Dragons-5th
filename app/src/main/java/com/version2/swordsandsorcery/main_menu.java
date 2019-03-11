@@ -29,22 +29,6 @@ public class main_menu extends AppCompatActivity {
             }
         });
 
-        final Button createGame = findViewById(R.id.button4);
-        createGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.createGame.class));
-            }
-        });
-
-        final Button joinGame = findViewById(R.id.button5);
-        joinGame.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.joinGame.class));
-            }
-        });
-
         final Button settings = findViewById(R.id.button6);
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
