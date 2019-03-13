@@ -80,17 +80,34 @@ public class characterCreationOverview extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(characterCreationOverview.this,main_menu.class));
-
-        Spinner lvlSpinner = (Spinner) findViewById(R.id.lvl_spinner);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(characterCreationOverview.this,
-                android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.lvl));
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        lvlSpinner.setAdapter(adapter);
             }
         });
 
+        // spinner is implemented dynamically in the java activity file.
+        Spinner lvlSpinner = (Spinner) findViewById(R.id.lvl_spinner);
+        String[] items = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
 
+        // create arrayAdapter using the string array and a default
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_dropdown_item, items);
 
+        lvlSpinner.setAdapter(adapter);
+        lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener()
+            {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+                    {
+                        Log.v("level", (String) parent.getItemAtPosition(position));
+                    }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent)
+                    {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
+                    }
+            });
     }
 
 
