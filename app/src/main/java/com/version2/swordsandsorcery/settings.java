@@ -2,8 +2,12 @@ package com.version2.swordsandsorcery;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.AdapterView.OnItemSelectedListener;
 
 public class settings extends AppCompatActivity {
 
@@ -12,31 +16,65 @@ public class settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Spinner dropdown = findViewById(R.id.spinner);
-        String[] items = new String[]{"1", "2", "three"};
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        Spinner lvlDropdown = findViewById(R.id.spinner);
+        String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
+        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lvlDefault);
+        lvlDropdown.setAdapter(lvlDefaultAdapter);
 
-        dropdown = findViewById(R.id.spinner1);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        lvlDropdown.setOnItemSelectedListener(new OnItemSelectedListener()
+            {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+                    {
+                        Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
+                    }
 
-        dropdown = findViewById(R.id.spinner2);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+                @Override
+                public void onNothingSelected(AdapterView<?> parent)
+                    {
+                        // supposedly this creates a default value
+                    }
+            });
 
-        dropdown = findViewById(R.id.spinner3);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        Spinner bonusDropdown = findViewById(R.id.spinner1);
+        String[] bonusOrientation = new String[]{"top", "bottom"};
+        ArrayAdapter<String> bonusOrientationAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, bonusOrientation);
+        bonusDropdown.setAdapter(bonusOrientationAdapter);
 
-        dropdown = findViewById(R.id.spinner4);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+        bonusDropdown.setOnItemSelectedListener(new OnItemSelectedListener()
+            {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+                    {
+                        Log.v("bonusOrientation", (String) parent.getItemAtPosition(position));
+                    }
 
-        dropdown = findViewById(R.id.spinner5);
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
-        dropdown.setAdapter(adapter);
+                @Override
+                public void onNothingSelected(AdapterView<?> parent)
+                    {
+                        // supposedly this creates a default value
+                    }
+            });
 
+        Spinner abilityScoreChoice = findViewById(R.id.spinner2);
+        String[] abilityScoreChoiceOptions = new String[]{"Roll", "Manual", "Point Buy"};
+        ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, abilityScoreChoiceOptions);
+        abilityScoreChoice.setAdapter(abilityScoreChoiceAdapter);
+
+        abilityScoreChoice.setOnItemSelectedListener(new OnItemSelectedListener()
+            {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+                    {
+                        Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
+                    }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent)
+                    {
+                        // supposedly this creates a default value
+                    }
+            });
 
     }
 

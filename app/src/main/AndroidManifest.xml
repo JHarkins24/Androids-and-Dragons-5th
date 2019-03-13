@@ -18,7 +18,7 @@
         <activity android:name=".characterCreationBackground" />
         <activity android:name=".characterCreationRace" />
         <activity android:name=".characterCreationAbilityScores" />
-        <activity android:name=".characterChreationClass" />
+        <activity android:name=".characterCreationClass" />
         <activity android:name=".characterCreationOverview" />
         <activity android:name=".main_menu" />
         <activity android:name=".MainActivity">
