@@ -15,7 +15,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="Swords \n     and \nSorcery"
+        android:text=" Swords \n     and \nSorcery"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="30sp"
