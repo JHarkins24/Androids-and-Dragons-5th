@@ -1,25 +1,27 @@
 package com.version2.swordsandsorcery;
 
-import android.content.IntentFilter;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+
+public class statusEffectsHelp extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_status_effects_help);
 
-        Button welcome = findViewById(R.id.button);
-        welcome.setOnClickListener(new View.OnClickListener() {
+        final Button statusEffectsHelp = findViewById(R.id.button4);
+        statusEffectsHelp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, main_menu.class));
+                startActivity(new Intent(statusEffectsHelp.this,help.class));
             }
         });
+
+
     }
 }

@@ -21,7 +21,13 @@
         <activity android:name=".characterCreationClass" />
         <activity android:name=".characterCreationOverview" />
         <activity android:name=".main_menu" />
+        <activity android:name=".rulesHelp"/>
+        <activity android:name=".statusEffectsHelp"/>
         <activity android:name=".MainActivity">
+
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
