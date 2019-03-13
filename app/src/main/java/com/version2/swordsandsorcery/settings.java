@@ -37,7 +37,7 @@ public class settings extends AppCompatActivity {
             });
 
         Spinner bonusDropdown = findViewById(R.id.spinner1);
-        String[] bonusOrientation = new String[]{"top", "bottom"};
+        String[] bonusOrientation = new String[]{"Top", "Bottom"};
         ArrayAdapter<String> bonusOrientationAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, bonusOrientation);
         bonusDropdown.setAdapter(bonusOrientationAdapter);
 
