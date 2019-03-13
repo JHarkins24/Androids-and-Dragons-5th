@@ -69,5 +69,13 @@ public class characterCreationItems extends AppCompatActivity {
                 startActivity(new Intent(characterCreationItems.this,characterCreationCharacterView.class));
             }
         });
+        final Button Home = findViewById(R.id.button16);
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(characterCreationItems.this,main_menu.class));
+            }
+        });
+
     }
 }

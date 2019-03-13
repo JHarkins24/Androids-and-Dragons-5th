@@ -75,6 +75,13 @@ public class characterCreationOverview extends AppCompatActivity {
                 startActivity(new Intent(characterCreationOverview.this,characterCreationCharacterView.class));
             }
         });
+        final Button Home = findViewById(R.id.button16);
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(characterCreationOverview.this,main_menu.class));
+            }
+        });
 
 
 //        Integer[] levels = new Integer[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20};

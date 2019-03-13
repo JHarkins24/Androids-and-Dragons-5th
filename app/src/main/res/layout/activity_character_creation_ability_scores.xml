@@ -80,6 +80,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+
     <EditText
         android:id="@+id/editText10"
         android:layout_width="wrap_content"
@@ -255,6 +256,16 @@
 
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="105dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
