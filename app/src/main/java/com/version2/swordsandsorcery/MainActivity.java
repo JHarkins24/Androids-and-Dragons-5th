@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button login = findViewById(R.id.button);
-        login.setOnClickListener(new View.OnClickListener() {
+        Button welcome = findViewById(R.id.button);
+        welcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, main_menu.class));
