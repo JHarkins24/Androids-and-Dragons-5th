@@ -87,7 +87,7 @@ public class characterCreationCharacterView extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_VIEW,
-                Uri.parse("../pdf.pdf"));
+                Uri.parse("5EFighterHumanCriminal.pdf"));
                 intent.setType("application/pdf");
                 PackageManager pm = getPackageManager();
                 List<ResolveInfo> activities = pm.queryIntentActivities(intent, 0);
