@@ -55,7 +55,7 @@
         android:id="@+id/button13"
         android:layout_width="70dp"
         android:layout_height="46dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:text="Items"
         app:layout_constraintStart_toEndOf="@+id/button12"
         app:layout_constraintTop_toTopOf="parent" />
