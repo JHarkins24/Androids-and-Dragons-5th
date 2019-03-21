@@ -1,0 +1,2 @@
+name cost damage type weight properties
+battleaxe,10gp,1d8,slashing,4lb,versatile(1d10)

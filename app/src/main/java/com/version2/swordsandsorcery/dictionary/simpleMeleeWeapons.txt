@@ -1,0 +1,2 @@
+name cost damage weight properties
+handAxe 5gp 1d6 slashing 2lb thrown(range20/60),light

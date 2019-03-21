@@ -1,0 +1,103 @@
+LEVEL
+1 fightingStyle,secondWind
+2 actionSurgex1
+3 martialArchetype
+4 asi
+5 extraAttack
+6 asi
+7 martialArchetypeFeature1
+8 asi
+9 indomitablex1
+10 martialArchetypeFeature2
+11 extraAttackx2
+12 asi
+13 indomitablex2
+14 asi
+15 martialArchetypeFeature3
+16 asi
+17 actionSurgex2,indomitablex3
+18 martialArchetypeFeature4
+19 asi
+20 extraAttackx3
+HITDICE 10
+STARTINGHP 10+con
+EQUIPMENTPROFICIENCIES allArmor,shields,simpleWeapons,martialWeapons
+SAVINGTHROWS 1 0 1 0 0 0 
+SKILLS 1 1 0 1 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0
+STARTINGEQUIPMENT chainMail|leather&longBow&arrowx20,martialWeapon&shield|martialWeaponx2,lightCrossBow&boltx20|handaxex2,dungeoneersPack|explorersPack
+FIGHTINGSTYLE archery,defense,dueling,greatWeaponFighting,protection,twoWeaponFighting 
+MARTIALARCHETYPE champion,battleMaster,eldritchKnight
+CHAMPION improvedCritical,remarkableAthlete,fightingStyle,superiorCritical,survivor
+BATTLEMASTER combatSuperiority&studentOfWar,knowYourEnemy,improvedCombatSuperiority,relentless,superCombatSuperiority
+ELDRITCHKNIGHT spellCasting&weaponBond,warMagic,eldritchStrike,arcaneCharge,improvedWarMagic
+MANEUVERS commandersStrike,disarmingAttack,distractingStrike,evasiveFootwork,feintingAttack,goadingAttack,lungingAttack,maneuveringAttack,menacingAttack,parry,precisionAttack,pushingAttack,rally,riposte,sweepingAttack,tripAttack
+SPELLCASTING
+level cantripsKnown spellsKnown 1stLevel 2ndLevel 3rdLevel 4thLevel
+3 2 3 2 0 0 0
+4 2 4 3 0 0 0 
+5 2 4 3 0 0 0 
+6 2 4 3 0 0 0 
+7 2 5 4 2 0 0 
+8 2 6 4 2 0 0
+9 2 6 4 2 0 0 
+10 3 7 4 3 0 0
+11 3 8 4 3 0 0 
+12 3 8 4 3 0 0 
+13 3 9 4 3 2 0
+14 3 10 4 3 2 0
+15 3 10 4 3 2 0
+16 3 11 4 3 3 0
+17 3 11 4 3 3 0
+18 3 11 4 3 3 0
+19 3 12 4 3 3 1
+20 3 13 4 3 3 1
+SPELLCASTINGABILITY int
+SPELLSAVEDC 8+proficiency+int
+SPELLATTACKMODIFIER proficiency+int
+ARCHERY "you gain a +2 bonus to attack rolls you make with ranged weapons."
+DEFENSE "while you are wearing armor, you gain a +1 bonus to AC."
+DUELING "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon"
+GREATWEAPONFIGHTING "when you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. the weapon must have the two-handed or versatile property for you to gaio this benefit."
+PROTECTION "when a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. you must be wielding a shield."
+TWO-WEAPONFIGHTING "when you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack."
+SECONDWIND "You have a limited well of stamina that you can draw on
+to protect Yourself from harm. On your turn, you can use
+a bonus action to regain hit points equal to 1d10 + your
+fighter level.
+Once you use this feature, you must finish a short or
+long rest before you can use it again."
+ACTIONSURGEX1 "On your turn, you can take
+one additional action on top of your regular action and a
+possible bonus action. You can use this 1 time per short rest"
+ACTIONSURGEX2 "On your turn, you can take
+one additional action on top of your regular action and a
+possible bonus action. You can use this 2 times per long rest but only once on the same turn"
+EXTRAATTACKX1 "You can attack twice instead of once, whenever you take the attack action on your turn"
+EXTRAATTACKX2 "You can attack three times instead of once, whenever you take the attack action on your turn"
+EXTRAATTACKX3 "You can attack four times instead of once, whenever you take the attack action on your turn"
+INDOMITABLEX1 "You can reroll a saving throw that you fail once per long rest. You must use the second roll"
+INDOMITABLEX2 "You can reroll a saving throw that you fail twice per long rest. You must use the second roll"
+INDOMITABLEX3 "You can reroll a saving throw that you fail three times per long rest. You must use the second roll"
+IMPROVEDCRITICAL "Crit on 19 and 20"
+REMARKABLEATHLETE "you can add half your proficiency
+bonus (round up) to any Strength, Dexterity, or
+Constitutioo check you make that doesn't already use
+your proficiency bonus.
+in addition, when you make a running longjump, the
+distance you can cover increases by a number of feet
+equal to your Strength modifier."
+SUPERIORCRITICAL "Crit on 18, 19, and 20"
+SURVIVOR "At the start of each of your turns, you regain hit
+points equal to 5 + your Constitution modifier if you
+have no more than half of your hit points left. You don't
+gain this benefit if you have O hit points."
+COMBATSUPERIORITY maneuvers,superiorityDice,maneuverSave
+MANEUVERSAVE 8+proficiency+str|dex
+SUPERIORITYDICE "you have four superiority dice,
+which are d8s. A superiority die is expended when you
+use it. you regain all of your expended superiority dice
+when you finish a short or long rest.
+you gain another superiority die at 7th level and one
+more at 15th level."
+STUDENTOFWAR "Gain proficiency with one type of artisans tool of your choice"
+
