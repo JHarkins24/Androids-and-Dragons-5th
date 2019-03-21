@@ -9,12 +9,13 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="132dp"
+        android:layout_height="112dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:fontFamily="cursive"
         android:text=" Swords \n     and \nSorcery"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
         android:textColor="@android:color/holo_red_dark"
