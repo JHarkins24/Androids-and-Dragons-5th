@@ -20,6 +20,13 @@ public class characterCreationBackground extends AppCompatActivity {
                 startActivity(new Intent(characterCreationBackground.this,characterCreationOverview.class));
             }
         });
+        final Button Class = findViewById(R.id.button5);
+        Class.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(characterCreationBackground.this,characterCreationClass.class));
+            }
+        });
         final Button abilityScores = findViewById(R.id.button10);
         abilityScores.setOnClickListener(new View.OnClickListener() {
             @Override
