@@ -19,13 +19,6 @@ public class characterCreationSpells extends AppCompatActivity {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationOverview.class));
             }
         });
-        final Button Class = findViewById(R.id.button9);
-        Class.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(characterCreationSpells.this,characterCreationClass.class));
-            }
-        });
         final Button abilityScores = findViewById(R.id.button10);
         abilityScores.setOnClickListener(new View.OnClickListener() {
             @Override
