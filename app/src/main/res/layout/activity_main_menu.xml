@@ -10,12 +10,15 @@
         android:id="@+id/button2"
         android:layout_width="149dp"
         android:layout_height="170dp"
-        android:layout_marginStart="128dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="96dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/dice_button"
         android:text="@string/characterCreation"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="118dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/button3"
