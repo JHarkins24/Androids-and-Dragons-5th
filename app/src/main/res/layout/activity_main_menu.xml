@@ -12,66 +12,15 @@
         android:id="@+id/button2"
         android:layout_width="149dp"
         android:layout_height="170dp"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/dice_button"
-=======
-        android:layout_marginStart="128dp"
-        android:background="@drawable/button_better"
->>>>>>> joe
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="78dp"
+        android:layout_marginEnd="10dp"
+        android:background="@null"
         android:text="@string/characterCreation"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent" />
-=======
-        tools:layout_editor_absoluteY="55dp" />
->>>>>>> joe
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="259dp"
-        android:layout_height="282dp"
-=======
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@null"
-        android:text="@string/characterCreation"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="183dp"
-        android:layout_height="218dp"
->>>>>>> Spencer
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="80dp"
-        android:background="@null"
-        android:text="character\nSelection"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="parent" />
-=======
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
->>>>>>> Spencer
 
     <Button
         android:id="@+id/button6"
@@ -79,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="265dp"
         android:background="@null"
         android:text="@string/settings"
         android:textColor="@android:color/white"
@@ -91,10 +40,10 @@
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="255dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="265dp"
         android:background="@null"
         android:text="@string/help"
         android:textColor="@android:color/white"
@@ -102,5 +51,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="183dp"
+        android:layout_height="218dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="55dp"
+        android:background="@null"
+        android:text="@string/characterSelection"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

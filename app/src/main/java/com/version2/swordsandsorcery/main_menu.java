@@ -21,7 +21,7 @@ public class main_menu extends AppCompatActivity {
             }
         });
 
-        final Button characterSelection = findViewById(R.id.button3);
+        final Button characterSelection = findViewById(R.id.button9);
         characterSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
