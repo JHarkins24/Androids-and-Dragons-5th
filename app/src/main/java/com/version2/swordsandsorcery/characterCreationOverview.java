@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -82,6 +83,11 @@ public class characterCreationOverview extends AppCompatActivity {
                 startActivity(new Intent(characterCreationOverview.this,main_menu.class));
             }
         });
+
+        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
+        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
+        background.setImageResource(imageResource);
+        background.setScaleType(ImageView.ScaleType.FIT_XY);
 
         // spinner is implemented dynamically in the java activity file.
         Spinner lvlSpinner = (Spinner) findViewById(R.id.lvl_spinner);

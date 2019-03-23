@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class characterCreationAbilityScores extends AppCompatActivity {
 
@@ -78,5 +79,10 @@ public class characterCreationAbilityScores extends AppCompatActivity {
                 startActivity(new Intent(characterCreationAbilityScores.this,main_menu.class));
             }
         });
+
+        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
+        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
+        background.setImageResource(imageResource);
+        background.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 }

@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
 
@@ -20,6 +21,11 @@ public class settings extends AppCompatActivity {
         String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
         ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lvlDefault);
         lvlDropdown.setAdapter(lvlDefaultAdapter);
+
+        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
+        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
+        background.setImageResource(imageResource);
+        background.setScaleType(ImageView.ScaleType.FIT_XY);
 
         lvlDropdown.setOnItemSelectedListener(new OnItemSelectedListener()
             {

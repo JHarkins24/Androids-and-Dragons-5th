@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import java.util.List;
 
@@ -81,6 +82,11 @@ public class characterCreationCharacterView extends AppCompatActivity {
                 startActivity(new Intent(characterCreationCharacterView.this,main_menu.class));
             }
         });
+
+        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
+        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
+        background.setImageResource(imageResource);
+        background.setScaleType(ImageView.ScaleType.FIT_XY);
 
         final Button Save = findViewById(R.id.button17);
         Save.setOnClickListener(new View.OnClickListener() {
