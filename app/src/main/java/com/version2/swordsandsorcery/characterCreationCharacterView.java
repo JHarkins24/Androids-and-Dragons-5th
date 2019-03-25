@@ -89,7 +89,7 @@ public class characterCreationCharacterView extends AppCompatActivity {
         background.setImageResource(imageResource);
         background.setScaleType(ImageView.ScaleType.FIT_XY);
 
-        final Button Save = findViewById(R.id.button17);
+        final ImageButton Save = findViewById(R.id.save_button);
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
