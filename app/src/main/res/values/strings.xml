@@ -22,6 +22,12 @@
     <string name="characterInt">Intelligence</string>
     <string name="wis">Wisdom</string>
     <string name="cha">Charisma</string>
+    <string name="character1">Character 1</string>
+    <string name="character2">Character 2</string>
+    <string name="character3">Character 3</string>
+    <string name="character4">Character 4</string>
+    <string name="character5">Character 5</string>
+    <string name="character6">Character 6</string>
     <string-array name="lvl">
         <item>1</item>
         <item>2</item>

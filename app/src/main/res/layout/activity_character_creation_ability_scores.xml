@@ -221,15 +221,25 @@
 
     </TableLayout>
 
-    <Button
-        android:id="@+id/button16"
+    <ImageButton
+        android:id="@+id/home_button"
         android:layout_width="105dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        android:text="@string/Home"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983"
+        app:srcCompat="@drawable/d20transparent" />
 
 
 </android.support.constraint.ConstraintLayout>

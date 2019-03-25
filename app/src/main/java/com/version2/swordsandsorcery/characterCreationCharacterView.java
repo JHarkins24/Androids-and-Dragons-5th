@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import java.util.List;
@@ -75,11 +76,11 @@ public class characterCreationCharacterView extends AppCompatActivity {
                 startActivity(new Intent(characterCreationCharacterView.this,characterCreationCharacterView.class));
             }
         });
-        final Button Home = findViewById(R.id.button16);
-        Home.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationCharacterView.this,main_menu.class));
+                startActivity(new Intent(characterCreationCharacterView.this, main_menu.class));
             }
         });
 

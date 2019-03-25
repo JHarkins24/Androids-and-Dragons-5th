@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class help extends AppCompatActivity {
@@ -14,11 +15,11 @@ public class help extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        final Button Home = findViewById(R.id.button16);
-        Home.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(help.this,main_menu.class));
+                startActivity(new Intent(help.this, main_menu.class));
             }
         });
 

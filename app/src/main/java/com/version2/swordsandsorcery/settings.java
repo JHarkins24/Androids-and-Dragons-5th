@@ -1,11 +1,13 @@
 package com.version2.swordsandsorcery;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -41,6 +43,14 @@ public class settings extends AppCompatActivity {
                         // supposedly this creates a default value
                     }
             });
+
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(settings.this, main_menu.class));
+            }
+        });
 
         Spinner bonusDropdown = findViewById(R.id.spinner1);
         String[] bonusOrientation = new String[]{"Top", "Bottom"};

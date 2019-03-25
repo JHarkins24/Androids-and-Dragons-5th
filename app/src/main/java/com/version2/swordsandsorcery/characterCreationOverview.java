@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
@@ -76,11 +77,11 @@ public class characterCreationOverview extends AppCompatActivity {
                 startActivity(new Intent(characterCreationOverview.this,characterCreationCharacterView.class));
             }
         });
-        final Button Home = findViewById(R.id.button16);
-        Home.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationOverview.this,main_menu.class));
+                startActivity(new Intent(characterCreationOverview.this, main_menu.class));
             }
         });
 
