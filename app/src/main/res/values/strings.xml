@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Swords and Sorcery 2.0.0</string>
+    <string name="app_name">Swords and Sorcery</string>
     <string name="welcome">Welcome</string>
     <string name="characterCreation">Character Creation</string>
     <string name="characterSelection">Character \nSelection</string>

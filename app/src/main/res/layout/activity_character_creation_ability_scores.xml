@@ -6,6 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".characterCreationAbilityScores">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/abilityScoreToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+    </android.support.v7.widget.Toolbar>
+
 
     <ImageView
         android:id="@+id/backgroundImg"
