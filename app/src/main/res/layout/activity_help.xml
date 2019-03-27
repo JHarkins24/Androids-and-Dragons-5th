@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".help">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/my_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@android:color/black"
-        android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:layout_constraintTop_toTopOf="@+id/backgroundImg"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:layout_editor_absoluteX="0dp" />
 
     <ImageView
         android:id="@+id/backgroundImg"
@@ -31,6 +21,11 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/parchment" />
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -41,13 +36,12 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-black"
         android:text="Swords and Sorcery Help Menu"
-        android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintVertical_bias="0.039" />
 
     <ImageButton
         android:id="@+id/home_button"
@@ -108,7 +102,6 @@
         app:layout_constraintVertical_bias="0.64"
         app:srcCompat="@drawable/d8transparent" />
 
-
     <TextView
         android:id="@+id/homeText"
         android:layout_width="92dp"
@@ -124,22 +117,6 @@
         app:layout_constraintTop_toTopOf="@+id/home_button"
         app:layout_constraintVertical_bias="0.661" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="This page is to assist any beginners using our app  \n The following are are buttons for  status effects and rules "
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.021" />
 
     <TextView
         android:id="@+id/textView25"
@@ -168,6 +145,7 @@
         app:layout_constraintStart_toStartOf="@+id/status_effects_button"
         app:layout_constraintTop_toTopOf="@+id/status_effects_button"
         app:layout_constraintVertical_bias="0.445" />
+
 
 
 </android.support.constraint.ConstraintLayout>
