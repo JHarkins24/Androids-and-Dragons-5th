@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class rulesHelp extends AppCompatActivity {
@@ -14,11 +15,11 @@ public class rulesHelp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rules_help);
 
-        final Button rules = findViewById(R.id.button4);
-        rules.setOnClickListener(new View.OnClickListener() {
+        ImageButton backhelpButton = findViewById(R.id.back_help_button);
+        backhelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(rulesHelp.this,help.class));
+                startActivity(new Intent(rulesHelp.this, help.class));
             }
         });
 

@@ -22,22 +22,21 @@ public class help extends AppCompatActivity {
                 startActivity(new Intent(help.this, main_menu.class));
             }
         });
-
-        final Button statusEffects = findViewById(R.id.button17);
-        statusEffects.setOnClickListener(new View.OnClickListener() {
+        ImageButton rulesButton = findViewById(R.id.rules_button);
+        rulesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(help.this,statusEffectsHelp.class));
+                startActivity(new Intent(help.this, rulesHelp.class));
+            }
+        });
+        ImageButton statusEffectsButton = findViewById(R.id.status_effects_button);
+        statusEffectsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(help.this, statusEffectsHelp.class));
             }
         });
 
-        final Button rules = findViewById(R.id.button18);
-        rules.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(help.this,rulesHelp.class));
-            }
-        });
 
         ImageView background = (ImageView) findViewById(R.id.backgroundImg);
         int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());

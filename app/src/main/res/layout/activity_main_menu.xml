@@ -7,6 +7,17 @@
     android:background="@color/colorAccent"
     tools:context=".main_menu">
 
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/black"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImg"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        tools:layout_editor_absoluteX="0dp" />
+
     <ImageView
         android:id="@+id/backgroundImg"
         android:layout_width="fill_parent"

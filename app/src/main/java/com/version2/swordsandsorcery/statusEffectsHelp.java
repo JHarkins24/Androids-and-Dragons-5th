@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 
@@ -15,11 +16,11 @@ public class statusEffectsHelp extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_status_effects_help);
 
-        final Button statusEffectsHelp = findViewById(R.id.button4);
-        statusEffectsHelp.setOnClickListener(new View.OnClickListener() {
+        ImageButton backhelpButton = findViewById(R.id.back_help_button);
+        backhelpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(statusEffectsHelp.this,help.class));
+                startActivity(new Intent(statusEffectsHelp.this, help.class));
             }
         });
 
