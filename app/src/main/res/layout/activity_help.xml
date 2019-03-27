@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".help">
 
+
     <ImageView
         android:id="@+id/backgroundImg"
         android:layout_width="fill_parent"
@@ -19,6 +20,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/parchment" />
+
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
 
     <TextView
         android:id="@+id/textView2"
@@ -34,7 +40,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:layout_constraintVertical_bias="0.039" />
 
     <ImageButton
@@ -57,6 +63,45 @@
         app:layout_constraintVertical_bias="0.983"
         app:srcCompat="@drawable/d20transparent" />
 
+    <ImageButton
+        android:id="@+id/rules_button"
+        android:layout_width="162dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.299"
+        app:srcCompat="@drawable/d8transparent" />
+
+    <ImageButton
+        android:id="@+id/status_effects_button"
+        android:layout_width="162dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.64"
+        app:srcCompat="@drawable/d8transparent" />
+
     <TextView
         android:id="@+id/homeText"
         android:layout_width="92dp"
@@ -72,57 +117,35 @@
         app:layout_constraintTop_toTopOf="@+id/home_button"
         app:layout_constraintVertical_bias="0.661" />
 
+
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="This page is to assist any beginners using our app  \n The following are are buttons for  status effects and rules "
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.021" />
-
-    <Button
-        android:id="@+id/button17"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/colorPrimary"
-        android:text="Status Effects"
-        android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.06" />
-
-    <Button
-        android:id="@+id/button18"
-        android:layout_width="160dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:id="@+id/textView25"
+        android:layout_width="81dp"
+        android:layout_height="38dp"
         android:text="Rules"
-        app:layout_constraintBottom_toBottomOf="@+id/backgroundImg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button17"
-        app:layout_constraintVertical_bias="0.062" />
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rules_button"
+        app:layout_constraintEnd_toEndOf="@+id/rules_button"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/rules_button"
+        app:layout_constraintTop_toTopOf="@+id/rules_button"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="97dp"
+        android:layout_height="wrap_content"
+        android:text="Status Effects"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/status_effects_button"
+        app:layout_constraintEnd_toEndOf="@+id/status_effects_button"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="@+id/status_effects_button"
+        app:layout_constraintTop_toTopOf="@+id/status_effects_button"
+        app:layout_constraintVertical_bias="0.445" />
+
 
 
 </android.support.constraint.ConstraintLayout>

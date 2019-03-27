@@ -1,158 +1,311 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".characterCreationOverview">
 
-
-    <ImageView
-        android:id="@+id/backgroundImg"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/parchment" />
-
-    <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="105dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        app:srcCompat="@drawable/d20transparent" />
-
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/Home"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/home_button"
-        app:layout_constraintEnd_toEndOf="@+id/home_button"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/home_button"
-        app:layout_constraintTop_toTopOf="@+id/home_button"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/characterClass"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:context=".characterCreationOverview">
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/overview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/backgroundImg"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/parchment" />
 
+        <include
+            layout="@layout/app_bar"
+            android:id="@+id/app_bar">
+        </include>
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/abilityScores"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/characterName"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@+name/Character Name"
+            app:layout_constraintBottom_toTopOf="@id/artificer"
+            app:layout_constraintEnd_toStartOf="@id/lvl_spinner"
+            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar"
+            app:layout_constraintVertical_bias="0.436" />
 
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/race"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/lvl_spinner"
+            android:layout_width="92dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/artificer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar"
+            app:layout_constraintVertical_bias="0.481" />
 
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/artificer"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="176dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="70dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="128dp"
-        android:text="@string/items"
-        app:layout_constraintStart_toEndOf="@+id/button12"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/barbarian"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/artificer" />
 
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/spells"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/bard"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barbarian" />
 
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/characterView"
-        app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toTopOf="parent" />
+        <Spinner
+            android:id="@+id/cleric"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bard" />
 
+        <Spinner
+            android:id="@+id/druid"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cleric" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="48dp"
-        android:text="@+name/Character Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvl_spinner" />
+        <Spinner
+            android:id="@+id/fighter"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/druid" />
 
-    <Spinner
-        android:id="@+id/lvl_spinner"
-        android:layout_width="92dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="160dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button14" />
+        <Spinner
+            android:id="@+id/monk"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fighter" />
 
+        <Spinner
+            android:id="@+id/mystic"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/monk" />
 
-</android.support.constraint.ConstraintLayout>
+        <Spinner
+            android:id="@+id/paladin"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mystic" />
+
+        <Spinner
+            android:id="@+id/ranger"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paladin" />
+
+        <Spinner
+            android:id="@+id/rogue"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ranger" />
+
+        <Spinner
+            android:id="@+id/sorcerer"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rogue" />
+
+        <Spinner
+            android:id="@+id/warlock"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sorcerer" />
+
+        <Spinner
+            android:id="@+id/wizard"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/warlock" />
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="105dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:backgroundTint="@color/colorAccent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:tint="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.947"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.983"
+            app:srcCompat="@drawable/d20transparent" />
+
+        <TextView
+            android:id="@+id/homeText"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:text="@string/Home"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/home_button"
+            app:layout_constraintEnd_toEndOf="@+id/home_button"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="@+id/home_button"
+            app:layout_constraintTop_toTopOf="@+id/home_button"
+            app:layout_constraintVertical_bias="0.661" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

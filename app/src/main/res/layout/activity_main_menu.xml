@@ -21,6 +21,11 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/parchment" />
 
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
+
     <ImageButton
         android:id="@+id/character_creation_button"
         android:layout_width="200dp"

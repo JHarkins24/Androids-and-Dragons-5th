@@ -20,81 +20,10 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/parchment" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/characterClass"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:text="@string/overview"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/abilityScores"
-        app:layout_constraintStart_toEndOf="@+id/button8"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="72dp"
-        android:text="@string/race"
-        app:layout_constraintStart_toEndOf="@+id/button10"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/background"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button13"
-        android:layout_width="70dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="128dp"
-        android:text="@string/items"
-        app:layout_constraintStart_toEndOf="@+id/button12"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/spells"
-        app:layout_constraintStart_toEndOf="@+id/button13"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button15"
-        android:layout_width="143dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:text="@string/characterView"
-        app:layout_constraintStart_toEndOf="@+id/button14"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
 
     <ImageButton
         android:id="@+id/home_button"
