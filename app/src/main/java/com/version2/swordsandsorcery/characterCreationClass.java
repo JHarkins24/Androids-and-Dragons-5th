@@ -32,49 +32,49 @@ public class characterCreationClass extends AppCompatActivity {
         artificer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationClass.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button barbarian = findViewById(R.id.barbarian);
         barbarian.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationAbilityScores.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button bard = findViewById(R.id.bard);
         bard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationRace.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button cleric = findViewById(R.id.cleric);
         cleric.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationBackground.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button druid = findViewById(R.id.druid);
         druid.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationItems.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button fighter = findViewById(R.id.fighter);
         fighter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationSpells.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
         final Button monk = findViewById(R.id.monk);
         monk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -82,7 +82,7 @@ public class characterCreationClass extends AppCompatActivity {
         mystic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -90,7 +90,7 @@ public class characterCreationClass extends AppCompatActivity {
         paladin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -98,7 +98,7 @@ public class characterCreationClass extends AppCompatActivity {
         ranger.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -106,7 +106,7 @@ public class characterCreationClass extends AppCompatActivity {
         rogue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -114,7 +114,7 @@ public class characterCreationClass extends AppCompatActivity {
         sorcerer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 
@@ -122,7 +122,7 @@ public class characterCreationClass extends AppCompatActivity {
         warlock.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationClass.this,characterCreationCharacterView.class));
+                startActivity(new Intent(characterCreationClass.this,characterCreationOverview.class));
             }
         });
 

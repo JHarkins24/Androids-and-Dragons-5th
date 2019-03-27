@@ -30,6 +30,14 @@ public class characterCreationBackground extends AppCompatActivity {
             }
         });
 
+        final Button soldier = findViewById(R.id.soldier);
+        soldier.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(characterCreationBackground.this,characterCreationCharacterView.class));
+            }
+        });
+
         ImageView background = (ImageView) findViewById(R.id.backgroundImg);
         int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
         background.setImageResource(imageResource);

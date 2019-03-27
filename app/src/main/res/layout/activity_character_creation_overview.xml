@@ -33,19 +33,22 @@
             android:id="@+id/app_bar">
         </include>
 
-        <TextView
+        <EditText
             android:id="@+id/characterName"
             android:layout_width="wrap_content"
-            android:layout_height="25dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@+name/Character Name"
-            app:layout_constraintBottom_toTopOf="@id/artificer"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:inputType="textPersonName|textCapWords"
+            android:text="@string/character1"
+            app:layout_constraintBottom_toTopOf="@id/fighter"
             app:layout_constraintEnd_toStartOf="@id/lvl_spinner"
-            app:layout_constraintHorizontal_bias="0.058"
+            app:layout_constraintHorizontal_bias="0.071"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/app_bar"
-            app:layout_constraintVertical_bias="0.436" />
+            app:layout_constraintVertical_bias="0.156" />
 
         <Spinner
             android:id="@+id/lvl_spinner"
@@ -54,87 +57,16 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/artificer"
+            android:layout_marginBottom="8dp"
+            android:background="@color/red"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/fighter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@id/characterName"
             app:layout_constraintTop_toBottomOf="@id/app_bar"
-            app:layout_constraintVertical_bias="0.481" />
-
-        <Spinner
-            android:id="@+id/artificer"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="176dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Spinner
-            android:id="@+id/barbarian"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/artificer" />
-
-        <Spinner
-            android:id="@+id/bard"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/barbarian" />
-
-        <Spinner
-            android:id="@+id/cleric"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bard" />
-
-        <Spinner
-            android:id="@+id/druid"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cleric" />
+            app:layout_constraintVertical_bias="0.146" />
 
         <Spinner
             android:id="@+id/fighter"
@@ -147,129 +79,11 @@
             android:textColor="@color/colorPrimary"
             android:textSize="14sp"
             android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toTopOf="@id/home_button"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/druid" />
+            app:layout_constraintTop_toBottomOf="@id/app_bar" />
 
-        <Spinner
-            android:id="@+id/monk"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/fighter" />
-
-        <Spinner
-            android:id="@+id/mystic"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/monk" />
-
-        <Spinner
-            android:id="@+id/paladin"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/mystic" />
-
-        <Spinner
-            android:id="@+id/ranger"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/paladin" />
-
-        <Spinner
-            android:id="@+id/rogue"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/ranger" />
-
-        <Spinner
-            android:id="@+id/sorcerer"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rogue" />
-
-        <Spinner
-            android:id="@+id/warlock"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/sorcerer" />
-
-        <Spinner
-            android:id="@+id/wizard"
-            android:layout_width="300dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/red"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
-            android:spinnerMode="dropdown"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/warlock" />
 
         <ImageButton
             android:id="@+id/home_button"
@@ -298,7 +112,7 @@
             android:text="@string/Home"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@+id/home_button"
             app:layout_constraintEnd_toEndOf="@+id/home_button"
             app:layout_constraintHorizontal_bias="0.333"

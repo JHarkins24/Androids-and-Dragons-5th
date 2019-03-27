@@ -17,6 +17,7 @@
     <string name="abilityScores">Ability Scores</string>
     <string name="items">Items</string>
     <string name="spells">Spells</string>
+    <string name="spellList">Spell List</string>
     <string name="str">Strength</string>
     <string name="dex">Dexterity</string>
     <string name="con">Constitution</string>
@@ -37,12 +38,21 @@
     <string name="sorcerer">Sorcerer</string>
     <string name="warlock">Warlock</string>
     <string name="wizard">Wizard</string>
+    <string name="soldier">Soldier</string>
+    <string name="human">Human</string>
+    <string name="gold">Gold:</string>
     <string name="character1">Character 1</string>
     <string name="character2">Character 2</string>
     <string name="character3">Character 3</string>
     <string name="character4">Character 4</string>
     <string name="character5">Character 5</string>
     <string name="character6">Character 6</string>
+    <string name="item1">Item 1:</string>
+    <string name="item2">Item 2:</string>
+    <string name="item3">Item 3:</string>
+    <string name="item4">Item 4:</string>
+    <string name="item5">Item 5:</string>
+    <string name="item6">Item 6:</string>
     <string-array name="lvl">
         <item>1</item>
         <item>2</item>

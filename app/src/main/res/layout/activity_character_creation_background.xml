@@ -25,6 +25,16 @@
         android:id="@+id/app_bar">
     </include>
 
+    <Button
+        android:id="@+id/soldier"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:text="@string/soldier"
+        app:layout_constraintBottom_toTopOf="@id/home_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
     <ImageButton
         android:id="@+id/home_button"
         android:layout_width="105dp"
