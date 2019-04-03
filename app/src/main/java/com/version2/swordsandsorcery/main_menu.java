@@ -3,13 +3,8 @@ package com.version2.swordsandsorcery;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 
 public class main_menu extends AppCompatActivity {
 
@@ -18,55 +13,37 @@ public class main_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-
-        ImageButton characterCreationButton = findViewById(R.id.character_creation_button);
-        characterCreationButton.setOnClickListener(new View.OnClickListener() {
+        final Button characterCreation = findViewById(R.id.button2);
+        characterCreation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(main_menu.this, characterCreationOverview.class));
             }
         });
 
-        ImageButton characterSelectionButton = findViewById(R.id.character_selection_button);
-        characterSelectionButton.setOnClickListener(new View.OnClickListener() {
+        final Button characterSelection = findViewById(R.id.button3);
+        characterSelection.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_menu.this, characterSelection.class));
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.characterSelection.class));
             }
         });
 
-        ImageButton settingsButton = findViewById(R.id.settings_button);
-        settingsButton.setOnClickListener(new View.OnClickListener() {
+        final Button settings = findViewById(R.id.button6);
+        settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_menu.this, settings.class));
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.settings.class));
             }
         });
 
-        ImageButton helpButton = findViewById(R.id.help_button);
-        helpButton.setOnClickListener(new View.OnClickListener() {
+        final Button help = findViewById(R.id.button7);
+        help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(main_menu.this, help.class));
+                startActivity(new Intent(main_menu.this, com.version2.swordsandsorcery.help.class));
             }
         });
-
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
     }
 
 

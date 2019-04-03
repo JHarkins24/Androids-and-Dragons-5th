@@ -3,15 +3,8 @@ package com.version2.swordsandsorcery;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-
 public class characterCreationSpells extends AppCompatActivity {
 
     @Override
@@ -19,59 +12,68 @@ public class characterCreationSpells extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_creation_spells);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-
-        ImageButton homeButton = findViewById(R.id.home_button);
-        homeButton.setOnClickListener(new View.OnClickListener() {
+        final Button Overview = findViewById(R.id.button8);
+        Overview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(characterCreationSpells.this, main_menu.class));
+                startActivity(new Intent(characterCreationSpells.this,characterCreationOverview.class));
             }
         });
-
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.overviewButton:
-                startActivity(new Intent(characterCreationSpells.this,characterCreationOverview.class));
-                break;
-            case R.id.classButton:
+        final Button Class = findViewById(R.id.button5);
+        Class.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationClass.class));
-                break;
-            case R.id.abilityScoresButton:
+            }
+        });
+        final Button abilityScores = findViewById(R.id.button10);
+        abilityScores.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationAbilityScores.class));
-                break;
-            case R.id.raceButton:
+            }
+        });
+        final Button Race = findViewById(R.id.button11);
+        Race.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationRace.class));
-                break;
-            case R.id.backgroundButton:
+            }
+        });
+        final Button Background = findViewById(R.id.button12);
+        Background.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationBackground.class));
-                break;
-            case R.id.itemsButton:
+            }
+        });
+        final Button Items = findViewById(R.id.button13);
+        Items.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationItems.class));
-                break;
-            case R.id.spellsButton:
+            }
+        });
+        final Button Spells = findViewById(R.id.button14);
+        Spells.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationSpells.class));
-                break;
-            case R.id.viewButton:
+            }
+        });
+        final Button characterView = findViewById(R.id.button15);
+        characterView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(new Intent(characterCreationSpells.this,characterCreationCharacterView.class));
-        }
-
-        return super.onOptionsItemSelected(item);
+            }
+        });
+        final Button Home = findViewById(R.id.button16);
+        Home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(characterCreationSpells.this,main_menu.class));
+            }
+        });
     }
 }

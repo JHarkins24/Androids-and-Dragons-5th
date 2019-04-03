@@ -7,275 +7,86 @@
     tools:context=".characterSelection">
 
 
-    <ImageView
-        android:id="@+id/backgroundImg"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="Character 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="117dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="4dp"
+        android:text="Home"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:text="Character 2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/parchment" />
+        app:layout_constraintTop_toBottomOf="@+id/button16" />
 
-    <include
-        layout="@layout/app_bar"
-        android:id="@+id/app_bar">
-    </include>
-
-    <ImageButton
-        android:id="@+id/character1"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/character3"
-        app:layout_constraintEnd_toStartOf="@id/character2"
-        app:layout_constraintHorizontal_bias="0.273"
+    <Button
+        android:id="@+id/button18"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="CHaracter 3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:srcCompat="@drawable/d6dice" />
+        app:layout_constraintTop_toBottomOf="@+id/button17" />
 
-    <ImageButton
-        android:id="@+id/character2"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/character4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.825"
-        app:layout_constraintStart_toEndOf="@id/character1"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:srcCompat="@drawable/d6dice" />
 
-    <ImageButton
-        android:id="@+id/character3"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintTop_toBottomOf="@id/character1"
-        app:layout_constraintBottom_toTopOf="@+id/character5"
-        app:layout_constraintEnd_toStartOf="@+id/character4"
-        app:layout_constraintHorizontal_bias="0.339"
+    <Button
+        android:id="@+id/button19"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="Character 4"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/d6dice" />
+        app:layout_constraintTop_toBottomOf="@+id/button18" />
 
-    <ImageButton
-        android:id="@+id/character4"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/character6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.682"
-        app:layout_constraintStart_toEndOf="@id/character3"
-        app:layout_constraintTop_toBottomOf="@id/character2"
-        app:srcCompat="@drawable/d6dice" />
-
-    <ImageButton
-        android:id="@+id/character5"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/home_button"
-        app:layout_constraintEnd_toStartOf="@+id/character6"
-        app:layout_constraintHorizontal_bias="0.35"
+    <Button
+        android:id="@+id/button20"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="Character 5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/character3"
-        app:srcCompat="@drawable/d6dice" />
+        app:layout_constraintTop_toBottomOf="@+id/button19" />
 
-    <ImageButton
-        android:id="@+id/character6"
-        android:layout_width="95dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/home_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/character5"
-        app:layout_constraintTop_toBottomOf="@id/character4"
-        app:layout_constraintVertical_bias="0.326"
-        app:srcCompat="@drawable/d6dice" />
-
-    <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="105dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:text="Character 6"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.983"
-        app:srcCompat="@drawable/d20transparent" />
+        app:layout_constraintTop_toBottomOf="@+id/button20" />
 
-
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/Home"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/home_button"
-        app:layout_constraintEnd_toEndOf="@+id/home_button"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/home_button"
-        app:layout_constraintTop_toTopOf="@+id/home_button"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character1Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character1"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character1"
-        app:layout_constraintEnd_toEndOf="@+id/character1"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character1"
-        app:layout_constraintTop_toTopOf="@+id/character1"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character2Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character2"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character2"
-        app:layout_constraintEnd_toEndOf="@+id/character2"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character2"
-        app:layout_constraintTop_toTopOf="@+id/character2"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character3Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character3"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character3"
-        app:layout_constraintEnd_toEndOf="@+id/character3"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character3"
-        app:layout_constraintTop_toTopOf="@+id/character3"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character4Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character4"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character4"
-        app:layout_constraintEnd_toEndOf="@+id/character4"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character4"
-        app:layout_constraintTop_toTopOf="@+id/character4"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character5Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character5"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character5"
-        app:layout_constraintEnd_toEndOf="@+id/character5"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character5"
-        app:layout_constraintTop_toTopOf="@+id/character5"
-        app:layout_constraintVertical_bias="0.661" />
-
-    <TextView
-        android:id="@+id/character6Text"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/character6"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/character6"
-        app:layout_constraintEnd_toEndOf="@+id/character6"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="@+id/character6"
-        app:layout_constraintTop_toTopOf="@+id/character6"
-        app:layout_constraintVertical_bias="0.661" />
-
+    <Button
+        android:id="@+id/button22"
+        android:layout_width="168dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:text="Character 7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button21" />
 
 
 </android.support.constraint.ConstraintLayout>

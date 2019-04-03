@@ -1,24 +1,24 @@
 LEVEL
-1 fightingStyle,secondWind
-2 actionSurgex1
-3 martialArchetype
-4 asi
-5 extraAttack
-6 asi
-7 martialArchetypeFeature1
-8 asi
-9 indomitablex1
-10 martialArchetypeFeature2
-11 extraAttackx2
-12 asi
-13 indomitablex2
-14 asi
-15 martialArchetypeFeature3
-16 asi
-17 actionSurgex2,indomitablex3
-18 martialArchetypeFeature4
-19 asi
-20 extraAttackx3
+1  $2fightingStyle,$1secondWind
+2  $1actionSurgex1
+3  $2martialArchetype
+4  $3
+5  $1extraAttack
+6  $3
+7  $1martialArchetypeFeature1
+8  $3
+9  $1indomitablex1
+10 $1martialArchetypeFeature2
+11 $1extraAttackx2
+12 $3
+13 $1indomitablex2
+14 $3
+15 $1martialArchetypeFeature3
+16 $3
+17 $1actionSurgex2,$1indomitablex3
+18 $1martialArchetypeFeature4
+19 $3
+20 $1extraAttackx3
 HITDICE 10
 STARTINGHP 10+con
 EQUIPMENTPROFICIENCIES allArmor,shields,simpleWeapons,martialWeapons
@@ -27,12 +27,13 @@ SKILLS 1 1 0 1 0 1 1 1 0 0 0 1 0 0 0 0 0 1 0
 STARTINGEQUIPMENT chainMail|leather&longBow&arrowx20,martialWeapon&shield|martialWeaponx2,lightCrossBow&boltx20|handaxex2,dungeoneersPack|explorersPack
 FIGHTINGSTYLE archery,defense,dueling,greatWeaponFighting,protection,twoWeaponFighting 
 MARTIALARCHETYPE champion,battleMaster,eldritchKnight
-CHAMPION improvedCritical,remarkableAthlete,fightingStyle,superiorCritical,survivor
-BATTLEMASTER combatSuperiority&studentOfWar,knowYourEnemy,improvedCombatSuperiority,relentless,superCombatSuperiority
-ELDRITCHKNIGHT spellCasting&weaponBond,warMagic,eldritchStrike,arcaneCharge,improvedWarMagic
+CHAMPIONFEATURES improvedCritical,remarkableAthlete,fightingStyle,superiorCritical,survivor
+BATTLEMASTERFEATURES combatSuperiority&studentOfWar,knowYourEnemy,improvedCombatSuperiority,relentless,superCombatSuperiority
+ELDRITCHKNIGHTFEATURES spellCasting&weaponBond,warMagic,eldritchStrike,arcaneCharge,improvedWarMagic
 MANEUVERS commandersStrike,disarmingAttack,distractingStrike,evasiveFootwork,feintingAttack,goadingAttack,lungingAttack,maneuveringAttack,menacingAttack,parry,precisionAttack,pushingAttack,rally,riposte,sweepingAttack,tripAttack
-SPELLCASTING
-level cantripsKnown spellsKnown 1stLevel 2ndLevel 3rdLevel 4thLevel
+SPELLCASTING levelTable,spellCastingAbility,spellSaveDC,spellAttackModifier
+LEVELTABLE
+level cantripsKnown spellsKnown 1stLevelSpellSlots 2ndLevelSpellSlots 3rdLevelSpellSlots 4thLevelSpellSlots
 3 2 3 2 0 0 0
 4 2 4 3 0 0 0 
 5 2 4 3 0 0 0 
@@ -51,9 +52,9 @@ level cantripsKnown spellsKnown 1stLevel 2ndLevel 3rdLevel 4thLevel
 18 3 11 4 3 3 0
 19 3 12 4 3 3 1
 20 3 13 4 3 3 1
-SPELLCASTINGABILITY int
-SPELLSAVEDC 8+proficiency+int
-SPELLATTACKMODIFIER proficiency+int
+SPELLCASTINGABILITY $int
+SPELLSAVEDC 8+$proficiency+$intMod
+SPELLATTACKMODIFIER $proficiency+$intMod
 ARCHERY "you gain a +2 bonus to attack rolls you make with ranged weapons."
 DEFENSE "while you are wearing armor, you gain a +1 bonus to AC."
 DUELING "When you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon"
@@ -81,9 +82,9 @@ INDOMITABLEX3 "You can reroll a saving throw that you fail three times per long 
 IMPROVEDCRITICAL "Crit on 19 and 20"
 REMARKABLEATHLETE "you can add half your proficiency
 bonus (round up) to any Strength, Dexterity, or
-Constitutioo check you make that doesn't already use
+Constitution check you make that doesn't already use
 your proficiency bonus.
-in addition, when you make a running longjump, the
+in addition, when you make a running long jump, the
 distance you can cover increases by a number of feet
 equal to your Strength modifier."
 SUPERIORCRITICAL "Crit on 18, 19, and 20"
@@ -92,7 +93,8 @@ points equal to 5 + your Constitution modifier if you
 have no more than half of your hit points left. You don't
 gain this benefit if you have O hit points."
 COMBATSUPERIORITY maneuvers,superiorityDice,maneuverSave
-MANEUVERSAVE 8+proficiency+str|dex
+MANEUVERSAVE "Some of your maneuvers require your target to make a saving throw to resist the
+ maneuver's effects. The saving throw DC is: 8 + your proficiency bonus + strength or dexterity "
 SUPERIORITYDICE "you have four superiority dice,
 which are d8s. A superiority die is expended when you
 use it. you regain all of your expended superiority dice
@@ -100,4 +102,108 @@ when you finish a short or long rest.
 you gain another superiority die at 7th level and one
 more at 15th level."
 STUDENTOFWAR "Gain proficiency with one type of artisans tool of your choice"
-
+KNOWYOURENEMY "if you spend at least 1 minute observing or interacting with another creature outside
+combat, you can learn certain information about its capabilities compared to your own. The DM tells you if
+the creature is your equal, superior, or inferior in regard to two of the following characteristics of your choice:
+Strength score, Dexterity score, Constitution score, Armor Class, Current hit points, Total class levels, Fighter class levels (if any)"
+IMPROVEDCOMBATSUPERIORITY "Your superiority dice at 10th level are d10s and are d12s at 18th level"
+RELENTLESS "when you roll initiative and have no superiority dice remaining, you regain 1 superiority die"
+COMMANDERSSTRIKE "When you take the Attack
+action on your turn, you can forgo one of your attacks
+and use a bonus action to direct one of your companions
+to strike, When you do so, choose a friendly creature
+who can see or hear you and expend one superiority die,
+That creature can immediately use its reaction to make
+one weapon attack, adding the superiority die to the
+attack's damage roll"
+DISARMINGSTRIKE "When you hit a creature with a
+weapon attack, you can expend one superiority die to
+attempt to disarm the target, forcing it to drop one item
+of your choice that it's holding, you add the superiority
+die to the attack's damage roll, and the target must
+make a Strength saving throw, On a failed save, it drops
+the object you choose, The object lands at its feet.
+DISTRACTINGSTRIKE "When you hit a creature with a
+weapon attack, you can expend one superiority die to
+distract the creature, giving your allies an opening, you
+add the superiority die to the attack's damage roll. The
+next attack roll against the target by an attacker other
+than you has advantage if the attack is made before the
+start of your next turn"
+EVASIVEFOOTWORK "When you move, you can expend
+one superiority die, rolling the die and adding the
+number rolled to your AC until you stop moving"
+FEINTINGATTACK "You can expend one superiority die
+and use a bonus action on your turn to feint, choosing
+one creature within 5 feet of you as your target. You
+have advantage on your next attack roll against that
+creature, If that attack hits, add the superiority die to the
+attack's damage roll"
+GOADINGATTACK "When you hit a creature with a
+weapon attack, you can expend one superiority die to
+attempt to goad the target into attacking you, you add
+the superiority die to the attack's damage roll, and
+the target must make a Wisdom saving throw, On a
+failed save, the target has disadvantage on all attack
+rolls against targets other than you until the end of
+your next turn"
+LUNGINGATTACK "When you make a melee weapon
+attack on your turn, you can expend one superiority die
+to increase your reach for that attack by 5 feet. If you hit,
+you add the superiority die to the attack's damage roll"
+MANEUVERINGATTACK "When you hit a creature with
+a weapon attack, you can expend one superiority
+die to maneuver one of your comrades into a more
+advantageous position, you add the superiority die to the
+attack's damage roll, and you choose a friendly creature
+who can see or hear you, That creature can use its
+reaction to move up to half its speed without provoking
+opportunity attacks from the target of your attack"
+MENACINGATTACK "When you hit a creature with a
+weapon attack, you can expend one superiority die to
+attempt to frighten the target. You add the superiority
+die to the attack's damage roll, and the target must
+make a Wisdom saving throw, On a failed save, it is
+frightened of you until the end of your next turn"
+PARRY "When another creature damages you with a
+melee attack, you can use your reaction and expend one
+superiority die to reduce the damage by the number you
+roll on your superiority die + your Dexterity modifier"
+PRECISIONATTACK "When you make a weapon attack
+roll against a creature, you can expend one superiority
+die to add it to the roll. You can use this maneuver
+before or after making the attack roll, but before any
+effects of the attack are applied"
+PUSHINGATTACK "When you hit a creature with
+a weapon attack, you can expend one superiority
+die to attempt to drive the target back. You add the
+superiority die to the attack's damage roll, and if the
+target is Large or smaller, it must make a Strength
+saving throw, On a failed save, you push the target up
+to 15 feet away from you"
+RALLY "On your turn, you can use a bonus action and
+expend one superiority die to bolster the resolve of one
+of your companions. When you do so, choose a friendly
+creature who can see or hear you, That creature gains
+temporary hit points equal to the superiority die roll +
+your Charisma modifier"
+RIPOSTE "When a creature misses you with a melee
+attack, you can use your reaction and expend one
+superiority die to make a melee weapon attack against
+the creature, If you hit, you add the superiority die to the
+attack's damage roll"
+SWEEPINGATTACK "When you hit a creature with a
+melee weapon attack, you can expend one superiority
+die to attempt to damage another creature with the
+same attack, Choose another creature within 5 feet
+of the original target and within your reach, If the
+original attack roll would hit the second creature, it
+takes damage equal to the number you roll on your
+superiority die, The damage is of the same type dealt by
+the original attack"
+TRIPATTACK "When you hit a creature with a weapon
+attack, you can expend one superiority die to attempt
+to knock the target down, you add the superiority die
+to the attack's damage roll, and if the target is Large or
+smaller, it must make a Strength saving throw, On a
+failed save, you knock the target prone"
