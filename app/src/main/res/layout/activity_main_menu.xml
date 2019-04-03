@@ -4,103 +4,162 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main_menu"
-    android:background="@drawable/parchment_home">
+    android:background="@color/colorAccent"
+    tools:context=".main_menu">
 
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="149dp"
-        android:layout_height="170dp"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/dice_button"
-=======
-        android:layout_marginStart="128dp"
-        android:background="@drawable/button_better"
->>>>>>> joe
-        android:text="@string/characterCreation"
-        android:textColor="@android:color/white"
+    <ImageView
+        android:id="@+id/backgroundImg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:contentDescription="@null"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintTop_toTopOf="parent" />
-=======
-        tools:layout_editor_absoluteY="55dp" />
->>>>>>> joe
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/parchment" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="259dp"
-        android:layout_height="282dp"
-=======
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="8dp"
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
+
+    <ImageButton
+        android:id="@+id/character_creation_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
         android:background="@null"
-        android:text="@string/characterCreation"
-        android:textColor="@android:color/white"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.106"
+        app:srcCompat="@drawable/d20transparent" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="183dp"
-        android:layout_height="218dp"
->>>>>>> Spencer
+    <ImageButton
+        android:id="@+id/character_selection_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533"
+        app:srcCompat="@drawable/d20transparent" />
+
+    <ImageButton
+        android:id="@+id/settings_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533"
+        app:srcCompat="@drawable/d20transparent" />
+
+    <ImageButton
+        android:id="@+id/help_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        app:srcCompat="@drawable/d20transparent" />
+
+    <TextView
+        android:id="@+id/characterCreationText"
+        android:layout_width="138dp"
+        android:layout_height="66dp"
+        android:text="@string/characterCreation"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/character_creation_button"
+        app:layout_constraintEnd_toEndOf="@+id/character_creation_button"
+        app:layout_constraintStart_toStartOf="@+id/character_creation_button"
+        app:layout_constraintTop_toTopOf="@+id/character_creation_button" />
+
+    <TextView
+        android:id="@+id/characterSelectionText"
+        android:layout_width="115dp"
+        android:layout_height="63dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="80dp"
-        android:background="@null"
-        android:text="character\nSelection"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintStart_toStartOf="parent" />
-=======
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
->>>>>>> Spencer
+        android:text="@string/characterSelection"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/character_selection_button"
+        app:layout_constraintEnd_toEndOf="@+id/character_selection_button"
+        app:layout_constraintStart_toStartOf="@+id/character_selection_button"
+        app:layout_constraintTop_toTopOf="@+id/character_selection_button" />
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
+    <TextView
+        android:id="@+id/settingsText"
+        android:layout_width="94dp"
+        android:layout_height="48dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="340dp"
-        android:background="@null"
         android:text="@string/settings"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/settings_button"
+        app:layout_constraintEnd_toEndOf="@+id/settings_button"
+        app:layout_constraintStart_toStartOf="@+id/settings_button"
+        app:layout_constraintTop_toTopOf="@+id/settings_button" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="340dp"
-        android:background="@null"
+    <TextView
+        android:id="@+id/helpText"
+        android:layout_width="70dp"
+        android:layout_height="41dp"
         android:text="@string/help"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/help_button"
+        app:layout_constraintEnd_toEndOf="@+id/help_button"
+        app:layout_constraintStart_toStartOf="@+id/help_button"
+        app:layout_constraintTop_toTopOf="@+id/help_button"
+        app:layout_constraintVertical_bias="0.503" />
 
 </android.support.constraint.ConstraintLayout>
