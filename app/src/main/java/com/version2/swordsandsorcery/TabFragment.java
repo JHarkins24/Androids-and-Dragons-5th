@@ -50,13 +50,13 @@ public class TabFragment extends Fragment {
 
         switch (position){
             case 0:
-                textView.setText("Overview");
+                textView.setText(R.string.overview);
                 break;
             case 1:
-                textView.setText("Class");
+                textView.setText(R.string.characterClass);
                 break;
             case 2:
-                textView.setText("Ability Scores");
+                textView.setText(R.string.abilityScores);
                 break;
         }
     }
