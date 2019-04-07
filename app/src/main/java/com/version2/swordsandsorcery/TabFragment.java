@@ -37,7 +37,17 @@ public class TabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         textView = (TextView) view.findViewById(R.id.textView);
 
-        textView.setText("Fragment " + (position + 1));
 
+        switch (position){
+            case 0:
+                textView.setText("Overview");
+                break;
+            case 1:
+                textView.setText("Class");
+                break;
+            case 2:
+                textView.setText("Ability Scores");
+                break;
+        }
     }
 }
