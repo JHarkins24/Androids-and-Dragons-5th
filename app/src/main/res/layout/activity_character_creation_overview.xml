@@ -7,9 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".characterCreationOverview">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context=".characterCreationOverview">
@@ -28,10 +26,38 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/parchment" />
 
-        <include
-            layout="@layout/app_bar"
-            android:id="@+id/app_bar">
-        </include>
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@android:color/holo_red_dark"
+                app:titleTextColor="@android:color/black"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/black"
+                app:tabTextColor="@android:color/holo_red_dark"
+                app:tabGravity="fill"
+                app:tabMode="fixed" />
+        </android.support.design.widget.AppBarLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
 
         <EditText
             android:id="@+id/characterName"
@@ -43,6 +69,8 @@
             android:layout_marginBottom="8dp"
             android:inputType="textPersonName|textCapWords"
             android:text="@string/character1"
+            app:layout_anchor="@+id/viewpager"
+            app:layout_anchorGravity="left|center"
             app:layout_constraintBottom_toTopOf="@id/fighter"
             app:layout_constraintEnd_toStartOf="@id/lvl_spinner"
             app:layout_constraintHorizontal_bias="0.071"
@@ -61,6 +89,8 @@
             android:background="@color/red"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
+            app:layout_anchor="@+id/backgroundImg"
+            app:layout_anchorGravity="left|center"
             app:layout_constraintBottom_toTopOf="@+id/fighter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
@@ -75,13 +105,15 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:background="@color/red"
+            android:spinnerMode="dropdown"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="14sp"
-            android:spinnerMode="dropdown"
+            app:layout_anchor="@+id/backgroundImg"
+            app:layout_anchorGravity="right|center"
             app:layout_constraintBottom_toTopOf="@id/home_button"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/app_bar" />
 
 
@@ -97,6 +129,8 @@
             android:contentDescription="@null"
             android:scaleType="centerInside"
             android:tint="@color/colorAccent"
+            app:layout_anchor="@+id/backgroundImg"
+            app:layout_anchorGravity="bottom|center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.947"
@@ -107,12 +141,14 @@
 
         <TextView
             android:id="@+id/homeText"
-            android:layout_width="92dp"
+            android:layout_width="111dp"
             android:layout_height="30dp"
             android:text="@string/Home"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
+            app:layout_anchor="@+id/home_button"
+            app:layout_anchorGravity="right|center"
             app:layout_constraintBottom_toBottomOf="@+id/home_button"
             app:layout_constraintEnd_toEndOf="@+id/home_button"
             app:layout_constraintHorizontal_bias="0.333"
@@ -120,6 +156,6 @@
             app:layout_constraintTop_toTopOf="@+id/home_button"
             app:layout_constraintVertical_bias="0.661" />
 
-    </android.support.constraint.ConstraintLayout>
+    </android.support.design.widget.CoordinatorLayout>
 
 </ScrollView>
