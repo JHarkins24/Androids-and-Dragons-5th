@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class TabFragment extends Fragment {
     int position;
-    private TextView textView;
+    TextView textView;
 
     public static Fragment getInstance(int position) {
         Bundle bundle = new Bundle();
