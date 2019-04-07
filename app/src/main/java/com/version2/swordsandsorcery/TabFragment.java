@@ -30,10 +30,14 @@ public class TabFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        if(position == 2){
-            return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
+        switch (position){
+            case 0:
+                return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
+            case 1:
+                return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
+            case 2:
+                return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
         }
-
 
         return inflater.inflate(R.layout.fragment_tab, container, false);
     }
