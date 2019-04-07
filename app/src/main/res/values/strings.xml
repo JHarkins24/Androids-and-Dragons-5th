@@ -53,6 +53,28 @@
     <string name="item4">Item 4:</string>
     <string name="item5">Item 5:</string>
     <string name="item6">Item 6:</string>
+    <string name="actions">Actions In Combat</string>
+    <string name="attack">Attack - you make a melee or ranged weapon attack.</string>
+    <string name="casting">Casting Spells - You cast a cantrip or a spell of 1st level or higher. See spells casting time</string>
+    <string name="dash">Dash - You gain extra movement equal to your speed for current turn.</string>
+    <string name="rules">Rules</string>
+    <string name="disengage">Disengage - Your movement does not provoke opportunity attacks for the rest of the turn.</string>
+    <string name="dodge">Dodge - until next turn any attack roll made against you has disadvantage if you see them.</string>
+    <string name="helpAction">Help - You help one creature with a task, giving that creature advantage when they are performing that tasks ability check.</string>
+    <string name="hide">Hide - You make a Dexterity check in an attempt to become hidden, unseen, and unheard.</string>
+    <string name="readyAction">Ready - You wait for a particular circumstance before you act, which lets you act using your reaction before the start of your next turn.</string>
+    <string name="searchAction">Search - You make a wisdom check or a Intelligence check to find something.</string>
+    <string name="d20Explanation">The D20 die is used for all actions taken by the player in game, you roll for skill checks, saving throws, and attack rolls against enemies.</string>
+    <string name="helpMenu">Swords and Sorcery Help Menu</string>
+    <string name="statusEffect">Status Effects</string>
+    <string name="stunned">Stunned - A stunned creature is incapacitated and cannot move.</string>
+    <string name="unconscious">Unconscious - An unconscious creature is incapacitated , cannot move or speak and is unaware of its surroundings.</string>
+    <string name="poisoned">Poisoned - A poisoned creature has disadvantage on attack rolls and ability checks.</string>
+    <string name="paralyzed">Paralyzed - A paralyzed creature is incapacitated and cannot move or speak.</string>
+    <string name="incapacitated">Incapacitated - An incapacitated creature cannot take actions or reactions.</string>
+    <string name="grappled">Grappled - A grappled creatures speed becomes 0 and it cannot benefit from any movement bonuses.</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
     <string-array name="lvl">
         <item>1</item>
         <item>2</item>

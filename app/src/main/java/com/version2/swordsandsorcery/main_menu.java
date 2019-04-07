@@ -57,16 +57,6 @@ public class main_menu extends AppCompatActivity {
         int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
         background.setImageResource(imageResource);
         background.setScaleType(ImageView.ScaleType.FIT_XY);
-
-
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
     }
 
 

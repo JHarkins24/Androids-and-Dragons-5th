@@ -35,11 +35,6 @@ public class characterCreationCharacterView extends AppCompatActivity {
             }
         });
 
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
-
         final ImageButton Save = findViewById(R.id.save_button);
         Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,44 +52,5 @@ public class characterCreationCharacterView extends AppCompatActivity {
             }
         });
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.overviewButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationOverview.class));
-                break;
-            case R.id.classButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationClass.class));
-                break;
-            case R.id.abilityScoresButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationAbilityScores.class));
-                break;
-            case R.id.raceButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationRace.class));
-                break;
-            case R.id.backgroundButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationBackground.class));
-                break;
-            case R.id.itemsButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationItems.class));
-                break;
-            case R.id.spellsButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationSpells.class));
-                break;
-            case R.id.viewButton:
-                startActivity(new Intent(characterCreationCharacterView.this,characterCreationCharacterView.class));
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

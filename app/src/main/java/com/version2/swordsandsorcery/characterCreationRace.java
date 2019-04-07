@@ -39,48 +39,6 @@ public class characterCreationRace extends AppCompatActivity {
             }
         });
 
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.overviewButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationOverview.class));
-                break;
-            case R.id.classButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationClass.class));
-                break;
-            case R.id.abilityScoresButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationAbilityScores.class));
-                break;
-            case R.id.raceButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationRace.class));
-                break;
-            case R.id.backgroundButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationBackground.class));
-                break;
-            case R.id.itemsButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationItems.class));
-                break;
-            case R.id.spellsButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationSpells.class));
-                break;
-            case R.id.viewButton:
-                startActivity(new Intent(characterCreationRace.this,characterCreationCharacterView.class));
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

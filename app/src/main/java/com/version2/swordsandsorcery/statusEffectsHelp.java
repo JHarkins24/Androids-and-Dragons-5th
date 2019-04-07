@@ -22,26 +22,14 @@ public class statusEffectsHelp extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        ImageButton backButton = findViewById(R.id.back_help_button);
-        backButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(statusEffectsHelp.this,help.class));
+                startActivity(new Intent(statusEffectsHelp.this,main_menu.class));
             }
         });
 
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
     }
 }

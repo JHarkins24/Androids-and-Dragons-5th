@@ -37,9 +37,19 @@ public class TabFragment extends Fragment {
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 2:
                 return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
+            case 4:
+                return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
+            case 5:
+                return inflater.inflate(R.layout.fragment_character_creation_background, container, false);
+            case 6:
+                return inflater.inflate(R.layout.fragment_character_creation_items, container, false);
+            case 7:
+                return inflater.inflate(R.layout.fragment_character_creation_spells, container, false);
+            case 8:
+                return inflater.inflate(R.layout.fragment_character_creation_view, container, false);
         }
 
-        return inflater.inflate(R.layout.fragment_tab, container, false);
+        return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
     }
 
     @Override
@@ -57,6 +67,21 @@ public class TabFragment extends Fragment {
                 break;
             case 2:
                 textView.setText(R.string.abilityScores);
+                break;
+            case 3:
+                textView.setText(R.string.race);
+                break;
+            case 4:
+                textView.setText(R.string.background);
+                break;
+            case 5:
+                textView.setText(R.string.items);
+                break;
+            case 6:
+                textView.setText(R.string.spells);
+                break;
+            case 7:
+                textView.setText(R.string.characterView);
                 break;
         }
     }

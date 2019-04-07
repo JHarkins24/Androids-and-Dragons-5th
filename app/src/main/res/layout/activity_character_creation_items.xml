@@ -4,21 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/parchment"
     tools:context=".characterCreationItems">
-
-    <ImageView
-        android:id="@+id/backgroundImg"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:contentDescription="@null"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/parchment" />
 
     <include
         layout="@layout/app_bar"
@@ -75,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.071"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+        app:layout_constraintTop_toBottomOf="@id/previousButton" />
 
     <TableLayout
         android:id="@+id/tableLayout"
@@ -208,6 +195,43 @@
             app:layout_constraintTop_toBottomOf="@+id/item_5" />
 
     </TableLayout>
+
+    <ImageButton
+        android:id="@+id/nextButton"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/abilityTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintVertical_bias="0.472"
+        app:srcCompat="@drawable/next_arrow" />
+
+
+    <ImageButton
+        android:id="@+id/previousButton"
+        android:layout_width="88dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toTopOf="@id/abilityTable"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintVertical_bias="0.472"
+        app:srcCompat="@drawable/previous_arrow" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -21,26 +21,14 @@ public class rulesHelp extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        ImageButton backhelpButton = findViewById(R.id.back_help_button);
-        backhelpButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton homeButton = findViewById(R.id.home_button);
+        homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(rulesHelp.this,help.class));
+                startActivity(new Intent(rulesHelp.this,main_menu.class));
             }
         });
 
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
-
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
-    }
 }

@@ -45,7 +45,7 @@
         app:layout_constraintHorizontal_bias="0.273"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/character2"
@@ -65,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.825"
         app:layout_constraintStart_toEndOf="@id/character1"
         app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/character3"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toStartOf="@+id/character4"
         app:layout_constraintHorizontal_bias="0.339"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/character4"
@@ -106,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.682"
         app:layout_constraintStart_toEndOf="@id/character3"
         app:layout_constraintTop_toBottomOf="@id/character2"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/character5"
@@ -127,7 +127,7 @@
         app:layout_constraintHorizontal_bias="0.35"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/character3"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/character6"
@@ -148,7 +148,7 @@
         app:layout_constraintStart_toEndOf="@id/character5"
         app:layout_constraintTop_toBottomOf="@id/character4"
         app:layout_constraintVertical_bias="0.326"
-        app:srcCompat="@drawable/d6dice" />
+        app:srcCompat="@drawable/d20transparent" />
 
     <ImageButton
         android:id="@+id/home_button"

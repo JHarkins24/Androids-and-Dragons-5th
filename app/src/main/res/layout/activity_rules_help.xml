@@ -5,75 +5,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/parchment"
     tools:context=".characterCreationClass">
 
     <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
-        <ImageView
-            android:id="@+id/backgroundImg"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/parchment" />
-
         <include
-            layout="@layout/app_bar"
-            android:id="@+id/app_bar">
+            android:id="@+id/app_bar"
+            layout="@layout/app_bar">
+
         </include>
-
-        <ImageButton
-            android:id="@+id/back_help_button"
-            android:layout_width="103dp"
-            android:layout_height="53dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:backgroundTint="@color/colorAccent"
-            android:contentDescription="@null"
-            android:scaleType="centerInside"
-            android:tint="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.974"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/d8transparent" />
-
-        <TextView
-            android:id="@+id/backButtonText"
-            android:layout_width="92dp"
-            android:layout_height="30dp"
-            android:text="@string/back"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/back_help_button"
-            app:layout_constraintEnd_toEndOf="@+id/back_help_button"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="@+id/back_help_button"
-            app:layout_constraintTop_toTopOf="@+id/back_help_button"
-            app:layout_constraintVertical_bias="0.512" />
 
         <TextView
             android:id="@+id/rulesText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rules"
+            android:text="@string/rules"
             android:textColor="@color/black"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@id/actions_in_combat"
@@ -92,7 +42,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Actions In Combat"
+            android:text="@string/actions"
             android:textColor="@color/black"
             android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@id/attack"
@@ -109,11 +59,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Attack - You make a melee or ranged weapon attack"
+            android:text="@string/attack"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/castingSpells"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.123"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/actions_in_combat" />
 
@@ -125,11 +76,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Casting Spells -  You cast a cantrip or a spell of 1st level or higher. See spells casting time"
+            android:text="@string/casting"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/dash"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/attack" />
 
@@ -141,11 +93,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Dash - You gain extra movement equal to your speed for current turn "
+            android:text="@string/dash"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/disengage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/castingSpells" />
 
@@ -157,10 +110,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Disengage - Your movement does not provoke oppurtunity attacks for the rest of the turn"
+            android:text="@string/disengage"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/dodge"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dash"
             app:layout_constraintVertical_bias="0.277" />
@@ -173,11 +128,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Dodge - until next turn any attack roll made againest you has disadvantage if you see them"
+            android:text="@string/dodge"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/helpAction"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/disengage"
             app:layout_constraintVertical_bias="0.338" />
@@ -190,8 +146,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Help - You help one creature with a task, giving that creature advantage when they are performing that tasks ability check"
+            android:text="@string/helpAction"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/hide"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.384"
@@ -207,8 +164,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Hide - You make a Dexterity check in an attempt to become hidden--unseen and unheard"
+            android:text="@string/hide"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/readyAction"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
@@ -224,8 +182,9 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Ready - You wait for a particular circumstance before you act, which lets you act using your reaction before the start of your next turn."
+            android:text="@string/readyAction"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/searchAction"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.307"
@@ -241,10 +200,12 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="Search - You make a wisdom check or a Intelligence check to find something"
+            android:text="@string/searchAction"
             android:textColor="@color/black"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@id/d20_explain"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/readyAction"
             app:layout_constraintVertical_bias="0.759" />
@@ -257,15 +218,49 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="The D20 die is used for all actions in game,  you roll for checks   and to attack  enemies"
+            android:text="@string/d20Explanation"
             android:textColor="@color/black"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@id/home_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.375"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.922" />
+
+        <ImageButton
+            android:id="@+id/home_button"
+            android:layout_width="105dp"
+            android:layout_height="94dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:backgroundTint="@color/colorAccent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:tint="@color/colorAccent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/d20_explain"
+            app:srcCompat="@drawable/d20transparent" />
+
+        <TextView
+            android:id="@+id/homeText"
+            android:layout_width="92dp"
+            android:layout_height="30dp"
+            android:text="@string/Home"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/home_button"
+            app:layout_constraintEnd_toEndOf="@+id/home_button"
+            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintStart_toStartOf="@+id/home_button"
+            app:layout_constraintTop_toTopOf="@+id/home_button"
+            app:layout_constraintVertical_bias="0.661" />
+
+
 
     </android.support.constraint.ConstraintLayout>
 

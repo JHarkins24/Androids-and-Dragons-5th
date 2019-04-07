@@ -1,184 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".characterCreationClass">
+    android:background="@drawable/parchment"
+    android:layout_height="match_parent">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <include
+        layout="@layout/app_bar"
+        android:id="@+id/app_bar">
+    </include>
 
+    <TextView
+        android:id="@+id/stunned"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/stunned"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/unconscious"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintVertical_bias="0.006" />
 
-        <ImageView
-            android:id="@+id/backgroundImg"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:contentDescription="@null"
-            android:scaleType="fitXY"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/parchment" />
+    <TextView
+        android:id="@+id/unconscious"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/unconscious"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/poisoned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stunned"
+        app:layout_constraintVertical_bias="0.147" />
 
-        <include
-            layout="@layout/app_bar"
-            android:id="@+id/app_bar">
-        </include>
+    <TextView
+        android:id="@+id/poisoned"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/poisoned"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/paralyzed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unconscious"
+        app:layout_constraintVertical_bias="0.143" />
 
-        <ImageButton
-            android:id="@+id/back_help_button"
-            android:layout_width="76dp"
-            android:layout_height="72dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:backgroundTint="@color/colorAccent"
-            android:contentDescription="@null"
-            android:scaleType="centerInside"
-            android:tint="@color/colorAccent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.054"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/app_bar"
-            app:layout_constraintVertical_bias="0.159"
-            app:srcCompat="@drawable/d8transparent" />
+    <TextView
+        android:id="@+id/paralyzed"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/paralyzed"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/incapacitated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poisoned"
+        app:layout_constraintVertical_bias="0.226" />
 
-        <TextView
-            android:id="@+id/backButtonText"
-            android:layout_width="92dp"
-            android:layout_height="30dp"
-            android:text="@string/back"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="@+id/back_help_button"
-            app:layout_constraintEnd_toEndOf="@+id/back_help_button"
-            app:layout_constraintHorizontal_bias="0.434"
-            app:layout_constraintStart_toStartOf="@+id/back_help_button"
-            app:layout_constraintTop_toTopOf="@+id/back_help_button"
-            app:layout_constraintVertical_bias="0.512" />
+    <TextView
+        android:id="@+id/incapacitated"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/incapacitated"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/grappled"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paralyzed"
+        app:layout_constraintVertical_bias="0.31" />
 
-        <TextView
-            android:id="@+id/statusEffects"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Status Effects"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/stunned"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.408"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/app_bar"
-            app:layout_constraintVertical_bias="0.0" />
+    <TextView
+        android:id="@+id/grappled"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/grappled"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/home_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/incapacitated"
+        app:layout_constraintVertical_bias="0.452" />
 
-        <TextView
-            android:id="@+id/stunned"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Stunned -  A stunned creature is incapacitated and cannot move"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/unconscious"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.692"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/back_help_button"
-            app:layout_constraintVertical_bias="0.006" />
+    <ImageButton
+        android:id="@+id/home_button"
+        android:layout_width="105dp"
+        android:layout_height="94dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:background="@null"
+        android:backgroundTint="@color/colorAccent"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:tint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/grappled"
+        app:layout_constraintVertical_bias="0.983"
+        app:srcCompat="@drawable/d20transparent" />
 
-        <TextView
-            android:id="@+id/unconscious"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Unconscious - AN unconscious creature is incapacitated , can't move or speak and is unaware of its surroundings"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/poisoned"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.692"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/stunned"
-            app:layout_constraintVertical_bias="0.147" />
+    <TextView
+        android:id="@+id/homeText"
+        android:layout_width="92dp"
+        android:layout_height="30dp"
+        android:text="@string/Home"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/home_button"
+        app:layout_constraintEnd_toEndOf="@+id/home_button"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/home_button"
+        app:layout_constraintTop_toTopOf="@+id/home_button"
+        app:layout_constraintVertical_bias="0.661" />
 
-        <TextView
-            android:id="@+id/poisoned"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="poisoned - A poisoned creature has disadvantage on attack rolls and ability checks"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/paralyzed"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.559"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/unconscious"
-            app:layout_constraintVertical_bias="0.143" />
-
-        <TextView
-            android:id="@+id/paralyzed"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="paralyzed - A paralyzed creature is incapacitated and can't move or speak"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/incapacitated"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/poisoned"
-            app:layout_constraintVertical_bias="0.226" />
-
-        <TextView
-            android:id="@+id/incapacitated"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Incapacitated - An incapacitated creature can't take actions or reactions"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toTopOf="@id/grappled"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/paralyzed"
-            app:layout_constraintVertical_bias="0.31" />
-
-        <TextView
-            android:id="@+id/grappled"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="Grappled - A grappled creatures speed becomes 0 and it can't benefit ffrom any movement bonuses"
-            android:textColor="@color/black"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/incapacitated"
-            app:layout_constraintVertical_bias="0.452" />
-
-    </android.support.constraint.ConstraintLayout>
-
-</ScrollView>
+</android.support.constraint.ConstraintLayout>
