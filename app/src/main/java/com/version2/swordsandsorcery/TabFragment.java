@@ -29,6 +29,12 @@ public class TabFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
+        if(position == 2){
+            return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
+        }
+
+
         return inflater.inflate(R.layout.fragment_tab, container, false);
     }
 
