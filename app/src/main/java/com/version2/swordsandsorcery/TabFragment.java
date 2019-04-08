@@ -1,7 +1,12 @@
 package com.version2.swordsandsorcery;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +25,9 @@ import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
 
 public class TabFragment extends Fragment {
+    private SharedPreferences levelPreferences;
+    private SharedPreferences level2Preferences;
+    private SharedPreferences abilityScorePreferences;
     int position;
     TextView textView;
     short bla = 0;
@@ -72,11 +80,25 @@ public class TabFragment extends Fragment {
         switch (position){
             case 0:
                 // spinner is implemented dynamically in the java activity file.
-                Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
-                String[] items = new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
-
+                final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
+                LinkedList<String> items = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
+                levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String level = levelPreferences.getString("level", "");
+                if(items.contains(level))
+                {
+                    items.remove(level);
+                    items.addFirst(level);
+                }
                 // create arrayAdapter using the string array and a default
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
+                level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String level2 = levelPreferences.getString("level2", "");
+                if(level != null)
+                {
+                    int spinnerPosition = adapter.getPosition(level);
+                    lvlSpinner.setSelection(spinnerPosition);
+
+                }
 
                 lvlSpinner.setAdapter(adapter);
                 lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener()
@@ -84,7 +106,10 @@ public class TabFragment extends Fragment {
                         @Override
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
                             {
+                                SharedPreferences.Editor editor = level2Preferences.edit();
+                                editor.putString("level",lvlSpinner.getSelectedItem().toString());
                                 Log.v("level", (String) parent.getItemAtPosition(position));
+                                editor.apply();
                             }
 
                         @Override
@@ -220,6 +245,7 @@ public class TabFragment extends Fragment {
                 });
                 break;
             case 2:
+
                 break;
             case 3:
                 final Button artificer1 = view.findViewById(R.id.artificer);

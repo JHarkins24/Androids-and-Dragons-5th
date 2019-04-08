@@ -1,4 +1,7 @@
 <resources>
+    <string name="level2">Swords and Sorcery</string>
+    <string name="level">Swords and Sorcery</string>
+    <string name="abilityScore">Swords and Sorcery</string>
     <string name="app_name">Swords and Sorcery</string>
     <string name="welcome">Welcome</string>
     <string name="characterCreation">Character Creation</string>
