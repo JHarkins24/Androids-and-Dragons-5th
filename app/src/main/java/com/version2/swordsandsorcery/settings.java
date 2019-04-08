@@ -117,17 +117,17 @@ public class settings extends AppCompatActivity {
                     }
             });
         final TextView pointBuy = findViewById(R.id.textView3);
-        final Button numberButton = findViewById(R.id.number_button);
+        //final Button numberButton = findViewById(R.id.number_button);
         final TextView abilityPoint = findViewById(R.id.textView4);
         final String currentPoint = abilityPoint.getText().toString();
         //  .setText(integer + "")
 
-        numberButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-                {
-
-                }
-        });
+//        numberButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v)
+//                {
+//
+//                }
+//        });
     }
 }
