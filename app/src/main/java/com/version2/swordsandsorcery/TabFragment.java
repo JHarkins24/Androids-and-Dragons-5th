@@ -48,15 +48,15 @@ public class TabFragment extends Fragment {
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 2:
                 return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
-            case 4:
+            case 3:
                 return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
-            case 5:
+            case 4:
                 return inflater.inflate(R.layout.fragment_character_creation_background, container, false);
-            case 6:
+            case 5:
                 return inflater.inflate(R.layout.fragment_character_creation_items, container, false);
-            case 7:
+            case 6:
                 return inflater.inflate(R.layout.fragment_character_creation_spells, container, false);
-            case 8:
+            case 7:
                 return inflater.inflate(R.layout.fragment_character_creation_view, container, false);
         }
 
@@ -66,7 +66,6 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final View view2 = view;
 
 
         switch (position){
@@ -95,7 +94,6 @@ public class TabFragment extends Fragment {
                                 // screen and the drop down interface here? Boolean?
                             }
                     });
-
 
                 Spinner fighter = view.findViewById(R.id.fighter);
                 String[] fighterOptions = new String[]{"Arcane Archer", "Battlemaster", "Brute", "Cavalier",
@@ -213,32 +211,16 @@ public class TabFragment extends Fragment {
                 });
                 break;
             case 2:
-                textView.setText(R.string.abilityScores);
                 break;
             case 3:
-                final Button human = view.findViewById(R.id.human);
-                human.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
                 break;
             case 4:
-                final Button soldier = view.findViewById(R.id.soldier);
-                soldier.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
                 break;
             case 5:
-                textView.setText(R.string.items);
                 break;
             case 6:
-                textView.setText(R.string.spells);
                 break;
             case 7:
-                textView.setText(R.string.characterView);
                 break;
         }
     }

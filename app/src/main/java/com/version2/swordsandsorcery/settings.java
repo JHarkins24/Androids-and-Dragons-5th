@@ -1,6 +1,11 @@
 package com.version2.swordsandsorcery;
 
+import android.app.ActivityManager;
+import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -8,14 +13,27 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.Spinner;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.TextView;
+
+import java.util.List;
+
 
 public class settings extends AppCompatActivity {
+
+    private SharedPreferences levelPreferences;
+    private SharedPreferences abilityScorePreferences;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,50 +43,38 @@ public class settings extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        Spinner lvlDropdown = findViewById(R.id.spinner);
-        String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
-        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lvlDefault);
-        lvlDropdown.setAdapter(lvlDefaultAdapter);
+
 
         ImageView background = (ImageView) findViewById(R.id.backgroundImg);
         int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
         background.setImageResource(imageResource);
         background.setScaleType(ImageView.ScaleType.FIT_XY);
 
-        lvlDropdown.setOnItemSelectedListener(new OnItemSelectedListener()
+        final Spinner lvlDropdown = findViewById(R.id.spinner);
+        String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
+        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lvlDefault);
+        lvlDropdown.setAdapter(lvlDefaultAdapter);
+
+        levelPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String level = levelPreferences.getString("level", "");
+        if(level != null)
             {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-                    {
-                        Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
-                    }
+                int spinnerPosition = lvlDefaultAdapter.getPosition(level);
+                lvlDropdown.setSelection(spinnerPosition);
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent)
-                    {
-                        // supposedly this creates a default value
-                    }
-            });
-
-        ImageButton homeButton = findViewById(R.id.home_button);
-        homeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, main_menu.class));
             }
-        });
 
-        Spinner bonusDropdown = findViewById(R.id.spinner1);
-        String[] bonusOrientation = new String[]{"Top", "Bottom"};
-        ArrayAdapter<String> bonusOrientationAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, bonusOrientation);
-        bonusDropdown.setAdapter(bonusOrientationAdapter);
 
-        bonusDropdown.setOnItemSelectedListener(new OnItemSelectedListener()
+        lvlDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
             {
+
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
                     {
-                        Log.v("bonusOrientation", (String) parent.getItemAtPosition(position));
+                        SharedPreferences.Editor editor = levelPreferences.edit();
+                        editor.putString("level",lvlDropdown.getSelectedItem().toString());
+                        Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
+                        editor.apply();
                     }
 
                 @Override
@@ -76,19 +82,32 @@ public class settings extends AppCompatActivity {
                     {
                         // supposedly this creates a default value
                     }
+
             });
 
-        Spinner abilityScoreChoice = findViewById(R.id.spinner2);
+        final Spinner abilityScoreChoice = findViewById(R.id.spinner2);
         String[] abilityScoreChoiceOptions = new String[]{"Roll", "Manual", "Point Buy"};
         ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, abilityScoreChoiceOptions);
         abilityScoreChoice.setAdapter(abilityScoreChoiceAdapter);
+
+        abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        String ability = abilityScorePreferences.getString("abilityScore", "");
+        if(ability != null)
+            {
+                int spinnerPosition = abilityScoreChoiceAdapter.getPosition(ability);
+                abilityScoreChoice.setSelection(spinnerPosition);
+
+            }
 
         abilityScoreChoice.setOnItemSelectedListener(new OnItemSelectedListener()
             {
                 @Override
                 public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
                     {
+                        SharedPreferences.Editor abilityEditor = abilityScorePreferences.edit();
+                        abilityEditor.putString("abilityScore",abilityScoreChoice.getSelectedItem().toString());
                         Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
+                        abilityEditor.apply();
                     }
 
                 @Override
@@ -97,6 +116,18 @@ public class settings extends AppCompatActivity {
                         // supposedly this creates a default value
                     }
             });
+        final TextView pointBuy = findViewById(R.id.textView3);
+        final Button numberButton = findViewById(R.id.number_button);
+        final TextView abilityPoint = findViewById(R.id.textView4);
+        final String currentPoint = abilityPoint.getText().toString();
+        //  .setText(integer + "")
 
+        numberButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+                {
+
+                }
+        });
     }
 }

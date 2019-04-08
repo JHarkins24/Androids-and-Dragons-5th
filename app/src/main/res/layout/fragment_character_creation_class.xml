@@ -222,7 +222,6 @@ tools:context=".characterCreationClass">
         app:layout_constraintVertical_bias="0.472"
         app:srcCompat="@drawable/next_arrow" />
 
-
     <ImageButton
         android:id="@+id/previousButton"
         android:layout_width="88dp"
@@ -240,6 +239,7 @@ tools:context=".characterCreationClass">
         app:layout_constraintTop_toBottomOf="@id/app_bar"
         app:layout_constraintVertical_bias="0.472"
         app:srcCompat="@drawable/previous_arrow" />
+
 
 </android.support.constraint.ConstraintLayout>
 
