@@ -31,7 +31,8 @@ public class settings extends AppCompatActivity {
 
     private SharedPreferences levelPreferences;
     private SharedPreferences abilityScorePreferences;
-
+    private int currentAbilityPoint;
+    private int currentBuyPoint;
 
 
 
@@ -52,82 +53,122 @@ public class settings extends AppCompatActivity {
 
         final Spinner lvlDropdown = findViewById(R.id.spinner);
         String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
-        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, lvlDefault);
+        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<String>(this, R.layout.spinner_text_work_bitch, lvlDefault );
         lvlDropdown.setAdapter(lvlDefaultAdapter);
 
         levelPreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String level = levelPreferences.getString("level", "");
         if(level != null)
-            {
-                int spinnerPosition = lvlDefaultAdapter.getPosition(level);
-                lvlDropdown.setSelection(spinnerPosition);
+        {
+            int spinnerPosition = lvlDefaultAdapter.getPosition(level);
+            lvlDropdown.setSelection(spinnerPosition);
 
-            }
+        }
 
 
         lvlDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+        {
+
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
+                SharedPreferences.Editor editor = levelPreferences.edit();
+                editor.putString("level",lvlDropdown.getSelectedItem().toString());
+                Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
+                editor.apply();
+            }
 
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-                    {
-                        SharedPreferences.Editor editor = levelPreferences.edit();
-                        editor.putString("level",lvlDropdown.getSelectedItem().toString());
-                        Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
-                        editor.apply();
-                    }
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                // supposedly this creates a default value
+            }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent)
-                    {
-                        // supposedly this creates a default value
-                    }
-
-            });
+        });
 
         final Spinner abilityScoreChoice = findViewById(R.id.spinner2);
         String[] abilityScoreChoiceOptions = new String[]{"Roll", "Manual", "Point Buy"};
-        ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, abilityScoreChoiceOptions);
+        ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, R.layout.spinner_text_work_bitch, abilityScoreChoiceOptions);
         abilityScoreChoice.setAdapter(abilityScoreChoiceAdapter);
 
         abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this);
         String ability = abilityScorePreferences.getString("abilityScore", "");
         if(ability != null)
-            {
-                int spinnerPosition = abilityScoreChoiceAdapter.getPosition(ability);
-                abilityScoreChoice.setSelection(spinnerPosition);
+        {
+            int spinnerPosition = abilityScoreChoiceAdapter.getPosition(ability);
+            abilityScoreChoice.setSelection(spinnerPosition);
 
-            }
+        }
 
         abilityScoreChoice.setOnItemSelectedListener(new OnItemSelectedListener()
+        {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
             {
-                @Override
-                public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-                    {
-                        SharedPreferences.Editor abilityEditor = abilityScorePreferences.edit();
-                        abilityEditor.putString("abilityScore",abilityScoreChoice.getSelectedItem().toString());
-                        Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
-                        abilityEditor.apply();
-                    }
+                SharedPreferences.Editor abilityEditor = abilityScorePreferences.edit();
+                abilityEditor.putString("abilityScore",abilityScoreChoice.getSelectedItem().toString());
+                Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
+                abilityEditor.apply();
+            }
 
-                @Override
-                public void onNothingSelected(AdapterView<?> parent)
-                    {
-                        // supposedly this creates a default value
-                    }
-            });
-        final TextView pointBuy = findViewById(R.id.textView3);
-        //final Button numberButton = findViewById(R.id.number_button);
-        final TextView abilityPoint = findViewById(R.id.textView4);
-        final String currentPoint = abilityPoint.getText().toString();
-        //  .setText(integer + "")
-
+            @Override
+            public void onNothingSelected(AdapterView<?> parent)
+            {
+                // supposedly this creates a default value
+            }
+        });
+//        final TextView pointBuy = findViewById(R.id.textView3);//27
+//        final Button numberButton = findViewById(R.id.number_button);
+//        final TextView abilityPoint = findViewById(R.id.textView4);//8
+//
+//      //  .setText(integer + "")
 //        numberButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v)
+//            {
+//               currentAbilityPoint = Integer.parseInt(abilityPoint.getText().toString());
+//             currentBuyPoint = Integer.parseInt(pointBuy.getText().toString());
+//
+//                if(currentAbilityPoint >= 13)
+//                {
+//                    if(currentBuyPoint < 2 )
+//                    {
+//                        //throw error
+//
+//                    }
+//                    currentAbilityPoint++;
+//                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
+//                    currentBuyPoint = currentBuyPoint - 2;
+//                    pointBuy.setText(Integer.toString(currentBuyPoint));
+//
+//                }
+//                else if(currentAbilityPoint == 15 || currentBuyPoint == 0  )
 //                {
 //
 //                }
+//                else
+//                {
+//                    currentAbilityPoint++;
+//                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
+//                    currentBuyPoint--;
+//                    pointBuy.setText(Integer.toString(currentBuyPoint));
+//                }
+//
+//
+//
+//            }
 //        });
+
+
+
+//     private void checkSharedPreferences(){
+//            String
+//        }
+
+
+
     }
+
+
+
 }
