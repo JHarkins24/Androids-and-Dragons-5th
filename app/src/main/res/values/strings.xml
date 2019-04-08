@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Swords and Sorcery</string>
+    <string name="insert">Insert Appropriate Value Here</string>
     <string name="welcome">Welcome</string>
     <string name="characterCreation">Character Creation</string>
     <string name="characterSelection">Character \nSelection</string>
@@ -53,6 +54,12 @@
     <string name="item4">Item 4:</string>
     <string name="item5">Item 5:</string>
     <string name="item6">Item 6:</string>
+    <string name="spell1">Spell 1:</string>
+    <string name="spell2">Spell 2:</string>
+    <string name="spell3">Spell 3:</string>
+    <string name="spell4">Spell 4:</string>
+    <string name="spell5">Spell 5:</string>
+    <string name="spell6">Spell 6:</string>
     <string name="actions">Actions In Combat</string>
     <string name="attack">Attack - you make a melee or ranged weapon attack.</string>
     <string name="casting">Casting Spells - You cast a cantrip or a spell of 1st level or higher. See spells casting time</string>

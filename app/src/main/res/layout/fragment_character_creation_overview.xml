@@ -1,16 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/parchment"
+    tools:context=".characterCreationOverview">
 
-    <TextView
-        android:id="@+id/textView"
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:padding="10dp"
-        android:textSize="40sp"
-        android:textStyle="bold"/>
+        android:layout_height="wrap_content"
+        tools:context=".characterCreationOverview">
 
-</android.support.constraint.ConstraintLayout>
+
+        <include
+            layout="@layout/app_bar"
+            android:id="@+id/app_bar">
+        </include>
+
+        <EditText
+            android:id="@+id/characterName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:autofillHints="@string/insert"
+            android:inputType="textPersonName|textCapWords"
+            android:text="@string/character1"
+            app:layout_constraintEnd_toStartOf="@+id/nextButton"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+        <Spinner
+            android:id="@+id/lvl_spinner"
+            android:layout_width="92dp"
+            android:layout_height="33dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="12dp"
+            android:background="@color/dieRed"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+        <Spinner
+            android:id="@+id/fighter"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="164dp"
+            android:background="@color/dieRed"
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/characterName" />
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="88dp"
+            android:layout_height="86dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:backgroundTint="@color/colorAccent"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:tint="@color/colorAccent"
+            app:layout_constraintBottom_toTopOf="@id/lvl_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/next_arrow" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
