@@ -1,57 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/parchment"
-    tools:context=".characterCreationRace">
+    tools:context=".characterCreationClass">
 
-    <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="105dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="612dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:srcCompat="@drawable/d20transparent" />
-
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/Home"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/home_button"
-        app:layout_constraintEnd_toEndOf="@+id/home_button"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="@+id/home_button"
-        app:layout_constraintTop_toTopOf="@+id/home_button"
-        app:layout_constraintVertical_bias="0.531" />
-
-    <Button
-        android:id="@+id/human"
-        android:layout_width="100dp"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/human"
-        app:layout_constraintBottom_toTopOf="@id/home_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+        tools:context=".characterCreationClass">
+
+        <Button
+            android:id="@+id/artificer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/artificer"
+            app:layout_constraintBottom_toTopOf="@id/barbarian"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/barbarian"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/barbarian"
+            app:layout_constraintBottom_toTopOf="@id/bard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/artificer" />
 
 
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/bard"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/bard"
+            app:layout_constraintBottom_toTopOf="@id/cleric"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barbarian" />
+
+        <Button
+            android:id="@+id/cleric"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/cleric"
+            app:layout_constraintBottom_toTopOf="@id/druid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bard" />
+
+        <Button
+            android:id="@+id/druid"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/druid"
+            app:layout_constraintBottom_toTopOf="@id/fighter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cleric" />
+
+        <Button
+            android:id="@+id/fighter"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/fighter"
+            app:layout_constraintBottom_toTopOf="@id/monk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/druid" />
+
+        <Button
+            android:id="@+id/monk"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/monk"
+            app:layout_constraintBottom_toTopOf="@id/mystic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fighter" />
+
+        <Button
+            android:id="@+id/mystic"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/mystic"
+            app:layout_constraintBottom_toTopOf="@id/paladin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/monk" />
+
+        <Button
+            android:id="@+id/paladin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/paladin"
+            app:layout_constraintBottom_toTopOf="@id/ranger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mystic" />
+
+        <Button
+            android:id="@+id/ranger"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/ranger"
+            app:layout_constraintBottom_toTopOf="@id/rogue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paladin" />
+
+        <Button
+            android:id="@+id/rogue"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/rogue"
+            app:layout_constraintBottom_toTopOf="@id/sorcerer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ranger" />
+
+        <Button
+            android:id="@+id/sorcerer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/sorcerer"
+            app:layout_constraintBottom_toTopOf="@id/warlock"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rogue" />
+
+        <Button
+            android:id="@+id/warlock"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/warlock"
+            app:layout_constraintBottom_toTopOf="@id/wizard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sorcerer" />
+
+        <Button
+            android:id="@+id/wizard"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:text="@string/wizard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/warlock" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>
