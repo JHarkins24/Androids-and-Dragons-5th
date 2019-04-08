@@ -21,77 +21,54 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/parchment" />
 
-
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="229dp"
         android:layout_height="41dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="8dp"
         android:background="@color/dieRed"
         android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="229dp"
         android:layout_height="41dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="8dp"
         android:background="@color/dieRed"
         android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="66dp"
+        android:layout_width="256dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="68dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@color/dieRed"
-        android:text="8"
+        android:text="Ability score allocation style"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/spinner2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/number_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/dieRed"
-        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="51dp"
+        android:layout_width="146dp"
         android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="27"
-        android:textSize="24sp"
+        android:layout_marginTop="192dp"
         android:background="@color/dieRed"
-        app:layout_constraintBottom_toTopOf="@+id/number_button"
+        android:text="Default Level"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
