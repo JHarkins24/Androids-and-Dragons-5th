@@ -22,6 +22,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 public class TabFragment extends Fragment {
     int position;
     TextView textView;
+    short bla = 0;
 
     public static Fragment getInstance(int position) {
         Bundle bundle = new Bundle();
@@ -99,8 +100,15 @@ public class TabFragment extends Fragment {
                 String[] fighterOptions = new String[]{"Arcane Archer", "Battlemaster", "Brute", "Cavalier",
                         "Champion", "Eldritch Knight", "Monster Hunter", "Purple Dragon Knight", "Samurai",
                         "Scout", "Sharpshooter"};
+
                 ArrayAdapter<String> fighterAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, fighterOptions);
                 fighter.setAdapter(fighterAdapter);
+                if (bla == 0){
+                    fighter.setVisibility(View.INVISIBLE);
+                }else {
+                    fighter.setVisibility(View.VISIBLE);
+                }
+
 
                 fighter.setOnItemSelectedListener(new OnItemSelectedListener()
                     {
@@ -152,6 +160,7 @@ public class TabFragment extends Fragment {
                 fighterClass.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
+                        bla = 1;
                     }
                 });
                 final Button monk = view.findViewById(R.id.monk);
