@@ -15,11 +15,6 @@ tools:context=".characterCreationClass">
     android:layout_height="wrap_content"
     tools:context=".characterCreationClass">
 
-    <include
-        layout="@layout/app_bar"
-        android:id="@+id/app_bar">
-    </include>
-
     <Button
         android:id="@+id/artificer"
         android:layout_width="100dp"
@@ -31,7 +26,7 @@ tools:context=".characterCreationClass">
         app:layout_constraintBottom_toTopOf="@id/barbarian"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
@@ -203,42 +198,6 @@ tools:context=".characterCreationClass">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/warlock" />
-
-    <ImageButton
-        android:id="@+id/nextButton"
-        android:layout_width="88dp"
-        android:layout_height="86dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/abilityTable"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:layout_constraintVertical_bias="0.472"
-        app:srcCompat="@drawable/next_arrow" />
-
-    <ImageButton
-        android:id="@+id/previousButton"
-        android:layout_width="88dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/abilityTable"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:layout_constraintVertical_bias="0.472"
-        app:srcCompat="@drawable/previous_arrow" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -7,11 +7,6 @@
     android:background="@drawable/parchment"
     tools:context=".characterCreationCharacterView">
 
-    <include
-        layout="@layout/app_bar"
-        android:id="@+id/app_bar">
-    </include>
-
     <ImageButton
         android:id="@+id/home_button"
         android:layout_width="105dp"
@@ -80,24 +75,6 @@
         app:layout_constraintTop_toTopOf="@+id/save_button"
         app:layout_constraintVertical_bias="0.661" />
 
-
-    <ImageButton
-        android:id="@+id/previousButton"
-        android:layout_width="88dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@id/home_button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar"
-        app:layout_constraintVertical_bias="0.063"
-        app:srcCompat="@drawable/previous_arrow" />
 
 
 </android.support.constraint.ConstraintLayout>

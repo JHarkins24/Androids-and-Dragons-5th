@@ -16,12 +16,6 @@
         android:layout_height="wrap_content"
         tools:context=".characterCreationOverview">
 
-
-        <include
-            layout="@layout/app_bar"
-            android:id="@+id/app_bar">
-        </include>
-
         <ImageButton
             android:id="@+id/home_button"
             android:layout_width="105dp"
@@ -64,22 +58,24 @@
             android:layout_marginEnd="8dp"
             android:inputType="textPersonName|textCapWords"
             android:text="@string/character1"
-            app:layout_constraintEnd_toStartOf="@+id/nextButton"
             app:layout_constraintHorizontal_bias="0.041"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+            app:layout_constraintEnd_toStartOf="@id/lvl_spinner"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Spinner
             android:id="@+id/lvl_spinner"
             android:layout_width="92dp"
             android:layout_height="33dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
             android:background="@color/dieRed"
             android:textAlignment="center"
             android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@id/fighter"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/app_bar" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.102" />
 
         <Spinner
             android:id="@+id/fighter"
@@ -96,24 +92,6 @@
             app:layout_constraintHorizontal_bias="0.456"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/characterName" />
-
-        <ImageButton
-            android:id="@+id/nextButton"
-            android:layout_width="88dp"
-            android:layout_height="86dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="8dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:backgroundTint="@color/colorAccent"
-            android:contentDescription="@null"
-            android:scaleType="centerInside"
-            android:tint="@color/colorAccent"
-            app:layout_constraintBottom_toTopOf="@id/lvl_spinner"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/app_bar"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/next_arrow" />
 
 
     </android.support.constraint.ConstraintLayout>
