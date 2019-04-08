@@ -117,6 +117,34 @@ public class settings extends AppCompatActivity {
                 // supposedly this creates a default value
             }
         });
+
+//         <TextView
+//        android:id="@+id/textView2"
+//        android:layout_width="290dp"
+//        android:layout_height="37dp"
+//        android:layout_marginStart="8dp"
+//        android:layout_marginTop="8dp"
+//        android:layout_marginEnd="8dp"
+//        android:layout_marginBottom="8dp"
+//        android:text="Starting Character Level"
+//        android:textSize="24sp"
+//        app:layout_constraintBottom_toTopOf="@+id/imageView"
+//        app:layout_constraintEnd_toEndOf="parent"
+//        app:layout_constraintHorizontal_bias="0.495"
+//        app:layout_constraintStart_toStartOf="parent"
+//        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+//        app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+
+
+
+
+
+
+
 //        final TextView pointBuy = findViewById(R.id.textView3);//27
 //        final Button numberButton = findViewById(R.id.number_button);
 //        final TextView abilityPoint = findViewById(R.id.textView4);//8

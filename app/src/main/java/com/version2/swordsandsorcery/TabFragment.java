@@ -245,7 +245,14 @@ public class TabFragment extends Fragment {
                 });
                 break;
             case 2:
+                final TextView rollType = view.findViewById(R.id.rollType);
+                abilityScorePreferences =  PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String ability = abilityScorePreferences.getString("abilityScore", "");
+                if(ability != null)
+                {
+                    rollType.setText(ability);
 
+                }
                 break;
             case 3:
                 final Button artificer1 = view.findViewById(R.id.artificer);

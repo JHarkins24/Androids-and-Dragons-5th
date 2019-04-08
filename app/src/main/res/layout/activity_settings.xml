@@ -21,6 +21,8 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/parchment" />
 
+
+
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="232dp"
