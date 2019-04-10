@@ -20,7 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_bar">
+        app:layout_constraintTop_toBottomOf="@id/rollType">
 
         <TableRow
             android:layout_width="match_parent"
@@ -132,41 +132,6 @@
             app:layout_constraintTop_toBottomOf="@+id/app_bar" />
 
     </TableLayout>
-
-    <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="105dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987"
-        app:srcCompat="@drawable/d20transparent" />
-
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="73dp"
-        android:layout_height="30dp"
-        android:text="@string/Home"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/home_button"
-        app:layout_constraintEnd_toEndOf="@+id/home_button"
-        app:layout_constraintHorizontal_bias="0.468"
-        app:layout_constraintStart_toStartOf="@+id/home_button"
-        app:layout_constraintTop_toTopOf="@+id/home_button"
-        app:layout_constraintVertical_bias="0.515" />
 
     <TextView
         android:id="@+id/rollType"

@@ -25,7 +25,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/dieRed"
-                app:titleTextColor="@android:color/black"
+                app:titleTextColor="@android:color/white"
                 app:layout_scrollFlags="scroll|enterAlways"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
@@ -34,7 +34,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/black"
-                app:tabTextColor="@color/dieRed"
+                app:tabTextColor="@color/white"
                 app:tabGravity="fill"
                 app:tabMode="fixed" />
         </android.support.design.widget.AppBarLayout>
