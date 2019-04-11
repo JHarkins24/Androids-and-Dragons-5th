@@ -255,16 +255,268 @@ public class TabFragment extends Fragment {
                 }
                 break;
             case 3:
-                final Button artificer1 = view.findViewById(R.id.artificer);
-                artificer1.setOnClickListener(new View.OnClickListener() {
+                final Button aasimar = view.findViewById(R.id.aasimar);
+                aasimar.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button bugbear = view.findViewById(R.id.bugbear);
+                bugbear.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button dragonborn = view.findViewById(R.id.dragonborn);
+                dragonborn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button dwarf = view.findViewById(R.id.dwarf);
+                dwarf.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button elf = view.findViewById(R.id.elf);
+                elf.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button firbolg = view.findViewById(R.id.firbolg);
+                firbolg.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button genasi = view.findViewById(R.id.genasi);
+                genasi.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button gith = view.findViewById(R.id.gith);
+                gith.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button gnome = view.findViewById(R.id.gnome);
+                gnome.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button goblin = view.findViewById(R.id.goblin);
+                goblin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button goliath = view.findViewById(R.id.goliath);
+                goliath.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button hobgoblin = view.findViewById(R.id.hobgoblin);
+                hobgoblin.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button halfElf = view.findViewById(R.id.halfelf);
+                halfElf.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button halfling = view.findViewById(R.id.halfling);
+                halfling.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button halfOrc = view.findViewById(R.id.halforc);
+                halfOrc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button human = view.findViewById(R.id.human);
+                human.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button kenku = view.findViewById(R.id.kenku);
+                kenku.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button kobold = view.findViewById(R.id.kobold);
+                kobold.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button lizardfolk = view.findViewById(R.id.lizardfolk);
+                lizardfolk.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button orc = view.findViewById(R.id.orc);
+                orc.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button tabaxi = view.findViewById(R.id.tabaxi);
+                tabaxi.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button tiefling = view.findViewById(R.id.tiefling);
+                tiefling.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button tortle = view.findViewById(R.id.tortle);
+                tortle.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button triton = view.findViewById(R.id.triton);
+                triton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button yuantiPureblood = view.findViewById(R.id.yuantipureblood);
+                yuantiPureblood.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                     }
                 });
                 break;
             case 4:
-                final Button artificer2 = view.findViewById(R.id.artificer);
-                artificer2.setOnClickListener(new View.OnClickListener() {
+                final Button acolyte = view.findViewById(R.id.acolyte);
+                acolyte.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button charlatan = view.findViewById(R.id.charlatan);
+                charlatan.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button criminal = view.findViewById(R.id.criminal);
+                criminal.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button entertainer = view.findViewById(R.id.entertainer);
+                entertainer.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button folkHero = view.findViewById(R.id.folkHero);
+                folkHero.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button guildArtisan = view.findViewById(R.id.guildArtisan);
+                guildArtisan.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button hermit = view.findViewById(R.id.hermit);
+                hermit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button noble = view.findViewById(R.id.noble);
+                noble.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button outlander = view.findViewById(R.id.outlander);
+                outlander.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button sage = view.findViewById(R.id.sage);
+                sage.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button sailor = view.findViewById(R.id.sailor);
+                sailor.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button soldier = view.findViewById(R.id.soldier);
+                soldier.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+
+                final Button urchin = view.findViewById(R.id.urchin);
+                urchin.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                     }

@@ -16,17 +16,198 @@
         tools:context=".characterCreationClass">
 
         <Button
-            android:id="@+id/artificer"
+            android:id="@+id/acolyte"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:background="@color/dieRed"
-            android:text="@string/artificer"
-            app:layout_constraintBottom_toTopOf="@id/barbarian"
+            android:textColor="@color/white"
+            android:text="@string/acolyte"
+            app:layout_constraintBottom_toTopOf="@id/charlatan"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/charlatan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/charlatan"
+            app:layout_constraintBottom_toTopOf="@id/criminal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/acolyte"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/criminal"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/criminal"
+            app:layout_constraintBottom_toTopOf="@id/entertainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/charlatan"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/entertainer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/entertainer"
+            app:layout_constraintBottom_toTopOf="@id/folkHero"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/criminal"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/folkHero"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/folkHero"
+            app:layout_constraintBottom_toTopOf="@id/guildArtisan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/entertainer"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/guildArtisan"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/guildArtisan"
+            app:layout_constraintBottom_toTopOf="@id/hermit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/folkHero"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/hermit"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/hermit"
+            app:layout_constraintBottom_toTopOf="@id/noble"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/guildArtisan"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/noble"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/noble"
+            app:layout_constraintBottom_toTopOf="@id/outlander"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hermit"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/outlander"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/outlander"
+            app:layout_constraintBottom_toTopOf="@id/sage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/noble"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/sage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/sage"
+            app:layout_constraintBottom_toTopOf="@id/sailor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/outlander"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/sailor"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/sailor"
+            app:layout_constraintBottom_toTopOf="@id/soldier"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sage"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/soldier"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/soldier"
+            app:layout_constraintBottom_toTopOf="@id/urchin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sailor"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <Button
+            android:id="@+id/urchin"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/dieRed"
+            android:textColor="@color/white"
+            android:text="@string/urchin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/soldier"
             app:layout_constraintVertical_chainStyle="packed" />
 
 
