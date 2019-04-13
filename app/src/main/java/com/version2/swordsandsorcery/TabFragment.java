@@ -1,8 +1,13 @@
 package com.version2.swordsandsorcery;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+import java.util.List;
+
+import android.content.Context;
 import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -23,21 +28,26 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
+import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
+import com.version2.swordsandsorcery.Database.CharacterDB;
 
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
+    ArrayList<String> equip = new ArrayList<>();
     private SharedPreferences level2Preferences;
     private SharedPreferences abilityScorePreferences;
+    private SQLiteDatabase characterDatabase;
     int position;
     TextView textView;
     short bla = 0;
-
+    CharacterDB character;
     public static Fragment getInstance(int position) {
         Bundle bundle = new Bundle();
         bundle.putInt("pos", position);
         TabFragment tabFragment = new TabFragment();
         tabFragment.setArguments(bundle);
         return tabFragment;
+
     }
 
     @Override
@@ -150,107 +160,160 @@ public class TabFragment extends Fragment {
                             }
                     });
                 break;
-            case 1:
-                final Button artificer = view.findViewById(R.id.artificer);
-                artificer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                final Button barbarian = view.findViewById(R.id.barbarian);
-                barbarian.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                final Button bard = view.findViewById(R.id.bard);
-                bard.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                final Button cleric = view.findViewById(R.id.cleric);
-                cleric.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                final Button druid = view.findViewById(R.id.druid);
-                druid.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                final Button fighterClass = view.findViewById(R.id.fighter);
-                fighterClass.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        bla = 1;
-                    }
-                });
-                final Button monk = view.findViewById(R.id.monk);
-                monk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
 
-                final Button mystic = view.findViewById(R.id.mystic);
-                mystic.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                case 1:
+                    final Button artificer = view.findViewById(R.id.artificer);
+                    artificer.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button barbarian = view.findViewById(R.id.barbarian);
+                    barbarian.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button bard = view.findViewById(R.id.bard);
+                    bard.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button cleric = view.findViewById(R.id.cleric);
+                    cleric.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button druid = view.findViewById(R.id.druid);
+                    druid.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    final Button fighterClass = view.findViewById(R.id.fighter);
+                    fighterClass.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            bla = 1;
+                        }
+                    });
+                    final Button monk = view.findViewById(R.id.monk);
+                    monk.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button paladin = view.findViewById(R.id.paladin);
-                paladin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                    final Button mystic = view.findViewById(R.id.mystic);
+                    mystic.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button ranger = view.findViewById(R.id.ranger);
-                ranger.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                    final Button paladin = view.findViewById(R.id.paladin);
+                    paladin.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button rogue = view.findViewById(R.id.rogue);
-                rogue.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                    final Button ranger = view.findViewById(R.id.ranger);
+                    ranger.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button sorcerer = view.findViewById(R.id.sorcerer);
-                sorcerer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                    final Button rogue = view.findViewById(R.id.rogue);
+                    rogue.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button warlock = view.findViewById(R.id.warlock);
-                warlock.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
+                    final Button sorcerer = view.findViewById(R.id.sorcerer);
+                    sorcerer.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
 
-                final Button wizard = view.findViewById(R.id.wizard);
-                wizard.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                    }
-                });
-                break;
+                    final Button warlock = view.findViewById(R.id.warlock);
+                    warlock.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+
+                    final Button wizard = view.findViewById(R.id.wizard);
+                    wizard.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                        }
+                    });
+                    break;
             case 2:
-                final TextView rollType = view.findViewById(R.id.rollType);
-                abilityScorePreferences =  PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String ability = abilityScorePreferences.getString("abilityScore", "");
-                if(ability != null)
-                {
-                    rollType.setText(ability);
+
+                        final TextView rollType = view.findViewById(R.id.rollType);
+                    abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                    String ability = abilityScorePreferences.getString("abilityScore", "");
+                    if (ability != null) {
+                        switch(ability)
+                        {
+                            case"Point Buy":
+                                //        final TextView pointBuy = findViewById(R.id.textView3);//27
+                                //        final Button numberButton = findViewById(R.id.number_button);
+                                //        final TextView abilityPoint = findViewById(R.id.textView4);//8
+                                //
+                                //      //  .setText(integer + "")
+                                //        numberButton.setOnClickListener(new View.OnClickListener() {
+                                //            @Override
+                                //            public void onClick(View v)
+                                //            {
+                                //               currentAbilityPoint = Integer.parseInt(abilityPoint.getText().toString());
+                                //             currentBuyPoint = Integer.parseInt(pointBuy.getText().toString());
+                                //
+                                //                if(currentAbilityPoint >= 13)
+                                //                {
+                                //                    if(currentBuyPoint < 2 )
+                                //                    {
+                                //                        //throw error
+                                //
+                                //                    }
+                                //                    currentAbilityPoint++;
+                                //                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
+                                //                    currentBuyPoint = currentBuyPoint - 2;
+                                //                    pointBuy.setText(Integer.toString(currentBuyPoint));
+                                //
+                                //                }
+                                //                else if(currentAbilityPoint == 15 || currentBuyPoint == 0  )
+                                //                {
+                                //
+                                //                }
+                                //                else
+                                //                {
+                                //                    currentAbilityPoint++;
+                                //                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
+                                //                    currentBuyPoint--;
+                                //                    pointBuy.setText(Integer.toString(currentBuyPoint));
+                                //                }
+                                //
+                                //
+                                //
+                                //            }
+                                //        });
+                                break;
+                            case"Manual":
+                                //Write Manual algorithm
+                                break;
+                            case"Roll":
+                                //Write Roll algorithm that calls Roll in CharacaterDB
+
+                                break;
+                        }
 
                 }
                 break;
@@ -527,6 +590,24 @@ public class TabFragment extends Fragment {
             case 6:
                 break;
             case 7:
+
+         final Button save = view.findViewById(R.id.save_button);
+//                equip.add("shield");
+//                equip.add("sword");
+//                equip.add("helmet");
+//                int scores[] = {2,2,2,2,2,2};
+//                character.setAbilityScores(scores);
+//                character.setAlignment("NN");
+//                character.setName("Allstar");
+//                character.setEquipment(equip);
+//                save.setOnClickListener(new View.OnClickListener()
+//                {
+//                    @Override
+//                    public void onClick(View v)
+//                    {
+//                      //  CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+//                    }
+//                });
                 break;
         }
     }

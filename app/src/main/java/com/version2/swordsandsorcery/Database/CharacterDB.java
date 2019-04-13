@@ -22,9 +22,6 @@ import java.lang.Object;
 
 public class CharacterDB {
 
-
-
-
     private String name;
     private String className;
     private String race;
@@ -342,5 +339,36 @@ public class CharacterDB {
                 break;
         }
         return profBonus;
+    }
+    public static final class CharacterTable
+    {
+        public static final String TABLE_NAME = "character";
+
+        public static final class Cols
+        {
+
+            public static final String CLASS_NAME = "className";
+            public static final String RACE = "race";
+            public static final String BACKGROUND = "background";
+            public static final String LVL = "lvl";
+            public static final String  ABILITY_SCORES = "abilityScores";
+            public static final String ITEMS = "items";
+            public static final String SPELLS = "spells";
+            public static final String FEATS = "feats";
+            public static final String EXP = "exp";
+            public static final String HITPOINTS = "hitpoints";
+            public static final String SKILLS_PROFICIENCIES = "skillProficiencies";
+            public static final String MONEY = "money";
+            public static final String ALIGNMENT = "alignment";
+            public static final String ARMOR_CLASS = "armorClass";
+            public static final String SAVING_THROWS = "savingThrows";
+            public static final String LANGUAGES = "languages";
+            public static final String  EQUIPMENT = "equipment";
+            public static final String SPEED = "speed";
+            public static final String INITIATIVE = "initiative";
+            public static final String HIT_DICE = "hitDice";
+            public static final String NAME = "name";
+
+        }
     }
 }
