@@ -33,7 +33,7 @@ import com.version2.swordsandsorcery.Database.CharacterDB;
 
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
-    ArrayList<String> equip = new ArrayList<>();
+    ArrayList<String> equip;
     private SharedPreferences level2Preferences;
     private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
@@ -85,7 +85,8 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        equip = new ArrayList<>();
+        character = new CharacterDB();
 
         switch (position){
             case 0:
@@ -591,23 +592,23 @@ public class TabFragment extends Fragment {
                 break;
             case 7:
 
-         final Button save = view.findViewById(R.id.save_button);
-//                equip.add("shield");
-//                equip.add("sword");
-//                equip.add("helmet");
-//                int scores[] = {2,2,2,2,2,2};
-//                character.setAbilityScores(scores);
-//                character.setAlignment("NN");
-//                character.setName("Allstar");
-//                character.setEquipment(equip);
-//                save.setOnClickListener(new View.OnClickListener()
-//                {
-//                    @Override
-//                    public void onClick(View v)
-//                    {
-//                      //  CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-//                    }
-//                });
+                final ImageButton save = view.findViewById(R.id.save_button);
+                equip.add("shield");
+                equip.add("sword");
+                equip.add("helmet");
+                int scores[] = {2,2,2,2,2,2};
+                character.setAbilityScores(scores);
+                character.setAlignment("NN");
+                character.setName("Allstar");
+                character.setEquipment(equip);
+                save.setOnClickListener(new View.OnClickListener()
+                {
+                    @Override
+                    public void onClick(View v)
+                    {
+                       CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+                    }
+                });
                 break;
         }
     }
