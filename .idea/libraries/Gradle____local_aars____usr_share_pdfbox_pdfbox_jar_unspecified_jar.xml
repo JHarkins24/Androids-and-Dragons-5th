@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="Gradle: __local_aars__:/usr/share/pdfbox/pdfbox.jar:unspecified@jar">
+  <library name="Gradle: __local_aars__:/usr/share/pdfbox.pdfbox.jar:unspecified@jar">
     <CLASSES>
-      <root url="jar:///usr/share/pdfbox/pdfbox.jar!/" />
+      <root url="jar:///usr/share/pdfbox.pdfbox.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
