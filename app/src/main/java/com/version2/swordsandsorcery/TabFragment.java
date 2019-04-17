@@ -37,7 +37,6 @@ import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
-import org.apache.pdfbox.*;
 
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
