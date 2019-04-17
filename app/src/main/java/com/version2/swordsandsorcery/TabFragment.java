@@ -1,6 +1,7 @@
 package com.version2.swordsandsorcery;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -15,6 +16,7 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -53,6 +55,65 @@ public class TabFragment extends Fragment {
         tabFragment.setArguments(bundle);
         return tabFragment;
 
+    }
+
+    private File getPdf(){
+        return null;
+    }
+
+    private File getNewFile(){
+        return null;
+    }
+
+    private void handleExceptions(int i, ImageButton save){
+        switch (i){
+            case 0:
+                try {
+                    makePdf();
+                }catch (IOException ioe){
+                    save.setVisibility(View.INVISIBLE);
+                }
+                break;
+            case 1:
+                System.out.println("hi");
+                break;
+                default:
+                    System.out.println("Bye");
+        }
+    }
+
+    private void makePdf() throws IOException{
+        File oldFile = getPdf();
+        Scanner scanner = new Scanner(oldFile);
+        File file = getNewFile();
+        FileOutputStream fileOutputStream;
+
+        fileOutputStream = new FileOutputStream(file, true);
+        while (scanner.hasNext()) {
+            String line = scanner.nextLine();
+            if (line.contains("~~~name~")) {
+                Scanner lineScanner = new Scanner(line);
+                while (lineScanner.hasNext()) {
+                    byte ch;
+                    while ((ch = lineScanner.nextByte()) != '~') {
+                        fileOutputStream.write(ch);
+                    }
+                    if(lineScanner.nextByte() == '~' && lineScanner.nextByte() == '~'){
+                        int nameLength = character.getName().length();
+                        fileOutputStream.write(character.getName().getBytes());
+                        for (int i = 0; i < nameLength - 3; i++) {
+                            scanner.nextByte();
+                        }
+                        while (scanner.hasNext()){
+                            fileOutputStream.write(scanner.next().getBytes());
+                        }
+                        return;
+                    }
+                }
+            } else {
+                fileOutputStream.write(line.getBytes());
+            }
+        }
     }
 
     @Override
@@ -617,40 +678,8 @@ public class TabFragment extends Fragment {
 
                 });
 
-//                Scanner scanner = new Scanner(System.in);
-//                File file = new File("./character1");
-//                FileOutputStream fileOutputStream;
-//                try {
-//                    fileOutputStream = new FileOutputStream(file, true);
-//                    while (scanner.hasNext()) {
-//                        String line = scanner.nextLine();
-//                        if (line.contains("~~~name~")) {
-//                            Scanner lineScanner = new Scanner(line);
-//                            while (lineScanner.hasNext()) {
-//                                byte ch;
-//                                while ((ch = lineScanner.nextByte()) != '~') {
-//                                    fileOutputStream.write(ch);
-//                                }
-//                                if(lineScanner.nextByte() == '~' && lineScanner.nextByte() == '~'){
-//                                    int nameLength = character.getName().length();
-//                                    for (int i = 0; i < nameLength - 2; i++) {
-//                                        //todo finish this
-//                                    }
-//                                }
-//                            }
-//                        } else {
-//                            fileOutputStream.write(line.getBytes());
-//                        }
-//                    }
-//                }catch (FileNotFoundException fnfe) {
-//                    save.setVisibility(View.INVISIBLE);
-//                    break;
-//                }
-//                catch (IOException ioe){
-//                    save.setVisibility(View.INVISIBLE);
-//                }
-
-
+                handleExceptions(1, save);
+                //todo change to zero to make the pdf thing work
                 break;
         }
     }
