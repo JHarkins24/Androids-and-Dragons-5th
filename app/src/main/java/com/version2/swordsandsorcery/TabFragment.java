@@ -1,9 +1,14 @@
 package com.version2.swordsandsorcery;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Scanner;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -608,7 +613,44 @@ public class TabFragment extends Fragment {
                     {
                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
                     }
+
+
                 });
+
+//                Scanner scanner = new Scanner(System.in);
+//                File file = new File("./character1");
+//                FileOutputStream fileOutputStream;
+//                try {
+//                    fileOutputStream = new FileOutputStream(file, true);
+//                    while (scanner.hasNext()) {
+//                        String line = scanner.nextLine();
+//                        if (line.contains("~~~name~")) {
+//                            Scanner lineScanner = new Scanner(line);
+//                            while (lineScanner.hasNext()) {
+//                                byte ch;
+//                                while ((ch = lineScanner.nextByte()) != '~') {
+//                                    fileOutputStream.write(ch);
+//                                }
+//                                if(lineScanner.nextByte() == '~' && lineScanner.nextByte() == '~'){
+//                                    int nameLength = character.getName().length();
+//                                    for (int i = 0; i < nameLength - 2; i++) {
+//                                        //todo finish this
+//                                    }
+//                                }
+//                            }
+//                        } else {
+//                            fileOutputStream.write(line.getBytes());
+//                        }
+//                    }
+//                }catch (FileNotFoundException fnfe) {
+//                    save.setVisibility(View.INVISIBLE);
+//                    break;
+//                }
+//                catch (IOException ioe){
+//                    save.setVisibility(View.INVISIBLE);
+//                }
+
+
                 break;
         }
     }
