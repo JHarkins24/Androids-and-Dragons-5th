@@ -66,6 +66,7 @@ public class TabFragment extends Fragment {
     }
 
     private void handleExceptions(int i, ImageButton save){
+
         switch (i){
             case 0:
                 try {
