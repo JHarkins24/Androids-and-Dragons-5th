@@ -84,8 +84,10 @@ public class TabFragment extends Fragment {
 
     private void makePdf() throws IOException{
         File oldFile = getPdf();
+        if(oldFile == null) throw new IOException();
         Scanner scanner = new Scanner(oldFile);
         File file = getNewFile();
+        if(file == null) throw new IOException();
         FileOutputStream fileOutputStream;
 
         fileOutputStream = new FileOutputStream(file, true);
@@ -673,12 +675,12 @@ public class TabFragment extends Fragment {
                     public void onClick(View v)
                     {
                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+                       handleExceptions(0, save);
                     }
 
 
                 });
 
-                handleExceptions(1, save);
                 //todo change to zero to make the pdf thing work
                 break;
         }
