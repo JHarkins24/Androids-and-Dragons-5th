@@ -67,7 +67,7 @@ public class TabFragment extends Fragment {
     }
 
     private File getNewFile(){
-        return null;
+        return new File(this.getContext().getFilesDir(), character.getName());
     }
 
     private void handleExceptions(int i, ImageButton save){
@@ -105,7 +105,7 @@ public class TabFragment extends Fragment {
             if (line.contains("~~~name~")) {
                 Scanner lineScanner = new Scanner(line);
                 while (lineScanner.hasNext()) {
-                    byte ch;
+                    byte ch = lineScanner.nextByte();
                     while ((ch = lineScanner.nextByte()) != '~') {
                         fileOutputStream.write(ch);
                     }
