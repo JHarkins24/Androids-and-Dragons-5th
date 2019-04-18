@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -101,28 +102,33 @@ public class TabFragment extends Fragment {
 
         fileOutputStream = new FileOutputStream(file, true);
         while (scanner.hasNext()) {
-            String line = scanner.nextLine();
-            if (line.contains("~~~name~")) {
-                Scanner lineScanner = new Scanner(line);
-                while (lineScanner.hasNext()) {
-                    byte ch = lineScanner.nextByte();
-                    while ((ch = lineScanner.nextByte()) != '~') {
-                        fileOutputStream.write(ch);
-                    }
-                    if(lineScanner.nextByte() == '~' && lineScanner.nextByte() == '~'){
+            String lineString = scanner.nextLine();
+            byte[] line = lineString.getBytes();
+
+            if (lineString.contains("~~~name~")) {
+
+                for (int i = 1; i < line.length; i++){
+
+                    if(line[i] == '~' && line[i+1] == '~' && line[i+2] == '~'){
+
                         int nameLength = character.getName().length();
                         fileOutputStream.write(character.getName().getBytes());
-                        for (int i = 0; i < nameLength - 3; i++) {
-                            scanner.nextByte();
+                        i += character.getName().length();
+
+                        while (i<line.length){
+                            fileOutputStream.write(' ');
+                            i++;
                         }
+
                         while (scanner.hasNext()){
-                            fileOutputStream.write(scanner.next().getBytes());
+                            fileOutputStream.write(scanner.nextLine().getBytes());
                         }
+                        fileOutputStream.close();
                         return;
                     }
                 }
             } else {
-                fileOutputStream.write(line.getBytes());
+                fileOutputStream.write(line);
             }
         }
     }
