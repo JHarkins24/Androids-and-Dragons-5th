@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
@@ -13,6 +14,7 @@ import java.util.Scanner;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
@@ -38,6 +40,8 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
+import org.apache.pdfbox.pdfparser.PDFParser;
+
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
     ArrayList<String> equip;
@@ -57,8 +61,9 @@ public class TabFragment extends Fragment {
 
     }
 
-    private File getPdf(){
-        return null;
+    private InputStream getPdf()throws NullPointerException, IOException{
+        AssetManager assetManager = this.getContext().getAssets();
+        return assetManager.open("currentVersion.pdf");
     }
 
     private File getNewFile(){
@@ -66,12 +71,14 @@ public class TabFragment extends Fragment {
     }
 
     private void handleExceptions(int i, ImageButton save){
-
+        PDFParser.class.getCanonicalName();
         switch (i){
             case 0:
                 try {
                     makePdf();
                 }catch (IOException ioe){
+                    save.setVisibility(View.INVISIBLE);
+                }catch (NullPointerException npe){
                     save.setVisibility(View.INVISIBLE);
                 }
                 break;
@@ -85,7 +92,7 @@ public class TabFragment extends Fragment {
 
     private void makePdf() throws IOException{
 
-        File oldFile = getPdf();
+        InputStream oldFile = getPdf();
         if(oldFile == null) throw new IOException();
         Scanner scanner = new Scanner(oldFile);
         File file = getNewFile();
