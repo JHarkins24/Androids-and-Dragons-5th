@@ -1,27 +1,20 @@
 package com.version2.swordsandsorcery;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -32,10 +25,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
@@ -64,7 +53,7 @@ public class TabFragment extends Fragment {
 
     private InputStream getPdf()throws NullPointerException, IOException{
         AssetManager assetManager = this.getContext().getAssets();
-        return assetManager.open("currentVersion.pdf");
+        return assetManager.open("currentVersion");
     }
 
     private File getNewFile(){
@@ -91,6 +80,12 @@ public class TabFragment extends Fragment {
         }
     }
 
+    private void printBytes(byte[] input, FileOutputStream outputStream) throws IOException{
+        for (byte symbol : input) {
+            outputStream.write((char)symbol);
+        }
+    }
+
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
@@ -98,9 +93,8 @@ public class TabFragment extends Fragment {
         Scanner scanner = new Scanner(oldFile);
         File file = getNewFile();
         if(file == null) throw new IOException();
-        FileOutputStream fileOutputStream;
+        FileOutputStream fileOutputStream = new FileOutputStream(file, true);
 
-        fileOutputStream = new FileOutputStream(file, true);
         while (scanner.hasNext()) {
             String lineString = scanner.nextLine();
             byte[] line = lineString.getBytes();
@@ -112,16 +106,16 @@ public class TabFragment extends Fragment {
                     if(line[i] == '~' && line[i+1] == '~' && line[i+2] == '~'){
 
                         int nameLength = character.getName().length();
-                        fileOutputStream.write(character.getName().getBytes());
+                        printBytes(character.getName().getBytes(), fileOutputStream);
                         i += character.getName().length();
 
                         while (i<line.length){
-                            fileOutputStream.write(' ');
+                            fileOutputStream.write('a');
                             i++;
                         }
 
                         while (scanner.hasNext()){
-                            fileOutputStream.write(scanner.nextLine().getBytes());
+                            printBytes(scanner.nextLine().getBytes(), fileOutputStream);
                         }
                         fileOutputStream.close();
                         return;
