@@ -4,18 +4,26 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.Callable;
 
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.pdf.PdfDocument;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.provider.DocumentFile;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +39,10 @@ import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
 import org.apache.pdfbox.pdfparser.PDFParser;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
+import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
+import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
@@ -56,28 +68,29 @@ public class TabFragment extends Fragment {
         return assetManager.open("currentVersion");
     }
 
-    private File getNewFile(){
-        return new File(this.getContext().getFilesDir(), character.getName());
+    private File getNewFile(String fileName){
+        return new File(this.getContext().getFilesDir(), fileName);
     }
 
     private void handleExceptions(int i, ImageButton save){
         PDFParser.class.getCanonicalName();
-        switch (i){
-            case 0:
-                try {
+
+        try {
+            switch (i) {
+                case 0:
                     makePdf();
-                }catch (IOException ioe){
-                    save.setVisibility(View.INVISIBLE);
-                }catch (NullPointerException npe){
-                    save.setVisibility(View.INVISIBLE);
-                }
-                break;
-            case 1:
-                System.out.println("hi");
-                break;
+                    break;
+                case 1:
+                    makeUsingPdfBox();
+                    break;
                 default:
                     System.out.println("Bye");
-        }
+            }
+        }catch (IOException ioe){
+                save.setVisibility(View.INVISIBLE);
+        }catch (NullPointerException npe){
+                save.setVisibility(View.INVISIBLE);
+            }
     }
 
     private void printBytes(byte[] input, FileOutputStream outputStream) throws IOException{
@@ -91,9 +104,9 @@ public class TabFragment extends Fragment {
         InputStream oldFile = getPdf();
         if(oldFile == null) throw new IOException();
         Scanner scanner = new Scanner(oldFile);
-        File file = getNewFile();
+        File file = getNewFile(character.getName());
         if(file == null) throw new IOException();
-        FileOutputStream fileOutputStream = new FileOutputStream(file, true);
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
 
         while (scanner.hasNext()) {
             String lineString = scanner.nextLine();
@@ -124,6 +137,41 @@ public class TabFragment extends Fragment {
             } else {
                 fileOutputStream.write(line);
             }
+        }
+    }
+
+    private File copyFile(int i)throws IOException{
+        Context context = this.getContext();
+        if(context == null)
+            return null;
+        AssetManager assetManager = context.getAssets();
+        InputStream inputStream = assetManager.open("currentVersion");
+        File file = getNewFile(i==0?character.getName():"copy");
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        int currentChar;
+        while ((currentChar = inputStream.read()) != 0){
+            fileOutputStream.write(currentChar);
+        }
+        fileOutputStream.close();
+        return file;
+    }
+
+    private PDDocument getUsingPdfBox()throws IOException{
+        File pdf;
+        PDDocument document = null;
+        if((pdf = copyFile(1)) != null)
+            document = PDDocument.load(pdf);
+        return document;
+    }
+
+    private void makeUsingPdfBox()throws IOException{
+        PDDocument from = getUsingPdfBox();
+
+        PDDocumentCatalog catalog = from.getDocumentCatalog();
+        PDAcroForm form = catalog.getAcroForm();
+        List itt = form.getFields();
+        for (Object field : itt){
+            System.out.println(((PDField)field).getFullyQualifiedName());
         }
     }
 
@@ -684,7 +732,7 @@ public class TabFragment extends Fragment {
                     public void onClick(View v)
                     {
                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                       handleExceptions(0, save);
+                       handleExceptions(1, save);
                     }
 
 
