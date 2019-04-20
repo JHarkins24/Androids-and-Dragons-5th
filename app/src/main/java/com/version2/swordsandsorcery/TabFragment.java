@@ -149,7 +149,7 @@ public class TabFragment extends Fragment {
         File file = getNewFile(i==0?character.getName():"copy");
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar;
-        while ((currentChar = inputStream.read()) != 0){
+        while ((currentChar = inputStream.read()) != -1){
             fileOutputStream.write(currentChar);
         }
         fileOutputStream.close();
