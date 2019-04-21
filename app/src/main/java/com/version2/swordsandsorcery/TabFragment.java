@@ -20,6 +20,7 @@ import android.content.SharedPreferences;
 import android.content.res.AssetManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.pdf.PdfDocument;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -70,6 +71,7 @@ public class TabFragment extends Fragment {
     }
 
     private File getNewFile(String fileName){
+        //return new File(Environment.getExternalStorageDirectory().getPath() + "/" + fileName);
         return new File(this.getContext().getFilesDir(), fileName);
     }
 
