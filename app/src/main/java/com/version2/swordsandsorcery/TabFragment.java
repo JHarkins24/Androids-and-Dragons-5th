@@ -111,11 +111,12 @@ public class TabFragment extends Fragment {
                 if((currentChar = oldFile.read()) == '~'){
                     if((currentChar = oldFile.read()) == '~'){
                         if((currentChar = oldFile.read()) == 'n'){
-                            for (int i = 0; i < 3; i++) {
+                            for (int i = 0; i < 4; i++) {
                                 oldFile.read();
                             }
                             String name = character.getName();
-                            fileOutputStream.write(name.substring(0, 7).getBytes());
+                            fileOutputStream.write((name.substring(0, 7) + " ").getBytes());
+
                         }else {
                             fileOutputStream.write('~');
                             fileOutputStream.write('~');
