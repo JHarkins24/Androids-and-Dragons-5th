@@ -102,24 +102,29 @@ public class TabFragment extends Fragment {
         }
     }
 
-    private void fillString(FileOutputStream fileOutputStream, String string, int total)throws IOException{
+    private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string, int total, int number)throws IOException{
         int counter = 0;
         for (int i = 0; i < string.length() && counter < total - 1; i++) {
+            inputStream.read();
             fileOutputStream.write((string.charAt(counter)+"").getBytes());
             counter++;
         }
 
-        counter = total - counter;
+        counter = total - counter - 3;
         while (counter != 0){
+            inputStream.read();
             fileOutputStream.write(" ".getBytes());
             counter--;
+        }
+        for (int i = 0; i < 3; i++) {
+            fileOutputStream.write(" ".getBytes());
         }
     }
 
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
-        File file = getNewFile("test");
+        File file = getNewFile("test2");
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar = ',';
         while (currentChar != -1){
@@ -128,9 +133,11 @@ public class TabFragment extends Fragment {
                     //todo fix breaks
                     switch (oldFile.read()){
                         case '1':
-                            fillString(fileOutputStream, character.getName(), 15);
+                            fillString(fileOutputStream, oldFile, character.getName(), 15, 1);
+                            break;
                         case '2':
-                            fillString(fileOutputStream, "class&level", 10);
+                            fillString(fileOutputStream, oldFile, "class", 8, 2);
+                            break;
                             default:
                                 System.out.println("hi");
                     }
