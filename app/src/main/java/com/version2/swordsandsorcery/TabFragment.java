@@ -124,22 +124,24 @@ public class TabFragment extends Fragment {
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
-        File file = getNewFile("test2");
+        File file = getNewFile("test2.pdf");
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar = ',';
         while (currentChar != -1){
             if((currentChar = oldFile.read()) == ','){
                 if((currentChar = oldFile.read()) == ','){
                     //todo fix breaks
-                    switch (oldFile.read()){
+                    int temp;
+                    switch ((temp = oldFile.read())){
                         case '1':
                             fillString(fileOutputStream, oldFile, character.getName(), 15, 1);
                             break;
                         case '2':
-                            fillString(fileOutputStream, oldFile, "class", 8, 2);
+                            fillString(fileOutputStream, oldFile, "class", 9, 2);
                             break;
                             default:
                                 System.out.println("hi");
+                                fileOutputStream.write((",," + (char)temp).getBytes());
                     }
                 }else {
                     fileOutputStream.write(',');
