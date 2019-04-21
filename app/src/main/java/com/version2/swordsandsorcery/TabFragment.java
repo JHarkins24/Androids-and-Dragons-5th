@@ -1,6 +1,7 @@
 package com.version2.swordsandsorcery;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -102,40 +103,36 @@ public class TabFragment extends Fragment {
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
-        if(oldFile == null) throw new IOException();
-        Scanner scanner = new Scanner(oldFile);
         File file = getNewFile(character.getName());
-        if(file == null) throw new IOException();
         FileOutputStream fileOutputStream = new FileOutputStream(file);
-
-        while (scanner.hasNext()) {
-            String lineString = scanner.nextLine();
-            byte[] line = lineString.getBytes();
-
-            if (lineString.contains("~~~name~")) {
-
-                for (int i = 1; i < line.length; i++){
-
-                    if(line[i] == '~' && line[i+1] == '~' && line[i+2] == '~'){
-
-                        int nameLength = character.getName().length();
-                        printBytes(character.getName().getBytes(), fileOutputStream);
-                        i += character.getName().length();
-
-                        while (i<line.length){
-                            fileOutputStream.write('a');
-                            i++;
+        int currentChar;
+        while ((currentChar = oldFile.read()) != -1){
+            if(currentChar == '~'){
+                if((currentChar = oldFile.read()) == '~'){
+                    if((currentChar = oldFile.read()) == '~'){
+                        if((currentChar = oldFile.read()) == 'n'){
+                            for (int i = 0; i < 3; i++) {
+                                oldFile.read();
+                            }
+                            String name = character.getName();
+                            fileOutputStream.write(name.substring(0, 7).getBytes());
+                        }else {
+                            fileOutputStream.write('~');
+                            fileOutputStream.write('~');
+                            fileOutputStream.write('~');
+                            fileOutputStream.write(currentChar);
                         }
-
-                        while (scanner.hasNext()){
-                            printBytes(scanner.nextLine().getBytes(), fileOutputStream);
-                        }
-                        fileOutputStream.close();
-                        return;
+                    }else {
+                        fileOutputStream.write('~');
+                        fileOutputStream.write('~');
+                        fileOutputStream.write(currentChar);
                     }
+                }else {
+                    fileOutputStream.write('~');
+                    fileOutputStream.write(currentChar);
                 }
-            } else {
-                fileOutputStream.write(line);
+            }else {
+                fileOutputStream.write(currentChar);
             }
         }
     }
@@ -732,7 +729,7 @@ public class TabFragment extends Fragment {
                     public void onClick(View v)
                     {
                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                       handleExceptions(1, save);
+                       handleExceptions(0, save);
                     }
 
 
