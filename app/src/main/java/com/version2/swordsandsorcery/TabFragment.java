@@ -102,42 +102,46 @@ public class TabFragment extends Fragment {
         }
     }
 
+    private void fillString(FileOutputStream fileOutputStream, String string, int total)throws IOException{
+        int counter = 0;
+        for (int i = 0; i < string.length() && counter < total - 1; i++) {
+            fileOutputStream.write(string.charAt(counter));
+            counter++;
+        }
+
+        counter = total - counter;
+        while (counter != 0){
+            fileOutputStream.write(' ');
+            counter--;
+        }
+    }
+
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
         File file = getNewFile(character.getName());
         FileOutputStream fileOutputStream = new FileOutputStream(file);
-        int currentChar;
-        while ((currentChar = oldFile.read()) != -1){
-            if(currentChar == '~'){
-                if((currentChar = oldFile.read()) == '~'){
-                    if((currentChar = oldFile.read()) == '~'){
-                        if((currentChar = oldFile.read()) == 'n'){
-                            for (int i = 0; i < 4; i++) {
-                                oldFile.read();
-                            }
-                            String name = character.getName();
-                            fileOutputStream.write((name.substring(0, 7) + " ").getBytes());
-
-                        }else {
-                            fileOutputStream.write('~');
-                            fileOutputStream.write('~');
-                            fileOutputStream.write('~');
-                            fileOutputStream.write(currentChar);
-                        }
-                    }else {
-                        fileOutputStream.write('~');
-                        fileOutputStream.write('~');
-                        fileOutputStream.write(currentChar);
+        int currentChar = ',';
+        while (currentChar != -1){
+            if((currentChar = oldFile.read()) == ','){
+                if((currentChar = oldFile.read()) == ','){
+                    switch (oldFile.read()){
+                        case '1':
+                            fillString(fileOutputStream, character.getName(), 15);
+                        case '2':
+                            fillString(fileOutputStream, "class&level", 10);
+                            default:
+                                System.out.println("hi");
                     }
                 }else {
-                    fileOutputStream.write('~');
+                    fileOutputStream.write(',');
                     fileOutputStream.write(currentChar);
                 }
             }else {
                 fileOutputStream.write(currentChar);
             }
         }
+        fileOutputStream.close();
     }
 
     private File copyFile(int i)throws IOException{
