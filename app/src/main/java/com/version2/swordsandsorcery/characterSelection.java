@@ -25,10 +25,10 @@ public class characterSelection extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
-        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
-        background.setImageResource(imageResource);
-        background.setScaleType(ImageView.ScaleType.FIT_XY);
+//        ImageView background = (ImageView) findViewById(R.id.backgroundImg);
+//        int imageResource = getResources().getIdentifier("@drawable/parchment", null, this.getPackageName());
+//        background.setImageResource(imageResource);
+//        background.setScaleType(ImageView.ScaleType.FIT_XY);
 
         characterCardList = new ArrayList<>();
         cardRecyclerView = (RecyclerView) findViewById(R.id.cardRecyclerView);
