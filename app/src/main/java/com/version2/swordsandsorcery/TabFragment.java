@@ -231,8 +231,11 @@ public class TabFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         equip = new ArrayList<>();
         character = new CharacterDB();
-
+        final ContentValues values = new ContentValues();
+        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+        final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
         switch (position){
+
             case 0: {
                 final Button artificer = view.findViewById(R.id.artificer);
                 artificer.setOnClickListener(new View.OnClickListener() {
@@ -952,9 +955,6 @@ public class TabFragment extends Fragment {
                 break;
             case 6:
 
-                final ContentValues values = new ContentValues();
-                CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener()
                 {
@@ -963,17 +963,16 @@ public class TabFragment extends Fragment {
                     {
                         handleExceptions(0, save);
 
-
-
-
-                        //Inserting test values into the Database
-
+                        //Inserting values into the Database
                         values.put(CharacterDB.CharacterTable.CharactersColumns.NAME, character.getName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.LVL, character.getLvl());
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.BACKGROUND, character.getBackground());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.RACE, character.getRace());
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES, Arrays.toString(character.getAbilityScores()));
+
 
                         //puts all the values into a new row
-
                         characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null , values);
 
                         // all rows are gotten
