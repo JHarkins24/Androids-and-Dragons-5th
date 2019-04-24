@@ -141,7 +141,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="TextView"
+        android:text="Manual"
         android:textColor="@color/dieRed"
         android:textSize="30sp"
         android:textStyle="bold"

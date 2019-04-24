@@ -208,9 +208,9 @@ public class TabFragment extends Fragment {
                     case "Roll":
                         return inflater.inflate(R.layout.fragment_character_creation_ability_scores_roll,container,false);
                     case "Manual":
-                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
+                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
                 }
-                return inflater.inflate(R.layout.fragment_character_creation_ability_scores, container, false);
+                return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
             case 3:
                 return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
             case 4:
