@@ -1,31 +1,16 @@
 package com.version2.swordsandsorcery;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Scanner;
-import java.util.concurrent.Callable;
-
-import android.content.Context;
+import android.content.ContentValues;
 import android.content.SharedPreferences;
-import android.content.res.AssetManager;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.pdf.PdfDocument;
-import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.provider.DocumentFile;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,7 +24,13 @@ import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.List;
+import android.content.Context;
+import android.content.res.AssetManager;
 import org.apache.pdfbox.pdfparser.PDFParser;
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
@@ -404,47 +395,6 @@ public class TabFragment extends Fragment {
                         switch(ability)
                         {
                             case"Point Buy":
-                                //        final TextView pointBuy = findViewById(R.id.textView3);//27
-                                //        final Button numberButton = findViewById(R.id.number_button);
-                                //        final TextView abilityPoint = findViewById(R.id.textView4);//8
-                                //
-                                //      //  .setText(integer + "")
-                                //        numberButton.setOnClickListener(new View.OnClickListener() {
-                                //            @Override
-                                //            public void onClick(View v)
-                                //            {
-                                //               currentAbilityPoint = Integer.parseInt(abilityPoint.getText().toString());
-                                //             currentBuyPoint = Integer.parseInt(pointBuy.getText().toString());
-                                //
-                                //                if(currentAbilityPoint >= 13)
-                                //                {
-                                //                    if(currentBuyPoint < 2 )
-                                //                    {
-                                //                        //throw error
-                                //
-                                //                    }
-                                //                    currentAbilityPoint++;
-                                //                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
-                                //                    currentBuyPoint = currentBuyPoint - 2;
-                                //                    pointBuy.setText(Integer.toString(currentBuyPoint));
-                                //
-                                //                }
-                                //                else if(currentAbilityPoint == 15 || currentBuyPoint == 0  )
-                                //                {
-                                //
-                                //                }
-                                //                else
-                                //                {
-                                //                    currentAbilityPoint++;
-                                //                    abilityPoint.setText(Integer.toString(currentAbilityPoint));
-                                //                    currentBuyPoint--;
-                                //                    pointBuy.setText(Integer.toString(currentBuyPoint));
-                                //                }
-                                //
-                                //
-                                //
-                                //            }
-                                //        });
                                 break;
                             case"Manual":
                                 //Write Manual algorithm
@@ -730,29 +680,37 @@ public class TabFragment extends Fragment {
             case 6:
                 break;
             case 7:
-
                 final ImageButton save = view.findViewById(R.id.save_button);
-                equip.add("shield");
-                equip.add("sword");
-                equip.add("helmet");
-                int scores[] = {2,2,2,2,2,2};
-                character.setAbilityScores(scores);
-                character.setAlignment("NN");
-                character.setName("Allstar");
-                character.setEquipment(equip);
                 save.setOnClickListener(new View.OnClickListener()
                 {
                     @Override
                     public void onClick(View v)
                     {
-                       CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                       handleExceptions(0, save);
+                        handleExceptions(0, save);
+
+                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+                        SQLiteDatabase characterDataBase = helper.getReadableDatabase();
+                        ContentValues values = new ContentValues();
+
+                        //Inserting test values into the Database
+
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.NAME, character.getName());
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.RACE, character.getRace());
+
+                        //puts all the values into a new row
+
+                        characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null , values);
+
+                        // all rows are gotten
+
+                        Cursor AllCharacter = characterDataBase.query(CharacterDB.CharacterTable.TABLE_NAME,null,"1",null,null,null,null);
+                        while (AllCharacter.moveToNext()) {
+                                AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
+                        }
+                        AllCharacter.close();
                     }
-
-
                 });
-
-                //todo change to zero to make the pdf thing work
                 break;
         }
     }
