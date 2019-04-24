@@ -48,6 +48,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6692106e-d9e3-4cde-bd7d-6afb90ab93fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
     </list>
@@ -66,185 +76,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="530" column="71" selection-start-line="530" selection-start-column="71" selection-end-line="530" selection-end-column="71" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11976#12186#0" expanded="true" />
-                <element signature="e#12185#12186#0" expanded="true" />
-                <element signature="e#12310#12519#0" expanded="true" />
-                <element signature="e#12518#12519#0" expanded="true" />
-                <element signature="e#12628#12832#0" expanded="true" />
-                <element signature="e#12831#12832#0" expanded="true" />
-                <element signature="e#12947#13153#0" expanded="true" />
-                <element signature="e#13152#13153#0" expanded="true" />
-                <element signature="e#13265#13470#0" expanded="true" />
-                <element signature="e#13469#13470#0" expanded="true" />
-                <element signature="e#13598#13805#0" expanded="true" />
-                <element signature="e#13804#13805#0" expanded="true" />
-                <element signature="e#13914#14118#0" expanded="true" />
-                <element signature="e#14117#14118#0" expanded="true" />
-                <element signature="e#14234#14440#0" expanded="true" />
-                <element signature="e#14439#14440#0" expanded="true" />
-                <element signature="e#14559#14766#0" expanded="true" />
-                <element signature="e#14765#14766#0" expanded="true" />
-                <element signature="e#14882#15088#0" expanded="true" />
-                <element signature="e#15087#15088#0" expanded="true" />
-                <element signature="e#15201#15406#0" expanded="true" />
-                <element signature="e#15405#15406#0" expanded="true" />
-                <element signature="e#15528#15736#0" expanded="true" />
-                <element signature="e#15735#15736#0" expanded="true" />
-                <element signature="e#15855#16062#0" expanded="true" />
-                <element signature="e#16061#16062#0" expanded="true" />
-                <element signature="e#16178#16384#0" expanded="true" />
-                <element signature="e#16383#16384#0" expanded="true" />
-                <element signature="e#17249#17509#0" expanded="true" />
-                <element signature="e#17508#17509#0" expanded="true" />
-                <element signature="e#17566#17826#0" expanded="true" />
-                <element signature="e#17825#17826#0" expanded="true" />
-                <element signature="e#18137#18397#0" expanded="true" />
-                <element signature="e#18396#18397#0" expanded="true" />
-                <element signature="e#18454#18714#0" expanded="true" />
-                <element signature="e#18713#18714#0" expanded="true" />
-                <element signature="e#19034#19304#0" expanded="true" />
-                <element signature="e#19303#19304#0" expanded="true" />
-                <element signature="e#19361#19630#0" expanded="true" />
-                <element signature="e#19629#19630#0" expanded="true" />
-                <element signature="e#19941#20202#0" expanded="true" />
-                <element signature="e#20201#20202#0" expanded="true" />
-                <element signature="e#20259#20519#0" expanded="true" />
-                <element signature="e#20518#20519#0" expanded="true" />
-                <element signature="e#20830#21090#0" expanded="true" />
-                <element signature="e#21089#21090#0" expanded="true" />
-                <element signature="e#21147#21408#0" expanded="true" />
-                <element signature="e#21407#21408#0" expanded="true" />
-                <element signature="e#21720#21980#0" expanded="true" />
-                <element signature="e#21979#21980#0" expanded="true" />
-                <element signature="e#22037#22297#0" expanded="true" />
-                <element signature="e#22296#22297#0" expanded="true" />
-                <element signature="e#22444#23241#0" expanded="true" />
-                <element signature="e#23240#23241#0" expanded="true" />
-                <element signature="e#24045#24860#0" expanded="true" />
-                <element signature="e#24859#24860#0" expanded="true" />
-                <element signature="e#25292#25494#0" expanded="true" />
-                <element signature="e#25493#25494#0" expanded="true" />
-                <element signature="e#25613#25815#0" expanded="true" />
-                <element signature="e#25814#25815#0" expanded="true" />
-                <element signature="e#25943#26148#0" expanded="true" />
-                <element signature="e#26147#26148#0" expanded="true" />
-                <element signature="e#26261#26461#0" expanded="true" />
-                <element signature="e#26460#26461#0" expanded="true" />
-                <element signature="e#26568#26766#0" expanded="true" />
-                <element signature="e#26765#26766#0" expanded="true" />
-                <element signature="e#26885#27087#0" expanded="true" />
-                <element signature="e#27086#27087#0" expanded="true" />
-                <element signature="e#27203#27404#0" expanded="true" />
-                <element signature="e#27403#27404#0" expanded="true" />
-                <element signature="e#27514#27713#0" expanded="true" />
-                <element signature="e#27712#27713#0" expanded="true" />
-                <element signature="e#27826#28026#0" expanded="true" />
-                <element signature="e#28025#28026#0" expanded="true" />
-                <element signature="e#28142#28343#0" expanded="true" />
-                <element signature="e#28342#28343#0" expanded="true" />
-                <element signature="e#28462#28664#0" expanded="true" />
-                <element signature="e#28663#28664#0" expanded="true" />
-                <element signature="e#28789#28993#0" expanded="true" />
-                <element signature="e#28992#28993#0" expanded="true" />
-                <element signature="e#29112#29314#0" expanded="true" />
-                <element signature="e#29313#29314#0" expanded="true" />
-                <element signature="e#29436#29639#0" expanded="true" />
-                <element signature="e#29638#29639#0" expanded="true" />
-                <element signature="e#29758#29960#0" expanded="true" />
-                <element signature="e#29959#29960#0" expanded="true" />
-                <element signature="e#30073#30273#0" expanded="true" />
-                <element signature="e#30272#30273#0" expanded="true" />
-                <element signature="e#30386#30586#0" expanded="true" />
-                <element signature="e#30585#30586#0" expanded="true" />
-                <element signature="e#30702#30903#0" expanded="true" />
-                <element signature="e#30902#30903#0" expanded="true" />
-                <element signature="e#31031#31236#0" expanded="true" />
-                <element signature="e#31235#31236#0" expanded="true" />
-                <element signature="e#31343#31541#0" expanded="true" />
-                <element signature="e#31540#31541#0" expanded="true" />
-                <element signature="e#31657#31858#0" expanded="true" />
-                <element signature="e#31857#31858#0" expanded="true" />
-                <element signature="e#31980#32183#0" expanded="true" />
-                <element signature="e#32182#32183#0" expanded="true" />
-                <element signature="e#32299#32500#0" expanded="true" />
-                <element signature="e#32499#32500#0" expanded="true" />
-                <element signature="e#32616#32817#0" expanded="true" />
-                <element signature="e#32816#32817#0" expanded="true" />
-                <element signature="e#32960#33170#0" expanded="true" />
-                <element signature="e#33169#33170#0" expanded="true" />
-                <element signature="e#33347#33555#0" expanded="true" />
-                <element signature="e#33554#33555#0" expanded="true" />
-                <element signature="e#33680#33890#0" expanded="true" />
-                <element signature="e#33889#33890#0" expanded="true" />
-                <element signature="e#34012#34221#0" expanded="true" />
-                <element signature="e#34220#34221#0" expanded="true" />
-                <element signature="e#34352#34564#0" expanded="true" />
-                <element signature="e#34563#34564#0" expanded="true" />
-                <element signature="e#34686#34895#0" expanded="true" />
-                <element signature="e#34894#34895#0" expanded="true" />
-                <element signature="e#35029#35242#0" expanded="true" />
-                <element signature="e#35241#35242#0" expanded="true" />
-                <element signature="e#35358#35565#0" expanded="true" />
-                <element signature="e#35564#35565#0" expanded="true" />
-                <element signature="e#35678#35884#0" expanded="true" />
-                <element signature="e#35883#35884#0" expanded="true" />
-                <element signature="e#36009#36219#0" expanded="true" />
-                <element signature="e#36218#36219#0" expanded="true" />
-                <element signature="e#36329#36534#0" expanded="true" />
-                <element signature="e#36533#36534#0" expanded="true" />
-                <element signature="e#36650#36857#0" expanded="true" />
-                <element signature="e#36856#36857#0" expanded="true" />
-                <element signature="e#36976#37184#0" expanded="true" />
-                <element signature="e#37183#37184#0" expanded="true" />
-                <element signature="e#37300#37507#0" expanded="true" />
-                <element signature="e#37506#37507#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#601#602#0" expanded="true" />
-                <element signature="e#661#662#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="554" column="24" lean-forward="true" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2920">
-              <caret line="252" selection-start-line="252" selection-end-line="252" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#7801#7802#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -304,7 +154,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_class.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
@@ -312,6 +161,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_class.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/main_menu.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
       </list>
     </option>
@@ -320,14 +170,12 @@
     <option name="width" value="1920" />
     <option name="height" value="1061" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -338,28 +186,31 @@
             <path>
               <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="swordsandsorcery" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="device.picker.selection" value="Nexus_5X_API_28_x86" />
-    <property name="last_opened_file_path" value="$USER_HOME$/androidProject/Androids-and-Dragons-5th" />
+    <property name="last_opened_file_path" value="$USER_HOME$/mine/Androids-and-Dragons-5th" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.22520107" />
     <property name="project.structure.side.proportion" value="0.2750865" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -652,10 +503,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1061" extended-state="0" />
+    <frame x="0" y="0" width="960" height="1061" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49946865" weight="0.6076923" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49946865" weight="0.27540106" />
       <window_info id="Structure" order="2" sideWeight="0.5005314" side_tool="true" weight="0.23796791" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -666,9 +518,9 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.32943678" />
-      <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
-      <window_info anchor="bottom" id="Build" order="5" weight="0.32412326" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49946523" weight="0.32943678" />
+      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5005348" side_tool="true" weight="0.32943678" />
+      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49893048" weight="0.32412326" />
       <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.32731137" />
@@ -710,6 +562,10 @@
     </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$USER_HOME$/tempMine/Androids-and-Dragons-5th" />
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="updates made" />
     <MESSAGE value="update" />
     <MESSAGE value="fixed settings" />
@@ -738,293 +594,40 @@
     <option name="LAST_COMMIT_MESSAGE" value="copied over base helper" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/rulesHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_menu.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="51" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_selection.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/statusEffectsHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_ability_scores.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="215" column="46" lean-forward="true" selection-end-line="215" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_background.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="82" column="41" lean-forward="true" selection-end-line="96" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_race.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="78" column="16" lean-forward="true" selection-end-line="98" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_spells.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" lean-forward="true" selection-end-line="63" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_character_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="834">
-          <caret line="69" column="13" lean-forward="true" selection-end-line="85" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="57" column="11" lean-forward="true" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationRace.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationItems.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationCharacterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="52" column="11" lean-forward="true" selection-start-line="37" selection-start-column="8" selection-end-line="52" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_items.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="214" column="44" selection-start-line="214" selection-start-column="8" selection-end-line="214" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_rules_help.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3842">
-          <caret line="226" column="57" lean-forward="true" selection-start-line="226" selection-start-column="57" selection-end-line="226" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_status_effects_help.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1700">
-          <caret line="100" column="13" lean-forward="true" selection-start-line="100" selection-start-column="13" selection-end-line="100" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_overview.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_items.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="37" lean-forward="true" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_spells.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1399">
-          <caret line="32" column="41" lean-forward="true" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_class.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="209" column="40" selection-start-line="209" selection-start-column="40" selection-end-line="209" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="191" column="59" selection-start-line="191" selection-start-column="59" selection-end-line="191" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="83" column="42" selection-start-line="83" selection-start-column="42" selection-end-line="83" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_background.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_race.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_spells.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_character_view.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationClass.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationRace.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationItems.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationCharacterView.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_items.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_help.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_rules_help.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_status_effects_help.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_overview.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_items.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_spells.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_settings.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/app_bar.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_class.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_background.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_race.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/values/strings.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterHelper.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationBackground.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationAbilityScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationBackground.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationAbilityScores.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/formulaProcessor.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1140">
-          <caret line="76" selection-start-line="76" selection-end-line="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_text_work_bitch.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterLab.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_class.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_view.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/spinner_text_work_bitch.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterLab.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_class.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/settings.java" />
+    <entry file="file://$PROJECT_DIR$/../app/build.gradle" />
     <entry file="jar:///usr/share/pdfbox/pdfbox.jar!/org/apache/pdfbox/pdfparser/PDFParser.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1039,21 +642,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/app/libs/pdfbox.jar!/org/apache/pdfbox/pdmodel/PDDocument.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="820" column="52" lean-forward="true" selection-start-line="820" selection-start-column="52" selection-end-line="820" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$PROJECT_DIR$/../app/libs/pdfbox.jar!/org/apache/pdfbox/pdmodel/PDDocument.class" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_overview.xml" />
     <entry file="file://$USER_HOME$/.androidsdk/sources/android-28/android/content/res/AssetManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -1068,191 +658,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/main_menu.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_ability_scores.xml" />
+    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_background.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/main_menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="530" column="71" selection-start-line="530" selection-start-column="71" selection-end-line="530" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#11976#12186#0" expanded="true" />
-            <element signature="e#12185#12186#0" expanded="true" />
-            <element signature="e#12310#12519#0" expanded="true" />
-            <element signature="e#12518#12519#0" expanded="true" />
-            <element signature="e#12628#12832#0" expanded="true" />
-            <element signature="e#12831#12832#0" expanded="true" />
-            <element signature="e#12947#13153#0" expanded="true" />
-            <element signature="e#13152#13153#0" expanded="true" />
-            <element signature="e#13265#13470#0" expanded="true" />
-            <element signature="e#13469#13470#0" expanded="true" />
-            <element signature="e#13598#13805#0" expanded="true" />
-            <element signature="e#13804#13805#0" expanded="true" />
-            <element signature="e#13914#14118#0" expanded="true" />
-            <element signature="e#14117#14118#0" expanded="true" />
-            <element signature="e#14234#14440#0" expanded="true" />
-            <element signature="e#14439#14440#0" expanded="true" />
-            <element signature="e#14559#14766#0" expanded="true" />
-            <element signature="e#14765#14766#0" expanded="true" />
-            <element signature="e#14882#15088#0" expanded="true" />
-            <element signature="e#15087#15088#0" expanded="true" />
-            <element signature="e#15201#15406#0" expanded="true" />
-            <element signature="e#15405#15406#0" expanded="true" />
-            <element signature="e#15528#15736#0" expanded="true" />
-            <element signature="e#15735#15736#0" expanded="true" />
-            <element signature="e#15855#16062#0" expanded="true" />
-            <element signature="e#16061#16062#0" expanded="true" />
-            <element signature="e#16178#16384#0" expanded="true" />
-            <element signature="e#16383#16384#0" expanded="true" />
-            <element signature="e#17249#17509#0" expanded="true" />
-            <element signature="e#17508#17509#0" expanded="true" />
-            <element signature="e#17566#17826#0" expanded="true" />
-            <element signature="e#17825#17826#0" expanded="true" />
-            <element signature="e#18137#18397#0" expanded="true" />
-            <element signature="e#18396#18397#0" expanded="true" />
-            <element signature="e#18454#18714#0" expanded="true" />
-            <element signature="e#18713#18714#0" expanded="true" />
-            <element signature="e#19034#19304#0" expanded="true" />
-            <element signature="e#19303#19304#0" expanded="true" />
-            <element signature="e#19361#19630#0" expanded="true" />
-            <element signature="e#19629#19630#0" expanded="true" />
-            <element signature="e#19941#20202#0" expanded="true" />
-            <element signature="e#20201#20202#0" expanded="true" />
-            <element signature="e#20259#20519#0" expanded="true" />
-            <element signature="e#20518#20519#0" expanded="true" />
-            <element signature="e#20830#21090#0" expanded="true" />
-            <element signature="e#21089#21090#0" expanded="true" />
-            <element signature="e#21147#21408#0" expanded="true" />
-            <element signature="e#21407#21408#0" expanded="true" />
-            <element signature="e#21720#21980#0" expanded="true" />
-            <element signature="e#21979#21980#0" expanded="true" />
-            <element signature="e#22037#22297#0" expanded="true" />
-            <element signature="e#22296#22297#0" expanded="true" />
-            <element signature="e#22444#23241#0" expanded="true" />
-            <element signature="e#23240#23241#0" expanded="true" />
-            <element signature="e#24045#24860#0" expanded="true" />
-            <element signature="e#24859#24860#0" expanded="true" />
-            <element signature="e#25292#25494#0" expanded="true" />
-            <element signature="e#25493#25494#0" expanded="true" />
-            <element signature="e#25613#25815#0" expanded="true" />
-            <element signature="e#25814#25815#0" expanded="true" />
-            <element signature="e#25943#26148#0" expanded="true" />
-            <element signature="e#26147#26148#0" expanded="true" />
-            <element signature="e#26261#26461#0" expanded="true" />
-            <element signature="e#26460#26461#0" expanded="true" />
-            <element signature="e#26568#26766#0" expanded="true" />
-            <element signature="e#26765#26766#0" expanded="true" />
-            <element signature="e#26885#27087#0" expanded="true" />
-            <element signature="e#27086#27087#0" expanded="true" />
-            <element signature="e#27203#27404#0" expanded="true" />
-            <element signature="e#27403#27404#0" expanded="true" />
-            <element signature="e#27514#27713#0" expanded="true" />
-            <element signature="e#27712#27713#0" expanded="true" />
-            <element signature="e#27826#28026#0" expanded="true" />
-            <element signature="e#28025#28026#0" expanded="true" />
-            <element signature="e#28142#28343#0" expanded="true" />
-            <element signature="e#28342#28343#0" expanded="true" />
-            <element signature="e#28462#28664#0" expanded="true" />
-            <element signature="e#28663#28664#0" expanded="true" />
-            <element signature="e#28789#28993#0" expanded="true" />
-            <element signature="e#28992#28993#0" expanded="true" />
-            <element signature="e#29112#29314#0" expanded="true" />
-            <element signature="e#29313#29314#0" expanded="true" />
-            <element signature="e#29436#29639#0" expanded="true" />
-            <element signature="e#29638#29639#0" expanded="true" />
-            <element signature="e#29758#29960#0" expanded="true" />
-            <element signature="e#29959#29960#0" expanded="true" />
-            <element signature="e#30073#30273#0" expanded="true" />
-            <element signature="e#30272#30273#0" expanded="true" />
-            <element signature="e#30386#30586#0" expanded="true" />
-            <element signature="e#30585#30586#0" expanded="true" />
-            <element signature="e#30702#30903#0" expanded="true" />
-            <element signature="e#30902#30903#0" expanded="true" />
-            <element signature="e#31031#31236#0" expanded="true" />
-            <element signature="e#31235#31236#0" expanded="true" />
-            <element signature="e#31343#31541#0" expanded="true" />
-            <element signature="e#31540#31541#0" expanded="true" />
-            <element signature="e#31657#31858#0" expanded="true" />
-            <element signature="e#31857#31858#0" expanded="true" />
-            <element signature="e#31980#32183#0" expanded="true" />
-            <element signature="e#32182#32183#0" expanded="true" />
-            <element signature="e#32299#32500#0" expanded="true" />
-            <element signature="e#32499#32500#0" expanded="true" />
-            <element signature="e#32616#32817#0" expanded="true" />
-            <element signature="e#32816#32817#0" expanded="true" />
-            <element signature="e#32960#33170#0" expanded="true" />
-            <element signature="e#33169#33170#0" expanded="true" />
-            <element signature="e#33347#33555#0" expanded="true" />
-            <element signature="e#33554#33555#0" expanded="true" />
-            <element signature="e#33680#33890#0" expanded="true" />
-            <element signature="e#33889#33890#0" expanded="true" />
-            <element signature="e#34012#34221#0" expanded="true" />
-            <element signature="e#34220#34221#0" expanded="true" />
-            <element signature="e#34352#34564#0" expanded="true" />
-            <element signature="e#34563#34564#0" expanded="true" />
-            <element signature="e#34686#34895#0" expanded="true" />
-            <element signature="e#34894#34895#0" expanded="true" />
-            <element signature="e#35029#35242#0" expanded="true" />
-            <element signature="e#35241#35242#0" expanded="true" />
-            <element signature="e#35358#35565#0" expanded="true" />
-            <element signature="e#35564#35565#0" expanded="true" />
-            <element signature="e#35678#35884#0" expanded="true" />
-            <element signature="e#35883#35884#0" expanded="true" />
-            <element signature="e#36009#36219#0" expanded="true" />
-            <element signature="e#36218#36219#0" expanded="true" />
-            <element signature="e#36329#36534#0" expanded="true" />
-            <element signature="e#36533#36534#0" expanded="true" />
-            <element signature="e#36650#36857#0" expanded="true" />
-            <element signature="e#36856#36857#0" expanded="true" />
-            <element signature="e#36976#37184#0" expanded="true" />
-            <element signature="e#37183#37184#0" expanded="true" />
-            <element signature="e#37300#37507#0" expanded="true" />
-            <element signature="e#37506#37507#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2920">
-          <caret line="252" selection-start-line="252" selection-end-line="252" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7801#7802#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="600">
+          <caret line="554" column="24" lean-forward="true" selection-start-line="554" selection-start-column="24" selection-end-line="554" selection-end-column="24" />
         </state>
       </provider>
     </entry>
