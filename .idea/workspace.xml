@@ -5,52 +5,9 @@
       <config />
     </shared>
   </component>
-  <component name="AvailableLibraryUpdateStorage">
-    <library-updates>
-      <library-update>
-        <group-id>com.android.support</group-id>
-        <name>appcompat-v7</name>
-        <version>28.0.0</version>
-        <repository>Google</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.android.support</group-id>
-        <name>design</name>
-        <version>28.0.0</version>
-        <repository>Google</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.android.support.constraint</group-id>
-        <name>constraint-layout</name>
-        <version>2.0.0-alpha4</version>
-        <repository>Google</repository>
-      </library-update>
-      <library-update>
-        <group-id>junit</group-id>
-        <name>junit</name>
-        <version>4.13-beta-2</version>
-        <repository>JCenter</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.android.support.test</group-id>
-        <name>runner</name>
-        <version>1.0.2</version>
-        <repository>Google</repository>
-      </library-update>
-      <library-update>
-        <group-id>com.android.support.test.espresso</group-id>
-        <name>espresso-core</name>
-        <version>3.0.2</version>
-        <repository>Google</repository>
-      </library-update>
-    </library-updates>
-    <last-search-timestamp>1555537164023</last-search-timestamp>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="6692106e-d9e3-4cde-bd7d-6afb90ab93fb" name="Default Changelist" comment="">
+    <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,34 +24,57 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_selection.xml">
+          <provider editor-type-id="android-designer2" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1003">
+              <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml">
+          <provider editor-type-id="android-designer2" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="972" lean-forward="true" selection-start-line="972" selection-end-line="972" />
+            <state relative-caret-position="255">
+              <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterCard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
+            <state relative-caret-position="476">
+              <caret line="43" selection-start-line="43" selection-end-line="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterSelection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -107,107 +87,58 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>-1</find>
-      <find>case</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/menu.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardRecycler.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterCard.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterSelection.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_ability_scores.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_background.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_character_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_items.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_race.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_spells.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationSpells.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationRace.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationItems.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationClass.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationCharacterView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationBackground.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationAbilityScores.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/statusEffectsHelp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/rulesHelp.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_selection.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/settings.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_rules_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_status_effects_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_overview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_items.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_spells.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterLab.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_class.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/main_menu.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_class.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-109" />
-    <option name="y" value="42" />
-    <option name="width" value="1920" />
-    <option name="height" value="994" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
-              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
-              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
-              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="swordsandsorcery" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
             <path>
-              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
-              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
@@ -216,22 +147,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="app" />
+    <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="Pixel_2_API_23" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive/Desktop" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.22520107" />
-    <property name="project.structure.side.proportion" value="0.2750865" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/assets" />
-      <recent name="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/dictionary" />
-    </key>
+    <property name="device.picker.selection" value="Nexus_5X_API_28" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -312,479 +238,153 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="6692106e-d9e3-4cde-bd7d-6afb90ab93fb" name="Default Changelist" comment="" />
-      <created>1554672239230</created>
+      <changelist id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="" />
+      <created>1555886909463</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1554672239230</updated>
+      <updated>1555886909463</updated>
     </task>
-    <task id="LOCAL-00001" summary="added all the tabs and fixed button and page conflicts">
-      <created>1554677427862</created>
+    <task id="LOCAL-00001" summary="still debugging, currently crashing">
+      <created>1555904808102</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1554677427862</updated>
+      <updated>1555904808103</updated>
     </task>
-    <task id="LOCAL-00002" summary="changed java code might need to revert back later">
-      <created>1554684278747</created>
+    <task id="LOCAL-00002" summary="still debugging, currently crashing">
+      <created>1555906062650</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1554684278747</updated>
+      <updated>1555906062650</updated>
     </task>
-    <task id="LOCAL-00003" summary="colors and spacing is fixed across various pages. Updated pages to have the next and previous buttons and fixed the help screens.">
-      <created>1554710292753</created>
+    <task id="LOCAL-00003" summary="created static cards for character selection, design things need to be adjusted for cosmetic changes">
+      <created>1555974074474</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1554710292753</updated>
+      <updated>1555974074474</updated>
     </task>
-    <task id="LOCAL-00004" summary="updates made">
-      <created>1554712537541</created>
+    <task id="LOCAL-00004" summary="working on cosmetic changes">
+      <created>1555974987884</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1554712537542</updated>
+      <updated>1555974987884</updated>
     </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1554750906995</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1554750906995</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fixed settings">
-      <created>1554751375083</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1554751375083</updated>
-    </task>
-    <task id="LOCAL-00007" summary="fixed overview">
-      <created>1554751825363</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1554751825363</updated>
-    </task>
-    <task id="LOCAL-00008" summary="integrated settings">
-      <created>1554757145921</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1554757145921</updated>
-    </task>
-    <task id="LOCAL-00009" summary="integrated settings to overView">
-      <created>1554758615245</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1554758615245</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added buttons for every race and background">
-      <created>1554971735062</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1554971735062</updated>
-    </task>
-    <task id="LOCAL-00011" summary="finished pdf writer not counting fileio">
-      <created>1555533838503</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1555533838503</updated>
-    </task>
-    <task id="LOCAL-00012" summary="implimented">
-      <created>1555536478073</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1555536478073</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added pdf libraries">
-      <created>1555538282442</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1555538282442</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added pdf to app/src/main/java/com/version2/swordsandsorcery/dictionary">
-      <created>1555538712326</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1555538712326</updated>
-    </task>
-    <task id="LOCAL-00015" summary="pdf library is finally available">
-      <created>1555542840504</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1555542840504</updated>
-    </task>
-    <task id="LOCAL-00016" summary="getting closer">
-      <created>1555554657811</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1555554657811</updated>
-    </task>
-    <task id="LOCAL-00017" summary="almost working, error on line 108">
-      <created>1555555966730</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1555555966730</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Working, but the output is wrong">
-      <created>1555559614523</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1555559614523</updated>
-    </task>
-    <task id="LOCAL-00019" summary="changed many things">
-      <created>1555563188423</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1555563188423</updated>
-    </task>
-    <task id="LOCAL-00020" summary="integrating pdf box">
-      <created>1555623212726</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1555623212726</updated>
-    </task>
-    <task id="LOCAL-00021" summary="copyfile fix">
-      <created>1555734965781</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1555734965782</updated>
-    </task>
-    <task id="LOCAL-00022" summary="successfully makes pdf and sets name!!!">
-      <created>1555812495601</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1555812495601</updated>
-    </task>
-    <task id="LOCAL-00023" summary="added comment to impliment once I figure out permissions">
-      <created>1555816196491</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1555816196491</updated>
-    </task>
-    <task id="LOCAL-00024" summary="applying the switch statement">
-      <created>1555830030627</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1555830030627</updated>
-    </task>
-    <task id="LOCAL-00025" summary="added todo">
-      <created>1555831120033</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1555831120033</updated>
-    </task>
-    <task id="LOCAL-00026" summary="almost working QQ">
-      <created>1555879125601</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1555879125601</updated>
-    </task>
-    <task id="LOCAL-00027" summary="merged Joe&amp;Spencer">
-      <created>1556068360197</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1556068360198</updated>
-    </task>
-    <task id="LOCAL-00028" summary="copied over base helper">
-      <created>1556068585784</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1556068585784</updated>
-    </task>
-    <task id="LOCAL-00029" summary="re-merged from pierre">
-      <created>1556074648489</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1556074648489</updated>
-    </task>
-    <task id="LOCAL-00030" summary="removed overview">
-      <created>1556078305526</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1556078305526</updated>
-    </task>
-    <option name="localTasksCounter" value="31" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49946865" visible="true" weight="0.29731545" />
-      <window_info id="Structure" order="2" sideWeight="0.5005314" side_tool="true" weight="0.23796791" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11673774" />
+      <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
       <window_info id="Image Layers" order="5" />
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
-      <window_info id="Resources Explorer" order="8" weight="0.32994652" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info id="Resources Explorer" order="8" weight="0.16044776" />
+      <window_info anchor="bottom" id="Run" order="0" />
       <window_info anchor="bottom" id="Logcat" order="1" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49946523" weight="0.32943678" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5005348" side_tool="true" weight="0.32943678" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49893048" visible="true" weight="0.32294616" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.32731137" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.32968238" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.3409396" />
+      <window_info anchor="bottom" id="Debug" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="4" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="5" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32827735" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.32962668" />
+      <window_info anchor="right" id="Preview" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Assistant" order="6" weight="0.3295302" />
+      <window_info anchor="right" id="Assistant" order="6" show_stripe_button="false" weight="0.32932165" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49946865" visible="true" weight="0.27439025" />
-      <window_info id="Structure" order="2" sideWeight="0.5005314" side_tool="true" weight="0.23796791" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Build Variants" order="4" side_tool="true" />
-      <window_info id="Image Layers" order="5" />
-      <window_info id="Designer" order="6" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Resources Explorer" order="8" weight="0.32994652" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Logcat" order="1" />
-      <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49946523" weight="0.32943678" />
-      <window_info anchor="bottom" id="Event Log" order="4" sideWeight="0.5005348" side_tool="true" weight="0.32943678" />
-      <window_info anchor="bottom" id="Build" order="5" sideWeight="0.49893048" weight="0.32357043" />
-      <window_info anchor="bottom" id="Android Profiler" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.32943678" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.32731137" />
-      <window_info anchor="bottom" id="Find" order="9" weight="0.32968238" />
-      <window_info anchor="bottom" id="Messages" order="10" />
-      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.07754011" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="right" id="Gradle" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.32962668" />
-      <window_info anchor="right" id="Palette&#9;" order="5" />
-      <window_info anchor="right" id="Assistant" order="6" weight="0.32994652" />
-    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$USER_HOME$/tempMine/Androids-and-Dragons-5th" />
-      <path value="$PROJECT_DIR$/.." />
-    </ignored-roots>
-    <MESSAGE value="fixed settings" />
-    <MESSAGE value="fixed overview" />
-    <MESSAGE value="integrated settings" />
-    <MESSAGE value="integrated settings to overView" />
-    <MESSAGE value="added buttons for every race and background" />
-    <MESSAGE value="finished pdf writer not counting fileio" />
-    <MESSAGE value="implimented" />
-    <MESSAGE value="added pdf libraries" />
-    <MESSAGE value="added pdf to app/src/main/java/com/version2/swordsandsorcery/dictionary" />
-    <MESSAGE value="pdf library is finally available" />
-    <MESSAGE value="getting closer" />
-    <MESSAGE value="almost working, error on line 108" />
-    <MESSAGE value="Working, but the output is wrong" />
-    <MESSAGE value="changed many things" />
-    <MESSAGE value="integrating pdf box" />
-    <MESSAGE value="copyfile fix" />
-    <MESSAGE value="successfully makes pdf and sets name!!!" />
-    <MESSAGE value="added comment to impliment once I figure out permissions" />
-    <MESSAGE value="applying the switch statement" />
-    <MESSAGE value="added todo" />
-    <MESSAGE value="almost working QQ" />
-    <MESSAGE value="merged Joe&amp;Spencer" />
-    <MESSAGE value="copied over base helper" />
-    <MESSAGE value="re-merged from pierre" />
-    <MESSAGE value="removed overview" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed overview" />
+    <MESSAGE value="still debugging, currently crashing" />
+    <MESSAGE value="created static cards for character selection, design things need to be adjusted for cosmetic changes" />
+    <MESSAGE value="working on cosmetic changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on cosmetic changes" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_class.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_background.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_race.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/values/strings.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterHelper.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationBackground.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/characterCreationAbilityScores.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/formulaProcessor.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/AndroidManifest.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_view.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/spinner_text_work_bitch.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterLab.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_class.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/settings.java" />
-    <entry file="file://$PROJECT_DIR$/../app/build.gradle" />
-    <entry file="jar:///usr/share/pdfbox/pdfbox.jar!/org/apache/pdfbox/pdfparser/PDFParser.class" />
-    <entry file="file://$USER_HOME$/.androidsdk/sources/android-28/android/view/View.java" />
-    <entry file="jar://$PROJECT_DIR$/../app/libs/pdfbox.jar!/org/apache/pdfbox/pdmodel/PDDocument.class" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_character_creation_overview.xml" />
-    <entry file="file://$USER_HOME$/.androidsdk/sources/android-28/android/content/res/AssetManager.java" />
-    <entry file="file://$USER_HOME$/.androidsdk/sources/android-28/android/os/Looper.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/activity_main.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/main_menu.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/res/layout/fragment_character_creation_ability_scores.xml" />
-    <entry file="file://$PROJECT_DIR$/../app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_background.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5015">
-          <caret line="295" selection-start-line="295" selection-end-line="295" />
+        <state relative-caret-position="364">
+          <caret line="29" column="54" lean-forward="true" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml">
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+        <state relative-caret-position="323">
+          <caret line="60" column="54" selection-start-line="59" selection-start-column="29" selection-end-line="60" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_spells.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="62" column="30" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main_menu.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_overview.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="44" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_class.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="306">
+          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_selection.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58" />
+        <state relative-caret-position="527">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_text_work_bitch.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml">
       <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/main_menu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="72" selection-start-line="7" selection-start-column="72" selection-end-line="7" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="972" lean-forward="true" selection-start-line="972" selection-end-line="972" />
+        <state relative-caret-position="255">
+          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
         </state>
       </provider>
     </entry>
