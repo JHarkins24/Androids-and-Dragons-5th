@@ -102,23 +102,27 @@ public class TabFragment extends Fragment {
         }
     }
 
-    private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string, int total, int number)throws IOException{
-        int counter = 0;
-        for (int i = 0; i < string.length() && counter < total - 1; i++) {
-            inputStream.read();
-            fileOutputStream.write((string.charAt(counter)+"").getBytes());
-            counter++;
+    private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string)throws IOException{
+        int tilde = '~';
+        int current = 0;
+        for (int i = 0; i < string.length() && i < 3; i++) {
+            fileOutputStream.write((string.charAt(i)+"").getBytes());
+        }
+        for (int i = 3; i < string.length() && current != '~'; i++) {
+            current = inputStream.read();
+            fileOutputStream.write((string.charAt(i)+"").getBytes());
         }
 
-        counter = total - counter - 3;
-        while (counter != 0){
-            inputStream.read();
-            fileOutputStream.write(" ".getBytes());
-            counter--;
+        while (current != '~'){
+            current = inputStream.read();
+            fileOutputStream.write(' ');
         }
-        for (int i = 0; i < 3; i++) {
-            fileOutputStream.write(" ".getBytes());
-        }
+    }
+
+    private void fillSmallerString(FileOutputStream fileOutputStream, char character) throws IOException{
+        fileOutputStream.write(' ');
+        fileOutputStream.write(character);
+        fileOutputStream.write(' ');
     }
 
     private void makePdf() throws IOException{
@@ -134,10 +138,10 @@ public class TabFragment extends Fragment {
                     int temp;
                     switch ((temp = oldFile.read())){
                         case '1':
-                            fillString(fileOutputStream, oldFile, character.getName(), 15, 1);
+                            fillString(fileOutputStream, oldFile, character.getName());
                             break;
                         case '2':
-                            fillString(fileOutputStream, oldFile, "class", 9, 2);
+                            fillString(fileOutputStream, oldFile, "13");
                             break;
                             default:
                                 System.out.println("hi");
