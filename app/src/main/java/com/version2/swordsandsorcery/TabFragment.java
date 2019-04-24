@@ -105,8 +105,12 @@ public class TabFragment extends Fragment {
     private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string)throws IOException{
         int tilde = '~';
         int current = 0;
-        for (int i = 0; i < string.length() && i < 3; i++) {
-            fileOutputStream.write((string.charAt(i)+"").getBytes());
+        for (int i = 0;i < 3; i++) {
+            if(i < string.length()) {
+                fileOutputStream.write((string.charAt(i) + "").getBytes());
+            }else {
+                fileOutputStream.write(' ');
+            }
         }
         for (int i = 3; i < string.length() && current != '~'; i++) {
             current = inputStream.read();
@@ -141,6 +145,9 @@ public class TabFragment extends Fragment {
                             fillString(fileOutputStream, oldFile, character.getName());
                             break;
                         case '2':
+                            fillString(fileOutputStream, oldFile, "13");
+                            break;
+                        case '3':
                             fillString(fileOutputStream, oldFile, "13");
                             break;
                             default:
