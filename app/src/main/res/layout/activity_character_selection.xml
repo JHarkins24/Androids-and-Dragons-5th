@@ -15,10 +15,6 @@
         android:background="@drawable/parchment"
         tools:context=".characterSelection">
 
-        <include
-            layout="@layout/app_bar"
-            android:id="@+id/app_bar">
-        </include>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/cardRecyclerView"

@@ -145,10 +145,40 @@ public class TabFragment extends Fragment {
                             fillString(fileOutputStream, oldFile, character.getName());
                             break;
                         case '2':
-                            fillString(fileOutputStream, oldFile, "13");
+                            fillString(fileOutputStream, oldFile, " 13");
                             break;
                         case '3':
-                            fillString(fileOutputStream, oldFile, "13");
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '4':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '5':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '6':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '7':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '8':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case '9':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case 'a':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case 'b':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case 'c':
+                            fillString(fileOutputStream, oldFile, " 13");
+                            break;
+                        case 'd':
+                            fillString(fileOutputStream, oldFile, " 13");
                             break;
                             default:
                                 System.out.println("hi");

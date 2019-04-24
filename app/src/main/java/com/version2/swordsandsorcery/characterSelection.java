@@ -22,8 +22,8 @@ public class characterSelection extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_character_selection);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+//        setSupportActionBar(toolbar);
 
         characterCardList = new ArrayList<>();
         cardRecyclerView = (RecyclerView) findViewById(R.id.cardRecyclerView);
@@ -35,7 +35,7 @@ public class characterSelection extends AppCompatActivity {
                 new CharacterCard(
                         1,
                         3,
-                        "Nick The Fighter",
+                        "Nick The Software Fighter",
                         "Fighter",
                         R.drawable.fightericon));
 
@@ -43,7 +43,7 @@ public class characterSelection extends AppCompatActivity {
                 new CharacterCard(
                         1,
                         3,
-                        "AJ The Mighty Wizard",
+                        "AJ The Systems Wizard",
                         "Wizard",
                         R.drawable.wizardicon));
 
