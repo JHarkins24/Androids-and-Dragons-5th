@@ -89,6 +89,7 @@
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/apk_list" />
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/blame" />
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/build-info" />
+      <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/builds" />
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/bundle_manifest" />
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/check_manifest_result" />
       <excludeFolder url="file://$USER_HOME$/tempMine/Androids-and-Dragons-5th/app/build/intermediates/compatible_screen_manifest" />
