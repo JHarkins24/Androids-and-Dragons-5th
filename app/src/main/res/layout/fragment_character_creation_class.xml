@@ -9,13 +9,38 @@ android:background="@drawable/parchment"
 tools:context=".characterCreationClass">
 
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".characterCreationClass">
 
+    <EditText
+        android:id="@+id/characterName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:inputType="textPersonName|textCapWords"
+        android:hint="name"
+        android:background="@color/dieRed"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/lvl_spinner"
+        android:layout_width="92dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="164dp"
+        android:layout_marginEnd="300dp"
+        android:background="@color/dieRed"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <Button
         android:id="@+id/artificer"
         android:layout_width="100dp"
@@ -213,6 +238,25 @@ tools:context=".characterCreationClass">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/warlock" />
+
+    <TextView
+        android:id="@+id/levelTextViewClassCharacterCreation"
+        android:layout_width="99dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/white"
+        android:background="@color/dieRed"
+        android:text="level"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lvl_spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterName"
+        app:layout_constraintVertical_bias="0.775" />
 
 
 </android.support.constraint.ConstraintLayout>

@@ -10,6 +10,8 @@ import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,13 +47,15 @@ public class TabFragment extends Fragment {
     private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
     int position;
+    static CharacterDB character;
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
     TextView textView;
     short bla = 0;
-    CharacterDB character;
-    public static Fragment getInstance(int position) {
+
+    public static Fragment getInstance(int position, CharacterDB currentCharacter) {
+        character = currentCharacter;
         Bundle bundle = new Bundle();
         bundle.putInt("pos", position);
         TabFragment tabFragment = new TabFragment();
@@ -198,6 +202,7 @@ public class TabFragment extends Fragment {
 
         switch (position){
             case 0:
+
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 1:
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
@@ -229,14 +234,68 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        equip = new ArrayList<>();
-        character = new CharacterDB();
         final ContentValues values = new ContentValues();
         CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
         final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
         switch (position){
 
             case 0: {
+                // spinner is implemented dynamically in the java activity file.
+                final EditText name = view.findViewById(R.id.characterName);
+                name.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable s) {
+                        character.setName(name.getText().toString());
+                    }
+                });
+                final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
+                LinkedList<String> items = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
+                levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String level = levelPreferences.getString("level", "");
+                if (items.contains(level)) {
+                    items.remove(level);
+                    items.addFirst(level);
+                }
+                // create arrayAdapter using the string array and a default
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
+                level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String level2 = levelPreferences.getString("level2", "");
+                if (level != null) {
+
+                    int spinnerPosition = adapter.getPosition(level);
+                    lvlSpinner.setSelection(spinnerPosition);
+
+                }
+
+                lvlSpinner.setAdapter(adapter);
+                lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        SharedPreferences.Editor editor = level2Preferences.edit();
+                        editor.putString("level", lvlSpinner.getSelectedItem().toString());
+                        Log.v("level", (String) parent.getItemAtPosition(position));
+                        editor.apply();
+                        character.setLvl(Integer.parseInt((String)lvlSpinner.getSelectedItem()));
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
+                    }
+                });
+
                 final Button artificer = view.findViewById(R.id.artificer);
                 artificer.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -324,6 +383,7 @@ public class TabFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         character.setClassName("sorcerer");
+
                     }
                 });
 
@@ -475,17 +535,101 @@ public class TabFragment extends Fragment {
                             final EditText intelligence = view.findViewById(R.id.intelligence);
                             final EditText wis = view.findViewById(R.id.wisdom);
                             final EditText cha = view.findViewById(R.id.charisma);
-                            final Button save = view.findViewById(R.id.saveManual);
 
+                            str.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-                            save.setOnClickListener(new View.OnClickListener(){
-                                public void onClick(View v){
-                                    character.setAbilityScore(0,Integer.parseInt(str.getText().toString()));
-                                    character.setAbilityScore(1,Integer.parseInt(dex.getText().toString()));
-                                    character.setAbilityScore(2,Integer.parseInt(con.getText().toString()));
-                                    character.setAbilityScore(3,Integer.parseInt(intelligence.getText().toString()));
-                                    character.setAbilityScore(4,Integer.parseInt(wis.getText().toString()));
-                                    character.setAbilityScore(5,Integer.parseInt(cha.getText().toString()));
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(0, Integer.parseInt(str.getText().toString()));
+                                }
+                            });
+                            dex.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(1, Integer.parseInt(dex.getText().toString()));
+                                }
+                            });
+                            con.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(2, Integer.parseInt(con.getText().toString()));
+                                }
+                            });
+                            intelligence.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(3, Integer.parseInt(intelligence.getText().toString()));
+                                }
+                            });
+                            wis.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(4, Integer.parseInt(wis.getText().toString()));
+                                }
+                            });
+                            cha.addTextChangedListener(new TextWatcher() {
+                                @Override
+                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                }
+
+                                @Override
+                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+                                }
+
+                                @Override
+                                public void afterTextChanged(Editable s) {
+                                    character.setAbilityScore(5, Integer.parseInt(cha.getText().toString()));
                                 }
                             });
                             break;
