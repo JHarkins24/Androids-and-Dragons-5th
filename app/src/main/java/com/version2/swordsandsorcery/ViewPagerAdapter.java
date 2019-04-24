@@ -5,7 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private String title[] = {"Ov", "Cl", "AS", "Ra", "Ba", "It", "Sp", "Vi"};
+    private String title[] = {"Cl", "AS", "Ra", "Ba", "It", "Sp", "Vi"};
 
     public ViewPagerAdapter(FragmentManager manager) {
         super(manager);

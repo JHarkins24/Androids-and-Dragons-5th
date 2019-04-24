@@ -59,6 +59,7 @@ public class TabFragment extends Fragment {
         return tabFragment;
 
     }
+    //Pdf methods//////////////////////////////////////////////////
 
     private InputStream getPdf()throws NullPointerException, IOException{
         AssetManager assetManager = this.getContext().getAssets();
@@ -183,6 +184,7 @@ public class TabFragment extends Fragment {
             System.out.println(((PDField)field).getFullyQualifiedName());
         }
     }
+    //Pdf methods//////////////////////////////////////////////////
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -196,10 +198,8 @@ public class TabFragment extends Fragment {
 
         switch (position){
             case 0:
-                return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
-            case 1:
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
-            case 2:
+            case 1:
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String ability = abilityScorePreferences.getString("abilityScore", "");
                 switch(ability){
@@ -211,15 +211,15 @@ public class TabFragment extends Fragment {
                         return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
                 }
                 return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
-            case 3:
+            case 2:
                 return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
-            case 4:
+            case 3:
                 return inflater.inflate(R.layout.fragment_character_creation_background, container, false);
-            case 5:
+            case 4:
                 return inflater.inflate(R.layout.fragment_character_creation_items, container, false);
-            case 6:
+            case 5:
                 return inflater.inflate(R.layout.fragment_character_creation_spells, container, false);
-            case 7:
+            case 6:
                 return inflater.inflate(R.layout.fragment_character_creation_view, container, false);
         }
 
@@ -234,72 +234,6 @@ public class TabFragment extends Fragment {
 
         switch (position){
             case 0: {
-                // spinner is implemented dynamically in the java activity file.
-                final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
-                LinkedList<String> items = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
-                levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String level = levelPreferences.getString("level", "");
-                if (items.contains(level)) {
-                    items.remove(level);
-                    items.addFirst(level);
-                }
-                // create arrayAdapter using the string array and a default
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
-                level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String level2 = levelPreferences.getString("level2", "");
-                if (level != null) {
-                    int spinnerPosition = adapter.getPosition(level);
-                    lvlSpinner.setSelection(spinnerPosition);
-
-                }
-
-                lvlSpinner.setAdapter(adapter);
-                lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        SharedPreferences.Editor editor = level2Preferences.edit();
-                        editor.putString("level", lvlSpinner.getSelectedItem().toString());
-                        Log.v("level", (String) parent.getItemAtPosition(position));
-                        editor.apply();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                        // auto generated program stub will set the initial to the object at index 0,
-                        // could we make it so that there is some kind of interface between the settings
-                        // screen and the drop down interface here? Boolean?
-                    }
-                });
-
-                Spinner fighter = view.findViewById(R.id.fighter);
-                String[] fighterOptions = new String[]{"Arcane Archer", "Battlemaster", "Brute", "Cavalier",
-                        "Champion", "Eldritch Knight", "Monster Hunter", "Purple Dragon Knight", "Samurai",
-                        "Scout", "Sharpshooter"};
-
-                ArrayAdapter<String> fighterAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, fighterOptions);
-                fighter.setAdapter(fighterAdapter);
-                if (bla == 0) {
-                    fighter.setVisibility(View.INVISIBLE);
-                } else {
-                    fighter.setVisibility(View.VISIBLE);
-                }
-
-
-                fighter.setOnItemSelectedListener(new OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        Log.v("fighterSelect", (String) parent.getItemAtPosition(position));
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-
-                    }
-                });
-            }
-                break;
-
-            case 1: {
                 final Button artificer = view.findViewById(R.id.artificer);
                 artificer.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -407,7 +341,7 @@ public class TabFragment extends Fragment {
                 });
             }
                 break;
-            case 2: {
+            case 1: {
                 final TextView rollType = view.findViewById(R.id.rollType);
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String ability = abilityScorePreferences.getString("abilityScore", "");
@@ -704,7 +638,7 @@ public class TabFragment extends Fragment {
                 }
             }
             break;
-            case 3: {
+            case 2: {
                 final Button aasimar = view.findViewById(R.id.aasimar);
                 aasimar.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -906,7 +840,7 @@ public class TabFragment extends Fragment {
                 });
                 break;
             }
-            case 4: {
+            case 3: {
                 final Button acolyte = view.findViewById(R.id.acolyte);
                 acolyte.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -1012,11 +946,15 @@ public class TabFragment extends Fragment {
                 });
             }
                 break;
+            case 4:
+                break;
             case 5:
                 break;
             case 6:
-                break;
-            case 7:
+
+                final ContentValues values = new ContentValues();
+                CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+                final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener()
                 {
@@ -1025,9 +963,8 @@ public class TabFragment extends Fragment {
                     {
                         handleExceptions(0, save);
 
-                        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                        SQLiteDatabase characterDataBase = helper.getReadableDatabase();
-                        ContentValues values = new ContentValues();
+
+
 
                         //Inserting test values into the Database
 
@@ -1051,6 +988,7 @@ public class TabFragment extends Fragment {
                 break;
         }
     }
+    //Ability Score algorithms//////////////////////////////////////////////////////
     private void pointBuyAdd(final TextView stat, final TextView pointBuy){
 
         int currentAbilityPoint = Integer.parseInt(stat.getText().toString());
@@ -1105,4 +1043,6 @@ public class TabFragment extends Fragment {
         }
         return -1;
     }
+
+    //Ability Score algorithms//////////////////////////////////////////////////////
 }
