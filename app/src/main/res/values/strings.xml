@@ -121,6 +121,7 @@
     <string name="grappled">Grappled - A grappled creatures speed becomes 0 and it cannot benefit from any movement bonuses.</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
+    <string name="createNewCharacter">Create New Character</string>
     <string-array name="lvl">
         <item>1</item>
         <item>2</item>

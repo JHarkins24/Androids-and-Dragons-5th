@@ -145,40 +145,40 @@ public class TabFragment extends Fragment {
                             fillString(fileOutputStream, oldFile, character.getName());
                             break;
                         case '2':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
                             break;
                         case '3':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(1)));
                             break;
                         case '4':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(2)));
                             break;
                         case '5':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(3)));
                             break;
                         case '6':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(4)));
                             break;
                         case '7':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(5)));
                             break;
                         case '8':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(0)));
                             break;
                         case '9':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(1)));
                             break;
                         case 'a':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(2)));
                             break;
                         case 'b':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(3)));
                             break;
                         case 'c':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(4)));
                             break;
                         case 'd':
-                            fillString(fileOutputStream, oldFile, " 13");
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(5)));
                             break;
                             default:
                                 System.out.println("hi");
