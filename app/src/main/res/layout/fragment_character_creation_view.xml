@@ -8,39 +8,6 @@
     tools:context=".characterCreationCharacterView">
 
     <ImageButton
-        android:id="@+id/home_button"
-        android:layout_width="105dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="612dp"
-        android:adjustViewBounds="true"
-        android:background="@null"
-        android:backgroundTint="@color/colorAccent"
-        android:contentDescription="@null"
-        android:scaleType="centerInside"
-        android:tint="@color/colorAccent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf = "parent"
-        app:srcCompat="@drawable/d20transparent" />
-
-    <TextView
-        android:id="@+id/homeText"
-        android:layout_width="92dp"
-        android:layout_height="30dp"
-        android:text="@string/Home"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/home_button"
-        app:layout_constraintEnd_toEndOf="@+id/home_button"
-        app:layout_constraintHorizontal_bias="0.461"
-        app:layout_constraintStart_toStartOf="@+id/home_button"
-        app:layout_constraintTop_toTopOf="@+id/home_button"
-        app:layout_constraintVertical_bias="0.531" />
-
-    <ImageButton
         android:id="@+id/save_button"
         android:layout_width="105dp"
         android:layout_height="94dp"
@@ -74,7 +41,5 @@
         app:layout_constraintStart_toStartOf="@+id/save_button"
         app:layout_constraintTop_toTopOf="@+id/save_button"
         app:layout_constraintVertical_bias="0.661" />
-
-
 
 </android.support.constraint.ConstraintLayout>
