@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="150dp"
     android:background="@drawable/parchment"
-    tools:context=".characterCreationAbilityScores">
+    tools:context=".TabFragment">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"

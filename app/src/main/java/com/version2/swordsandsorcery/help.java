@@ -21,22 +21,6 @@ public class help extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        ImageButton rulesButton = findViewById(R.id.rules_button);
-        rulesButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(help.this,rulesHelp.class));
-            }
-        });
-
-        ImageButton statusEffectsButton = findViewById(R.id.status_effects_button);
-        statusEffectsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(help.this,statusEffectsHelp.class));
-            }
-        });
-
     }
 
 }

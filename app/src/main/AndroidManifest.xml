@@ -11,18 +11,7 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".help" />
         <activity android:name=".settings" />
-        <activity android:name=".characterSelection" />
-        <activity android:name=".characterCreationCharacterView" />
-        <activity android:name=".characterCreationSpells" />
-        <activity android:name=".characterCreationItems" />
-        <activity android:name=".characterCreationBackground" />
-        <activity android:name=".characterCreationRace" />
-        <activity android:name=".characterCreationAbilityScores" />
-        <activity android:name=".characterCreationClass" />
         <activity android:name=".characterCreationOverview" />
-        <activity android:name=".main_menu" />
-        <activity android:name=".rulesHelp"/>
-        <activity android:name=".statusEffectsHelp"/>
         <activity android:name=".MainActivity">
 
 
