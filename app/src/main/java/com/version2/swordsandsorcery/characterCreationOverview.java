@@ -33,13 +33,5 @@ public class characterCreationOverview extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-
-//        ImageButton homeButton = findViewById(R.id.home_button);
-//        homeButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(characterCreationOverview.this, main_menu.class));
-//            }
-//        });
     }
 }
