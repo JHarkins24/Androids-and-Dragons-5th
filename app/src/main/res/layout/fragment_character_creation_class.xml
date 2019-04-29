@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="@drawable/parchment"
-tools:context=".characterCreationClass">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/parchment"
+    tools:context=".TabFragment">
 
 <android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".characterCreationClass">
+    tools:context=".TabFragment">
 
     <EditText
         android:id="@+id/characterName"
@@ -23,7 +23,6 @@ tools:context=".characterCreationClass">
         android:hint="name"
         android:background="@color/dieRed"
         android:textColor="@color/white"
-        android:textColorHint="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -41,20 +40,6 @@ tools:context=".characterCreationClass">
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/artificer"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/artificer"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/barbarian"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
 
     <Button
         android:id="@+id/barbarian"
@@ -68,7 +53,7 @@ tools:context=".characterCreationClass">
         app:layout_constraintBottom_toTopOf="@id/bard"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/artificer" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -136,24 +121,10 @@ tools:context=".characterCreationClass">
         android:background="@color/dieRed"
         android:text="@string/monk"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@id/mystic"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/fighter" />
-
-    <Button
-        android:id="@+id/mystic"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/mystic"
-        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/paladin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/monk" />
+        app:layout_constraintTop_toBottomOf="@id/fighter" />
 
     <Button
         android:id="@+id/paladin"
@@ -167,7 +138,7 @@ tools:context=".characterCreationClass">
         app:layout_constraintBottom_toTopOf="@id/ranger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mystic" />
+        app:layout_constraintTop_toBottomOf="@id/monk" />
 
     <Button
         android:id="@+id/ranger"

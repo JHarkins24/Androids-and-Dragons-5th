@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (AllCharacter.moveToLast())
+        if (AllCharacter.moveToNext())
             {
                 characterName = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
                 className = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME));
@@ -89,17 +89,17 @@ public class MainActivity extends AppCompatActivity {
                 characterCardList.add(
                         new CharacterCard(
                                 1,
-                                3,
-                                "AJ The Systems Wizard",
-                                "Wizard",
+                                level,
+                                characterName,
+                                className,
                                 R.drawable.wizardicon));
 
                 characterCardList.add(
                         new CharacterCard(
                                 1,
-                                3,
-                                "Danny The Red Bull Bard",
-                                "Bard",
+                                level,
+                                characterName,
+                                className,
                                 R.drawable.bardicon));
             }
 
@@ -110,5 +110,4 @@ public class MainActivity extends AppCompatActivity {
         cardRecyclerView.setAdapter(adapter);
         AllCharacter.close();
     }
-
 }

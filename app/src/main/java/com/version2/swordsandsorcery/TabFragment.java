@@ -337,13 +337,6 @@ public class TabFragment extends Fragment {
                     }
                 });
 
-                final Button artificer = view.findViewById(R.id.artificer);
-                artificer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("artificier");
-                    }
-                });
                 final Button barbarian = view.findViewById(R.id.barbarian);
                 barbarian.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -384,14 +377,6 @@ public class TabFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         character.setClassName("monk");
-                    }
-                });
-
-                final Button mystic = view.findViewById(R.id.mystic);
-                mystic.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("mystic");
                     }
                 });
 
@@ -827,22 +812,6 @@ public class TabFragment extends Fragment {
             }
             break;
             case 2: {
-                final Button aasimar = view.findViewById(R.id.aasimar);
-                aasimar.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("assimar");
-                    }
-                });
-
-                final Button bugbear = view.findViewById(R.id.bugbear);
-                bugbear.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("bugbear");
-                    }
-                });
-
                 final Button dragonborn = view.findViewById(R.id.dragonborn);
                 dragonborn.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -867,59 +836,11 @@ public class TabFragment extends Fragment {
                     }
                 });
 
-                final Button firbolg = view.findViewById(R.id.firbolg);
-                firbolg.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("firbolg");
-                    }
-                });
-
-                final Button genasi = view.findViewById(R.id.genasi);
-                genasi.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("genasi");
-                    }
-                });
-
-                final Button gith = view.findViewById(R.id.gith);
-                gith.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("gith");
-                    }
-                });
-
                 final Button gnome = view.findViewById(R.id.gnome);
                 gnome.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         character.setRace("gnome");
-                    }
-                });
-
-                final Button goblin = view.findViewById(R.id.goblin);
-                goblin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("goblin");
-                    }
-                });
-
-                final Button goliath = view.findViewById(R.id.goliath);
-                goliath.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("goliath");
-                    }
-                });
-
-                final Button hobgoblin = view.findViewById(R.id.hobgoblin);
-                hobgoblin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("hobgoblin");
                     }
                 });
 
@@ -955,75 +876,11 @@ public class TabFragment extends Fragment {
                     }
                 });
 
-                final Button kenku = view.findViewById(R.id.kenku);
-                kenku.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("kenku");
-                    }
-                });
-
-                final Button kobold = view.findViewById(R.id.kobold);
-                kobold.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("kobold");
-                    }
-                });
-
-                final Button lizardfolk = view.findViewById(R.id.lizardfolk);
-                lizardfolk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("lizardfolk");
-                    }
-                });
-
-                final Button orc = view.findViewById(R.id.orc);
-                orc.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("orc");
-                    }
-                });
-
-                final Button tabaxi = view.findViewById(R.id.tabaxi);
-                tabaxi.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("tabaxi");
-                    }
-                });
-
                 final Button tiefling = view.findViewById(R.id.tiefling);
                 tiefling.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         character.setRace("tiefling");
-                    }
-                });
-
-                final Button tortle = view.findViewById(R.id.tortle);
-                tortle.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("tortle");
-                    }
-                });
-
-                final Button triton = view.findViewById(R.id.triton);
-                triton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("triton");
-                    }
-                });
-
-                final Button yuantiPureblood = view.findViewById(R.id.yuantipureblood);
-                yuantiPureblood.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("yuantiPureBlood");
                     }
                 });
                 break;

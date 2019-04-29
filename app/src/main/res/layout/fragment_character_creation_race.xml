@@ -6,45 +6,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/parchment"
-    android:paddingBottom="150dp"
-    tools:context=".characterCreationClass">
+    tools:context=".TabFragment">
 
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".characterCreationClass">
-
-        <Button
-            android:id="@+id/aasimar"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/aasimar"
-            app:layout_constraintBottom_toTopOf="@id/bugbear"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/bugbear"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/bugbear"
-            app:layout_constraintBottom_toTopOf="@id/dragonborn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/aasimar"
-            app:layout_constraintVertical_chainStyle="packed" />
+        tools:context=".TabFragment">
 
         <Button
             android:id="@+id/dragonborn"
@@ -58,7 +27,7 @@
             app:layout_constraintBottom_toTopOf="@id/dwarf"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/bugbear"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
@@ -85,56 +54,12 @@
             android:background="@color/dieRed"
             android:textColor="@color/white"
             android:text="@string/elf"
-            app:layout_constraintBottom_toTopOf="@id/firbolg"
+            app:layout_constraintBottom_toTopOf="@id/gnome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/dwarf"
             app:layout_constraintVertical_chainStyle="packed" />
 
-        <Button
-            android:id="@+id/firbolg"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/firbolg"
-            app:layout_constraintBottom_toTopOf="@id/genasi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/elf"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/genasi"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/genasi"
-            app:layout_constraintBottom_toTopOf="@id/gith"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/firbolg"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/gith"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/gith"
-            app:layout_constraintBottom_toTopOf="@id/gnome"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/genasi"
-            app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
             android:id="@+id/gnome"
@@ -145,55 +70,10 @@
             android:background="@color/dieRed"
             android:textColor="@color/white"
             android:text="@string/gnome"
-            app:layout_constraintBottom_toTopOf="@id/goblin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gith"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/goblin"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/goblin"
-            app:layout_constraintBottom_toTopOf="@id/goliath"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/gnome"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/goliath"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/goliath"
-            app:layout_constraintBottom_toTopOf="@id/hobgoblin"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/goblin"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/hobgoblin"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/hobgoblin"
             app:layout_constraintBottom_toTopOf="@id/halfelf"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/goliath"
+            app:layout_constraintTop_toBottomOf="@id/elf"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
@@ -208,7 +88,7 @@
             app:layout_constraintBottom_toTopOf="@id/halfling"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/hobgoblin"
+            app:layout_constraintTop_toBottomOf="@id/gnome"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
@@ -250,85 +130,10 @@
             android:background="@color/dieRed"
             android:textColor="@color/white"
             android:text="@string/human"
-            app:layout_constraintBottom_toTopOf="@id/kenku"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/halforc"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/kenku"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/kenku"
-            app:layout_constraintBottom_toTopOf="@id/kobold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/human"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/kobold"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/kobold"
-            app:layout_constraintBottom_toTopOf="@id/lizardfolk"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kenku"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/lizardfolk"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/lizardfolk"
-            app:layout_constraintBottom_toTopOf="@id/orc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/kobold"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/orc"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/orc"
-            app:layout_constraintBottom_toTopOf="@id/tabaxi"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lizardfolk"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/tabaxi"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/tabaxi"
             app:layout_constraintBottom_toTopOf="@id/tiefling"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/orc"
+            app:layout_constraintTop_toBottomOf="@id/halforc"
             app:layout_constraintVertical_chainStyle="packed" />
 
         <Button
@@ -340,56 +145,12 @@
             android:background="@color/dieRed"
             android:textColor="@color/white"
             android:text="@string/tiefling"
-            app:layout_constraintBottom_toTopOf="@id/tortle"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabaxi"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/tortle"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/tortle"
-            app:layout_constraintBottom_toTopOf="@id/triton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tiefling"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/triton"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/triton"
-            app:layout_constraintBottom_toTopOf="@id/yuantipureblood"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tortle"
-            app:layout_constraintVertical_chainStyle="packed" />
-
-        <Button
-            android:id="@+id/yuantipureblood"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@color/dieRed"
-            android:textColor="@color/white"
-            android:text="@string/yuantipureblood"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/triton"
+            app:layout_constraintTop_toBottomOf="@id/human"
             app:layout_constraintVertical_chainStyle="packed" />
+
 
     </android.support.constraint.ConstraintLayout>
 
