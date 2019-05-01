@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".help" />
-        <activity android:name=".settings" />
         <activity android:name=".characterCreationOverview" />
         <activity android:name=".MainActivity">
 
