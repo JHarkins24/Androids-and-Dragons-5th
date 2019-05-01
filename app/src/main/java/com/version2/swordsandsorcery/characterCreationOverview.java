@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class characterCreationOverview extends AppCompatActivity {
@@ -24,7 +25,8 @@ public class characterCreationOverview extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
 
         viewPager = findViewById(R.id.viewpager);
         ViewPagerAdapter adapter2 = new ViewPagerAdapter(getSupportFragmentManager());

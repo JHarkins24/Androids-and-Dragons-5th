@@ -7,6 +7,8 @@
     android:background="@drawable/parchment"
     tools:context=".TabFragment">
 
+
+
     <TableLayout
         android:id="@+id/abilityTable"
         android:layout_width="398dp"

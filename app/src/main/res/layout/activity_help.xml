@@ -20,108 +20,19 @@
             android:id="@+id/app_bar">
         </include>
 
-        <TextView
-            android:id="@+id/statusEffects"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/app_bar"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/statusEffect"
-            android:textColor="@color/black"
-            android:textSize="30sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/stunned"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/statusEffects"
-            android:text="@string/stunned"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/unconscious"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/stunned"
-            android:text="@string/unconscious"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/poisoned"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/unconscious"
-            android:text="@string/poisoned"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/paralyzed"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_below="@id/poisoned"
-            android:layout_marginBottom="8dp"
-            android:text="@string/paralyzed"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/incapacitated"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/paralyzed"
-            android:text="@string/incapacitated"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
-
-        <TextView
-            android:id="@+id/grappled"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/incapacitated"
-            android:text="@string/grappled"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/actions_in_combat"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/grappled"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_below="@+id/app_bar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="31dp"
             android:layout_marginBottom="8dp"
-            android:text="@string/actions"
+            android:text="@string/creation"
             android:textColor="@color/black"
             android:textSize="30sp"
             android:textStyle="bold" />

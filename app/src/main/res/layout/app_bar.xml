@@ -5,4 +5,25 @@
     android:background="@color/dieRed"
     android:theme="@style/customToolbarStyle">
 
+    <!-- Settings, should always be in the overflow -->
+
+
+        <!-- "Mark Favorite", should appear as action button if possible -->
+    <Button
+        android:id="@+id/action_help"
+        android:layout_width="30dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="130dp"
+        android:background="@android:drawable/ic_menu_help"
+        android:backgroundTint="@color/dieRed"
+        android:drawableStart="@android:drawable/ic_menu_help"
+        android:title="@string/help_bar"
+        android:visibility="visible"></Button>
+
+
+
+    <!-- Settings, should always be in the overflow -->
+
+
+
 </android.support.v7.widget.Toolbar>

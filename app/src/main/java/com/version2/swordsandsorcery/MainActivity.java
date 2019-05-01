@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
+
+
         characterCardList = new ArrayList<>();
         cardRecyclerView = (RecyclerView) findViewById(R.id.cardRecyclerView);
         cardRecyclerView.setHasFixedSize(true);
