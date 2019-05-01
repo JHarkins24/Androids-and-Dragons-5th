@@ -47,15 +47,14 @@ public class TabFragment extends Fragment {
     private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
     int position;
-    static CharacterDB character;
+    static CharacterDB character = new CharacterDB();
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
     TextView textView;
     short bla = 0;
 
-    public static Fragment getInstance(int position, CharacterDB currentCharacter) {
-        character = currentCharacter;
+    public static Fragment getInstance(int position) {
         Bundle bundle = new Bundle();
         bundle.putInt("pos", position);
         TabFragment tabFragment = new TabFragment();
@@ -244,7 +243,7 @@ public class TabFragment extends Fragment {
         switch (position){
             case 0:
 
-                return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
+                return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
             case 1:
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String ability = abilityScorePreferences.getString("abilityScore", "");
@@ -258,17 +257,12 @@ public class TabFragment extends Fragment {
                 }
                 return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
             case 2:
-                return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
-            case 3:
-                return inflater.inflate(R.layout.fragment_character_creation_background, container, false);
-            case 4:
                 return inflater.inflate(R.layout.fragment_character_creation_items, container, false);
-            case 5:
+            case 3:
                 return inflater.inflate(R.layout.fragment_character_creation_spells, container, false);
-            case 6:
+            case 4:
                 return inflater.inflate(R.layout.fragment_character_creation_view, container, false);
         }
-
         return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
     }
 
@@ -279,7 +273,6 @@ public class TabFragment extends Fragment {
         CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
         final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
         switch (position){
-
             case 0: {
                 // spinner is implemented dynamically in the java activity file.
                 final EditText name = view.findViewById(R.id.characterName);
@@ -300,25 +293,25 @@ public class TabFragment extends Fragment {
                     }
                 });
                 final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
-                LinkedList<String> items = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
+                LinkedList<String> levels = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
                 levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String level = levelPreferences.getString("level", "");
-                if (items.contains(level)) {
-                    items.remove(level);
-                    items.addFirst(level);
+                if (levels.contains(level)) {
+                    levels.remove(level);
+                    levels.addFirst(level);
                 }
                 // create arrayAdapter using the string array and a default
-                ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
+                ArrayAdapter<String> levelAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, levels);
                 level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String level2 = levelPreferences.getString("level2", "");
                 if (level != null) {
 
-                    int spinnerPosition = adapter.getPosition(level);
+                    int spinnerPosition = levelAdapter.getPosition(level);
                     lvlSpinner.setSelection(spinnerPosition);
 
                 }
 
-                lvlSpinner.setAdapter(adapter);
+                lvlSpinner.setAdapter(levelAdapter);
                 lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -337,97 +330,71 @@ public class TabFragment extends Fragment {
                     }
                 });
 
-                final Button barbarian = view.findViewById(R.id.barbarian);
-                barbarian.setOnClickListener(new View.OnClickListener() {
+                final Spinner classSpinner = (Spinner) view.findViewById(R.id.class_spinner);
+                LinkedList<String> classes = new LinkedList<>(Arrays.asList("barbarian", "bard", "cleric", "druid", "fighter","monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"));
+                ArrayAdapter<String> classAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, classes);
+                int classSpinnerPosition = classAdapter.getPosition("barbarian");
+                classSpinner.setSelection(classSpinnerPosition);
+
+                classSpinner.setAdapter(classAdapter);
+                classSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
-                    public void onClick(View v) {
-                        character.setClassName("barbarian");
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        Log.v("class", (String) parent.getItemAtPosition(position));
+                        character.setClassName((String)classSpinner.getSelectedItem());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
                     }
                 });
-                final Button bard = view.findViewById(R.id.bard);
-                bard.setOnClickListener(new View.OnClickListener() {
+                final Spinner raceSpinner = (Spinner) view.findViewById(R.id.raceSpinner);
+                LinkedList<String> racees = new LinkedList<>(Arrays.asList("dragonborn", "dwarf", "elf", "gnome", "half-elf","halfing", "half-orc", "human", "tiefling"));
+                ArrayAdapter<String> raceAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, racees);
+                int raceSpinnerPosition = raceAdapter.getPosition("dragonborn");
+                raceSpinner.setSelection(raceSpinnerPosition);
+
+                raceSpinner.setAdapter(raceAdapter);
+                raceSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
-                    public void onClick(View v) {
-                        character.setClassName("bard");
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        Log.v("race", (String) parent.getItemAtPosition(position));
+                        character.setRace((String)raceSpinner.getSelectedItem());
                     }
-                });
-                final Button cleric = view.findViewById(R.id.cleric);
-                cleric.setOnClickListener(new View.OnClickListener() {
+
                     @Override
-                    public void onClick(View v) {
-                        character.setClassName("cleric");
-                    }
-                });
-                final Button druid = view.findViewById(R.id.druid);
-                druid.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("druid");
-                    }
-                });
-                final Button fighterClass = view.findViewById(R.id.fighter);
-                fighterClass.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("fighter");
-                    }
-                });
-                final Button monk = view.findViewById(R.id.monk);
-                monk.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("monk");
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
                     }
                 });
 
-                final Button paladin = view.findViewById(R.id.paladin);
-                paladin.setOnClickListener(new View.OnClickListener() {
+                final Spinner backgroundSpinner = (Spinner) view.findViewById(R.id.backgroundSpinner);
+                LinkedList<String> backgrounds = new LinkedList<>(Arrays.asList("acolyte", "charlatan", "criminal", "entertainer", "folk hero","guild artisan", "hermit", "noble", "outlander", "sage", "sailor", "soldier", "urchin"));
+                ArrayAdapter<String> backgroundAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, backgrounds);
+                int bckgrndSpinnerPosition = backgroundAdapter.getPosition("acolyte");
+                backgroundSpinner.setSelection(bckgrndSpinnerPosition);
+
+                backgroundSpinner.setAdapter(backgroundAdapter);
+                backgroundSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
-                    public void onClick(View v) {
-                        character.setClassName("paladin");
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        Log.v("background", (String) parent.getItemAtPosition(position));
+                        character.setBackground((String)backgroundSpinner.getSelectedItem());
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
                     }
                 });
 
-                final Button ranger = view.findViewById(R.id.ranger);
-                ranger.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("ranger");
-                    }
-                });
-
-                final Button rogue = view.findViewById(R.id.rogue);
-                rogue.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("rogue");
-                    }
-                });
-
-                final Button sorcerer = view.findViewById(R.id.sorcerer);
-                sorcerer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("sorcerer");
-
-                    }
-                });
-
-                final Button warlock = view.findViewById(R.id.warlock);
-                warlock.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("warlock");
-                    }
-                });
-
-                final Button wizard = view.findViewById(R.id.wizard);
-                wizard.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setClassName("wizard");
-                    }
-                });
             }
                 break;
             case 1: {
@@ -553,7 +520,155 @@ public class TabFragment extends Fragment {
                             });
                         }
                         break;
-                        case "Manual":
+                            case "Roll": {
+                                //Write Roll algorithm that calls Roll in CharacterDB
+                                final int[] lastClicked = {-1};
+                                final Button[] abilityScores = {
+                                        view.findViewById(R.id.strength), view.findViewById(R.id.dexterity), view.findViewById(R.id.constitution),
+                                        view.findViewById(R.id.intelligence), view.findViewById(R.id.wisdom), view.findViewById(R.id.charisma)};
+                                final Button[] scoreTable = {
+                                        view.findViewById(R.id.score0), view.findViewById(R.id.score1), view.findViewById(R.id.score2),
+                                        view.findViewById(R.id.score3), view.findViewById(R.id.score4), view.findViewById(R.id.score5), view.findViewById(R.id.score6)};
+                                {
+
+                                    scoreTable[0].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 0;
+                                        }
+                                    });
+                                    scoreTable[1].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 1;
+                                        }
+                                    });
+                                    scoreTable[2].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 2;
+                                        }
+                                    });
+
+                                    scoreTable[3].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 3;
+                                        }
+                                    });
+                                    scoreTable[4].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 4;
+                                        }
+                                    });
+                                    scoreTable[5].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 5;
+                                        }
+                                    });
+                                    scoreTable[6].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            lastClicked[0] = 6;
+                                        }
+                                    });
+                                }
+                                int[] scores = character.rollAbilityScores();
+                                for (int i = 0; i < scoreTable.length; i++) {
+                                    scoreTable[i].setText(Integer.toString(scores[i]));
+                                }
+                                {
+                                    abilityScores[0].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[0].getText().equals("")) {
+                                                rollSetAbility(abilityScores[0], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[0], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = -1;
+                                            }
+
+                                        }
+                                    });
+                                    abilityScores[1].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[1].getText().equals("")) {
+                                                rollSetAbility(abilityScores[1], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[1], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = -1;
+                                            }
+
+                                        }
+                                    });
+                                    abilityScores[2].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[2].getText().equals("")) {
+                                                rollSetAbility(abilityScores[2], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[2], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = -1;
+                                            }
+
+                                        }
+                                    });
+                                    abilityScores[3].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[3].getText().equals("")) {
+                                                rollSetAbility(abilityScores[3], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[3], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = -1;
+                                            }
+
+                                        }
+                                    });
+                                    abilityScores[4].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[4].getText().equals("")) {
+                                                rollSetAbility(abilityScores[4], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[4], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = 0;
+                                            }
+
+                                        }
+                                    });
+                                    abilityScores[5].setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            if (!abilityScores[5].getText().equals("")) {
+                                                rollSetAbility(abilityScores[5], scoreTable[findFirstEmpty(scoreTable)]);
+                                            } else {
+                                                rollSetAbility(abilityScores[5], scoreTable[lastClicked[0]]);
+                                                lastClicked[0] = 0;
+                                            }
+
+                                        }
+                                    });
+
+
+                                }
+                                final Button saveRoll = view.findViewById(R.id.saveRoll);
+                                saveRoll.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        int[] abilityScoresForCharacter = new int[abilityScores.length];
+                                        for (int i = 0; i < abilityScores.length; i++) {
+                                            abilityScoresForCharacter[i] = Integer.parseInt((String) abilityScores[i].getText());
+                                        }
+                                        character.setAbilityScores(abilityScoresForCharacter);
+                                    }
+                                });
+                            }
+                        break;
+                        default: {
                             //Write Manual algorithm
                             final EditText str = view.findViewById(R.id.strength);
                             final EditText dex = view.findViewById(R.id.dexterity);
@@ -575,7 +690,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(0, Integer.parseInt(str.getText().toString()));
+                                    if (!str.getText().toString().equals("")) {
+                                        character.setAbilityScore(0, Integer.parseInt(str.getText().toString()));
+                                    }
                                 }
                             });
                             dex.addTextChangedListener(new TextWatcher() {
@@ -591,7 +708,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(1, Integer.parseInt(dex.getText().toString()));
+                                    if (!dex.getText().toString().equals("")) {
+                                        character.setAbilityScore(1, Integer.parseInt(dex.getText().toString()));
+                                    }
                                 }
                             });
                             con.addTextChangedListener(new TextWatcher() {
@@ -607,7 +726,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(2, Integer.parseInt(con.getText().toString()));
+                                    if (!con.getText().toString().equals("")) {
+                                        character.setAbilityScore(2, Integer.parseInt(con.getText().toString()));
+                                    }
                                 }
                             });
                             intelligence.addTextChangedListener(new TextWatcher() {
@@ -623,7 +744,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(3, Integer.parseInt(intelligence.getText().toString()));
+                                    if (!intelligence.getText().toString().equals("")) {
+                                        character.setAbilityScore(3, Integer.parseInt(intelligence.getText().toString()));
+                                    }
                                 }
                             });
                             wis.addTextChangedListener(new TextWatcher() {
@@ -639,7 +762,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(4, Integer.parseInt(wis.getText().toString()));
+                                    if (!wis.getText().toString().equals("")) {
+                                        character.setAbilityScore(4, Integer.parseInt(wis.getText().toString()));
+                                    }
                                 }
                             });
                             cha.addTextChangedListener(new TextWatcher() {
@@ -655,354 +780,28 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
-                                    character.setAbilityScore(5, Integer.parseInt(cha.getText().toString()));
-                                }
-                            });
-                            break;
-                            case "Roll":
-                            //Write Roll algorithm that calls Roll in CharacterDB
-                            final int[] lastClicked = {-1};
-                            final Button[] abilityScores = {
-                                    view.findViewById(R.id.strength), view.findViewById(R.id.dexterity), view.findViewById(R.id.constitution),
-                                    view.findViewById(R.id.intelligence), view.findViewById(R.id.wisdom), view.findViewById(R.id.charisma)};
-                            final Button[] scoreTable = {
-                                    view.findViewById(R.id.score0), view.findViewById(R.id.score1), view.findViewById(R.id.score2),
-                                    view.findViewById(R.id.score3), view.findViewById(R.id.score4), view.findViewById(R.id.score5), view.findViewById(R.id.score6)};
-                        {
-
-                            scoreTable[0].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 0;
-                                }
-                            });
-                            scoreTable[1].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 1;
-                                }
-                            });
-                            scoreTable[2].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 2;
-                                }
-                            });
-
-                            scoreTable[3].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 3;
-                                }
-                            });
-                            scoreTable[4].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 4;
-                                }
-                            });
-                            scoreTable[5].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 5;
-                                }
-                            });
-                            scoreTable[6].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    lastClicked[0] = 6;
+                                    if (!cha.getText().toString().equals("")) {
+                                        character.setAbilityScore(5, Integer.parseInt(cha.getText().toString()));
+                                    }
                                 }
                             });
                         }
-                        int[] scores = character.rollAbilityScores();
-                        for (int i = 0; i < scoreTable.length; i++) {
-                            scoreTable[i].setText(Integer.toString(scores[i]));
-                        }
-                        {
-                            abilityScores[0].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[0].getText().equals("")) {
-                                        rollSetAbility(abilityScores[0], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[0], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = -1;
-                                    }
-
-                                }
-                            });
-                            abilityScores[1].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[1].getText().equals("")) {
-                                        rollSetAbility(abilityScores[1], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[1], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = -1;
-                                    }
-
-                                }
-                            });
-                            abilityScores[2].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[2].getText().equals("")) {
-                                        rollSetAbility(abilityScores[2], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[2], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = -1;
-                                    }
-
-                                }
-                            });
-                            abilityScores[3].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[3].getText().equals("")) {
-                                        rollSetAbility(abilityScores[3], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[3], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = -1;
-                                    }
-
-                                }
-                            });
-                            abilityScores[4].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[4].getText().equals("")) {
-                                        rollSetAbility(abilityScores[4], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[4], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = 0;
-                                    }
-
-                                }
-                            });
-                            abilityScores[5].setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    if (!abilityScores[5].getText().equals("")) {
-                                        rollSetAbility(abilityScores[5], scoreTable[findFirstEmpty(scoreTable)]);
-                                    } else {
-                                        rollSetAbility(abilityScores[5], scoreTable[lastClicked[0]]);
-                                        lastClicked[0] = 0;
-                                    }
-
-                                }
-                            });
-
-
-                        }
-                        final Button saveRoll = view.findViewById(R.id.saveRoll);
-                        saveRoll.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v) {
-                                int[] abilityScoresForCharacter = new int[abilityScores.length];
-                                for(int i = 0; i < abilityScores.length; i++){
-                                    abilityScoresForCharacter[i] = Integer.parseInt((String)abilityScores[i].getText());
-                                }
-                                character.setAbilityScores(abilityScoresForCharacter);
-                            }
-                        });
                         break;
+
                     }
 
                 }
             }
             break;
-            case 2: {
-                final Button dragonborn = view.findViewById(R.id.dragonborn);
-                dragonborn.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("dragonborn");
-                    }
-                });
-
-                final Button dwarf = view.findViewById(R.id.dwarf);
-                dwarf.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("dwarf");
-                    }
-                });
-
-                final Button elf = view.findViewById(R.id.elf);
-                elf.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("elf");
-                    }
-                });
-
-                final Button gnome = view.findViewById(R.id.gnome);
-                gnome.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("gnome");
-                    }
-                });
-
-                final Button halfElf = view.findViewById(R.id.halfelf);
-                halfElf.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("halfelf");
-                    }
-                });
-
-                final Button halfling = view.findViewById(R.id.halfling);
-                halfling.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("halfling");
-                    }
-                });
-
-                final Button halfOrc = view.findViewById(R.id.halforc);
-                halfOrc.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("halfOrc");
-                    }
-                });
-
-                final Button human = view.findViewById(R.id.human);
-                human.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("human");
-                    }
-                });
-
-                final Button tiefling = view.findViewById(R.id.tiefling);
-                tiefling.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setRace("tiefling");
-                    }
-                });
+            case 2:
                 break;
-            }
-            case 3: {
-                final Button acolyte = view.findViewById(R.id.acolyte);
-                acolyte.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("acolyte");
-                    }
-                });
-
-                final Button charlatan = view.findViewById(R.id.charlatan);
-                charlatan.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("charlatan");
-                    }
-                });
-
-                final Button criminal = view.findViewById(R.id.criminal);
-                criminal.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("criminal");
-                    }
-                });
-
-                final Button entertainer = view.findViewById(R.id.entertainer);
-                entertainer.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("entertainer");
-                    }
-                });
-
-                final Button folkHero = view.findViewById(R.id.folkHero);
-                folkHero.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("folkHero");
-                    }
-                });
-
-                final Button guildArtisan = view.findViewById(R.id.guildArtisan);
-                guildArtisan.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("guildArtisan");
-                    }
-                });
-
-                final Button hermit = view.findViewById(R.id.hermit);
-                hermit.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("hermit");
-                    }
-                });
-
-                final Button noble = view.findViewById(R.id.noble);
-                noble.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("noble");
-                    }
-                });
-
-                final Button outlander = view.findViewById(R.id.outlander);
-                outlander.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("outlander");
-                    }
-                });
-
-                final Button sage = view.findViewById(R.id.sage);
-                sage.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("sage");
-                    }
-                });
-
-                final Button sailor = view.findViewById(R.id.sailor);
-                sailor.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("sailor");
-                    }
-                });
-
-                final Button soldier = view.findViewById(R.id.soldier);
-                soldier.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("soldier");
-                    }
-                });
-
-                final Button urchin = view.findViewById(R.id.urchin);
-                urchin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        character.setBackground("urchin");
-                    }
-                });
-            }
+            case 3:
                 break;
-            case 4:
-                break;
-            case 5:
-                break;
-            case 6:
-
+            case 4: {
                 final ImageButton save = view.findViewById(R.id.save_button);
-                save.setOnClickListener(new View.OnClickListener()
-                {
+                save.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View v)
-                    {
+                    public void onClick(View v) {
                         handleExceptions(0, save);
 
                         //Inserting values into the Database
@@ -1015,18 +814,19 @@ public class TabFragment extends Fragment {
 
 
                         //puts all the values into a new row
-                        characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null , values);
+                        characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null, values);
 
                         // all rows are gotten
 
-                        Cursor AllCharacter = characterDataBase.query(CharacterDB.CharacterTable.TABLE_NAME,null,"1",null,null,null,null);
+                        Cursor AllCharacter = characterDataBase.query(CharacterDB.CharacterTable.TABLE_NAME, null, "1", null, null, null, null);
                         while (AllCharacter.moveToNext()) {
-                                AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
+                            AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
                         }
                         AllCharacter.close();
                     }
                 });
                 break;
+            }
         }
     }
     //Ability Score algorithms//////////////////////////////////////////////////////

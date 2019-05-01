@@ -7,15 +7,14 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private String title[] = {"Cl", "AS", "Ra", "Ba", "It", "Sp", "Vi"};
-    final CharacterDB character = new CharacterDB();
+    private String[] title = {"Ov", "As", "It", "Sp", "Vi"};
     public ViewPagerAdapter(FragmentManager manager) {
         super(manager);
     }
 
     @Override
     public Fragment getItem(int position) {
-        return TabFragment.getInstance(position, character);
+        return TabFragment.getInstance(position);
     }
 
     @Override
