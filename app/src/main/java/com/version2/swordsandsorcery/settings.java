@@ -51,72 +51,72 @@ public class settings extends AppCompatActivity {
         background.setImageResource(imageResource);
         background.setScaleType(ImageView.ScaleType.FIT_XY);
 
-        final Spinner lvlDropdown = findViewById(R.id.spinner);
-        String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
-        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<String>(this, R.layout.spinner_text_work_bitch, lvlDefault );
-        lvlDropdown.setAdapter(lvlDefaultAdapter);
+//        final Spinner lvlDropdown = findViewById(R.id.spinner);
+//        String[] lvlDefault = new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"};
+//        ArrayAdapter<String> lvlDefaultAdapter = new ArrayAdapter<String>(this, R.layout.spinner_text_work_bitch, lvlDefault );
+//        lvlDropdown.setAdapter(lvlDefaultAdapter);
+//
+//        levelPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        String level = levelPreferences.getString("level", "");
+//        if(level != null)
+//        {
+//            int spinnerPosition = lvlDefaultAdapter.getPosition(level);
+//            lvlDropdown.setSelection(spinnerPosition);
+//
+//        }
+//
+//
+//        lvlDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
+//        {
+//
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+//            {
+//                SharedPreferences.Editor editor = levelPreferences.edit();
+//                editor.putString("level",lvlDropdown.getSelectedItem().toString());
+//                Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
+//                editor.apply();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent)
+//            {
+//                // supposedly this creates a default value
+//            }
+//
+//        });
 
-        levelPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String level = levelPreferences.getString("level", "");
-        if(level != null)
-        {
-            int spinnerPosition = lvlDefaultAdapter.getPosition(level);
-            lvlDropdown.setSelection(spinnerPosition);
-
-        }
-
-
-        lvlDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
-        {
-
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                SharedPreferences.Editor editor = levelPreferences.edit();
-                editor.putString("level",lvlDropdown.getSelectedItem().toString());
-                Log.v("lvlDefault", (String) parent.getItemAtPosition(position));
-                editor.apply();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // supposedly this creates a default value
-            }
-
-        });
-
-        final Spinner abilityScoreChoice = findViewById(R.id.spinner2);
-        String[] abilityScoreChoiceOptions = new String[]{"Roll", "Manual", "Point Buy"};
-        ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, R.layout.spinner_text_work_bitch, abilityScoreChoiceOptions);
-        abilityScoreChoice.setAdapter(abilityScoreChoiceAdapter);
-
-        abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String ability = abilityScorePreferences.getString("abilityScore", "");
-        if(ability != null)
-        {
-            int spinnerPosition = abilityScoreChoiceAdapter.getPosition(ability);
-            abilityScoreChoice.setSelection(spinnerPosition);
-
-        }
-
-        abilityScoreChoice.setOnItemSelectedListener(new OnItemSelectedListener()
-        {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
-            {
-                SharedPreferences.Editor abilityEditor = abilityScorePreferences.edit();
-                abilityEditor.putString("abilityScore",abilityScoreChoice.getSelectedItem().toString());
-                Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
-                abilityEditor.apply();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent)
-            {
-                // supposedly this creates a default value
-            }
-        });
+//        final Spinner abilityScoreChoice = findViewById(R.id.spinner2);
+//        String[] abilityScoreChoiceOptions = new String[]{"Roll", "Manual", "Point Buy"};
+//        ArrayAdapter<String> abilityScoreChoiceAdapter = new ArrayAdapter<>(this, R.layout.spinner_text_work_bitch, abilityScoreChoiceOptions);
+//        abilityScoreChoice.setAdapter(abilityScoreChoiceAdapter);
+//
+//        abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        String ability = abilityScorePreferences.getString("abilityScore", "");
+//        if(ability != null)
+//        {
+//            int spinnerPosition = abilityScoreChoiceAdapter.getPosition(ability);
+//            abilityScoreChoice.setSelection(spinnerPosition);
+//
+//        }
+//
+//        abilityScoreChoice.setOnItemSelectedListener(new OnItemSelectedListener()
+//        {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
+//            {
+//                SharedPreferences.Editor abilityEditor = abilityScorePreferences.edit();
+//                abilityEditor.putString("abilityScore",abilityScoreChoice.getSelectedItem().toString());
+//                Log.v("abilityScoreSelect", (String) parent.getItemAtPosition(position));
+//                abilityEditor.apply();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent)
+//            {
+//                // supposedly this creates a default value
+//            }
+//        });
 
 
     }

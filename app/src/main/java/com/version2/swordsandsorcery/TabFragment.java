@@ -317,7 +317,6 @@ public class TabFragment extends Fragment {
                     lvlSpinner.setSelection(spinnerPosition);
 
                 }
-
                 lvlSpinner.setAdapter(adapter);
                 lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
