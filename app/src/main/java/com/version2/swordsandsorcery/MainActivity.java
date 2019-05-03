@@ -12,10 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView cardRecyclerView;
     CardAdapter adapter;
 
-    List<CharacterCard> characterCardList;
+    List<CharacterDB> characterDBList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,18 +45,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    @Override
+    protected void onStart(){
+        super.onStart();
         final CharacterBaseHelper helper = new CharacterBaseHelper(getBaseContext());
         final SQLiteDatabase database = helper.getReadableDatabase();
-        final ContentValues values = new ContentValues();
-        final Cursor AllCharacter = database.query(CharacterDB.CharacterTable.TABLE_NAME,null,"2",null,null,null,null);
-        String characterName;
-        String className;
-        int level;
+        final Cursor AllCharacter = database.query(com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.TABLE_NAME,null,"2",null,null,null,null);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
 
-        characterCardList = new ArrayList<>();
+        characterDBList = new ArrayList<>();
         cardRecyclerView = (RecyclerView) findViewById(R.id.cardRecyclerView);
         cardRecyclerView.setHasFixedSize(true);
 
@@ -72,39 +71,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        if (AllCharacter.moveToNext())
-            {
-                characterName = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
-                className = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME));
-                level = Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL)));
+        while (AllCharacter.moveToNext()){
 
-                characterCardList.add(
-                        new CharacterCard(
-                                1,
-                                level,
-                                characterName,
-                                className,
-                                R.drawable.fightericon));
+            CharacterDB character = new CharacterDB();
+            character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
+            character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
+            character.setLvl(Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL))));
+            character.setDataBaseIndex(AllCharacter.getPosition());
+            characterDBList.add(character);
 
-                characterCardList.add(
-                        new CharacterCard(
-                                1,
-                                level,
-                                characterName,
-                                className,
-                                R.drawable.wizardicon));
-
-                characterCardList.add(
-                        new CharacterCard(
-                                1,
-                                level,
-                                characterName,
-                                className,
-                                R.drawable.bardicon));
-            }
+        }
 
         //creating recyclerview adapter
-        adapter = new CardAdapter(this, characterCardList);
+        adapter = new CardAdapter(this, characterDBList);
 
         //setting adapter to recyclerview
         cardRecyclerView.setAdapter(adapter);

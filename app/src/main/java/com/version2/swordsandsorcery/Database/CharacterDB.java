@@ -1,5 +1,7 @@
 package com.version2.swordsandsorcery.Database;
+
 import java.util.Scanner;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.BaseColumns;
@@ -17,24 +19,23 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
 import java.util.ArrayList;
 import java.lang.Object;
 
 
-public class CharacterDB
-{
-    public final class CharacterTable
-    {
+public class CharacterDB {
+    public final class CharacterTable {
         public static final String TABLE_NAME = "character";
 
-            public  final class CharactersColumns implements BaseColumns
-            {
+        public final class CharactersColumns implements BaseColumns {
+            public static final String _ID = "_ID";
             public static final String NAME = "name";
             public static final String CLASS_NAME = "className";
             public static final String RACE = "race";
             public static final String BACKGROUND = "background";
             public static final String LVL = "lvl";
-            public static final String  ABILITY_SCORES = "abilityScores";
+            public static final String ABILITY_SCORES = "abilityScores";
             public static final String ITEMS = "items";
             public static final String SPELLS = "spells";
             public static final String FEATS = "feats";
@@ -46,12 +47,12 @@ public class CharacterDB
             public static final String ARMOR_CLASS = "armorClass";
             public static final String SAVING_THROWS = "savingThrows";
             public static final String LANGUAGES = "languages";
-            public static final String  EQUIPMENT = "equipment";
+            public static final String EQUIPMENT = "equipment";
             public static final String SPEED = "speed";
             public static final String INITIATIVE = "initiative";
             public static final String HIT_DICE = "hitDice";
 
-         }
+        }
     }
 
     private String name;
@@ -75,6 +76,7 @@ public class CharacterDB
     private int speed;
     private int initiative;
     private int hitDice;
+    private int dataBaseIndex;
 
     public CharacterDB() {
         this.name = "";
@@ -98,250 +100,332 @@ public class CharacterDB
         this.speed = 0;
         this.initiative = 0;
         this.hitDice = 0;
+        this.dataBaseIndex = -1;
     }
-    public int abilityModifier(int index)
-    {
-        return  (abilityScores[index] - 10) / 2;
+
+    public int abilityModifier(int index) {
+        return (abilityScores[index] - 10) / 2;
     }
-    public int[] rollAbilityScores(){
+
+    public int[] rollAbilityScores() {
         int[] abilityScores = new int[7];
-        for(int i = 0; i < 7; i++){
+        for (int i = 0; i < 7; i++) {
             ArrayList<Integer> rolls = new ArrayList<Integer>(4);
-            for(int j = 0; j < 4; j++){
+            for (int j = 0; j < 4; j++) {
                 rolls.add(rollD6());
             }
-            for(int j = 0; j < 3;j++){
-                abilityScores[i] += Math.max(rolls.get(0),rolls.get(1));
-                if(rolls.get(0) < rolls.get(1)){
+            for (int j = 0; j < 3; j++) {
+                abilityScores[i] += Math.max(rolls.get(0), rolls.get(1));
+                if (rolls.get(0) < rolls.get(1)) {
                     rolls.remove(1);
+                } else {
+                    rolls.remove(0);
                 }
-                else{rolls.remove(0);}
             }
         }
         return abilityScores;
     }
-    public int rollD6(){
-        return (int)(Math.random()*6)+1;
+
+    public int rollD6() {
+        return (int) (Math.random() * 6) + 1;
     }
-    public int rollD8(){
-        return (int)(Math.random()*8)+1;
+
+    public int rollD8() {
+        return (int) (Math.random() * 8) + 1;
     }
-    public int rollD10(){
-        return (int)(Math.random()*10)+1;
+
+    public int rollD10() {
+        return (int) (Math.random() * 10) + 1;
     }
-    public int rollD12(){
-        return (int)(Math.random()*12)+1;
+
+    public int rollD12() {
+        return (int) (Math.random() * 12) + 1;
     }
+
     public int getExp() {
         return exp;
     }
+
     public void setExp(int exp) {
         this.exp = exp;
     }
+
     public int[] getHitpoints() {
         return hitpoints;
     }
+
     public void setHitpoints(int[] hitpoints) {
         this.hitpoints = hitpoints;
     }
-    public void setBaseHP(int HP){
+
+    public void setBaseHP(int HP) {
         hitpoints[0] = HP;
     }
-    public int getBaseHP(){
+
+    public int getBaseHP() {
         return hitpoints[0];
     }
-    public void setCurrentHP(int HP){
+
+    public void setCurrentHP(int HP) {
         hitpoints[1] = HP;
     }
-    public int getCurrentHP(){
+
+    public int getCurrentHP() {
         return hitpoints[1];
     }
-    public void setBonusHP(int HP){
+
+    public void setBonusHP(int HP) {
         hitpoints[2] = HP;
     }
-    public int getBonusHP(){
+
+    public int getBonusHP() {
         return hitpoints[2];
     }
+
     public int[] getSkillProficiencies() {
         return skillProficiencies;
     }
+
     public void setSkillProficiencies(int[] skillProficiencies) {
         this.skillProficiencies = skillProficiencies;
     }
+
+    public int getDataBaseIndex() {
+        return dataBaseIndex;
+    }
+
+    public void setDataBaseIndex(int index) {
+        this.dataBaseIndex = index;
+    }
+
     public int[] getMoney() {
         return money;
     }
-    public int getMoney(int index){
+
+    public int getMoney(int index) {
         return money[index];
     }
+
     public void setMoney(int[] money) {
         this.money = money;
     }
+
     public void setMoney(int index, int amount) {
         this.money[index] = amount;
     }
+
     public String getAlignment() {
         return alignment;
     }
+
     public void setAlignment(String alignment) {
         this.alignment = alignment;
     }
+
     public int getArmorClass() {
         return armorClass;
     }
+
     public void setArmorClass(int armorClass) {
         this.armorClass = armorClass;
     }
+
     public int[] getSavingThrows() {
         return savingThrows;
     }
-    public int getSavingThrow(int index){
+
+    public int getSavingThrow(int index) {
         return savingThrows[index];
     }
+
     public void setSavingThrows(int[] savingThrows) {
         this.savingThrows = savingThrows;
     }
-    public void setSavingThrow(int index){
+
+    public void setSavingThrow(int index) {
         savingThrows[index] = 1;
     }
+
     public ArrayList<String> getLanguages() {
         return languages;
     }
-    public boolean knowsLanguage(String language){
+
+    public boolean knowsLanguage(String language) {
         return languages.contains(language);
     }
-    public void addLanguage(String language){
+
+    public void addLanguage(String language) {
         languages.add(language);
     }
+
     public void setLanguages(ArrayList<String> languages) {
         this.languages = languages;
     }
-    public boolean removeLanguage(String language){
+
+    public boolean removeLanguage(String language) {
         return languages.remove(language);
     }
+
     public ArrayList<String> getEquipment() {
         return equipment;
     }
-    public void addEquipment(String equip){
+
+    public void addEquipment(String equip) {
         this.equipment.add(equip);
     }
-    public boolean removeEquipment(String equip){
+
+    public boolean removeEquipment(String equip) {
         return equipment.remove(equip);
     }
+
     public void setEquipment(ArrayList<String> equipment) {
         this.equipment = equipment;
     }
+
     public int getSpeed() {
         return speed;
     }
+
     public void setSpeed(int speed) {
         this.speed = speed;
     }
+
     public int getInitiative() {
         return initiative;
     }
+
     public void setInitiative(int initiative) {
         this.initiative = initiative;
     }
+
     public int getHitDice() {
         return hitDice;
     }
+
     public void setHitDice(int hitDice) {
         this.hitDice = hitDice;
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public String getClassName() {
         return className;
     }
+
     public void setClassName(String className) {
         this.className = className;
     }
+
     public String getRace() {
         return race;
     }
+
     public void setRace(String race) {
         this.race = race;
     }
+
     public String getBackground() {
         return background;
     }
+
     public void setBackground(String background) {
         this.background = background;
     }
+
     public int getLvl() {
         return lvl;
     }
+
     public void setLvl(int lvl) {
         this.lvl = lvl;
     }
+
     public int[] getAbilityScores() {
         return abilityScores;
     }
+
     public void setAbilityScores(int[] abilityScores) {
         this.abilityScores = abilityScores;
     }
-    public void setAbilityScore(int index, int score){
+
+    public void setAbilityScore(int index, int score) {
         abilityScores[index] = score;
     }
-    public int getAbilityScore(int index){
+
+    public int getAbilityScore(int index) {
         return abilityScores[index];
     }
+
     public ArrayList<String> getItems() {
         return items;
     }
+
     public void setItems(ArrayList<String> items) {
         this.items = items;
     }
-    public void addItem(String item){
+
+    public void addItem(String item) {
         items.add(item);
     }
-    public boolean hasItem(String item){
+
+    public boolean hasItem(String item) {
         return items.contains(item);
     }
-    public boolean removeItem(String item){
+
+    public boolean removeItem(String item) {
         return items.remove(item);
     }
+
     public ArrayList<String> getSpells() {
         return spells;
     }
-    public void addSpell(String spell){
+
+    public void addSpell(String spell) {
         spells.add(spell);
     }
-    public boolean hasSpell(String spell){
+
+    public boolean hasSpell(String spell) {
         return spells.contains(spell);
     }
+
     public void setSpells(ArrayList<String> spells) {
         this.spells = spells;
     }
-    public boolean removeSpell(String spell){
+
+    public boolean removeSpell(String spell) {
         return spells.remove(spell);
     }
+
     public ArrayList<String> getFeats() {
         return feats;
     }
+
     public void setFeats(ArrayList<String> feats) {
         this.feats = feats;
     }
-    public void addFeat(String feat){
+
+    public void addFeat(String feat) {
         feats.add(feat);
     }
-    public boolean hasFeat(String feat){
+
+    public boolean hasFeat(String feat) {
         return feats.contains(feat);
     }
-    public boolean removeFeat(String feat){
+
+    public boolean removeFeat(String feat) {
         return feats.remove(feat);
     }
-    public int proficiency()
-    {
+
+    public int proficiency() {
         int profBonus;
 
-        switch (lvl)
-        {
+        switch (lvl) {
             case 5:
             case 6:
             case 7:

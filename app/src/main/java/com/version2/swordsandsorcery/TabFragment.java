@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
+import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
@@ -805,6 +806,7 @@ public class TabFragment extends Fragment {
                         handleExceptions(0, save);
 
                         //Inserting values into the Database
+                        values.put(CharacterDB.CharacterTable.CharactersColumns._ID, DatabaseUtils.queryNumEntries(characterDataBase, CharacterDB.CharacterTable.TABLE_NAME));
                         values.put(CharacterDB.CharacterTable.CharactersColumns.NAME, character.getName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.LVL, character.getLvl());
@@ -816,13 +818,6 @@ public class TabFragment extends Fragment {
                         //puts all the values into a new row
                         characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null, values);
 
-                        // all rows are gotten
-
-                        Cursor AllCharacter = characterDataBase.query(CharacterDB.CharacterTable.TABLE_NAME, null, "1", null, null, null, null);
-                        while (AllCharacter.moveToNext()) {
-                            AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME));
-                        }
-                        AllCharacter.close();
                     }
                 });
                 break;
