@@ -3,8 +3,6 @@ package com.version2.swordsandsorcery.Database;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.content.Context;
-import android.nfc.Tag;
-import android.util.Log;
 
 import com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable;
 import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.*;
@@ -18,8 +16,9 @@ public class CharacterBaseHelper extends SQLiteOpenHelper {
     }
     @Override
     public void onCreate(SQLiteDatabase db){
-        db.execSQL("create table " + CharacterTable.TABLE_NAME + "(" + " _id integer primary key autoincrement, "
-                + CharacterTable.CharactersColumns.NAME
+        db.execSQL("create table " + CharacterTable.CHARACTER_TABLE + "(" + " _id integer primary key autoincrement, "
+
+                 + CharacterTable.CharactersColumns.NAME
                 + "," + CharacterTable.CharactersColumns.CLASS_NAME
                 + "," + CharacterTable.CharactersColumns.RACE
                 + "," + CharacterTable.CharactersColumns.BACKGROUND
@@ -39,12 +38,13 @@ public class CharacterBaseHelper extends SQLiteOpenHelper {
                 + "," + CharacterTable.CharactersColumns.EQUIPMENT
                 + "," + CharacterTable.CharactersColumns.SPEED
                 + "," + CharacterTable.CharactersColumns.INITIATIVE
-                + "," + CharacterTable.CharactersColumns.HIT_DICE + ")");
+                + "," + CharacterTable.CharactersColumns.HIT_DICE
+                + "," +CharacterTable.CharactersColumns.TIME + ")");
     }
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion){
 
-        db.execSQL("Drop Table if Exists " + TABLE_NAME);
+        db.execSQL("Drop Table if Exists " + CHARACTER_TABLE);
         onCreate(db);
     }
 

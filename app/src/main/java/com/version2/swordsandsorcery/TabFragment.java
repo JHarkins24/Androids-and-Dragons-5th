@@ -1,11 +1,11 @@
 package com.version2.swordsandsorcery;
 
+import java.util.Calendar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
-import android.database.DatabaseUtils;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
@@ -27,7 +27,7 @@ import android.widget.ImageButton;
 import android.widget.AdapterView.OnItemSelectedListener;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
-import android.database.Cursor;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -806,7 +806,7 @@ public class TabFragment extends Fragment {
                         handleExceptions(0, save);
 
                         //Inserting values into the Database
-                        values.put(CharacterDB.CharacterTable.CharactersColumns._ID, DatabaseUtils.queryNumEntries(characterDataBase, CharacterDB.CharacterTable.TABLE_NAME));
+                        values.put(CharacterDB.CharacterTable.CharactersColumns.TIME, Calendar.getInstance().getTimeInMillis());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.NAME, character.getName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.LVL, character.getLvl());
@@ -816,7 +816,7 @@ public class TabFragment extends Fragment {
 
 
                         //puts all the values into a new row
-                        characterDataBase.insert(CharacterDB.CharacterTable.TABLE_NAME, null, values);
+                        characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
 
                     }
                 });

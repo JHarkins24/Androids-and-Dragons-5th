@@ -17,7 +17,7 @@ import com.version2.swordsandsorcery.Database.CharacterDB;
 
 import java.util.List;
 
-import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns._ID;
+import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.TIME;
 
 // this will hold the RecyclerView.Adapter --> for binding the information to the view itself
 // this will also hold the RecyclerView.ViewHolder --> for displaying the view itself
@@ -68,7 +68,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 ImageView characterIcon;
                 TextView characterName, characterClass, characterLevel;
                 Button deleteButton;
-                int position;
+                String position;
                 final CharacterBaseHelper helper = new CharacterBaseHelper(characterContext);
                 final SQLiteDatabase database = helper.getReadableDatabase();
 
@@ -84,8 +84,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         deleteButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View V) {
-                                String[] positions = {Integer.toString(position)};
-                                database.delete(CharacterDB.CharacterTable.TABLE_NAME, _ID +" = ?", positions);
+                                int i = database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
                             }
                         });
                     }

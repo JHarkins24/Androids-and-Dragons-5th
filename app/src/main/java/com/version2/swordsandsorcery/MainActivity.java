@@ -1,6 +1,5 @@
 package com.version2.swordsandsorcery;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -52,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         final CharacterBaseHelper helper = new CharacterBaseHelper(getBaseContext());
         final SQLiteDatabase database = helper.getReadableDatabase();
-        final Cursor AllCharacter = database.query(com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.TABLE_NAME,null,"2",null,null,null,null);
+        final Cursor AllCharacter = database.query(com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CHARACTER_TABLE,null,"2",null,null,null,null);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
             character.setLvl(Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL))));
-            character.setDataBaseIndex(AllCharacter.getPosition());
+            character.setDataBaseIndex(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
             characterDBList.add(character);
 
         }

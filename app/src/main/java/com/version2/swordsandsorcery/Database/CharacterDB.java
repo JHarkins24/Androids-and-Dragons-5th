@@ -1,35 +1,16 @@
 package com.version2.swordsandsorcery.Database;
 
-import java.util.Scanner;
-
-import android.content.Intent;
-import android.os.Bundle;
 import android.provider.BaseColumns;
-import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.AdapterView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
-import java.lang.Object;
 
 
 public class CharacterDB {
     public final class CharacterTable {
-        public static final String TABLE_NAME = "character";
+        public static final String CHARACTER_TABLE = "character";
 
         public final class CharactersColumns implements BaseColumns {
-            public static final String _ID = "_ID";
+            public static final String TIME = "time";
             public static final String NAME = "name";
             public static final String CLASS_NAME = "className";
             public static final String RACE = "race";
@@ -76,7 +57,7 @@ public class CharacterDB {
     private int speed;
     private int initiative;
     private int hitDice;
-    private int dataBaseIndex;
+    private String dataBaseIndex;
 
     public CharacterDB() {
         this.name = "";
@@ -100,7 +81,7 @@ public class CharacterDB {
         this.speed = 0;
         this.initiative = 0;
         this.hitDice = 0;
-        this.dataBaseIndex = -1;
+        this.dataBaseIndex = "";
     }
 
     public int abilityModifier(int index) {
@@ -190,11 +171,11 @@ public class CharacterDB {
         this.skillProficiencies = skillProficiencies;
     }
 
-    public int getDataBaseIndex() {
+    public String getDataBaseIndex() {
         return dataBaseIndex;
     }
 
-    public void setDataBaseIndex(int index) {
+    public void setDataBaseIndex(String index) {
         this.dataBaseIndex = index;
     }
 
