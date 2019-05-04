@@ -283,6 +283,9 @@ public class TabFragment extends Fragment {
             case 0: {
                 // spinner is implemented dynamically in the java activity file.
                 final EditText name = view.findViewById(R.id.characterName);
+                if(!character.getName().equals("")){
+                    name.setText(character.getName());
+                }
                 name.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -301,32 +304,24 @@ public class TabFragment extends Fragment {
                 });
                 final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
                 LinkedList<String> levels = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
-                levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String level = levelPreferences.getString("level", "");
-                if (levels.contains(level)) {
-                    levels.remove(level);
-                    levels.addFirst(level);
-                }
                 // create arrayAdapter using the string array and a default
                 ArrayAdapter<String> levelAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, levels);
-                level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String level2 = levelPreferences.getString("level2", "");
-                if (level != null) {
-
-                    int spinnerPosition = levelAdapter.getPosition(level);
-                    lvlSpinner.setSelection(spinnerPosition);
-
+                lvlSpinner.setAdapter(levelAdapter);
+                int lvlSpinnerPosition = 0;
+                if (character.getLvl() == 0) {
+                    lvlSpinnerPosition = levelAdapter.getPosition("1");
+                    lvlSpinner.setSelection(lvlSpinnerPosition);
+                } else {
+                    lvlSpinnerPosition = levelAdapter.getPosition(Integer.toString(character.getLvl()));
+                    lvlSpinner.setSelection(lvlSpinnerPosition);
                 }
 
-                lvlSpinner.setAdapter(levelAdapter);
+
                 lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        SharedPreferences.Editor editor = level2Preferences.edit();
-                        editor.putString("level", lvlSpinner.getSelectedItem().toString());
-                        Log.v("level", (String) parent.getItemAtPosition(position));
-                        editor.apply();
-                        character.setLvl(Integer.parseInt((String)lvlSpinner.getSelectedItem()));
+                        Log.v("lvl", (String) parent.getItemAtPosition(position));
+                        character.setLvl(Integer.parseInt((String) lvlSpinner.getSelectedItem()));
                     }
 
                     @Override
@@ -338,17 +333,25 @@ public class TabFragment extends Fragment {
                 });
 
                 final Spinner classSpinner = (Spinner) view.findViewById(R.id.class_spinner);
-                LinkedList<String> classes = new LinkedList<>(Arrays.asList("barbarian", "bard", "cleric", "druid", "fighter","monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"));
+                LinkedList<String> classes = new LinkedList<>(Arrays.asList("barbarian", "bard", "cleric", "druid", "fighter", "monk", "paladin", "ranger", "rogue", "sorcerer", "warlock", "wizard"));
                 ArrayAdapter<String> classAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, classes);
-                int classSpinnerPosition = classAdapter.getPosition("barbarian");
-                classSpinner.setSelection(classSpinnerPosition);
-
                 classSpinner.setAdapter(classAdapter);
+                int classSpinnerPosition = 0;
+                String s;
+                if (character.getClassName().equals("")) {
+                    classSpinnerPosition = classAdapter.getPosition("barbarian");
+                    classSpinner.setSelection(classSpinnerPosition);
+                } else {
+                    classSpinnerPosition = classAdapter.getPosition(character.getClassName());
+                    classSpinner.setSelection(classSpinnerPosition);
+                    s = (String)classSpinner.getItemAtPosition(classSpinnerPosition);
+                }
+
                 classSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         Log.v("class", (String) parent.getItemAtPosition(position));
-                        character.setClassName((String)classSpinner.getSelectedItem());
+                        character.setClassName((String) classSpinner.getSelectedItem());
                     }
 
                     @Override
@@ -359,17 +362,24 @@ public class TabFragment extends Fragment {
                     }
                 });
                 final Spinner raceSpinner = (Spinner) view.findViewById(R.id.raceSpinner);
-                LinkedList<String> racees = new LinkedList<>(Arrays.asList("dragonborn", "dwarf", "elf", "gnome", "half-elf","halfing", "half-orc", "human", "tiefling"));
+                LinkedList<String> racees = new LinkedList<>(Arrays.asList("dragonborn", "dwarf", "elf", "gnome", "half-elf", "halfing", "half-orc", "human", "tiefling"));
                 ArrayAdapter<String> raceAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, racees);
-                int raceSpinnerPosition = raceAdapter.getPosition("dragonborn");
-                raceSpinner.setSelection(raceSpinnerPosition);
-
                 raceSpinner.setAdapter(raceAdapter);
+                int raceSpinnerPosition = 0;
+                if (character.getRace().equals("")) {
+                    raceSpinnerPosition = raceAdapter.getPosition("dragonborn");
+                    raceSpinner.setSelection(raceSpinnerPosition);
+                } else {
+                    raceSpinnerPosition = raceAdapter.getPosition(character.getRace());
+                    raceSpinner.setSelection(raceSpinnerPosition);
+                }
+
+
                 raceSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         Log.v("race", (String) parent.getItemAtPosition(position));
-                        character.setRace((String)raceSpinner.getSelectedItem());
+                        character.setRace((String) raceSpinner.getSelectedItem());
                     }
 
                     @Override
@@ -381,12 +391,20 @@ public class TabFragment extends Fragment {
                 });
 
                 final Spinner backgroundSpinner = (Spinner) view.findViewById(R.id.backgroundSpinner);
-                LinkedList<String> backgrounds = new LinkedList<>(Arrays.asList("acolyte", "charlatan", "criminal", "entertainer", "folk hero","guild artisan", "hermit", "noble", "outlander", "sage", "sailor", "soldier", "urchin"));
+                LinkedList<String> backgrounds = new LinkedList<>(Arrays.asList("acolyte", "charlatan", "criminal", "entertainer", "folk hero", "guild artisan", "hermit", "noble", "outlander", "sage", "sailor", "soldier", "urchin"));
                 ArrayAdapter<String> backgroundAdapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, backgrounds);
-                int bckgrndSpinnerPosition = backgroundAdapter.getPosition("acolyte");
-                backgroundSpinner.setSelection(bckgrndSpinnerPosition);
-
                 backgroundSpinner.setAdapter(backgroundAdapter);
+                int bckgrndSpinnerPosition = 0;
+                if (character.getBackground().equals("")){
+                    bckgrndSpinnerPosition = backgroundAdapter.getPosition("acolyte");
+                    backgroundSpinner.setSelection(bckgrndSpinnerPosition);
+                }else{
+                    bckgrndSpinnerPosition = backgroundAdapter.getPosition(character.getBackground());
+                    backgroundSpinner.setSelection(bckgrndSpinnerPosition);
+                }
+
+
+
                 backgroundSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -683,7 +701,15 @@ public class TabFragment extends Fragment {
                             final EditText intelligence = view.findViewById(R.id.intelligence);
                             final EditText wis = view.findViewById(R.id.wisdom);
                             final EditText cha = view.findViewById(R.id.charisma);
+                            if(character.getAbilityScore(0) != 0){
+                                str.setText(Integer.toString(character.getAbilityScore(0)));
+                                dex.setText(Integer.toString(character.getAbilityScore(1)));
+                                con.setText(Integer.toString(character.getAbilityScore(2)));
+                                intelligence.setText(Integer.toString(character.getAbilityScore(3)));
+                                wis.setText(Integer.toString(character.getAbilityScore(4)));
+                                cha.setText(Integer.toString(character.getAbilityScore(5)));
 
+                            }
                             str.addTextChangedListener(new TextWatcher() {
                                 @Override
                                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {

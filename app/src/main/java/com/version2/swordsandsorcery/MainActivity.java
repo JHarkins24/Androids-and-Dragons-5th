@@ -14,6 +14,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
+
+import org.bouncycastle.util.Strings;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -78,6 +81,12 @@ public class MainActivity extends AppCompatActivity {
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
             character.setLvl(Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL))));
             character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
+            String[] abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
+            for(int i = 0; i < abilityScoresString.length; i++){
+
+                abilityScoresString[i] = abilityScoresString[i].substring(1,3);
+                character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
+            }
             characterDBList.add(character);
 
         }
