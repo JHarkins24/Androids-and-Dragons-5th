@@ -1,9 +1,12 @@
 package com.version2.swordsandsorcery;
 
-
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +18,8 @@ import android.widget.TextView;
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.List;
 
 import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.TIME;
@@ -54,7 +59,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 holder.characterClass.setText(card.getClassName());
                 holder.characterLevel.setText(String.valueOf(card.getLvl()));
                 holder.characterIcon.setImageDrawable(characterContext.getResources().getDrawable(getImage(card)));
-                holder.position = card.getDataBaseIndex();
+                holder.position = card.getCreationTime();
+                holder.character = card;
             }
 
         @Override
@@ -69,6 +75,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 TextView characterName, characterClass, characterLevel;
                 Button deleteButton;
                 String position;
+                CardView card;
+                CharacterDB character;
                 final CharacterBaseHelper helper = new CharacterBaseHelper(characterContext);
                 final SQLiteDatabase database = helper.getReadableDatabase();
 
@@ -76,6 +84,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 public CardViewHolder(@NonNull View itemView)
                     {
                         super(itemView);
+                        card = itemView.findViewById(R.id.card);
                         characterIcon = itemView.findViewById(R.id.classIcon);
                         characterName = itemView.findViewById(R.id.characterNameText);
                         characterClass = itemView.findViewById(R.id.characterClassText);
@@ -85,6 +94,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                             @Override
                             public void onClick(View V) {
                                 int i = database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+                            }
+                        });
+                        card.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Intent newIntent = new Intent(characterContext,characterCreationOverview.class);
+                                newIntent.putExtra("character", character);
+                                characterContext.startActivity(newIntent);
                             }
                         });
                     }

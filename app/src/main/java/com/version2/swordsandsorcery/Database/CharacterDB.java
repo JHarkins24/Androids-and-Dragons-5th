@@ -2,10 +2,11 @@ package com.version2.swordsandsorcery.Database;
 
 import android.provider.BaseColumns;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 
-public class CharacterDB {
+public class CharacterDB implements Serializable {
     public final class CharacterTable {
         public static final String CHARACTER_TABLE = "character";
 
@@ -57,7 +58,7 @@ public class CharacterDB {
     private int speed;
     private int initiative;
     private int hitDice;
-    private String dataBaseIndex;
+    private String creationTime;
 
     public CharacterDB() {
         this.name = "";
@@ -81,7 +82,7 @@ public class CharacterDB {
         this.speed = 0;
         this.initiative = 0;
         this.hitDice = 0;
-        this.dataBaseIndex = "";
+        this.creationTime = "";
     }
 
     public int abilityModifier(int index) {
@@ -171,12 +172,12 @@ public class CharacterDB {
         this.skillProficiencies = skillProficiencies;
     }
 
-    public String getDataBaseIndex() {
-        return dataBaseIndex;
+    public String getCreationTime() {
+        return creationTime;
     }
 
-    public void setDataBaseIndex(String index) {
-        this.dataBaseIndex = index;
+    public void setCreationTime(String index) {
+        this.creationTime = index;
     }
 
     public int[] getMoney() {

@@ -41,6 +41,9 @@ import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 
+import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.*;
+
+
 public class TabFragment extends Fragment {
     private SharedPreferences levelPreferences;
     ArrayList<String> equip;
@@ -48,18 +51,21 @@ public class TabFragment extends Fragment {
     private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
     int position;
-    static CharacterDB character = new CharacterDB();
+    static CharacterDB character;
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
     TextView textView;
     short bla = 0;
 
-    public static Fragment getInstance(int position) {
+    public static Fragment getInstance(CharacterDB newCharacter, int position) {
         Bundle bundle = new Bundle();
         bundle.putInt("pos", position);
         TabFragment tabFragment = new TabFragment();
         tabFragment.setArguments(bundle);
+        if(character == null){
+            character = newCharacter;
+        }
         return tabFragment;
 
     }
@@ -806,17 +812,24 @@ public class TabFragment extends Fragment {
                         handleExceptions(0, save);
 
                         //Inserting values into the Database
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.TIME, Calendar.getInstance().getTimeInMillis());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.NAME, character.getName());
+
+                        values.put(NAME, character.getName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.LVL, character.getLvl());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.BACKGROUND, character.getBackground());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.RACE, character.getRace());
                         values.put(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES, Arrays.toString(character.getAbilityScores()));
 
+                        if(!character.getCreationTime().equals("")){
+                            characterDataBase.update(CharacterDB.CharacterTable.CHARACTER_TABLE,values, TIME + " = " + character.getCreationTime(), null);
+                        }else{
+                            values.put(TIME, Calendar.getInstance().getTimeInMillis());
+                            characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
+                        }
+
 
                         //puts all the values into a new row
-                        characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
+
 
                     }
                 });
