@@ -1,5 +1,6 @@
 package com.version2.swordsandsorcery;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,12 +27,12 @@ public class MainActivity extends AppCompatActivity {
     CardAdapter adapter;
 
     List<CharacterDB> characterDBList;
-
+    public static Activity activity = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        activity = this;
         ImageButton settingsButton = findViewById(R.id.settings_button);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,7 +71,10 @@ public class MainActivity extends AppCompatActivity {
         createCharacter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,characterCreationOverview.class));
+                CharacterDB character = new CharacterDB();
+                Intent newIntent = new Intent(MainActivity.this,characterCreationOverview.class);
+                newIntent.putExtra("character", character);
+                startActivity(newIntent);
             }
         });
 
@@ -83,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
             character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
             String[] abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
             for(int i = 0; i < abilityScoresString.length; i++){
-
                 abilityScoresString[i] = abilityScoresString[i].substring(1,3);
                 character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
             }

@@ -1,5 +1,6 @@
 package com.version2.swordsandsorcery;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
@@ -93,7 +94,9 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         deleteButton.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View V) {
-                                int i = database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+//                                MainActivity.activity.finish();
+//                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
                             }
                         });
                         card.setOnClickListener(new View.OnClickListener() {

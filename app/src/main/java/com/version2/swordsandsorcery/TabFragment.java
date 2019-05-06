@@ -64,7 +64,12 @@ public class TabFragment extends Fragment {
         TabFragment tabFragment = new TabFragment();
         tabFragment.setArguments(bundle);
         if(character == null){
-            character = newCharacter;
+            if(newCharacter != null) {
+                character = newCharacter;
+            }
+            else{
+                character = new CharacterDB();
+            }
         }
         return tabFragment;
 
