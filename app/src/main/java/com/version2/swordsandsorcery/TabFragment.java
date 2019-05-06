@@ -463,7 +463,7 @@ public class TabFragment extends Fragment  {
                 });
 
 
-                //                final Spinner selectionSpinnerManual = (Spinner) view.findViewById(R.id.selection_type_manual);
+//                final Spinner selectionSpinnerManual = (Spinner) view.findViewById(R.id.selection_type_manual);
 //                LinkedList<String> selectionsManual = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
 //                ArrayAdapter<String> adapters2 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsManual);
 //                selectionSpinnerManual.setAdapter(adapters2);
