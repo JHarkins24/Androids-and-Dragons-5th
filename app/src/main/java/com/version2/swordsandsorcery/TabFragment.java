@@ -249,7 +249,7 @@ public class TabFragment extends Fragment  {
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 1:
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String ability = abilityScorePreferences.getString("abilityScore", "");
+               String ability = abilityScorePreferences.getString("abilityScore", "");
                 switch(ability){
                     case"Point Buy":
                         return inflater.inflate(R.layout.fragment_character_creation_ability_scores_point_buy,container, false);
@@ -432,10 +432,10 @@ public class TabFragment extends Fragment  {
             }
                 break;
             case 1: {
-//                final Spinner selectionSpinner = (Spinner) view.findViewById(R.id.selection_type);
-//                LinkedList<String> selections = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
-//                ArrayAdapter<String> adapters = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selections);
-//                selectionSpinner.setAdapter(adapters);
+                final Spinner selectionSpinner = (Spinner) view.findViewById(R.id.selection_type_roll);
+                LinkedList<String> selections = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+                ArrayAdapter<String> adapters = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selections);
+                selectionSpinner.setAdapter(adapters);
 //                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
 //                selectionSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //                    @Override

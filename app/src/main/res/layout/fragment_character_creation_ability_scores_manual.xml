@@ -171,11 +171,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/selection_type"
+        android:id="@+id/selection_type_manual"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="283dp"
-        tools:layout_editor_absoluteY="62dp" />
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/abilityTable"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rollType"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </android.support.constraint.ConstraintLayout>
