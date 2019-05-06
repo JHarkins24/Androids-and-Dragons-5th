@@ -31,15 +31,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        ImageButton helpButton = findViewById(R.id.help_button);
-        helpButton.setOnClickListener(new View.OnClickListener() {
+        Button action = findViewById(R.id.action_help);
+        action.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, help.class));
             }
         });
+
+
 
         final CharacterBaseHelper helper = new CharacterBaseHelper(getBaseContext());
         final SQLiteDatabase database = helper.getReadableDatabase();

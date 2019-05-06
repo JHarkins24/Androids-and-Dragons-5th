@@ -40,12 +40,14 @@ import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 
-public class TabFragment extends Fragment {
+public class TabFragment extends Fragment  {
     private SharedPreferences levelPreferences;
     ArrayList<String> equip;
     private SharedPreferences level2Preferences;
+    private SharedPreferences selectionAbilityScorePreference;
     private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
+    String selectionAbilityScore;
     int position;
     static CharacterDB character;
     final int POINT_BUY_MAX = 15;
@@ -430,11 +432,28 @@ public class TabFragment extends Fragment {
             }
                 break;
             case 1: {
+//                final Spinner selectionSpinner = (Spinner) view.findViewById(R.id.selection_type);
+//                LinkedList<String> selections = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+//                ArrayAdapter<String> adapters = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selections);
+//                selectionSpinner.setAdapter(adapters);
+//                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+//                selectionSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//                    @Override
+//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+//                    {
+//                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
+//                        editor.putString("selection", selectionSpinner.getSelectedItem().toString());
+//                        Log.v("level", (String) parent.getItemAtPosition(position));
+//                        editor.apply();
+//                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
+//                    }
+//                });
+
                 final TextView rollType = view.findViewById(R.id.rollType);
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String ability = abilityScorePreferences.getString("abilityScore", "");
-                if (ability != null) {
-                    switch (ability) {
+                if (selectionAbilityScore != null) {
+                    switch (selectionAbilityScore) {
 
                         case "Point Buy": {
 
