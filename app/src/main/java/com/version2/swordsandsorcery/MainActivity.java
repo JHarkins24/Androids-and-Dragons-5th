@@ -83,13 +83,18 @@ public class MainActivity extends AppCompatActivity {
             CharacterDB character = new CharacterDB();
             character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
-            character.setLvl(Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL))));
-            character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
-            String[] abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
-            for(int i = 0; i < abilityScoresString.length; i++){
-                abilityScoresString[i] = abilityScoresString[i].substring(1,3);
-                character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
+            String level = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL));
+            String[] abilityScoresString;
+            if(Character.isDigit(level.charAt(0))){
+                character.setLvl(Integer.parseInt(level));
+                abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
+                for(int i = 0; i < abilityScoresString.length; i++){
+                    abilityScoresString[i] = abilityScoresString[i].substring(1,3);
+                    character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
+                }
             }
+            character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
+
             characterDBList.add(character);
 
         }
