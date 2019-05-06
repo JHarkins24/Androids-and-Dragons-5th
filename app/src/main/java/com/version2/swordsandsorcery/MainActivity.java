@@ -32,23 +32,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton settingsButton = findViewById(R.id.settings_button);
-        settingsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, settings.class));
-            }
-        });
-
-        ImageButton helpButton = findViewById(R.id.help_button);
-        helpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, help.class));
-            }
-        });
-
-
     }
     @Override
     protected void onStart(){
