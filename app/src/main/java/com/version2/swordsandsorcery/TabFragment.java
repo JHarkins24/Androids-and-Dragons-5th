@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -248,17 +250,17 @@ public class TabFragment extends Fragment  {
 
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 1:
-                abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-               String ability = abilityScorePreferences.getString("abilityScore", "");
-                switch(ability){
-                    case"Point Buy":
-                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_point_buy,container, false);
-                    case "Roll":
-                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_roll,container,false);
-                    case "Manual":
-                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
-                }
-                return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
+//                abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+//               String ability = abilityScorePreferences.getString("abilityScore", "");
+//                switch(ability){
+//                    case"Point Buy":
+//                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_point_buy,container, false);
+//                    case "Roll":
+//                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_roll,container,false);
+//                    case "Manual":
+//                        return inflater.inflate(R.layout.fragment_character_creation_ability_scores_manual, container, false);
+//                }
+                return inflater.inflate(R.layout.fragment_character_creation_ability_scores_roll, container, false);
             case 2:
                 return inflater.inflate(R.layout.fragment_character_creation_race, container, false);
             case 3:
@@ -301,6 +303,7 @@ public class TabFragment extends Fragment  {
                         character.setName(name.getText().toString());
                     }
                 });
+
                 final Spinner lvlSpinner = (Spinner) view.findViewById(R.id.lvl_spinner);
                 LinkedList<String> items = new LinkedList<>(Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20"));
                 levelPreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
@@ -309,6 +312,7 @@ public class TabFragment extends Fragment  {
                     items.remove(level);
                     items.addFirst(level);
                 }
+
                 // create arrayAdapter using the string array and a default
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
                 level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
@@ -432,22 +436,44 @@ public class TabFragment extends Fragment  {
             }
                 break;
             case 1: {
-                final Spinner selectionSpinner = (Spinner) view.findViewById(R.id.selection_type_roll);
-                LinkedList<String> selections = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
-                ArrayAdapter<String> adapters = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selections);
-                selectionSpinner.setAdapter(adapters);
-//                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-//                selectionSpinner.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//                    @Override
-//                    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-//                    {
-//                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
-//                        editor.putString("selection", selectionSpinner.getSelectedItem().toString());
-//                        Log.v("level", (String) parent.getItemAtPosition(position));
-//                        editor.apply();
-//                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
-//                    }
-//                });
+
+                final Spinner selectionSpinnerRoll = (Spinner) view.findViewById(R.id.selection_type_roll);
+                LinkedList<String> selectionsRoll = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+                ArrayAdapter<String> adapters1 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsRoll);
+                selectionSpinnerRoll.setAdapter(adapters1);
+                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                selectionSpinnerRoll.setOnItemSelectedListener(new OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
+                        editor.putString("selection", selectionSpinnerRoll.getSelectedItem().toString());
+                        Log.v("selection", (String) parent.getItemAtPosition(position));
+                        editor.apply();
+                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
+//                        TabLayout tabs = getActivity().findViewById(R.id.selection_type_point_buy);
+//                        tabs.getTabAt(1).select();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
+                    }
+                });
+
+
+                //                final Spinner selectionSpinnerManual = (Spinner) view.findViewById(R.id.selection_type_manual);
+//                LinkedList<String> selectionsManual = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+//                ArrayAdapter<String> adapters2 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsManual);
+//                selectionSpinnerManual.setAdapter(adapters2);
+
+//                final Spinner selectionSpinnerPointBuy = (Spinner) view.findViewById(R.id.selection_type_point_buy);
+//                LinkedList<String> selectionsPointBuy = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+//                ArrayAdapter<String> adapters3 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsPointBuy);
+//                selectionSpinnerPointBuy.setAdapter(adapters3);
+
+
 
                 final TextView rollType = view.findViewById(R.id.rollType);
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
@@ -678,6 +704,10 @@ public class TabFragment extends Fragment  {
                             });
                             break;
                             case "Roll":
+
+
+
+
                             //Write Roll algorithm that calls Roll in CharacterDB
                             final int[] lastClicked = {-1};
                             final Button[] abilityScores = {
