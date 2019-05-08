@@ -63,14 +63,7 @@ public class TabFragment extends Fragment {
         bundle.putInt("pos", position);
         TabFragment tabFragment = new TabFragment();
         tabFragment.setArguments(bundle);
-        if(character == null){
-            if(newCharacter != null) {
-                character = newCharacter;
-            }
-            else{
-                character = new CharacterDB();
-            }
-        }
+        character = newCharacter;
         return tabFragment;
 
     }
@@ -836,6 +829,14 @@ public class TabFragment extends Fragment {
             case 3:
                 break;
             case 4: {
+                final Button delete = view.findViewById(R.id.delete_button_character_view);
+                delete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        characterDataBase.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + character.getCreationTime(), null);
+                        character.setCreationTime("");
+                    }
+                });
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -854,7 +855,8 @@ public class TabFragment extends Fragment {
                         if(!character.getCreationTime().equals("")){
                             characterDataBase.update(CharacterDB.CharacterTable.CHARACTER_TABLE,values, TIME + " = " + character.getCreationTime(), null);
                         }else{
-                            values.put(TIME, Calendar.getInstance().getTimeInMillis());
+                            character.setCreationTime(Long.toString(Calendar.getInstance().getTimeInMillis()));
+                            values.put(TIME, character.getCreationTime());
                             characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
                         }
 
