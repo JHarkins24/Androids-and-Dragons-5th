@@ -6,6 +6,11 @@
     <string name="welcome">Welcome</string>
     <string name="characterCreation">Character Creation</string>
     <string name="characterSelection">Character \nSelection</string>
+    <string name="characterCreationHeading1">Name and Level</string>
+    <string name="characterCreationHeading2">Character Details</string>
+    <string name="background">Background:</string>
+    <string name="characterClass">Class:</string>
+    <string name="race">Race:</string>
 	
     <string name="settings">Settings</string>
     <string name="name">Name</string>
@@ -14,10 +19,7 @@
     <string name="back">Back</string>
     <string name="Save">Save</string>
     <string name="swords">Swords and Sorcery</string>
-    <string name="race">Race</string>
-    <string name="characterClass">Class</string>
     <string name="overview">Overview</string>
-    <string name="background">Background</string>
     <string name="characterView">View</string>
     <string name="abilityScores">Ability Scores</string>
     <string name="items">Items</string>
@@ -81,7 +83,7 @@
     <string name="tortle">Tortle</string>
     <string name="triton">Triton</string>
     <string name="yuantipureblood">Yuan-Ti Pureblood</string>
-    <string name="classLevel">Level</string>
+    <string name="classLevel">Level:</string>
     <string name="gold">Gold:</string>
     <string name="character1">Character 1</string>
     <string name="character2">Character 2</string>
