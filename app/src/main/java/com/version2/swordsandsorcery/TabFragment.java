@@ -432,8 +432,8 @@ public class TabFragment extends Fragment {
                         case "Point Buy": {
 
                             final TextView pointBuy = view.findViewById(R.id.pointsRemaining);//27
-                            final Button strPlus = view.findViewById(R.id.strPlus);
-                            final Button strMin = view.findViewById(R.id.strMin);
+                            final ImageButton strPlus = view.findViewById(R.id.strPlus);
+                            final ImageButton strMin = view.findViewById(R.id.strMin);
                             final TextView str = view.findViewById(R.id.strValue);//8
 
                             strPlus.setOnClickListener(new View.OnClickListener() {
@@ -448,8 +448,8 @@ public class TabFragment extends Fragment {
                                     pointBuyMin(str, pointBuy);
                                 }
                             });
-                            final Button wisPlus = view.findViewById(R.id.wisPlus);
-                            final Button wisMin = view.findViewById(R.id.wisMin);
+                            final ImageButton wisPlus = view.findViewById(R.id.wisPlus);
+                            final ImageButton wisMin = view.findViewById(R.id.wisMin);
                             final TextView wis = view.findViewById(R.id.wisValue);//8
 
                             wisPlus.setOnClickListener(new View.OnClickListener() {
@@ -464,8 +464,8 @@ public class TabFragment extends Fragment {
                                     pointBuyMin(wis, pointBuy);
                                 }
                             });
-                            final Button intPlus = view.findViewById(R.id.intPlus);
-                            final Button intMin = view.findViewById(R.id.intMin);
+                            final ImageButton intPlus = view.findViewById(R.id.intPlus);
+                            final ImageButton intMin = view.findViewById(R.id.intMin);
                             final TextView intelligence = view.findViewById(R.id.intValue);//8
 
                             intPlus.setOnClickListener(new View.OnClickListener() {
@@ -481,8 +481,8 @@ public class TabFragment extends Fragment {
                                     pointBuyMin(intelligence, pointBuy);
                                 }
                             });
-                            final Button chaPlus = view.findViewById(R.id.chaPlus);
-                            final Button chaMin = view.findViewById(R.id.chaMin);
+                            final ImageButton chaPlus = view.findViewById(R.id.chaPlus);
+                            final ImageButton chaMin = view.findViewById(R.id.chaMin);
                             final TextView cha = view.findViewById(R.id.chaValue);//8
 
                             chaPlus.setOnClickListener(new View.OnClickListener() {
@@ -498,8 +498,8 @@ public class TabFragment extends Fragment {
                                     pointBuyMin(cha, pointBuy);
                                 }
                             });
-                            final Button dexPlus = view.findViewById(R.id.dexPlus);
-                            final Button dexMin = view.findViewById(R.id.dexMin);
+                            final ImageButton dexPlus = view.findViewById(R.id.dexPlus);
+                            final ImageButton dexMin = view.findViewById(R.id.dexMin);
                             final TextView dex = view.findViewById(R.id.dexValue);//8
 
                             dexPlus.setOnClickListener(new View.OnClickListener() {
@@ -516,8 +516,8 @@ public class TabFragment extends Fragment {
                                 }
                             });
 
-                            final Button conPlus = view.findViewById(R.id.conPlus);
-                            final Button conMin = view.findViewById(R.id.conMin);
+                            final ImageButton conPlus = view.findViewById(R.id.conPlus);
+                            final ImageButton conMin = view.findViewById(R.id.conMin);
                             final TextView con = view.findViewById(R.id.conValue);//8
 
                             conPlus.setOnClickListener(new View.OnClickListener() {
