@@ -81,26 +81,22 @@ public class MainActivity extends AppCompatActivity {
         while (AllCharacter.moveToNext()){
 
             CharacterDB character = new CharacterDB();
-            character.setBackground(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.BACKGROUND)));
-            character.setRace(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.RACE)));
             character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
             String level = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL));
             String[] abilityScoresString;
-            if(Character.isDigit(level.charAt(0))){
-                character.setLvl(Integer.parseInt(level));
-                String stringScores = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES ));
-                abilityScoresString = Strings.split(stringScores.substring(1,stringScores.length()-1),',');
-                for(int i = 0; i < abilityScoresString.length; i++){
-                    if(i != 0) {
-                        abilityScoresString[i] = abilityScoresString[i].substring(1);
-                    }
-                    character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
+            character.setLvl(Integer.parseInt(level));
+            abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
+            for(int i = 0; i < abilityScoresString.length; i++){
+                abilityScoresString[i] = abilityScoresString[i].substring(1);
+                if(i == abilityScoresString.length - 1){
+                    abilityScoresString[i] = abilityScoresString[i].substring(0, abilityScoresString[i].length() - 1);
                 }
-            }
-            character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
+                character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
+                }
+                character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
 
-            characterDBList.add(character);
+                characterDBList.add(character);
 
         }
 

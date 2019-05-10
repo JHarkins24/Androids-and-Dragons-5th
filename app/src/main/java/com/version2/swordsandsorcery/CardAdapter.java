@@ -95,6 +95,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                             @Override
                             public void onClick(View V) {
                                 database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+//                                MainActivity.activity.finish();
+//                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
                             }
                         });
                         card.setOnClickListener(new View.OnClickListener() {

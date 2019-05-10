@@ -66,10 +66,7 @@ public class CharacterDB implements Serializable {
         this.race = "";
         this.background = "";
         this.lvl = 0;
-        this.abilityScores = new int[6];
-        for(int i = 0; i < abilityScores.length;i++){
-            abilityScores[i] = 0;
-        }
+        this.abilityScores = new int[]{0,0,0,0,0,0};
         this.items = new ArrayList<String>();
         this.spells = new ArrayList<String>();
         this.feats = new ArrayList<String>();

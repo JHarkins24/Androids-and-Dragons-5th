@@ -40,6 +40,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+import org.w3c.dom.CharacterData;
 
 import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.*;
 
@@ -829,14 +830,6 @@ public class TabFragment extends Fragment {
             case 3:
                 break;
             case 4: {
-                final Button delete = view.findViewById(R.id.delete_button_character_view);
-                delete.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        characterDataBase.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + character.getCreationTime(), null);
-                        character.setCreationTime("");
-                    }
-                });
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -855,8 +848,7 @@ public class TabFragment extends Fragment {
                         if(!character.getCreationTime().equals("")){
                             characterDataBase.update(CharacterDB.CharacterTable.CHARACTER_TABLE,values, TIME + " = " + character.getCreationTime(), null);
                         }else{
-                            character.setCreationTime(Long.toString(Calendar.getInstance().getTimeInMillis()));
-                            values.put(TIME, character.getCreationTime());
+                            values.put(TIME, Calendar.getInstance().getTimeInMillis());
                             characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
                         }
 
@@ -864,6 +856,14 @@ public class TabFragment extends Fragment {
                         //puts all the values into a new row
 
 
+                    }
+                });
+                final Button delete = view.findViewById(R.id.deleteButtonView);
+                delete.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        characterDataBase.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + character.getCreationTime(), null);
+                        character.setCreationTime("");
                     }
                 });
                 break;
