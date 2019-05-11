@@ -40,6 +40,7 @@ import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.pdmodel.PDDocumentCatalog;
 import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;
 import org.apache.pdfbox.pdmodel.interactive.form.PDField;
+import org.bouncycastle.util.Strings;
 import org.w3c.dom.CharacterData;
 
 import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.*;
@@ -275,9 +276,7 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        final ContentValues values = new ContentValues();
-        CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-        final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
+
         switch (position){
             case 0: {
                 // spinner is implemented dynamically in the java activity file.
@@ -722,6 +721,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(str.getText().toString())){
+                                        return;
+                                    }
                                     if (!str.getText().toString().equals("")) {
                                         character.setAbilityScore(0, Integer.parseInt(str.getText().toString()));
                                     }
@@ -740,6 +742,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(dex.getText().toString())){
+                                        return;
+                                    }
                                     if (!dex.getText().toString().equals("")) {
                                         character.setAbilityScore(1, Integer.parseInt(dex.getText().toString()));
                                     }
@@ -758,6 +763,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(con.getText().toString())){
+                                        return;
+                                    }
                                     if (!con.getText().toString().equals("")) {
                                         character.setAbilityScore(2, Integer.parseInt(con.getText().toString()));
                                     }
@@ -776,6 +784,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(intelligence.getText().toString())){
+                                        return;
+                                    }
                                     if (!intelligence.getText().toString().equals("")) {
                                         character.setAbilityScore(3, Integer.parseInt(intelligence.getText().toString()));
                                     }
@@ -794,6 +805,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(wis.getText().toString())){
+                                        return;
+                                    }
                                     if (!wis.getText().toString().equals("")) {
                                         character.setAbilityScore(4, Integer.parseInt(wis.getText().toString()));
                                     }
@@ -812,6 +826,9 @@ public class TabFragment extends Fragment {
 
                                 @Override
                                 public void afterTextChanged(Editable s) {
+                                    if(checkForChars(cha.getText().toString())){
+                                        return;
+                                    }
                                     if (!cha.getText().toString().equals("")) {
                                         character.setAbilityScore(5, Integer.parseInt(cha.getText().toString()));
                                     }
@@ -830,6 +847,9 @@ public class TabFragment extends Fragment {
             case 3:
                 break;
             case 4: {
+                final ContentValues values = new ContentValues();
+                CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
+                final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -866,6 +886,9 @@ public class TabFragment extends Fragment {
                         character.setCreationTime("");
                     }
                 });
+                if(!character.isDeleteable()){
+                    delete.setVisibility(View.INVISIBLE);
+                }
                 break;
             }
         }
@@ -925,6 +948,15 @@ public class TabFragment extends Fragment {
         }
         return -1;
     }
+    private boolean checkForChars(String check){
+        for(int i = 0; i < check.length(); i++){
+            if(!Character.isDigit(check.charAt(i))){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     //Ability Score algorithms//////////////////////////////////////////////////////
 }

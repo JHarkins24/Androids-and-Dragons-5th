@@ -96,16 +96,16 @@ public class MainActivity extends AppCompatActivity {
                 }
                 character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
 
-                characterDBList.add(character);
+            characterDBList.add(character);
 
         }
-
+        AllCharacter.close();
         //creating recyclerview adapter
         adapter = new CardAdapter(this, characterDBList);
         CardView card = findViewById(R.id.card);
 
         //setting adapter to recyclerview
         cardRecyclerView.setAdapter(adapter);
-        AllCharacter.close();
+
     }
 }

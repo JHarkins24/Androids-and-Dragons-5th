@@ -74,7 +74,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             {
                 ImageView characterIcon;
                 TextView characterName, characterClass, characterLevel;
-                Button deleteButton;
+//                Button deleteButton;
                 String position;
                 CardView card;
                 CharacterDB character;
@@ -90,18 +90,19 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         characterName = itemView.findViewById(R.id.characterNameText);
                         characterClass = itemView.findViewById(R.id.characterClassText);
                         characterLevel = itemView.findViewById(R.id.characterLevel);
-                        deleteButton = itemView.findViewById(R.id.deleteButton);
-                        deleteButton.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View V) {
-                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
-//                                MainActivity.activity.finish();
-//                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
-                            }
-                        });
+//                        deleteButton = itemView.findViewById(R.id.deleteButton);
+//                        deleteButton.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View V) {
+//                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+////                                MainActivity.activity.finish();
+////                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
+//                            }
+//                        });
                         card.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                character.setDeleteable(true);
                                 Intent newIntent = new Intent(characterContext,characterCreationOverview.class);
                                 newIntent.putExtra("character", character);
                                 characterContext.startActivity(newIntent);
