@@ -251,39 +251,8 @@ public class TabFragment extends Fragment {
         fileOutputStream.close();
     }
 
-    private File copyFile(int i)throws IOException{
-        Context context = this.getContext();
-        if(context == null)
-            return null;
-        AssetManager assetManager = context.getAssets();
-        InputStream inputStream = assetManager.open("currentVersion");
-        File file = getNewFile(i==0?character.getName():"copy");
-        FileOutputStream fileOutputStream = new FileOutputStream(file);
-        int currentChar;
-        while ((currentChar = inputStream.read()) != -1){
-            fileOutputStream.write(currentChar);
-        }
-        fileOutputStream.close();
-        return file;
-    }
-
-    private PDDocument getUsingPdfBox()throws IOException{
-        File pdf;
-        PDDocument document = null;
-        if((pdf = copyFile(1)) != null)
-            document = PDDocument.load(pdf);
-        return document;
-    }
-
     private void makeUsingPdfBox()throws IOException{
-        PDDocument from = getUsingPdfBox();
 
-        PDDocumentCatalog catalog = from.getDocumentCatalog();
-        PDAcroForm form = catalog.getAcroForm();
-        List itt = form.getFields();
-        for (Object field : itt){
-            System.out.println(((PDField)field).getFullyQualifiedName());
-        }
     }
 
     //Pdf methods//////////////////////////////////////////////////
