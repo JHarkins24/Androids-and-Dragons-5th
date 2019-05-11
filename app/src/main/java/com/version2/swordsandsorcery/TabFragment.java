@@ -4,13 +4,19 @@ import java.util.Calendar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.LinkedList;
+
+import android.Manifest;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -57,6 +63,8 @@ public class TabFragment extends Fragment {
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
+    boolean permissionChecked = false;
+    boolean permissionGranted = true;
     TextView textView;
     short bla = 0;
 
@@ -82,6 +90,7 @@ public class TabFragment extends Fragment {
     }
 
     public boolean isExternalStorageWritable() {
+
          String state = Environment.getExternalStorageState();
         System.out.println(Environment.MEDIA_MOUNTED);
          return Environment.MEDIA_MOUNTED.equals(state);
