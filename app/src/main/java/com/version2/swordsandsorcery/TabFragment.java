@@ -70,21 +70,49 @@ public class TabFragment extends Fragment {
 
     }
     //Pdf methods//////////////////////////////////////////////////
-
-    private InputStream getPdf()throws NullPointerException, IOException{
+	private InputStream getPdf()throws NullPointerException, IOException{
         AssetManager assetManager = this.getContext().getAssets();
         return assetManager.open("currentVersion");
     }
 
     private File getNewFile(String fileName){
         //return new File(Environment.getExternalStorageDirectory().getPath() + "/" + fileName);
-        return new File(this.getContext().getFilesDir(), fileName);
+        //return new File(this.getContext().getFilesDir(), fileName);
+        return new File(getPublicAlbumStorageDir(""), fileName);
     }
+
+    public boolean isExternalStorageWritable() {
+         String state = Environment.getExternalStorageState();
+        System.out.println(Environment.MEDIA_MOUNTED);
+         return Environment.MEDIA_MOUNTED.equals(state);
+     }
+
+
+    public File getPublicAlbumStorageDir(String albumName) {
+        // Get the directory for the user's public pictures directory.
+        File file = new File(Environment.getExternalStoragePublicDirectory(
+                Environment.DIRECTORY_PICTURES), albumName);
+        if (!file.mkdirs()) {
+            Log.e("makeStorageTag", "Directory not created");
+        }
+        return file;
+    }
+
 
     private void handleExceptions(int i, ImageButton save){
         PDFParser.class.getCanonicalName();
+        if(!isExternalStorageWritable()){
+            System.err.println("External storage is not writable");
+            return;
+        }
 
         try {
+            if(permissionChecked && !permissionGranted){
+                throw new IOException("Permissions not granted");
+            }else if (!permissionChecked){
+                requestPermissions();
+            }
+
             switch (i) {
                 case 0:
                     makePdf();
@@ -96,20 +124,15 @@ public class TabFragment extends Fragment {
                     System.out.println("Bye");
             }
         }catch (IOException ioe){
-                save.setVisibility(View.INVISIBLE);
+            System.err.println(ioe.getMessage());
+            save.setVisibility(View.INVISIBLE);
         }catch (NullPointerException npe){
-                save.setVisibility(View.INVISIBLE);
+            System.err.println(npe.getMessage());
+            save.setVisibility(View.INVISIBLE);
             }
     }
 
-    private void printBytes(byte[] input, FileOutputStream outputStream) throws IOException{
-        for (byte symbol : input) {
-            outputStream.write((char)symbol);
-        }
-    }
-
     private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string)throws IOException{
-        int tilde = '~';
         int current = 0;
         for (int i = 0;i < 3; i++) {
             if(i < string.length()) {
@@ -129,16 +152,34 @@ public class TabFragment extends Fragment {
         }
     }
 
-    private void fillSmallerString(FileOutputStream fileOutputStream, char character) throws IOException{
-        fileOutputStream.write(' ');
-        fileOutputStream.write(character);
-        fileOutputStream.write(' ');
+    private void requestPermissions() throws NullPointerException{
+        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this.getActivity(),
+                new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+            System.out.println("Hi");
+        }
+    }
+
+    public void onRequestPermissionsResult(int requestCode,
+        String[] permissions, int[] grantResults){
+
+        if(requestCode == 1 && grantResults.length > 0
+                && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+            permissionGranted = true;
+            permissionChecked = true;
+        }
+        else {
+            permissionGranted = false;
+            permissionChecked = true;
+        }
     }
 
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
         File file = getNewFile("test2.pdf");
+        requestPermissions();
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar = ',';
         while (currentChar != -1){
@@ -235,6 +276,7 @@ public class TabFragment extends Fragment {
             System.out.println(((PDField)field).getFullyQualifiedName());
         }
     }
+
     //Pdf methods//////////////////////////////////////////////////
 
     @Override
