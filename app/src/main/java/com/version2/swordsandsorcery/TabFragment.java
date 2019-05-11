@@ -7,10 +7,13 @@ import java.util.LinkedList;
 
 import android.Manifest;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -67,6 +70,8 @@ public class TabFragment extends Fragment {
     boolean permissionGranted = true;
     TextView textView;
     short bla = 0;
+    File pdf = null;
+    Intent pdfIntent = null;
 
     public static Fragment getInstance(CharacterDB newCharacter, int position) {
         Bundle bundle = new Bundle();
@@ -86,7 +91,11 @@ public class TabFragment extends Fragment {
     private File getNewFile(String fileName){
         //return new File(Environment.getExternalStorageDirectory().getPath() + "/" + fileName);
         //return new File(this.getContext().getFilesDir(), fileName);
-        return new File(getPublicAlbumStorageDir(""), fileName);
+        pdf = new File(getPublicAlbumStorageDir(""), fileName);
+        pdfIntent = new Intent(Intent.ACTION_VIEW);
+        pdfIntent.setDataAndType(Uri.fromFile(pdf), "application/pdf");
+        pdfIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+        return pdf;
     }
 
     public boolean isExternalStorageWritable() {
@@ -132,6 +141,7 @@ public class TabFragment extends Fragment {
                 default:
                     System.out.println("Bye");
             }
+            startActivity(pdfIntent);
         }catch (IOException ioe){
             System.err.println(ioe.getMessage());
             save.setVisibility(View.INVISIBLE);
@@ -296,7 +306,8 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
         switch (position){
             case 0: {
                 // spinner is implemented dynamically in the java activity file.
