@@ -13,47 +13,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_design_27_1_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_design_27_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_transition_27_1_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_transition_27_1_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/modules.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/app.iml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle____local_aars___C__Users_kvashay_Documents_GitHub_Androids_and_Dragons_5th_app_libs_pdfbox_jar_unspecified_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
@@ -94,6 +61,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Androids-and-Dragons-5th.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Androids-and-Dragons-5th.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,18 +82,17 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+            <state relative-caret-position="107">
+              <caret line="846" column="41" lean-forward="true" selection-start-line="846" selection-start-column="41" selection-end-line="846" selection-end-column="41" />
+              <folding>
+                <element signature="method#onCreate#0;class#TabFragment#0" />
+                <element signature="method#onCreateView#0;class#TabFragment#0" />
+                <element signature="method#onViewCreated#0;class#TabFragment#0" />
+              </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_view.xml">
-          <provider editor-type-id="text-editor" />
-          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -175,22 +145,29 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="18" />
+    <option name="y" value="17" />
     <option name="width" value="1920" />
     <option name="height" value="1061" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -209,24 +186,10 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="swordsandsorcery" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -436,11 +399,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="1920" height="1061" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17860962" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17910448" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -448,16 +411,16 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" weight="0.16044776" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.71695095" visible="true" weight="0.32867885" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.71695095" weight="0.32867885" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32978722" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.43723404" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287234" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.28304905" side_tool="true" weight="0.3287234" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33793837" />
+      <window_info anchor="bottom" id="Build" order="7" weight="0.32446808" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.40511727" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -518,13 +481,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>276</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>337</line>
+          <line>139</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
@@ -533,12 +490,12 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
-      <provider editor-type-id="android-manifest" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -660,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16160">
-          <caret line="875" column="13" selection-start-line="875" selection-start-column="13" selection-end-line="875" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="620">
@@ -692,18 +642,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_view.xml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml" />
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_view.xml" />
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        <state relative-caret-position="107">
+          <caret line="846" column="41" lean-forward="true" selection-start-line="846" selection-start-column="41" selection-end-line="846" selection-end-column="41" />
+          <folding>
+            <element signature="method#onCreate#0;class#TabFragment#0" />
+            <element signature="method#onCreateView#0;class#TabFragment#0" />
+            <element signature="method#onViewCreated#0;class#TabFragment#0" />
+          </folding>
         </state>
       </provider>
     </entry>
