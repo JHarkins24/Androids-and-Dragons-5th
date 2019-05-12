@@ -1,3 +1,4 @@
+
 package com.version2.swordsandsorcery;
 
 import android.content.Intent;
@@ -20,6 +21,9 @@ public class help extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
+
+        Button action = findViewById(R.id.action_help);
+        action.setVisibility(Button.GONE);
 
     }
 

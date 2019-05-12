@@ -51,63 +51,9 @@
 
         </android.support.v7.widget.RecyclerView>
 
-        <ImageButton
-            android:id="@+id/settings_button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_below="@id/cardRecyclerView"
-            android:layout_marginStart="275dp"
-            android:layout_marginTop="292dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:backgroundTint="@color/colorAccent"
-            android:contentDescription="@null"
-            android:scaleType="centerInside"
-            android:tint="@color/colorAccent"
-            app:srcCompat="@drawable/d20transparent" />
 
-        <ImageButton
-            android:id="@+id/help_button"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_below="@id/cardRecyclerView"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="292dp"
-            android:adjustViewBounds="true"
-            android:background="@null"
-            android:backgroundTint="@color/colorAccent"
-            android:contentDescription="@null"
-            android:scaleType="centerInside"
-            android:tint="@color/colorAccent"
-            app:srcCompat="@drawable/d20transparent" />
 
-        <TextView
-            android:id="@+id/helpText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@id/help_button"
-            android:layout_alignBottom="@id/help_button"
-            android:layout_marginStart="40dp"
-            android:layout_marginBottom="50dp"
-            android:text="@string/help"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/settingsText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@id/settings_button"
-            android:layout_alignBottom="@id/settings_button"
-            android:layout_marginStart="26dp"
-            android:layout_marginBottom="50dp"
-            android:text="@string/settings"
-            android:textAlignment="center"
-            android:textColor="@color/colorPrimary"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
     </RelativeLayout>
 </ScrollView>

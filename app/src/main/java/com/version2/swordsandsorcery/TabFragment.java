@@ -47,18 +47,16 @@ import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.
 
 
 public class TabFragment extends Fragment {
-    private SharedPreferences levelPreferences;
     ArrayList<String> equip;
-    private SharedPreferences level2Preferences;
     private SharedPreferences abilityScorePreferences;
-    private SQLiteDatabase characterDatabase;
+    private SharedPreferences selectionAbilityScorePreference;
     int position;
     static CharacterDB character;
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
-    TextView textView;
     short bla = 0;
+    String selectionAbilityScore;
 
     public static Fragment getInstance(CharacterDB newCharacter, int position) {
         Bundle bundle = new Bundle();
@@ -252,8 +250,8 @@ public class TabFragment extends Fragment {
 
                 return inflater.inflate(R.layout.fragment_character_creation_overview, container, false);
             case 1:
-                abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String ability = abilityScorePreferences.getString("abilityScore", "");
+                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String ability = selectionAbilityScorePreference.getString("abilityScore", "");
                 switch(ability){
                     case"Point Buy":
                         return inflater.inflate(R.layout.fragment_character_creation_ability_scores_point_buy,container, false);
@@ -421,10 +419,48 @@ public class TabFragment extends Fragment {
             }
                 break;
             case 1: {
+                final Spinner selectionSpinnerRoll = (Spinner) view.findViewById(R.id.selection_type_roll);
+                LinkedList<String> selectionsRoll = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+                ArrayAdapter<String> adapters1 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsRoll);
+                selectionSpinnerRoll.setAdapter(adapters1);
+                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                selectionSpinnerRoll.setOnItemSelectedListener(new OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
+                        editor.putString("selection", selectionSpinnerRoll.getSelectedItem().toString());
+                        Log.v("selection", (String) parent.getItemAtPosition(position));
+                        editor.apply();
+                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
+//                        TabLayout tabs = getActivity().findViewById(R.id.selection_type_point_buy);
+//                        tabs.getTabAt(1).select();
+                    }
+
+                    @Override
+                    public void onNothingSelected(AdapterView<?> parent) {
+                        // auto generated program stub will set the initial to the object at index 0,
+                        // could we make it so that there is some kind of interface between the settings
+                        // screen and the drop down interface here? Boolean?
+                    }
+                });
+
+
+//                final Spinner selectionSpinnerManual = (Spinner) view.findViewById(R.id.selection_type_manual);
+//                LinkedList<String> selectionsManual = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+//                ArrayAdapter<String> adapters2 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsManual);
+//                selectionSpinnerManual.setAdapter(adapters2);
+
+//                final Spinner selectionSpinnerPointBuy = (Spinner) view.findViewById(R.id.selection_type_point_buy);
+//                LinkedList<String> selectionsPointBuy = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
+//                ArrayAdapter<String> adapters3 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsPointBuy);
+//                selectionSpinnerPointBuy.setAdapter(adapters3);
+
+
+
                 final TextView rollType = view.findViewById(R.id.rollType);
                 abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
                 String ability = abilityScorePreferences.getString("abilityScore", "");
-                if (ability != null) {
+                if (selectionAbilityScore != null) {
                     switch (ability) {
 
                         case "Point Buy": {

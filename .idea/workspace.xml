@@ -13,17 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/fileHashes/resourceHashesCache.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.1/taskHistory/taskHistory.lock" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -34,12 +24,18 @@
       <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,30 +52,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="104" column="60" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml">
-          <provider editor-type-id="android-designer2" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="56" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="597">
-              <caret line="409" column="29" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="29" />
+            <state relative-caret-position="340">
+              <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,52 +67,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-69">
-              <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+            <state relative-caret-position="-11">
+              <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="75" selection-end-column="67" />
+              <folding>
+                <element signature="e#1552#1742#0" expanded="true" />
+                <element signature="e#1741#1742#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="892" column="13" lean-forward="true" selection-start-line="892" selection-start-column="13" selection-end-line="892" selection-end-column="13" />
+            <state relative-caret-position="312">
+              <caret line="261" column="17" lean-forward="true" selection-start-line="261" selection-start-column="17" selection-end-line="261" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="522">
+              <caret line="180" column="51" selection-start-line="180" selection-start-column="51" selection-end-line="180" selection-end-column="51" />
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="38" column="62" selection-start-line="38" selection-start-column="62" selection-end-line="38" selection-end-column="62" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="486" column="55" selection-start-line="486" selection-start-column="55" selection-end-line="486" selection-end-column="55" />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="331" column="55" selection-start-line="331" selection-start-column="55" selection-end-line="331" selection-end-column="55" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -142,6 +155,7 @@
       <list>
         <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -158,19 +172,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardRecycler.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterSelection.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_selection.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/rulesHelp.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/statusEffectsHelp.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/characterCreationAbilityScores.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
@@ -180,21 +186,33 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterCard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterDB.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/action_bar1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="747" />
+    <option name="y" value="29" />
     <option name="width" value="974" />
-    <option name="height" value="1087" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -222,17 +240,27 @@
             <path>
               <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="swordsandsorcery" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Database" type="462c0819:PsiDirectoryNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -442,11 +470,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1087" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14332604" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.14392324" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -454,14 +482,14 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" weight="0.16044776" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.71695095" visible="true" weight="0.32867885" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.7164179" weight="0.32765958" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32978722" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43723404" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.43723404" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287234" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.28304905" side_tool="true" weight="0.3287234" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.43723404" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.33834586" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6380597" weight="0.33829787" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
@@ -524,76 +552,31 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>292</line>
+          <line>425</line>
           <properties />
-          <option name="timeStamp" value="44" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>354</line>
+          <line>252</line>
           <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
+          <line>433</line>
+          <properties />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/statusEffectsHelp.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/characterCreationAbilityScores.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2142">
-          <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_spells.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_overview.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_items.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/settings.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -644,8 +627,8 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_text_work_bitch.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterLab.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -743,21 +726,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/cdfff6afea18344a5470ac70ea324f3e/jars/classes.jar!/android/support/v7/widget/CardView.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="42" column="46" selection-start-line="42" selection-start-column="46" selection-end-line="42" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ae347a2aba53116d1280210237e905/jars/classes.jar!/android/support/v4/app/FragmentPagerAdapter.class" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/904f524b88a5721c8ed5ffe5be66034c/jars/classes.jar!/android/support/v4/view/ViewPager.class" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -766,34 +741,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml">
-      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
-      <provider selected="true" editor-type-id="android-designer2" />
-      <provider editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="892" column="13" lean-forward="true" selection-start-line="892" selection-start-column="13" selection-end-line="892" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="11" column="58" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
+        <state relative-caret-position="1212">
+          <caret line="105" column="57" selection-start-line="105" selection-start-column="57" selection-end-line="105" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
+        <state relative-caret-position="2994">
           <caret line="409" column="29" selection-start-line="409" selection-start-column="29" selection-end-line="409" selection-end-column="29" />
         </state>
       </provider>
@@ -801,21 +765,136 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/ViewPagerAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12">
+          <caret line="110" column="124" selection-start-line="110" selection-start-column="124" selection-end-line="110" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+          <folding>
+            <element signature="e#1371#1389#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-69">
-          <caret line="73" column="58" lean-forward="true" selection-start-line="73" selection-start-column="58" selection-end-line="73" selection-end-column="58" />
+        <state relative-caret-position="-11">
+          <caret line="74" column="68" selection-start-line="74" selection-start-column="68" selection-end-line="75" selection-end-column="67" />
+          <folding>
+            <element signature="e#1552#1742#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="331" column="55" selection-start-line="331" selection-start-column="55" selection-end-line="331" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="180" column="51" selection-start-line="180" selection-start-column="51" selection-end-line="180" selection-end-column="51" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="486" column="55" selection-start-line="486" selection-start-column="55" selection-end-line="486" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ae347a2aba53116d1280210237e905/jars/classes.jar!/android/support/v4/app/Fragment.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="104" column="60" selection-start-line="104" selection-start-column="60" selection-end-line="104" selection-end-column="60" />
+        <state relative-caret-position="167">
+          <caret line="1129" selection-start-line="1129" selection-end-line="1129" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/AdapterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="945" selection-start-line="945" selection-end-line="945" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="261" column="17" lean-forward="true" selection-start-line="261" selection-start-column="17" selection-end-line="261" selection-end-column="17" />
         </state>
       </provider>
     </entry>

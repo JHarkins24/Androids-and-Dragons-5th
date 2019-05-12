@@ -1,4 +1,5 @@
 <resources>
+    <string name="selection">Swords and Sorcery</string>
     <string name="level2">Swords and Sorcery</string>
     <string name="level">Swords and Sorcery</string>
     <string name="abilityScore">Swords and Sorcery</string>
@@ -6,7 +7,9 @@
     <string name="welcome">Welcome</string>
     <string name="characterCreation">Character Creation</string>
     <string name="characterSelection">Character \nSelection</string>
-	
+    <string name="help_bar">help bar</string>
+    <string name="help_bar2">help bar2</string>
+
     <string name="settings">Settings</string>
     <string name="help">Help</string>
     <string name="Home">Home</string>
@@ -93,13 +96,13 @@
     <string name="item4">Item 4:</string>
     <string name="item5">Item 5:</string>
     <string name="item6">Item 6:</string>
- <string name="spell1">Spell 1:</string>
+    <string name="spell1">Spell 1:</string>
     <string name="spell2">Spell 2:</string>
     <string name="spell3">Spell 3:</string>
     <string name="spell4">Spell 4:</string>
     <string name="spell5">Spell 5:</string>
     <string name="spell6">Spell 6:</string>
-    <string name="actions">Actions In Combat</string>
+    <string name="creation">Character Basics</string>
     <string name="attack">Attack - you make a melee or ranged weapon attack.</string>
     <string name="casting">Casting Spells - You cast a cantrip or a spell of 1st level or higher. See spells casting time</string>
     <string name="dash">Dash - You gain extra movement equal to your speed for current turn.</string>
