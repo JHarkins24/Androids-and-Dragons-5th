@@ -27,12 +27,10 @@ public class MainActivity extends AppCompatActivity {
     CardAdapter adapter;
 
     List<CharacterDB> characterDBList;
-    public static Activity activity = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        activity = this;
         ImageButton settingsButton = findViewById(R.id.settings_button);
         settingsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +99,8 @@ public class MainActivity extends AppCompatActivity {
         }
         AllCharacter.close();
         //creating recyclerview adapter
-        adapter = new CardAdapter(this, characterDBList);
+        Activity activity = this;
+        adapter = new CardAdapter(this, characterDBList, activity);
         CardView card = findViewById(R.id.card);
 
         //setting adapter to recyclerview

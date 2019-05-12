@@ -32,12 +32,13 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         private Context characterContext;
         private List<CharacterDB> characterList;
-
+        private  Activity activity;
         // constructor for the adapter
-        public CardAdapter(Context characterContext, List<CharacterDB> characterList)
+        public CardAdapter(Context characterContext, List<CharacterDB> characterList, Activity activity)
             {
                 this.characterContext = characterContext;
                 this.characterList = characterList;
+                this.activity = activity;
             }
 
         @NonNull
@@ -74,7 +75,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             {
                 ImageView characterIcon;
                 TextView characterName, characterClass, characterLevel;
-//                Button deleteButton;
+                Button deleteButton;
                 String position;
                 CardView card;
                 CharacterDB character;
@@ -90,15 +91,16 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         characterName = itemView.findViewById(R.id.characterNameText);
                         characterClass = itemView.findViewById(R.id.characterClassText);
                         characterLevel = itemView.findViewById(R.id.characterLevel);
-//                        deleteButton = itemView.findViewById(R.id.deleteButton);
-//                        deleteButton.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View V) {
-//                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
-////                                MainActivity.activity.finish();
-////                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
-//                            }
-//                        });
+                        deleteButton = itemView.findViewById(R.id.deleteButton);
+                        deleteButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View V) {
+                                PdfOpener opener = new PdfOpener( character,activity, characterContext);
+                                opener.handleExceptions(0, null);
+//                                MainActivity.activity.finish();
+//                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
+                            }
+                        });
                         card.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
