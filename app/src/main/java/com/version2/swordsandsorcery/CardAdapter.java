@@ -1,5 +1,6 @@
 package com.version2.swordsandsorcery;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.content.Context;
@@ -73,7 +74,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
             {
                 ImageView characterIcon;
                 TextView characterName, characterClass, characterLevel;
-                Button deleteButton;
+                //                Button deleteButton;
                 String position;
                 CardView card;
                 CharacterDB character;
@@ -89,16 +90,19 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         characterName = itemView.findViewById(R.id.characterNameText);
                         characterClass = itemView.findViewById(R.id.characterClassText);
                         characterLevel = itemView.findViewById(R.id.characterLevel);
-                        deleteButton = itemView.findViewById(R.id.deleteButton);
-                        deleteButton.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View V) {
-                                int i = database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
-                            }
-                        });
+//                        deleteButton = itemView.findViewById(R.id.deleteButton);
+//                        deleteButton.setOnClickListener(new View.OnClickListener() {
+//                            @Override
+//                            public void onClick(View V) {
+//                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+////                                MainActivity.activity.finish();
+////                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
+//                            }
+//                        });
                         card.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
+                                character.setDeleteable(true);
                                 Intent newIntent = new Intent(characterContext,characterCreationOverview.class);
                                 newIntent.putExtra("character", character);
                                 characterContext.startActivity(newIntent);
@@ -107,34 +111,34 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                     }
             }
 
-            private int getImage(CharacterDB card){
-                switch (card.getClassName()){
-                    case"fighter":
-                        return R.drawable.fightericon;
-                    case "barbarian":
-                        return R.drawable.barbarianicon;
-                    case "bard":
-                        return R.drawable.bardicon;
-                    case "cleric":
-                        return R.drawable.clericicon;
-                    case "druid":
-                        return R.drawable.druidicon;
-                    case "monk":
-                        return R.drawable.monkicon;
-                    case "paladin":
-                        return R.drawable.paladinicon;
-                    case "ranger":
-                        return R.drawable.rangericon;
-                    case "rogue":
-                        return R.drawable.rogueicon;
-                    case "sorcerer":
-                        return R.drawable.sorcerericon;
-                    case "warlock":
-                        return R.drawable.warlockicon;
-                    case "wizard":
-                        return R.drawable.wizardicon;
+        private int getImage(CharacterDB card){
+            switch (card.getClassName()){
+                case"fighter":
+                    return R.drawable.fightericon;
+                case "barbarian":
+                    return R.drawable.barbarianicon;
+                case "bard":
+                    return R.drawable.bardicon;
+                case "cleric":
+                    return R.drawable.clericicon;
+                case "druid":
+                    return R.drawable.druidicon;
+                case "monk":
+                    return R.drawable.monkicon;
+                case "paladin":
+                    return R.drawable.paladinicon;
+                case "ranger":
+                    return R.drawable.rangericon;
+                case "rogue":
+                    return R.drawable.rogueicon;
+                case "sorcerer":
+                    return R.drawable.sorcerericon;
+                case "warlock":
+                    return R.drawable.warlockicon;
+                case "wizard":
+                    return R.drawable.wizardicon;
 
-                }
-                return R.drawable.fightericon;
             }
+            return R.drawable.fightericon;
+        }
     }

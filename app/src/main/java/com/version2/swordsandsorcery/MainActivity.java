@@ -1,5 +1,6 @@
 package com.version2.swordsandsorcery;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -26,12 +27,20 @@ public class MainActivity extends AppCompatActivity {
     CardAdapter adapter;
 
     List<CharacterDB> characterDBList;
-
+    public static Activity activity = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        activity = this;
 
+        Button action = findViewById(R.id.action_help);
+        action.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, help.class));
+            }
+        });
     }
     @Override
     protected void onStart(){
@@ -53,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
         createCharacter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this,characterCreationOverview.class));
+                CharacterDB character = new CharacterDB();
+                Intent newIntent = new Intent(MainActivity.this,characterCreationOverview.class);
+                newIntent.putExtra("character", character);
+                startActivity(newIntent);
             }
         });
 
@@ -62,24 +74,29 @@ public class MainActivity extends AppCompatActivity {
             CharacterDB character = new CharacterDB();
             character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
-            character.setLvl(Integer.parseInt(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL))));
-            character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
-            String[] abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
+            String level = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL));
+            String[] abilityScoresString;
+            character.setLvl(Integer.parseInt(level));
+            abilityScoresString = Strings.split(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES )),',');
             for(int i = 0; i < abilityScoresString.length; i++){
-
-                abilityScoresString[i] = abilityScoresString[i].substring(1,3);
+                abilityScoresString[i] = abilityScoresString[i].substring(1);
+                if(i == abilityScoresString.length - 1){
+                    abilityScoresString[i] = abilityScoresString[i].substring(0, abilityScoresString[i].length() - 1);
+                }
                 character.setAbilityScore(i, Integer.parseInt(abilityScoresString[i]));
             }
+            character.setCreationTime(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.TIME)));
+
             characterDBList.add(character);
 
         }
-
+        AllCharacter.close();
         //creating recyclerview adapter
         adapter = new CardAdapter(this, characterDBList);
         CardView card = findViewById(R.id.card);
 
         //setting adapter to recyclerview
         cardRecyclerView.setAdapter(adapter);
-        AllCharacter.close();
+
     }
 }

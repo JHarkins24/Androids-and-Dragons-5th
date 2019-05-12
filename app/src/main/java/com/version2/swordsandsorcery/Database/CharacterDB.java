@@ -59,6 +59,8 @@ public class CharacterDB implements Serializable {
     private int initiative;
     private int hitDice;
     private String creationTime;
+    private boolean deleteable;
+
 
     public CharacterDB() {
         this.name = "";
@@ -66,7 +68,7 @@ public class CharacterDB implements Serializable {
         this.race = "";
         this.background = "";
         this.lvl = 0;
-        this.abilityScores = new int[6];
+        this.abilityScores = new int[]{0,0,0,0,0,0};
         this.items = new ArrayList<String>();
         this.spells = new ArrayList<String>();
         this.feats = new ArrayList<String>();
@@ -83,6 +85,7 @@ public class CharacterDB implements Serializable {
         this.initiative = 0;
         this.hitDice = 0;
         this.creationTime = "";
+        deleteable = false;
     }
 
     public int abilityModifier(int index) {
@@ -403,6 +406,15 @@ public class CharacterDB implements Serializable {
     public boolean removeFeat(String feat) {
         return feats.remove(feat);
     }
+
+    public boolean isDeleteable() {
+        return deleteable;
+    }
+
+    public void setDeleteable(boolean deleteable) {
+        this.deleteable = deleteable;
+    }
+
 
     public int proficiency() {
         int profBonus;
