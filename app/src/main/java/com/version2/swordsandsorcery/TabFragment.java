@@ -730,9 +730,7 @@ public class TabFragment extends Fragment {
             case 3:
                 break;
             case 4: {
-                final ContentValues values = new ContentValues();
-                CharacterBaseHelper helper = new CharacterBaseHelper(getContext());
-                final SQLiteDatabase characterDataBase = helper.getReadableDatabase();
+
                 final ImageButton save = view.findViewById(R.id.save_button);
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -741,19 +739,7 @@ public class TabFragment extends Fragment {
 
                         //Inserting values into the Database
 
-                        values.put(NAME, character.getName());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME, character.getClassName());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.LVL, character.getLvl());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.BACKGROUND, character.getBackground());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.RACE, character.getRace());
-                        values.put(CharacterDB.CharacterTable.CharactersColumns.ABILITY_SCORES, Arrays.toString(character.getAbilityScores()));
 
-                        if(!character.getCreationTime().equals("")){
-                            characterDataBase.update(CharacterDB.CharacterTable.CHARACTER_TABLE,values, TIME + " = " + character.getCreationTime(), null);
-                        }else{
-                            values.put(TIME, Calendar.getInstance().getTimeInMillis());
-                            characterDataBase.insert(CharacterDB.CharacterTable.CHARACTER_TABLE, null, values);
-                        }
 
 
                         //puts all the values into a new row
@@ -761,17 +747,6 @@ public class TabFragment extends Fragment {
 
                     }
                 });
-                final Button delete = view.findViewById(R.id.deleteButtonView);
-                delete.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        characterDataBase.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + character.getCreationTime(), null);
-                        character.setCreationTime("");
-                    }
-                });
-                if(!character.isDeleteable()){
-                    delete.setVisibility(View.INVISIBLE);
-                }
                 break;
             }
         }

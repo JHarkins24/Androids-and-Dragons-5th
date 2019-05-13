@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id == R.id.t1bTrash){
             for(int i = 0; i < adapter.getItemCount(); i++){
-                adapter.holder.get(i).toggleDeleteButtonVisibility();
+                adapter.getHolder().get(i).toggleDeleteButtonVisibility();
             }
         }
         return super.onOptionsItemSelected(item);

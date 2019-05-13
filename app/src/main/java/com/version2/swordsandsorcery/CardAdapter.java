@@ -33,7 +33,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         private Context characterContext;
         private List<CharacterDB> characterList;
-        public ArrayList<CardViewHolder> holder;
+        private ArrayList<CardViewHolder> holder;
 
         // constructor for the adapter
         public CardAdapter(Context characterContext, List<CharacterDB> characterList)
@@ -154,4 +154,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 }
                 return R.drawable.fightericon;
             }
+
+        public ArrayList<CardViewHolder> getHolder() {
+            return holder;
+        }
     }
