@@ -9,7 +9,6 @@
     <string name="characterSelection">Character \nSelection</string>
     <string name="help_bar">help bar</string>
     <string name="help_bar2">help bar2</string>
-
     <string name="settings">Settings</string>
     <string name="help">Help</string>
     <string name="Home">Home</string>
@@ -103,14 +102,45 @@
     <string name="spell5">Spell 5:</string>
     <string name="spell6">Spell 6:</string>
     <string name="creation">Character Creation Basics</string>
-    <string name="classD">Attack - you make a melee or ranged weapon attack.</string>
-    <string name="levelD">Casting Spells - You cast a cantrip or a spell of 1st level or higher. See spells casting time</string>
-    <string name="backgroundD">Dash - You gain extra movement equal to your speed for current turn.</string>
-    <string name="raceD">Dash - You gain extra movement equal to your speed for current turn.</string>
-    <string name="abilityScoresD">Dash - You gain extra movement equal to your speed for current turn.</string>
-    <string name="itemsD">Dash - You gain extra movement equal to your speed for current turn.</string>
-    <string name="spellsD">Dash - You gain extra movement equal to your speed for current turn.</string>
-    <string name="d20Explanation">The D20 die is used for all actions taken by the player in game, you roll for skill checks, saving throws, and attack rolls against enemies.</string>
+    <string name="classTitle"> Class</string>
+    <string name="levelTitle"> Level</string>
+    <string name="backgroundTitle"> Background</string>
+    <string name="raceTitle"> Race</string>
+    <string name="abilityTitle"> Ability Scores</string>
+    <string name="itemTitle"> Items</string>
+    <string name="spellTitle"> Spells</string>
+    <string name="classD">  Your defining trait in the game, as it allows  you to use certain sets
+                                    of skills, abilities and  weapons based on your choice.</string>
+    <string name="levelD"> Your level determines what abilities you have as you progress and how
+                                    powerful your character is as a whole.</string>
+    <string name="backgroundD"> The Background is the key role-playing element of Dungeons and Dragons
+                                            as it pertains to where your characters origin is from and what kind of
+                                            life they live.</string>
+    <string name="raceD"> Your Race is essential what your character is, from human to Dragonborn, and
+                                can give you certain traits and abilities based on what you choose.</string>
+    <string name="abilityScoresD"> The main traits of your character that let you do actions
+                                                    throughout the game. These traits include:
+                                                    \n\n Strength: How hard your character can hit and how much then can lift.
+
+                                                    \n\n Dexterity: How fast your character is, essentially their ability to use
+                                                                skill weapons and dance around your foes.
+
+                                                    \n\n Constitution: Helps how many hits your character can take, how they react
+                                                                to poisons and how long they can survive if they are injured by a enemy.
+
+                                                    \n\n Wisdom: Wisdom describes a character’s willpower, common sense, perception, and intuition.
+                                                                This is very helpful versus enemies who attack you with psychic abilities.
+
+                                                    \n\n Charisma: Measuring force of personality, essentially how personable people in the
+                                                                world find your character.
+
+                                                    \n\n Intelligence: measuring reasoning and memory, how well your character can solve
+                                                                     mental puzzles and tasks throughout the world itself.</string>
+
+    <string name="itemsD"> What Equipment your character starts out with at the beginning of your
+                                    campaign and uses until you find more throughout your adventures.</string>
+    <string name="spellsD"> If your Character can use magic these are what they use. Your character can
+                                    start with a couple of Cantrips(unlimited use spells) and a couple level 1 spells.</string>
     <string name="helpMenu">Swords and Sorcery Help Menu</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
