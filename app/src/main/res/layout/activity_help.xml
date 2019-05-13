@@ -7,9 +7,7 @@
     android:background="@drawable/parchment"
     tools:context=".help">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/parchment"
@@ -22,7 +20,7 @@
 
 
         <TextView
-            android:id="@+id/actions_in_combat"
+            android:id="@+id/Character_Creation_Basics"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/app_bar"
@@ -37,135 +35,109 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/attack"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/actions_in_combat"
-            android:text="@string/attack"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
 
         <TextView
-            android:id="@+id/castingSpells"
+            android:id="@+id/Class"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Character_Creation_Basics"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="49dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/attack"
-            android:text="@string/casting"
+            android:text="@string/classD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/dash"
+            android:id="@+id/Level"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Class"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="49dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/castingSpells"
-            android:text="@string/dash"
+            android:text="@string/levelD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/disengage"
+            android:id="@+id/Background"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Level"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="44dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/dash"
-            android:text="@string/disengage"
+            android:text="@string/backgroundD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/dodge"
+            android:id="@+id/Race"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Background"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="49dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/disengage"
-            android:text="@string/dodge"
+            android:text="@string/raceD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/helpAction"
+            android:id="@+id/Ability_Scores"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Race"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="41dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/dodge"
-            android:text="@string/helpAction"
+            android:text="@string/abilityScoresD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/hide"
+            android:id="@+id/Items"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Ability_Scores"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="41dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/helpAction"
-            android:text="@string/hide"
+            android:text="@string/itemsD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/readyAction"
+            android:id="@+id/Spells"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@id/Items"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="34dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/hide"
-            android:text="@string/readyAction"
+            android:text="@string/spellsD"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/searchAction"
-            android:layout_width="369dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_below="@id/readyAction"
-            android:text="@string/searchAction"
-            android:textColor="@color/black"
-            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/d20_explain"
             android:layout_width="369dp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/Spells"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:layout_below="@id/searchAction"
             android:text="@string/d20Explanation"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
 
     </RelativeLayout>
 </ScrollView>
