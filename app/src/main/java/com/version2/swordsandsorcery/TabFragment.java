@@ -123,6 +123,7 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        requestPermissions();
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         switch (position){
@@ -662,7 +663,7 @@ public class TabFragment extends Fragment {
                                 }
                             });
                             cha.addTextChangedListener(new TextWatcher() {
-                                @Override
+                                 @Override
                                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
                                 }
