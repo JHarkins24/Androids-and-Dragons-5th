@@ -7,6 +7,11 @@ import java.util.LinkedList;
 import android.content.ContentValues;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Point;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.preference.PreferenceManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -65,6 +70,32 @@ public class TabFragment extends Fragment {
         tabFragment.setArguments(bundle);
         character = newCharacter;
         return tabFragment;
+
+    }
+
+    // used for the drag & drop
+    private static class itemDragShadowBuilder extends View.DragShadowBuilder{
+        private static Drawable shadow;
+        public itemDragShadowBuilder(View view){
+            super(view);
+            shadow = new ColorDrawable(Color.TRANSPARENT);
+        }
+        // this will provide the drag shadow with dimensions and the ability to drop the view
+        public void dragProvideShadowMetrics(Point size, Point touch){
+            int width, height;
+
+            // makes the shadow smaller than the view itself
+            width = getView().getWidth() / 2;
+            height = getView().getHeight() / 2;
+
+            shadow.setBounds(0, 0, width, height);
+            size.set(width, height);
+            touch.set(width / 2, height / 2);
+        }
+        // this will draw the shadow using the info from shadow metrics above
+        public void onDragShadow(Canvas canvas){
+            shadow.draw(canvas);
+        }
 
     }
     //Pdf methods//////////////////////////////////////////////////
@@ -579,6 +610,8 @@ public class TabFragment extends Fragment {
                             });
                         }
                         break;
+
+                        // TODO: Implement drag and drop
                         case "Roll": {
                             //Write Roll algorithm that calls Roll in CharacterDB
                             final int[] lastClicked = {-1};
@@ -634,11 +667,15 @@ public class TabFragment extends Fragment {
                                     }
                                 });
                             }
+
+                            // scores are generated here
                             int[] scores = character.rollAbilityScores();
                             for (int i = 0; i < scoreTable.length; i++) {
                                 scoreTable[i].setText(Integer.toString(scores[i]));
                             }
                             {
+                                // here is the click and set portion
+                                // this is where I'm going to need to change to drag n drop, change from an onClickListener to an OnLongClickListener
                                 abilityScores[0].setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
