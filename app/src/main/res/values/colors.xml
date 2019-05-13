@@ -20,5 +20,7 @@
     <color name="navy">#000080</color>
     <color name="black">#000000</color>
     <color name="dieRed">#7D0B0B</color>
+    <color name="parchmentBeige">#D0C8B0</color>
+    <color name="darkerParchment">#E7C9A9</color>
 
 </resources>

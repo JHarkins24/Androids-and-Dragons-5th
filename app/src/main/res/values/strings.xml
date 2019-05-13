@@ -18,6 +18,13 @@
     <string name="characterClass">Class:</string>
     <string name="race">Race:</string>
 
+    <string name="strength">Str</string>
+    <string name="dexterity">Dex</string>
+    <string name="constitution">Con</string>
+    <string name="intelligence">Int</string>
+    <string name="wisdom">Wis</string>
+    <string name="charisma">Cha</string>
+
     <string name="str">Strength:</string>
     <string name="dex">Dexterity:</string>
     <string name="con">Constitution:</string>
