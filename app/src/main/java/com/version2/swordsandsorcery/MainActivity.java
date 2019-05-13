@@ -10,9 +10,12 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
@@ -25,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView cardRecyclerView;
     CardAdapter adapter;
+    Toolbar toolbar;
+    Button delete;
+    Button help;
 
     List<CharacterDB> characterDBList;
     public static Activity activity = null;
@@ -33,14 +39,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         activity = this;
-
-        Button action = findViewById(R.id.action_help);
-        action.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, help.class));
-            }
-        });
+        toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null){
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        }
+        delete = findViewById(R.id.action_delete);
+        help = findViewById(R.id.action_help);
+//        action.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, help.class));
+//            }
+//        });
     }
     @Override
     protected void onStart(){
@@ -49,15 +60,15 @@ public class MainActivity extends AppCompatActivity {
         final SQLiteDatabase database = helper.getReadableDatabase();
         final Cursor AllCharacter = database.query(com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CHARACTER_TABLE,null,"2",null,null,null,null);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+//        setSupportActionBar(toolbar);
 
         characterDBList = new ArrayList<>();
         cardRecyclerView = (RecyclerView) findViewById(R.id.cardRecyclerView);
         cardRecyclerView.setHasFixedSize(true);
 
         cardRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-
+//        delete.setVisibility(View.INVISIBLE);
         final Button createCharacter = findViewById(R.id.createNewCharacter);
         createCharacter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,5 +109,30 @@ public class MainActivity extends AppCompatActivity {
         //setting adapter to recyclerview
         cardRecyclerView.setAdapter(adapter);
 
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater mi = getMenuInflater();
+        mi.inflate(R.menu.actionbar1, menu);
+        MenuItem helpButton = menu.findItem(R.id.tlbHelp);
+        MenuItem deleteButton = menu.findItem(R.id.t1bTrash);
+        MenuItem saveButton = menu.findItem(R.id.tlbSave);
+        saveButton.setVisible(false);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.tlbHelp)
+        {
+            startActivity(new Intent(MainActivity.this, help.class));
+        }
+        if(id == R.id.t1bTrash){
+            for(int i = 0; i < adapter.getItemCount(); i++){
+                adapter.toggleDeleteButtonVisibility();
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

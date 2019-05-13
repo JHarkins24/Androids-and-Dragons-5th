@@ -18,13 +18,12 @@ public class help extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        Button trash = findViewById(R.id.deleteButtonView);
+        //trash.setVisibility(View.INVISIBLE);
         Button action = findViewById(R.id.action_help);
-        action.setVisibility(Button.GONE);
-
+        //action.setVisibility(View.INVISIBLE);
     }
 
 }

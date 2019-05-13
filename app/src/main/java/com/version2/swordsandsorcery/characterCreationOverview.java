@@ -4,7 +4,6 @@ package com.version2.swordsandsorcery;
 import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -13,7 +12,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+
 import com.version2.swordsandsorcery.Database.CharacterDB;
 
 public class characterCreationOverview extends AppCompatActivity {
@@ -45,16 +44,16 @@ public class characterCreationOverview extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater mi = getMenuInflater();
         mi.inflate(R.menu.actionbar1, menu);
-        Button b = findViewById(R.id.tlbPlus);
-
-
+        MenuItem helpButton = menu.findItem(R.id.tlbHelp);
+        MenuItem deleteButton = menu.findItem(R.id.t1bTrash);
+        deleteButton.setVisible(false);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.tlbPlus)
+        if (id == R.id.tlbHelp)
         {
             startActivity(new Intent(characterCreationOverview.this, help.class));
         }

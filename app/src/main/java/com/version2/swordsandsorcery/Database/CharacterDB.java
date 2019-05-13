@@ -60,6 +60,8 @@ public class CharacterDB implements Serializable {
     private int hitDice;
     private String creationTime;
     private boolean deleteable;
+    private String pdfPath;
+
 
 
     public CharacterDB() {
@@ -86,6 +88,7 @@ public class CharacterDB implements Serializable {
         this.hitDice = 0;
         this.creationTime = "";
         deleteable = false;
+        this.pdfPath = null;
     }
 
     public int abilityModifier(int index) {
@@ -413,6 +416,14 @@ public class CharacterDB implements Serializable {
 
     public void setDeleteable(boolean deleteable) {
         this.deleteable = deleteable;
+    }
+
+    public String getPdfPath() {
+        return pdfPath;
+    }
+
+    public void setPdfPath(String pdfPath) {
+        this.pdfPath = pdfPath;
     }
 
 

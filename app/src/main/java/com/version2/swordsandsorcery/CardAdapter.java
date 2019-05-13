@@ -32,6 +32,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         private Context characterContext;
         private List<CharacterDB> characterList;
+        private CardViewHolder holder;
 
         // constructor for the adapter
         public CardAdapter(Context characterContext, List<CharacterDB> characterList)
@@ -62,6 +63,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 holder.characterIcon.setImageDrawable(characterContext.getResources().getDrawable(getImage(card)));
                 holder.position = card.getCreationTime();
                 holder.character = card;
+                this.holder = holder;
             }
 
         @Override
@@ -70,11 +72,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 return characterList.size();
             }
 
-        class CardViewHolder extends RecyclerView.ViewHolder
+        public class CardViewHolder extends RecyclerView.ViewHolder
             {
                 ImageView characterIcon;
                 TextView characterName, characterClass, characterLevel;
-//                Button deleteButton;
+                Button deleteButton;
                 String position;
                 CardView card;
                 CharacterDB character;
@@ -90,15 +92,15 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                         characterName = itemView.findViewById(R.id.characterNameText);
                         characterClass = itemView.findViewById(R.id.characterClassText);
                         characterLevel = itemView.findViewById(R.id.characterLevel);
-//                        deleteButton = itemView.findViewById(R.id.deleteButton);
-//                        deleteButton.setOnClickListener(new View.OnClickListener() {
-//                            @Override
-//                            public void onClick(View V) {
-//                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
-////                                MainActivity.activity.finish();
-////                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
-//                            }
-//                        });
+                        deleteButton = itemView.findViewById(R.id.deleteButton);
+                        deleteButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View V) {
+                                database.delete(CharacterDB.CharacterTable.CHARACTER_TABLE, TIME + " = " + position, null);
+                                MainActivity.activity.finish();
+                                characterContext.startActivity(new Intent(characterContext, MainActivity.class));
+                            }
+                        });
                         card.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View v) {
@@ -108,9 +110,21 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                                 characterContext.startActivity(newIntent);
                             }
                         });
+                        toggleDeleteButtonVisibility();
+                    }
+                    public void toggleDeleteButtonVisibility(){
+                        if(deleteButton.getVisibility() == View.INVISIBLE){
+                            deleteButton.setVisibility(View.VISIBLE);
+                        }
+                        else{
+                            deleteButton.setVisibility(View.INVISIBLE);
+                        }
                     }
             }
 
+            public void toggleDeleteButtonVisibility(){
+                holder.toggleDeleteButtonVisibility();
+            }
             private int getImage(CharacterDB card){
                 switch (card.getClassName()){
                     case"fighter":

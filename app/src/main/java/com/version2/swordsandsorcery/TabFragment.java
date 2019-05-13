@@ -78,7 +78,6 @@ public class TabFragment extends Fragment {
         tabFragment.setArguments(bundle);
         character = newCharacter;
         return tabFragment;
-
     }
 
     @Override
