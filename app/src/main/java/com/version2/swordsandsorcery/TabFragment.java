@@ -614,6 +614,9 @@ public class TabFragment extends Fragment {
                         // TODO: Implement drag and drop
                         case "Roll": {
                             //Write Roll algorithm that calls Roll in CharacterDB
+                            // convert the button arrays to TextView Arrays that will still fill properly
+                            // assign the drag functionality to score0 - score6
+                            // don't fuck it up
                             final int[] lastClicked = {-1};
                             final Button[] abilityScores = {
                                     view.findViewById(R.id.strength), view.findViewById(R.id.dexterity), view.findViewById(R.id.constitution),
