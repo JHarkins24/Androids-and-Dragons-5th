@@ -14,6 +14,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
 import android.widget.Button;
 
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
@@ -130,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id == R.id.t1bTrash){
             for(int i = 0; i < adapter.getItemCount(); i++){
-                adapter.toggleDeleteButtonVisibility();
+                adapter.holder.get(i).toggleDeleteButtonVisibility();
             }
         }
         return super.onOptionsItemSelected(item);

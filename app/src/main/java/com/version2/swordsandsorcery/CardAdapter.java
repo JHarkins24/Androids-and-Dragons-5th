@@ -21,6 +21,7 @@ import com.version2.swordsandsorcery.Database.CharacterDB;
 
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 import static com.version2.swordsandsorcery.Database.CharacterDB.CharacterTable.CharactersColumns.TIME;
@@ -32,13 +33,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         private Context characterContext;
         private List<CharacterDB> characterList;
-        private CardViewHolder holder;
+        public ArrayList<CardViewHolder> holder;
 
         // constructor for the adapter
         public CardAdapter(Context characterContext, List<CharacterDB> characterList)
             {
                 this.characterContext = characterContext;
                 this.characterList = characterList;
+                holder = new ArrayList<>();
             }
 
         @NonNull
@@ -63,7 +65,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                 holder.characterIcon.setImageDrawable(characterContext.getResources().getDrawable(getImage(card)));
                 holder.position = card.getCreationTime();
                 holder.character = card;
-                this.holder = holder;
+                this.holder.add(holder);
             }
 
         @Override
@@ -122,9 +124,6 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
                     }
             }
 
-            public void toggleDeleteButtonVisibility(){
-                holder.toggleDeleteButtonVisibility();
-            }
             private int getImage(CharacterDB card){
                 switch (card.getClassName()){
                     case"fighter":
