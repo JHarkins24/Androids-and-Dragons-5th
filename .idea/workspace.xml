@@ -13,18 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_overview.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_overview.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -444,7 +433,7 @@
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6369138" weight="0.33475026" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.40511727" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -501,7 +490,8 @@
     <MESSAGE value="Working on delete button functionality" />
     <MESSAGE value="Delete button on toolbar works." />
     <MESSAGE value="update2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update2" />
+    <MESSAGE value="it's alive!" />
+    <option name="LAST_COMMIT_MESSAGE" value="it's alive!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
