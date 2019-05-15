@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.AttributeSet;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -21,7 +22,7 @@ public class characterCreationOverview extends AppCompatActivity {
     Toolbar toolbar;
     TabLayout tabLayout;
     ViewPager viewPager;
-
+    AttributeSet attrs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +47,6 @@ public class characterCreationOverview extends AppCompatActivity {
         MenuInflater mi = getMenuInflater();
         mi.inflate(R.menu.actionbar1, menu);
         Button b = findViewById(R.id.tlbPlus);
-
-
         return super.onCreateOptionsMenu(menu);
     }
 
