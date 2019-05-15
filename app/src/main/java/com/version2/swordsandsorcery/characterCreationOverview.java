@@ -267,6 +267,12 @@ public class characterCreationOverview extends AppCompatActivity {
                         case 'c':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(5)));
                             break;
+                        case 'E':
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(1)));
+                            break;
+                        case 'F':
+                            fillString(fileOutputStream, oldFile, "30");
+                            break;
                         default:
                             fillString(fileOutputStream, oldFile, "");
                     }

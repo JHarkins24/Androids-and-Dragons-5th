@@ -12,14 +12,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/modules.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,8 +93,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="252" column="110" selection-start-line="252" selection-start-column="110" selection-end-line="252" selection-end-column="110" />
+            <state relative-caret-position="611">
+              <caret line="273" column="111" lean-forward="true" selection-start-line="273" selection-start-column="111" selection-end-line="273" selection-end-column="111" />
               <folding>
                 <element signature="method#onCreate#0;class#characterCreationOverview#0" />
                 <element signature="method#onCreateOptionsMenu#0;class#characterCreationOverview#0" />
@@ -115,15 +108,6 @@
                 <element signature="method#requestPermissions#0;class#characterCreationOverview#0" />
                 <element signature="method#onRequestPermissionsResult#0;class#characterCreationOverview#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3587">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -210,6 +194,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
         <option value="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+        <option value="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
         <option value="$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java" />
       </list>
     </option>
@@ -506,7 +491,7 @@
       <window_info anchor="bottom" id="Version Control" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.63646054" weight="0.33156216" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" weight="0.40511727" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
@@ -566,7 +551,8 @@
     <MESSAGE value="it's alive!" />
     <MESSAGE value="Items is only kind of working" />
     <MESSAGE value="ygvuhbkjnk" />
-    <option name="LAST_COMMIT_MESSAGE" value="ygvuhbkjnk" />
+    <MESSAGE value="kjhvg" />
+    <option name="LAST_COMMIT_MESSAGE" value="kjhvg" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -809,15 +795,15 @@
     </entry>
     <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3587">
+        <state relative-caret-position="20">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="252" column="110" selection-start-line="252" selection-start-column="110" selection-end-line="252" selection-end-column="110" />
+        <state relative-caret-position="611">
+          <caret line="273" column="111" lean-forward="true" selection-start-line="273" selection-start-column="111" selection-end-line="273" selection-end-column="111" />
           <folding>
             <element signature="method#onCreate#0;class#characterCreationOverview#0" />
             <element signature="method#onCreateOptionsMenu#0;class#characterCreationOverview#0" />
