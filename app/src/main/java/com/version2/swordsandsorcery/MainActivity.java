@@ -3,9 +3,11 @@ package com.version2.swordsandsorcery;
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.preference.PreferenceManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -14,13 +16,16 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 import com.version2.swordsandsorcery.Database.CharacterBaseHelper;
 import com.version2.swordsandsorcery.Database.CharacterDB;
@@ -28,6 +33,8 @@ import com.version2.swordsandsorcery.Database.CharacterDB;
 import org.bouncycastle.util.Strings;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +44,9 @@ public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     Button delete;
     Button help;
+    private SharedPreferences selectionAbilityScorePreference;
+
+    ArrayList<String> equip;
 
     List<CharacterDB> characterDBList;
     public static Activity activity = null;
@@ -86,6 +96,45 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(newIntent);
             }
         });
+
+        /////////////SPINNER FOR ABILITY SCORE TYPE SELECTION///////////////////////////////////////////////
+
+        final Spinner abilityScoreType = findViewById(R.id.selection_type);
+        LinkedList<String> scoreType = new LinkedList<>(Arrays.asList("Manual", "Roll", "Point Buy"));
+
+
+        ArrayAdapter<String> adaptery = new ArrayAdapter<String>(this,  android.R.layout.simple_spinner_dropdown_item, scoreType);
+        selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this);
+        String abilitySelect = selectionAbilityScorePreference.getString("abilityScore", "");
+        if (scoreType.contains(abilitySelect)) {
+            scoreType.remove(abilitySelect);
+            scoreType.addFirst(abilitySelect);
+        }
+        if (abilitySelect != null) {
+
+            int spinnerPosition = adaptery.getPosition(abilitySelect);
+            abilityScoreType.setSelection(spinnerPosition);
+
+        }
+        abilityScoreType.setAdapter(adaptery);
+        abilityScoreType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
+                editor.putString("abilityScore", abilityScoreType.getSelectedItem().toString());
+                Log.v("abilityScore", (String) parent.getItemAtPosition(position));
+                editor.apply();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // auto generated program stub will set the initial to the object at index 0,
+                // could we make it so that there is some kind of interface between the settings
+                // screen and the drop down interface here? Boolean?
+            }
+        });
+
+        /////////////SPINNER FOR ABILITY SCORE TYPE SELECTION///////////////////////////////////////////////
 
         while (AllCharacter.moveToNext()){
 
