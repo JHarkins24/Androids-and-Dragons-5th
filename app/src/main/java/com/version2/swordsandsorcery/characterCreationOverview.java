@@ -86,6 +86,9 @@ public class characterCreationOverview extends AppCompatActivity {
             finish();
 
         }
+        if(id == R.id.t1bPDF){
+            //todo: SPENCER CODE HERE
+        }
 
         return super.onOptionsItemSelected(item);
     }

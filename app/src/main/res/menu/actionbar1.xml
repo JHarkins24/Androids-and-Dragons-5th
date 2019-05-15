@@ -16,4 +16,9 @@
         android:icon="@android:drawable/ic_menu_delete"
         android:title="Delete"
         app:showAsAction="always" />
+    <item
+        android:id="@+id/t1bPDF"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:title="OpenPDF"
+        app:showAsAction="always" />
 </menu>

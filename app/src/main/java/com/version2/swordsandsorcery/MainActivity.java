@@ -119,6 +119,8 @@ public class MainActivity extends AppCompatActivity {
         MenuItem helpButton = menu.findItem(R.id.tlbHelp);
         MenuItem deleteButton = menu.findItem(R.id.t1bTrash);
         MenuItem saveButton = menu.findItem(R.id.tlbSave);
+        MenuItem pdfButton = menu.findItem(R.id.t1bPDF);
+        pdfButton.setVisible(false);
         saveButton.setVisible(false);
 
         return super.onCreateOptionsMenu(menu);
