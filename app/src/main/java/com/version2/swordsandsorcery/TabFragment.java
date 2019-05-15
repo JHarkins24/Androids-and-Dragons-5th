@@ -44,14 +44,14 @@ import org.apache.pdfbox.pdmodel.interactive.form.PDField;
 
 public class TabFragment extends Fragment  {
     private SharedPreferences levelPreferences;
-    ArrayList<String> equip;
-    private SharedPreferences level2Preferences;
     private SharedPreferences selectionAbilityScorePreference;
-    private SharedPreferences abilityScorePreferences;
     private SQLiteDatabase characterDatabase;
+
     String selectionAbilityScore;
     int position;
     static CharacterDB character;
+    ArrayList<String> equip;
+
     final int POINT_BUY_MAX = 15;
     final int POINT_BUY_MIN = 8;
     final int POINT_BUY_MIDDLE = 13;
@@ -251,7 +251,7 @@ public class TabFragment extends Fragment  {
                 return inflater.inflate(R.layout.fragment_character_creation_class, container, false);
             case 1:
                 selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-               selectionAbilityScore = selectionAbilityScorePreference.getString("abilityScore", "");
+                selectionAbilityScore = selectionAbilityScorePreference.getString("abilityScore", "");
                 switch(selectionAbilityScore){
                     case"Point Buy":
                         return inflater.inflate(R.layout.fragment_character_creation_ability_scores_point_buy,container, false);
@@ -315,8 +315,6 @@ public class TabFragment extends Fragment  {
 
                 // create arrayAdapter using the string array and a default
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_dropdown_item, items);
-                level2Preferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String level2 = levelPreferences.getString("level2", "");
                 if (level != null) {
 
                     int spinnerPosition = adapter.getPosition(level);
@@ -327,7 +325,7 @@ public class TabFragment extends Fragment  {
                 lvlSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        SharedPreferences.Editor editor = level2Preferences.edit();
+                        SharedPreferences.Editor editor = levelPreferences.edit();
                         editor.putString("level", lvlSpinner.getSelectedItem().toString());
                         Log.v("level", (String) parent.getItemAtPosition(position));
                         editor.apply();
@@ -436,38 +434,9 @@ public class TabFragment extends Fragment  {
             }
                 break;
             case 1: {
-
-                final Spinner selectionSpinnerRoll = (Spinner) view.findViewById(R.id.selection_type);
-                LinkedList<String> selectionsRoll = new LinkedList<>(Arrays.asList("Roll" , "Manual" , "Point Buy"));
-                ArrayAdapter<String> adapters1 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsRoll);
-                selectionSpinnerRoll.setAdapter(adapters1);
-                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                selectionSpinnerRoll.setOnItemSelectedListener(new OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
-                        editor.putString("selection", selectionSpinnerRoll.getSelectedItem().toString());
-                        Log.v("selection", (String) parent.getItemAtPosition(position));
-                        editor.apply();
-                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
-                        //getActivity().finish();
-                        //getActivity().startActivity(new Intent(getContext(), characterCreationOverview.class));
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                        // auto generated program stub will set the initial to the object at index 0,
-                        // could we make it so that there is some kind of interface between the settings
-                        // screen and the drop down interface here? Boolean?
-                    }
-
-                });
-
-
-
                 final TextView rollType = view.findViewById(R.id.rollType);
-                abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String ability = abilityScorePreferences.getString("abilityScore", "");
+
+                String ability = selectionAbilityScorePreference.getString("abilityScore", "");
                 if (selectionAbilityScore != null) {
                     switch (selectionAbilityScore) {
 
@@ -589,27 +558,6 @@ public class TabFragment extends Fragment  {
                         }
                         break;
                         case "Manual":
-                            //Write Manual algorithm
-//                            selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-//                            selectionSpinnerRoll.setOnItemSelectedListener(new OnItemSelectedListener() {
-//                                @Override
-//                                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                                    SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
-//                                    editor.putString("selection", selectionSpinnerRoll.getSelectedItem().toString());
-//                                    Log.v("selection", (String) parent.getItemAtPosition(position));
-//                                    editor.apply();
-//                                    selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
-////                        TabLayout tabs = getActivity().findViewById(R.id.selection_type_point_buy);
-////                        tabs.getTabAt(1).select();
-//                                }
-//
-//                                @Override
-//                                public void onNothingSelected(AdapterView<?> parent) {
-//                                    // auto generated program stub will set the initial to the object at index 0,
-//                                    // could we make it so that there is some kind of interface between the settings
-//                                    // screen and the drop down interface here? Boolean?
-//                                }
-//                            });
 
                             final EditText str = view.findViewById(R.id.strength);
                             final EditText dex = view.findViewById(R.id.dexterity);
