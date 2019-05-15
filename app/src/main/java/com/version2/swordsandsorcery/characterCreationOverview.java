@@ -235,39 +235,36 @@ public class characterCreationOverview extends AppCompatActivity {
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
                             break;
                         case '2':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
-                            break;
-                        case '3':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(1)));
                             break;
-                        case '4':
+                        case '3':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(2)));
                             break;
-                        case '5':
+                        case '4':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(3)));
                             break;
-                        case '6':
+                        case '5':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(4)));
                             break;
-                        case '7':
+                        case '6':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(5)));
                             break;
-                        case '8':
+                        case '7':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(0)));
                             break;
-                        case '9':
+                        case '8':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(1)));
                             break;
-                        case 'a':
+                        case '9':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(2)));
                             break;
-                        case 'b':
+                        case 'a':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(3)));
                             break;
-                        case 'c':
+                        case 'b':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(4)));
                             break;
-                        case 'd':
+                        case 'c':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(5)));
                             break;
                         default:
@@ -297,14 +294,8 @@ public class characterCreationOverview extends AppCompatActivity {
             case '3':
                 fillString(fileOutputStream, file, character.getBackground());
                 break;
-            case '4':
-                fillString(fileOutputStream, file, "");
-                break;
             case '5':
                 fillString(fileOutputStream, file, character.getRace());
-                break;
-            case '6':
-                fillString(fileOutputStream, file, "");
                 break;
                 default:
                     fillString(fileOutputStream, file, "");
