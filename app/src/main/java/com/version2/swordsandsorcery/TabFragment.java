@@ -6,11 +6,15 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 import android.Manifest;
+import android.content.ClipData;
+import android.content.ClipDescription;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StrictMode;
@@ -23,6 +27,7 @@ import android.support.v4.content.ContextCompat;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.DragEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -30,6 +35,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ImageButton;
@@ -427,152 +433,151 @@ public class TabFragment extends Fragment {
                         }
                         break;
                             case "Roll": {
-                                //Write Roll algorithm that calls Roll in CharacterDB
-                                final int[] lastClicked = {-1};
-                                final Button[] abilityScores = {
-                                        view.findViewById(R.id.strength), view.findViewById(R.id.dexterity), view.findViewById(R.id.constitution),
-                                        view.findViewById(R.id.intelligence), view.findViewById(R.id.wisdom), view.findViewById(R.id.charisma)};
-                                final Button[] scoreTable = {
-                                        view.findViewById(R.id.score0), view.findViewById(R.id.score1), view.findViewById(R.id.score2),
-                                        view.findViewById(R.id.score3), view.findViewById(R.id.score4), view.findViewById(R.id.score5), view.findViewById(R.id.score6)};
-                                {
+                            final int[] lastClicked = {-1};
+                            final Button[] abilityScores = {
+                                    view.findViewById(R.id.strength), view.findViewById(R.id.dexterity), view.findViewById(R.id.constitution),
+                                    view.findViewById(R.id.intelligence), view.findViewById(R.id.wisdom), view.findViewById(R.id.charisma)};
+                            final Button[] scoreTable = {
+                                    view.findViewById(R.id.score0), view.findViewById(R.id.score1), view.findViewById(R.id.score2),
+                                    view.findViewById(R.id.score3), view.findViewById(R.id.score4), view.findViewById(R.id.score5), view.findViewById(R.id.score6)};
+                            {
 
-                                    scoreTable[0].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 0;
-                                        }
-                                    });
-                                    scoreTable[1].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 1;
-                                        }
-                                    });
-                                    scoreTable[2].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 2;
-                                        }
-                                    });
-
-                                    scoreTable[3].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 3;
-                                        }
-                                    });
-                                    scoreTable[4].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 4;
-                                        }
-                                    });
-                                    scoreTable[5].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 5;
-                                        }
-                                    });
-                                    scoreTable[6].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            lastClicked[0] = 6;
-                                        }
-                                    });
-                                }
-                                int[] scores = character.rollAbilityScores();
-                                for (int i = 0; i < scoreTable.length; i++) {
-                                    scoreTable[i].setText(Integer.toString(scores[i]));
-                                }
-                                {
-                                    abilityScores[0].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[0].getText().equals("")) {
-                                                rollSetAbility(abilityScores[0], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[0], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = -1;
-                                            }
-
-                                        }
-                                    });
-                                    abilityScores[1].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[1].getText().equals("")) {
-                                                rollSetAbility(abilityScores[1], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[1], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = -1;
-                                            }
-
-                                        }
-                                    });
-                                    abilityScores[2].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[2].getText().equals("")) {
-                                                rollSetAbility(abilityScores[2], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[2], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = -1;
-                                            }
-
-                                        }
-                                    });
-                                    abilityScores[3].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[3].getText().equals("")) {
-                                                rollSetAbility(abilityScores[3], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[3], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = -1;
-                                            }
-
-                                        }
-                                    });
-                                    abilityScores[4].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[4].getText().equals("")) {
-                                                rollSetAbility(abilityScores[4], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[4], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = 0;
-                                            }
-
-                                        }
-                                    });
-                                    abilityScores[5].setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            if (!abilityScores[5].getText().equals("")) {
-                                                rollSetAbility(abilityScores[5], scoreTable[findFirstEmpty(scoreTable)]);
-                                            } else {
-                                                rollSetAbility(abilityScores[5], scoreTable[lastClicked[0]]);
-                                                lastClicked[0] = 0;
-                                            }
-
-                                        }
-                                    });
-
-
-                                }
-                                final Button saveRoll = view.findViewById(R.id.saveRoll);
-                                saveRoll.setOnClickListener(new View.OnClickListener() {
+                                scoreTable[0].setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View v) {
-                                        int[] abilityScoresForCharacter = new int[abilityScores.length];
-                                        for (int i = 0; i < abilityScores.length; i++) {
-                                            abilityScoresForCharacter[i] = Integer.parseInt((String) abilityScores[i].getText());
-                                        }
-                                        character.setAbilityScores(abilityScoresForCharacter);
+                                        lastClicked[0] = 0;
+                                    }
+                                });
+                                scoreTable[1].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 1;
+                                    }
+                                });
+                                scoreTable[2].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 2;
+                                    }
+                                });
+
+                                scoreTable[3].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 3;
+                                    }
+                                });
+                                scoreTable[4].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 4;
+                                    }
+                                });
+                                scoreTable[5].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 5;
+                                    }
+                                });
+                                scoreTable[6].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        lastClicked[0] = 6;
                                     }
                                 });
                             }
+                            int[] scores = character.rollAbilityScores();
+                            for (int i = 0; i < scoreTable.length; i++) {
+                                scoreTable[i].setText(Integer.toString(scores[i]));
+                            }
+                            {
+                                abilityScores[0].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[0].getText().equals("")) {
+                                            rollSetAbility(abilityScores[0], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[0], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = -1;
+                                        }
+
+                                    }
+                                });
+                                abilityScores[1].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[1].getText().equals("")) {
+                                            rollSetAbility(abilityScores[1], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[1], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = -1;
+                                        }
+
+                                    }
+                                });
+                                abilityScores[2].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[2].getText().equals("")) {
+                                            rollSetAbility(abilityScores[2], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[2], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = -1;
+                                        }
+
+                                    }
+                                });
+                                abilityScores[3].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[3].getText().equals("")) {
+                                            rollSetAbility(abilityScores[3], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[3], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = -1;
+                                        }
+
+                                    }
+                                });
+                                abilityScores[4].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[4].getText().equals("")) {
+                                            rollSetAbility(abilityScores[4], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[4], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = 0;
+                                        }
+
+                                    }
+                                });
+                                abilityScores[5].setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        if (!abilityScores[5].getText().equals("")) {
+                                            rollSetAbility(abilityScores[5], scoreTable[findFirstEmpty(scoreTable)]);
+                                        } else {
+                                            rollSetAbility(abilityScores[5], scoreTable[lastClicked[0]]);
+                                            lastClicked[0] = 0;
+                                        }
+
+                                    }
+                                });
+
+
+                            }
+                            final Button saveRoll = view.findViewById(R.id.saveRoll);
+                            saveRoll.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    int[] abilityScoresForCharacter = new int[abilityScores.length];
+                                    for (int i = 0; i < abilityScores.length; i++) {
+                                        abilityScoresForCharacter[i] = Integer.parseInt((String) abilityScores[i].getText());
+                                    }
+                                    character.setAbilityScores(abilityScoresForCharacter);
+                                }
+                            });
+                        }
                         break;
                         default: {
                             //Write Manual algorithm
@@ -1001,4 +1006,94 @@ public class TabFragment extends Fragment {
     }
 
     //Pdf methods//////////////////////////////////////////////////
+
+
+    //jon meathods
+    public boolean onLongClick(View v){
+        // create the ClipData.Item for the TextView from the TextView object's tag
+        ClipData.Item item = new ClipData.Item((CharSequence) v.getTag());
+
+        //create the ClipData using the tag and the plain text MIME type with the already-created item
+        String[] mimeTypes = {ClipDescription.MIMETYPE_TEXT_PLAIN};
+        ClipData dragData = new ClipData(v.getTag().toString(), mimeTypes, item);
+
+        //instantiate the dragShadow
+        View.DragShadowBuilder shadow = new View.DragShadowBuilder(v);
+
+        // start the drag
+        v.startDrag(dragData, shadow, v, 0);
+        return true;
+    }
+    public boolean onDrag(View v, DragEvent event){
+        // define a variable that will store the action for events
+        int action = event.getAction();
+
+        // switch on all of our expected events
+        switch (action){
+            case DragEvent.ACTION_DRAG_STARTED:
+                // determine whether the view can accept the dragged data
+                if (event.getClipDescription().hasMimeType(ClipDescription.MIMETYPE_TEXT_PLAIN)){
+                    // this is where we could also theoretically change the background color of our layout
+                    return true;
+                }
+                return false;
+
+            case DragEvent.ACTION_DRAG_ENTERED:
+                // change the color of the view when something enters the spot
+                v.getBackground().setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_IN);
+
+                // invalidate the forced redraw
+                v.invalidate();
+                return true;
+
+            case DragEvent.ACTION_DRAG_LOCATION:
+                // ignore this event
+                return true;
+
+            case DragEvent.ACTION_DRAG_EXITED:
+                // re-sets the color tint then returns true
+                v.getBackground().clearColorFilter();
+                v.invalidate();
+                return true;
+
+            case DragEvent.ACTION_DROP:
+                // get the item that contains the dragged data
+                ClipData.Item item = event.getClipData().getItemAt(0);
+
+                // get the text from the data of the item
+                String dragData = item.getText().toString();
+
+                // turn off any color filters
+                v.getBackground().clearColorFilter();
+                v.invalidate();
+
+                View vw = (View) event.getLocalState();
+                ViewGroup owner = (ViewGroup) vw.getParent();
+                owner.removeView(vw); // removes the dragged view from its previous location
+
+                // cast the view to a Linear layout because the layout that will be accepting the items is a linear layout
+                LinearLayout location = (LinearLayout) v;
+                location.addView(vw); // add the dragged view
+                vw.setVisibility(View.VISIBLE);
+                return true;
+            case DragEvent.ACTION_DRAG_ENDED:
+                // turn off and color changes
+                v.getBackground().clearColorFilter();
+                v.invalidate();
+
+                // does a getResult(), and toast if successful
+//                if (event.getResult()){
+//                    Toast.makeText(this, "The drop worked!!", Toast.LENGTH_SHORT).show();
+//                }
+//                else{
+//                    Toast.makeText(this, "The drop is fucked.", Toast.LENGTH_SHORT).show();
+//                }
+                return true;
+            default:
+                Log.e("Drag&Drop", "Unknown action received by the OnDragListener");
+                break;
+        }
+        return false;
+    }
+
 }

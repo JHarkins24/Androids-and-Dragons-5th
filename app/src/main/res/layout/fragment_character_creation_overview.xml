@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,150 +7,198 @@
     android:background="@drawable/parchment"
     tools:context=".TabFragment">
 
-<android.support.constraint.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".TabFragment">
+    <RelativeLayout
+        android:id="@+id/topLevel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        tools:context=".TabFragment">
 
-    <EditText
-        android:id="@+id/characterName"
-        android:layout_width="wrap_content"
-        android:layout_height="31dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/dieRed"
-        android:hint="name"
-        android:inputType="textPersonName|textCapWords"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/playerDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="100dp"
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:text="@string/characterCreationHeading1"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/lvl_spinner"
-        android:layout_width="99dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:background="@color/dieRed"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/levelTextViewClassCharacterCreation2" />
+        <RelativeLayout
+            android:id="@+id/playerDetailsBox"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/frame"
+            android:orientation="vertical"
+            android:padding="10dp">
 
+            <EditText
+                android:id="@+id/characterName"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:hint="@string/name"
+                android:inputType="textPersonName|textCapWords"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/class_spinner"
-        android:layout_width="99dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/dieRed"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/classTextView" />
+            <Spinner
+                android:id="@+id/lvl_spinner"
+                android:layout_width="70dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="68dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
 
-    <Spinner
-        android:id="@+id/backgroundSpinner"
-        android:layout_width="99dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/dieRed"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/backGroundTextView" />
+            <TextView
+                android:id="@+id/levelTextViewClassCharacterCreation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="73dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:text="@string/classLevel"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-    <Spinner
-        android:id="@+id/raceSpinner"
-        android:layout_width="99dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/dieRed"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/raceTextView" />
-
-    <TextView
-        android:id="@+id/raceTextView"
-        android:layout_width="99dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/race"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/class_spinner" />
-
-    <TextView
-        android:id="@+id/backGroundTextView"
-        android:layout_width="162dp"
-        android:layout_height="38dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/background"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/class_spinner" />
-
-    <TextView
-        android:id="@+id/classTextView"
-        android:layout_width="99dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/dieRed"
-        android:text="@string/characterClass"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lvl_spinner" />
-
-    <TextView
-        android:id="@+id/levelTextViewClassCharacterCreation2"
-        android:layout_width="99dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
-        android:background="@color/dieRed"
-        android:text="level"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.429"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/characterName" />
+        </RelativeLayout>
 
 
-</android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/characterDetailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="100dp"
+            android:background="@color/colorAccent"
+            android:paddingBottom="0dp"
+            android:text="@string/characterCreationHeading2"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:id="@+id/characterDetailsBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/frame"
+            android:orientation="vertical"
+            android:layout_marginTop="320dp"
+            android:layout_marginStart="8dp"
+            android:padding="10dp">
+
+            <Spinner
+                android:id="@+id/class_spinner"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/classTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:text="@string/characterClass"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/raceSpinner"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="45dp"
+                android:background="@color/colorAccent"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/raceTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:text="@string/race"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/backgroundSpinner"
+                android:layout_width="160dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="110dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="100dp"
+                android:background="@color/colorAccent"
+                android:textAlignment="center"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/backGroundTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="105dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorAccent"
+                android:text="@string/background"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/classImage"
+            android:layout_width="234dp"
+            android:layout_height="353dp"
+            android:layout_marginStart="165dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/sorcerer" />
+
+        <ImageView
+            android:id="@+id/raceImage"
+            android:layout_width="wrap_content"
+            android:layout_height="353dp"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="380dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:src="@drawable/elf" />
+
+    </RelativeLayout>
 
 </ScrollView>

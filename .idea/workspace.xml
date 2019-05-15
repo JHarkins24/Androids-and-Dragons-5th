@@ -12,7 +12,20 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="" />
+    <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/.idea/workspace.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/character_card_list.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_overview.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_overview.xml" afterDir="false" />
+      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +40,72 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="733">
+              <caret line="1097" selection-start-line="1097" selection-end-line="1097" />
+              <folding>
+                <element signature="method#onCreate#0;class#TabFragment#0" />
+                <element signature="method#onCreateView#0;class#TabFragment#0" />
+                <element signature="method#onViewCreated#0;class#TabFragment#0" />
+                <element signature="class#13975:15185" />
+                <element signature="e#15190#15303#0" />
+                <element signature="e#16504#22934#1" />
+                <element signature="e#23214#32047#1" />
+                <element signature="e#24072#24344#0" expanded="true" />
+                <element signature="e#24343#24344#0" expanded="true" />
+                <element signature="e#24412#24684#0" expanded="true" />
+                <element signature="e#24683#24684#0" expanded="true" />
+                <element signature="e#24752#25024#0" expanded="true" />
+                <element signature="e#25023#25024#0" expanded="true" />
+                <element signature="e#25093#25365#0" expanded="true" />
+                <element signature="e#25364#25365#0" expanded="true" />
+                <element signature="e#25433#25705#0" expanded="true" />
+                <element signature="e#25704#25705#0" expanded="true" />
+                <element signature="e#25773#26045#0" expanded="true" />
+                <element signature="e#26044#26045#0" expanded="true" />
+                <element signature="e#26113#26385#0" expanded="true" />
+                <element signature="e#26384#26385#0" expanded="true" />
+                <element signature="e#26778#27457#0" expanded="true" />
+                <element signature="e#27456#27457#0" expanded="true" />
+                <element signature="e#27528#28207#0" expanded="true" />
+                <element signature="e#28206#28207#0" expanded="true" />
+                <element signature="e#28278#28957#0" expanded="true" />
+                <element signature="e#28956#28957#0" expanded="true" />
+                <element signature="e#29028#29707#0" expanded="true" />
+                <element signature="e#29706#29707#0" expanded="true" />
+                <element signature="e#29778#30456#0" expanded="true" />
+                <element signature="e#30455#30456#0" expanded="true" />
+                <element signature="e#30527#31205#0" expanded="true" />
+                <element signature="e#31204#31205#0" expanded="true" />
+                <element signature="e#31382#32019#0" expanded="true" />
+                <element signature="e#32018#32019#0" expanded="true" />
+                <element signature="e#32531#40042#1" />
+                <element signature="method#pointBuyAdd#0;class#TabFragment#0" />
+                <element signature="method#pointBuyMin#0;class#TabFragment#0" />
+                <element signature="method#rollSetAbility#0;class#TabFragment#0" />
+                <element signature="method#findFirstEmpty#0;class#TabFragment#0" />
+                <element signature="method#checkForChars#0;class#TabFragment#0" />
+                <element signature="method#getPdf#0;class#TabFragment#0" />
+                <element signature="method#getNewFile#0;class#TabFragment#0" />
+                <element signature="method#isExternalStorageWritable#0;class#TabFragment#0" />
+                <element signature="method#getPublicAlbumStorageDir#0;class#TabFragment#0" />
+                <element signature="method#handleExceptions#0;class#TabFragment#0" />
+                <element signature="method#fillString#0;class#TabFragment#0" />
+                <element signature="method#requestPermissions#0;class#TabFragment#0" />
+                <element signature="method#onRequestPermissionsResult#0;class#TabFragment#0" />
+                <element signature="method#makePdf#0;class#TabFragment#0" />
+                <element signature="method#makeUsingPdfBox#0;class#TabFragment#0" />
+                <element signature="method#onLongClick#0;class#TabFragment#0" />
+                <element signature="method#onDrag#0;class#TabFragment#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -84,6 +162,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" />
+        <option value="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
       </list>
     </option>
   </component>
@@ -97,10 +176,31 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+            </path>
+            <path>
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -111,7 +211,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="Nexus_5X_API_28" />
+    <property name="device.picker.selection" value="Pixel_2_API_28" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunDashboard">
@@ -324,10 +424,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="0" width="960" height="1061" extended-state="6" />
+    <frame x="0" y="0" width="1920" height="1061" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.14285715" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2812834" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -337,12 +437,12 @@
       <window_info id="Resources Explorer" order="8" weight="0.16044776" />
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.7164179" weight="0.32569557" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32978722" />
-      <window_info anchor="bottom" id="TODO" order="2" weight="0.32978722" />
+      <window_info anchor="bottom" id="TODO" order="2" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.43698853" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287234" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.36308622" side_tool="true" weight="0.3371522" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6369138" weight="0.3358051" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6369138" weight="0.33475026" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
       <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
@@ -422,18 +522,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_background.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_race.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_spells.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_overview.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_items.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CharacterDB.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/database/sqlite/SQLiteCursor.java" />
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/database/AbstractCursor.java" />
@@ -611,6 +699,92 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_items.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="733">
+          <caret line="1097" selection-start-line="1097" selection-end-line="1097" />
+          <folding>
+            <element signature="method#onCreate#0;class#TabFragment#0" />
+            <element signature="method#onCreateView#0;class#TabFragment#0" />
+            <element signature="method#onViewCreated#0;class#TabFragment#0" />
+            <element signature="class#13975:15185" />
+            <element signature="e#15190#15303#0" />
+            <element signature="e#16504#22934#1" />
+            <element signature="e#23214#32047#1" />
+            <element signature="e#24072#24344#0" expanded="true" />
+            <element signature="e#24343#24344#0" expanded="true" />
+            <element signature="e#24412#24684#0" expanded="true" />
+            <element signature="e#24683#24684#0" expanded="true" />
+            <element signature="e#24752#25024#0" expanded="true" />
+            <element signature="e#25023#25024#0" expanded="true" />
+            <element signature="e#25093#25365#0" expanded="true" />
+            <element signature="e#25364#25365#0" expanded="true" />
+            <element signature="e#25433#25705#0" expanded="true" />
+            <element signature="e#25704#25705#0" expanded="true" />
+            <element signature="e#25773#26045#0" expanded="true" />
+            <element signature="e#26044#26045#0" expanded="true" />
+            <element signature="e#26113#26385#0" expanded="true" />
+            <element signature="e#26384#26385#0" expanded="true" />
+            <element signature="e#26778#27457#0" expanded="true" />
+            <element signature="e#27456#27457#0" expanded="true" />
+            <element signature="e#27528#28207#0" expanded="true" />
+            <element signature="e#28206#28207#0" expanded="true" />
+            <element signature="e#28278#28957#0" expanded="true" />
+            <element signature="e#28956#28957#0" expanded="true" />
+            <element signature="e#29028#29707#0" expanded="true" />
+            <element signature="e#29706#29707#0" expanded="true" />
+            <element signature="e#29778#30456#0" expanded="true" />
+            <element signature="e#30455#30456#0" expanded="true" />
+            <element signature="e#30527#31205#0" expanded="true" />
+            <element signature="e#31204#31205#0" expanded="true" />
+            <element signature="e#31382#32019#0" expanded="true" />
+            <element signature="e#32018#32019#0" expanded="true" />
+            <element signature="e#32531#40042#1" />
+            <element signature="method#pointBuyAdd#0;class#TabFragment#0" />
+            <element signature="method#pointBuyMin#0;class#TabFragment#0" />
+            <element signature="method#rollSetAbility#0;class#TabFragment#0" />
+            <element signature="method#findFirstEmpty#0;class#TabFragment#0" />
+            <element signature="method#checkForChars#0;class#TabFragment#0" />
+            <element signature="method#getPdf#0;class#TabFragment#0" />
+            <element signature="method#getNewFile#0;class#TabFragment#0" />
+            <element signature="method#isExternalStorageWritable#0;class#TabFragment#0" />
+            <element signature="method#getPublicAlbumStorageDir#0;class#TabFragment#0" />
+            <element signature="method#handleExceptions#0;class#TabFragment#0" />
+            <element signature="method#fillString#0;class#TabFragment#0" />
+            <element signature="method#requestPermissions#0;class#TabFragment#0" />
+            <element signature="method#onRequestPermissionsResult#0;class#TabFragment#0" />
+            <element signature="method#makePdf#0;class#TabFragment#0" />
+            <element signature="method#makeUsingPdfBox#0;class#TabFragment#0" />
+            <element signature="method#onLongClick#0;class#TabFragment#0" />
+            <element signature="method#onDrag#0;class#TabFragment#0" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>

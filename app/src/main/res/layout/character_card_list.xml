@@ -61,7 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/characterNameText"
                 android:layout_marginStart="7dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="13dp"
                 android:layout_toEndOf="@id/classIcon"
                 android:text="@string/fighter"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
@@ -71,27 +71,15 @@
 
             <Button
                 android:id="@+id/deleteButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="109dp"
+                android:layout_height="35dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginStart="268dp"
-                android:layout_marginTop="84dp"
-                android:layout_marginEnd="30dp"
+                android:layout_marginStart="262dp"
+                android:layout_marginTop="64dp"
+                android:layout_marginEnd="22dp"
                 android:text="Delete" />
-
-            <Button
-                android:id="@+id/openPDF"
-                android:layout_width="118dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="80dp"
-                android:layout_marginEnd="145dp"
-                android:text="OpenPDF" />
 
         </RelativeLayout>
 

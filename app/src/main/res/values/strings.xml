@@ -1,50 +1,66 @@
 <resources>
-    <string name="selection">Swords and Sorcery</string>
     <string name="level2">Swords and Sorcery</string>
     <string name="level">Swords and Sorcery</string>
     <string name="abilityScore">Swords and Sorcery</string>
     <string name="app_name">Swords and Sorcery</string>
-    <string name="welcome">Welcome</string>
-    <string name="characterCreation">Character Creation</string>
-    <string name="characterSelection">Character \nSelection</string>
-    <string name="help_bar">help bar</string>
-    <string name="help_bar2">help bar2</string>
 
+    <string name="characterCreation">Character Creation</string>
+    <string name="createNewCharacter">Create New Character</string>
+    <string name="characterSelection">Character \nSelection</string>
+    <string name="characterCreationHeading1">Name and Level</string>
+    <string name="characterCreationHeading2">Character Details</string>
+
+    <string name="help_bar">help bar</string>
+    <string name="creation">Character Basics</string>
+
+
+    <string name="background">Background:</string>
+    <string name="characterClass">Class:</string>
+    <string name="race">Race:</string>
+
+    <string name="strength">Str</string>
+    <string name="dexterity">Dex</string>
+    <string name="constitution">Con</string>
+    <string name="intelligence">Int</string>
+    <string name="wisdom">Wis</string>
+    <string name="charisma">Cha</string>
+
+    <string name="str">Strength:</string>
+    <string name="dex">Dexterity:</string>
+    <string name="con">Constitution:</string>
+    <string name="intel">Intelligence:</string>
+    <string name="wis">Wisdom:</string>
+    <string name="cha">Charisma:</string>
+	
     <string name="settings">Settings</string>
+    <string name="name">Name</string>
     <string name="help">Help</string>
     <string name="Home">Home</string>
     <string name="back">Back</string>
     <string name="Save">Save</string>
-    <string name="swords">Swords and Sorcery</string>
-    <string name="race">Race</string>
-    <string name="characterClass">Class</string>
     <string name="overview">Overview</string>
-    <string name="background">Background</string>
     <string name="characterView">View</string>
     <string name="abilityScores">Ability Scores</string>
     <string name="items">Items</string>
     <string name="spells">Spells</string>
     <string name="spellList">Spell List</string>
-    <string name="str">Strength</string>
-    <string name="dex">Dexterity</string>
-    <string name="con">Constitution</string>
+    <string name="classLevel">Level:</string>
+    <string name="gold">Gold:</string>
+
     <string name="characterInt">Intelligence</string>
-    <string name="wis">Wisdom</string>
-    <string name="cha">Charisma</string>
-    <string name="artificer">Artificer</string>
     <string name="barbarian">Barbarian</string>
     <string name="bard">Bard</string>
     <string name="cleric">Cleric</string>
     <string name="druid">Druid</string>
     <string name="fighter">Fighter</string>
     <string name="monk">Monk</string>
-    <string name="mystic">Mystic</string>
     <string name="paladin">Paladin</string>
     <string name="ranger">Ranger</string>
     <string name="rogue">Rogue</string>
     <string name="sorcerer">Sorcerer</string>
     <string name="warlock">Warlock</string>
     <string name="wizard">Wizard</string>
+
     <string name="acolyte">Acolyte</string>
     <string name="charlatan">Charlatan</string>
     <string name="criminal">Criminal</string>
@@ -58,32 +74,18 @@
     <string name="sailor">Sailor</string>
     <string name="soldier">Soldier</string>
     <string name="urchin">Urchin</string>
-    <string name="aasimar">Aasimar</string>
-    <string name="bugbear">Bugbear</string>
+
     <string name="dragonborn">Dragonborn</string>
     <string name="dwarf">Dwarf</string>
     <string name="elf">Elf</string>
-    <string name="firbolg">Firbolg</string>
-    <string name="genasi">Genasi</string>
-    <string name="gith">Gith</string>
     <string name="gnome">Gnome</string>
-    <string name="goblin">Goblin</string>
-    <string name="goliath">Goliath</string>
-    <string name="hobgoblin">Hobgoblin</string>
     <string name="halfelf">Half-Elf</string>
     <string name="halfling">Halfling</string>
     <string name="halforc">Half-Orc</string>
     <string name="human">Human</string>
-    <string name="kenku">Kenku</string>
-    <string name="kobold">Kobold</string>
-    <string name="lizardfolk">Lizardfolk</string>
-    <string name="orc">Orc</string>
-    <string name="tabaxi">Tabaxi</string>
     <string name="tiefling">Tiefling</string>
-    <string name="tortle">Tortle</string>
-    <string name="triton">Triton</string>
-    <string name="yuantipureblood">Yuan-Ti Pureblood</string>
-    <string name="gold">Gold:</string>
+
+
     <string name="character1">Character 1</string>
     <string name="character2">Character 2</string>
     <string name="character3">Character 3</string>
@@ -96,13 +98,18 @@
     <string name="item4">Item 4:</string>
     <string name="item5">Item 5:</string>
     <string name="item6">Item 6:</string>
+
     <string name="spell1">Spell 1:</string>
     <string name="spell2">Spell 2:</string>
     <string name="spell3">Spell 3:</string>
     <string name="spell4">Spell 4:</string>
     <string name="spell5">Spell 5:</string>
     <string name="spell6">Spell 6:</string>
-    <string name="creation">Character Basics</string>
+
+    <string name="helpMenu">Swords and Sorcery Help Menu</string>
+    <string name="statusEffect">Status Effects</string>
+
+    <string name="actions">Actions In Combat</string>
     <string name="attack">Attack - you make a melee or ranged weapon attack.</string>
     <string name="casting">Casting Spells - You cast a cantrip or a spell of 1st level or higher. See spells casting time</string>
     <string name="dash">Dash - You gain extra movement equal to your speed for current turn.</string>
@@ -114,17 +121,21 @@
     <string name="readyAction">Ready - You wait for a particular circumstance before you act, which lets you act using your reaction before the start of your next turn.</string>
     <string name="searchAction">Search - You make a wisdom check or a Intelligence check to find something.</string>
     <string name="d20Explanation">The D20 die is used for all actions taken by the player in game, you roll for skill checks, saving throws, and attack rolls against enemies.</string>
-    <string name="helpMenu">Swords and Sorcery Help Menu</string>
-    <string name="statusEffect">Status Effects</string>
+
     <string name="stunned">Stunned - A stunned creature is incapacitated and cannot move.</string>
     <string name="unconscious">Unconscious - An unconscious creature is incapacitated , cannot move or speak and is unaware of its surroundings.</string>
     <string name="poisoned">Poisoned - A poisoned creature has disadvantage on attack rolls and ability checks.</string>
     <string name="paralyzed">Paralyzed - A paralyzed creature is incapacitated and cannot move or speak.</string>
     <string name="incapacitated">Incapacitated - An incapacitated creature cannot take actions or reactions.</string>
     <string name="grappled">Grappled - A grappled creatures speed becomes 0 and it cannot benefit from any movement bonuses.</string>
+
     <string name="next">Next</string>
     <string name="previous">Previous</string>
-    <string name="createNewCharacter">Create New Character</string>
+
+    <string name="manual">Manual</string>
+    <string name="pointBuy">Point Buy</string>
+    <string name="roll">Roll</string>
+
     <string-array name="lvl">
         <item>1</item>
         <item>2</item>
