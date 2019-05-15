@@ -129,7 +129,6 @@ public class TabFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        requestPermissions();
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         switch (position){
@@ -766,7 +765,6 @@ public class TabFragment extends Fragment {
                 save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        handleExceptions(0, save);
 
                         //Inserting values into the Database
 
@@ -849,189 +847,6 @@ public class TabFragment extends Fragment {
 
     //Ability Score algorithms//////////////////////////////////////////////////////
 
-    //Pdf methods//////////////////////////////////////////////////
-    private InputStream getPdf()throws NullPointerException, IOException{
-        AssetManager assetManager = this.getContext().getAssets();
-        return assetManager.open("currentVersion");
-    }
-
-    private File getNewFile(String fileName){
-        //return new File(Environment.getExternalStorageDirectory().getPath() + "/" + fileName);
-        //return new File(this.getContext().getFilesDir(), fileName);
-        pdf = new File(getPublicAlbumStorageDir(""), fileName);
-        pdfIntent = new Intent(Intent.ACTION_VIEW);
-        pdfIntent.setDataAndType(Uri.fromFile(pdf), "application/pdf");
-        pdfIntent.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        return pdf;
-    }
-
-    public boolean isExternalStorageWritable() {
-        String state = Environment.getExternalStorageState();
-        System.out.println(Environment.MEDIA_MOUNTED);
-        return Environment.MEDIA_MOUNTED.equals(state);
-    }
-
-
-    public File getPublicAlbumStorageDir(String albumName) {
-        // Get the directory for the user's public pictures directory.
-        File file = new File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_PICTURES), albumName);
-        if (!file.mkdirs()) {
-            Log.e("makeStorageTag", "Directory not created");
-        }
-        return file;
-    }
-
-
-    private void handleExceptions(int i, ImageButton save){
-        PDFParser.class.getCanonicalName();
-        if(!isExternalStorageWritable()){
-            System.err.println("External storage is not writable");
-            return;
-        }
-
-        try {
-            if(permissionChecked && !permissionGranted){
-                throw new IOException("Permissions not granted");
-            }else if (!permissionChecked){
-                requestPermissions();
-            }
-
-            switch (i) {
-                case 0:
-                    makePdf();
-                    break;
-                case 1:
-                    makeUsingPdfBox();
-                    break;
-                default:
-                    System.out.println("Bye");
-            }
-            startActivity(pdfIntent);
-        }catch (IOException ioe){
-            System.err.println(ioe.getMessage());
-            save.setVisibility(View.INVISIBLE);
-        }catch (NullPointerException npe){
-            System.err.println(npe.getMessage());
-            save.setVisibility(View.INVISIBLE);
-        }
-    }
-
-    private void fillString(FileOutputStream fileOutputStream, InputStream inputStream, String string)throws IOException{
-        int current = 0;
-        for (int i = 0;i < 3; i++) {
-            if(i < string.length()) {
-                fileOutputStream.write((string.charAt(i) + "").getBytes());
-            }else {
-                fileOutputStream.write(' ');
-            }
-        }
-        for (int i = 3; i < string.length() && current != '~'; i++) {
-            current = inputStream.read();
-            fileOutputStream.write((string.charAt(i)+"").getBytes());
-        }
-
-        while (current != '~'){
-            current = inputStream.read();
-            fileOutputStream.write(' ');
-        }
-    }
-
-    private void requestPermissions() throws NullPointerException{
-        if (ContextCompat.checkSelfPermission(this.getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this.getActivity(),
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
-            System.out.println("Hi");
-        }
-    }
-
-    public void onRequestPermissionsResult(int requestCode,
-                                           String[] permissions, int[] grantResults){
-
-        if(requestCode == 1 && grantResults.length > 0
-                && grantResults[0] == PackageManager.PERMISSION_GRANTED){
-            permissionGranted = true;
-            permissionChecked = true;
-        }
-        else {
-            permissionGranted = false;
-            permissionChecked = true;
-        }
-    }
-
-    private void makePdf() throws IOException{
-
-        InputStream oldFile = getPdf();
-        File file = getNewFile("test2.pdf");
-        requestPermissions();
-        FileOutputStream fileOutputStream = new FileOutputStream(file);
-        int currentChar = ',';
-        while (currentChar != -1){
-            if((currentChar = oldFile.read()) == ','){
-                if((currentChar = oldFile.read()) == ','){
-                    //todo fix breaks
-                    int temp;
-                    switch ((temp = oldFile.read())){
-                        case '1':
-                            fillString(fileOutputStream, oldFile, character.getName());
-                            break;
-                        case '2':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
-                            break;
-                        case '3':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(1)));
-                            break;
-                        case '4':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(2)));
-                            break;
-                        case '5':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(3)));
-                            break;
-                        case '6':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(4)));
-                            break;
-                        case '7':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(5)));
-                            break;
-                        case '8':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(0)));
-                            break;
-                        case '9':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(1)));
-                            break;
-                        case 'a':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(2)));
-                            break;
-                        case 'b':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(3)));
-                            break;
-                        case 'c':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(4)));
-                            break;
-                        case 'd':
-                            fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(5)));
-                            break;
-                        default:
-                            System.out.println("hi");
-                            fileOutputStream.write((",," + (char)temp).getBytes());
-                    }
-                }else {
-                    fileOutputStream.write(',');
-                    fileOutputStream.write(currentChar);
-                }
-            }else {
-                fileOutputStream.write(currentChar);
-            }
-        }
-        fileOutputStream.close();
-    }
-
-    private void makeUsingPdfBox()throws IOException{
-
-    }
-
-    //Pdf methods//////////////////////////////////////////////////
 
 
     //jon meathods

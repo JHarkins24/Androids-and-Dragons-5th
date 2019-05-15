@@ -220,7 +220,6 @@ public class characterCreationOverview extends AppCompatActivity {
 
         InputStream oldFile = getPdf();
         File file = getNewFile("test2.pdf");
-        requestPermissions();
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar = ',';
         while (currentChar != -1){
@@ -229,8 +228,11 @@ public class characterCreationOverview extends AppCompatActivity {
                     //todo fix breaks
                     int temp;
                     switch ((temp = oldFile.read())){
+                        case '*':
+                            makeSwitch(oldFile, fileOutputStream, character);
+                            break;
                         case '1':
-                            fillString(fileOutputStream, oldFile, character.getName());
+                            fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
                             break;
                         case '2':
                             fillString(fileOutputStream, oldFile, Integer.toString(character.getAbilityScore(0)));
@@ -269,8 +271,7 @@ public class characterCreationOverview extends AppCompatActivity {
                             fillString(fileOutputStream, oldFile, Integer.toString(character.abilityModifier(5)));
                             break;
                         default:
-                            System.out.println("hi");
-                            fileOutputStream.write((",," + (char)temp).getBytes());
+                            fillString(fileOutputStream, oldFile, "");
                     }
                 }else {
                     fileOutputStream.write(',');
@@ -282,6 +283,35 @@ public class characterCreationOverview extends AppCompatActivity {
         }
         fileOutputStream.close();
     }
+
+    private void makeSwitch(InputStream file, FileOutputStream fileOutputStream, CharacterDB character) throws IOException{
+        int symbol = file.read();
+        fileOutputStream.write(' ');
+        switch (symbol){
+            case '1':
+                fillString(fileOutputStream, file, character.getName());
+                break;
+            case '2':
+                fillString(fileOutputStream, file, character.getClassName() + " " + character.getLvl());
+                break;
+            case '3':
+                fillString(fileOutputStream, file, character.getBackground());
+                break;
+            case '4':
+                fillString(fileOutputStream, file, "");
+                break;
+            case '5':
+                fillString(fileOutputStream, file, character.getRace());
+                break;
+            case '6':
+                fillString(fileOutputStream, file, "");
+                break;
+                default:
+                    fillString(fileOutputStream, file, "");
+        }
+    }
+
+
 
     private void makeUsingPdfBox()throws IOException {
 
