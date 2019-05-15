@@ -13,7 +13,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b50afdae-9768-41b0-bf4c-a8048f0ae826" name="Default Changelist" comment="">
-      <change beforePath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" beforeDir="false" afterPath="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_core_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_livedata_core_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_runtime_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__android_arch_lifecycle_viewmodel_1_1_1_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_animated_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_appcompat_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_asynclayoutinflater_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cardview_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_constraint_constraint_layout_1_1_3_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_coordinatorlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_cursoradapter_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_customview_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_design_27_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_documentfile_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_drawerlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_interpolator_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_loader_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_localbroadcastmanager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_print_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_recyclerview_v7_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_slidingpanelayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_compat_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_ui_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_core_utils_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_fragment_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_media_compat_27_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_v4_27_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_support_vector_drawable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_swiperefreshlayout_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_core_3_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_espresso_espresso_idling_resource_3_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_monitor_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_test_runner_1_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_transition_27_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_versionedparcelable_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,65 +83,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="1097" selection-start-line="1097" selection-end-line="1097" />
-              <folding>
-                <element signature="method#onCreate#0;class#TabFragment#0" />
-                <element signature="method#onCreateView#0;class#TabFragment#0" />
-                <element signature="method#onViewCreated#0;class#TabFragment#0" />
-                <element signature="class#13975:15185" />
-                <element signature="e#15190#15303#0" />
-                <element signature="e#16504#22934#1" />
-                <element signature="e#23214#32047#1" />
-                <element signature="e#24072#24344#0" expanded="true" />
-                <element signature="e#24343#24344#0" expanded="true" />
-                <element signature="e#24412#24684#0" expanded="true" />
-                <element signature="e#24683#24684#0" expanded="true" />
-                <element signature="e#24752#25024#0" expanded="true" />
-                <element signature="e#25023#25024#0" expanded="true" />
-                <element signature="e#25093#25365#0" expanded="true" />
-                <element signature="e#25364#25365#0" expanded="true" />
-                <element signature="e#25433#25705#0" expanded="true" />
-                <element signature="e#25704#25705#0" expanded="true" />
-                <element signature="e#25773#26045#0" expanded="true" />
-                <element signature="e#26044#26045#0" expanded="true" />
-                <element signature="e#26113#26385#0" expanded="true" />
-                <element signature="e#26384#26385#0" expanded="true" />
-                <element signature="e#26778#27457#0" expanded="true" />
-                <element signature="e#27456#27457#0" expanded="true" />
-                <element signature="e#27528#28207#0" expanded="true" />
-                <element signature="e#28206#28207#0" expanded="true" />
-                <element signature="e#28278#28957#0" expanded="true" />
-                <element signature="e#28956#28957#0" expanded="true" />
-                <element signature="e#29028#29707#0" expanded="true" />
-                <element signature="e#29706#29707#0" expanded="true" />
-                <element signature="e#29778#30456#0" expanded="true" />
-                <element signature="e#30455#30456#0" expanded="true" />
-                <element signature="e#30527#31205#0" expanded="true" />
-                <element signature="e#31204#31205#0" expanded="true" />
-                <element signature="e#31382#32019#0" expanded="true" />
-                <element signature="e#32018#32019#0" expanded="true" />
-                <element signature="e#32531#40042#1" />
-                <element signature="method#pointBuyAdd#0;class#TabFragment#0" />
-                <element signature="method#pointBuyMin#0;class#TabFragment#0" />
-                <element signature="method#rollSetAbility#0;class#TabFragment#0" />
-                <element signature="method#findFirstEmpty#0;class#TabFragment#0" />
-                <element signature="method#checkForChars#0;class#TabFragment#0" />
-                <element signature="method#getPdf#0;class#TabFragment#0" />
-                <element signature="method#getNewFile#0;class#TabFragment#0" />
-                <element signature="method#isExternalStorageWritable#0;class#TabFragment#0" />
-                <element signature="method#getPublicAlbumStorageDir#0;class#TabFragment#0" />
-                <element signature="method#handleExceptions#0;class#TabFragment#0" />
-                <element signature="method#fillString#0;class#TabFragment#0" />
-                <element signature="method#requestPermissions#0;class#TabFragment#0" />
-                <element signature="method#onRequestPermissionsResult#0;class#TabFragment#0" />
-                <element signature="method#makePdf#0;class#TabFragment#0" />
-                <element signature="method#makeUsingPdfBox#0;class#TabFragment#0" />
-                <element signature="method#onLongClick#0;class#TabFragment#0" />
-                <element signature="method#onDrag#0;class#TabFragment#0" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -143,7 +140,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterDB.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/CardAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
@@ -151,45 +147,46 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java" />
-        <option value="$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+        <option value="$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="960" />
     <option name="width" value="960" />
-    <option name="height" value="1061" />
+    <option name="height" value="1062" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
             <path>
-              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
-              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
-              <item name="Androids-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Android-and-Dragons-5th" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="swordsandsorcery" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,7 +197,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="device.picker.selection" value="Pixel_2_API_28" />
+    <property name="device.picker.selection" value="Pixel_2_API_23" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
   </component>
   <component name="RunDashboard">
@@ -413,10 +410,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1061" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2812834" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2852349" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -424,14 +422,14 @@
       <window_info id="Designer" order="6" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Resources Explorer" order="8" weight="0.16044776" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.7164179" weight="0.32569557" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.7164179" visible="true" weight="0.3243626" />
       <window_info anchor="bottom" id="Logcat" order="1" weight="0.32978722" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" weight="0.43698853" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.3287234" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.36308622" side_tool="true" weight="0.3371522" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6369138" weight="0.33475026" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6369138" weight="0.33427763" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.33296824" />
       <window_info anchor="bottom" id="Android Profiler" order="9" />
       <window_info anchor="bottom" id="Find" order="10" sideWeight="0.49946696" weight="0.3287234" />
@@ -498,15 +496,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>494</line>
+          <line>462</line>
           <properties />
           <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java</url>
-          <line>502</line>
-          <properties />
-          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -543,8 +535,8 @@
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ae347a2aba53116d1280210237e905/jars/classes.jar!/android/support/v4/app/FragmentPagerAdapter.class" />
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/904f524b88a5721c8ed5ffe5be66034c/jars/classes.jar!/android/support/v4/view/ViewPager.class" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_view.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/Database/CharacterBaseHelper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -573,56 +565,56 @@
     <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/46ae347a2aba53116d1280210237e905/jars/classes.jar!/android/support/v4/app/Fragment.class" />
     <entry file="file://$USER_HOME$/AppData/Local/Android/Sdk/sources/android-28/android/widget/AdapterView.java" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="2907">
           <caret line="183" column="46" selection-start-line="183" selection-start-column="46" selection-end-line="183" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="8109">
           <caret line="488" column="13" selection-start-line="488" selection-start-column="13" selection-end-line="488" selection-end-column="13" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="5593">
           <caret line="340" column="46" selection-start-line="340" selection-start-column="46" selection-end-line="340" selection-end-column="46" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="55" selection-start-line="32" selection-start-column="55" selection-end-line="32" selection-end-column="55" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_character_creation_overview.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="117">
           <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="67">
           <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="40" selection-end-column="53" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/spinner_text_work_bitch.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/characterCreationOverview.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -632,12 +624,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/actionbar1.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -668,111 +660,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/character_card_list.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="847">
           <caret line="79" column="47" selection-start-line="79" selection-start-column="47" selection-end-line="79" selection-end-column="47" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_help.xml">
+      <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
           <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
         </state>
       </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml">
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_manual.xml" />
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_point_buy.xml" />
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml" />
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_items.xml" />
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml" />
+    <entry file="file://$PROJECT_DIR$/../ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/version2/swordsandsorcery/help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_ability_scores_roll.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/fragment_character_creation_items.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/res/layout/activity_help.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/ci/software/project/androidProject/pierre/Androids-and-Dragons-5th/app/src/main/java/com/version2/swordsandsorcery/TabFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="1097" selection-start-line="1097" selection-end-line="1097" />
-          <folding>
-            <element signature="method#onCreate#0;class#TabFragment#0" />
-            <element signature="method#onCreateView#0;class#TabFragment#0" />
-            <element signature="method#onViewCreated#0;class#TabFragment#0" />
-            <element signature="class#13975:15185" />
-            <element signature="e#15190#15303#0" />
-            <element signature="e#16504#22934#1" />
-            <element signature="e#23214#32047#1" />
-            <element signature="e#24072#24344#0" expanded="true" />
-            <element signature="e#24343#24344#0" expanded="true" />
-            <element signature="e#24412#24684#0" expanded="true" />
-            <element signature="e#24683#24684#0" expanded="true" />
-            <element signature="e#24752#25024#0" expanded="true" />
-            <element signature="e#25023#25024#0" expanded="true" />
-            <element signature="e#25093#25365#0" expanded="true" />
-            <element signature="e#25364#25365#0" expanded="true" />
-            <element signature="e#25433#25705#0" expanded="true" />
-            <element signature="e#25704#25705#0" expanded="true" />
-            <element signature="e#25773#26045#0" expanded="true" />
-            <element signature="e#26044#26045#0" expanded="true" />
-            <element signature="e#26113#26385#0" expanded="true" />
-            <element signature="e#26384#26385#0" expanded="true" />
-            <element signature="e#26778#27457#0" expanded="true" />
-            <element signature="e#27456#27457#0" expanded="true" />
-            <element signature="e#27528#28207#0" expanded="true" />
-            <element signature="e#28206#28207#0" expanded="true" />
-            <element signature="e#28278#28957#0" expanded="true" />
-            <element signature="e#28956#28957#0" expanded="true" />
-            <element signature="e#29028#29707#0" expanded="true" />
-            <element signature="e#29706#29707#0" expanded="true" />
-            <element signature="e#29778#30456#0" expanded="true" />
-            <element signature="e#30455#30456#0" expanded="true" />
-            <element signature="e#30527#31205#0" expanded="true" />
-            <element signature="e#31204#31205#0" expanded="true" />
-            <element signature="e#31382#32019#0" expanded="true" />
-            <element signature="e#32018#32019#0" expanded="true" />
-            <element signature="e#32531#40042#1" />
-            <element signature="method#pointBuyAdd#0;class#TabFragment#0" />
-            <element signature="method#pointBuyMin#0;class#TabFragment#0" />
-            <element signature="method#rollSetAbility#0;class#TabFragment#0" />
-            <element signature="method#findFirstEmpty#0;class#TabFragment#0" />
-            <element signature="method#checkForChars#0;class#TabFragment#0" />
-            <element signature="method#getPdf#0;class#TabFragment#0" />
-            <element signature="method#getNewFile#0;class#TabFragment#0" />
-            <element signature="method#isExternalStorageWritable#0;class#TabFragment#0" />
-            <element signature="method#getPublicAlbumStorageDir#0;class#TabFragment#0" />
-            <element signature="method#handleExceptions#0;class#TabFragment#0" />
-            <element signature="method#fillString#0;class#TabFragment#0" />
-            <element signature="method#requestPermissions#0;class#TabFragment#0" />
-            <element signature="method#onRequestPermissionsResult#0;class#TabFragment#0" />
-            <element signature="method#makePdf#0;class#TabFragment#0" />
-            <element signature="method#makeUsingPdfBox#0;class#TabFragment#0" />
-            <element signature="method#onLongClick#0;class#TabFragment#0" />
-            <element signature="method#onDrag#0;class#TabFragment#0" />
-          </folding>
+        <state relative-caret-position="272">
+          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
         </state>
       </provider>
     </entry>
