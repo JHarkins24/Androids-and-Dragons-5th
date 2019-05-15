@@ -1,5 +1,6 @@
 package com.version2.swordsandsorcery;
 
+import java.io.FileNotFoundException;
 import java.util.Calendar;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -35,6 +36,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -48,6 +50,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.List;
+import java.util.Scanner;
+
 import android.content.Context;
 import android.content.res.AssetManager;
 import org.apache.pdfbox.pdfparser.PDFParser;
@@ -731,6 +735,64 @@ public class TabFragment extends Fragment {
             }
             break;
             case 2:
+                try{
+                    Scanner scanWeapons = new Scanner(new File("weapons.txt"));
+                    Scanner scanArmor = new Scanner(new File("armor.txt"));
+
+                    String weapon = "";
+                    String armor = "";
+
+                    List<String> tempWeapons = new ArrayList<String>();
+                    List<String> tempArmor = new ArrayList<String>();
+
+                    while (scanWeapons.hasNext()){
+                        weapon = scanWeapons.next();
+                        tempWeapons.add(weapon);
+                    }
+                    scanWeapons.close();;
+
+                    while (scanArmor.hasNext()){
+                        armor = scanArmor.next();
+                        tempArmor.add(armor);
+                    }
+                    scanArmor.close();
+
+                    final String[] weaponsList = tempWeapons.toArray(new String[0]);
+                    final String[] armorList = tempArmor.toArray(new String[0]);
+
+                    GridView weaponsTable = view.findViewById(R.id.weaponsTable);
+                    GridView armorTable = view.findViewById(R.id.armorTable);
+
+                    ArrayAdapter<String> weaponAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, weaponsList);
+                    ArrayAdapter<String> armorAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, armorList);
+
+                    weaponsTable.setAdapter(weaponAdapter);
+                    armorTable.setAdapter(armorAdapter);
+
+                    weaponsTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                        {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+                                {
+                                    String weaponData = (String) parent.getItemAtPosition(position);
+                                    character.addEquipment(weaponData);
+                                }
+                        });
+
+                    armorTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                        {
+                            @Override
+                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+                                {
+                                    String armorData = (String) parent.getItemAtPosition(position);
+                                    character.addEquipment(armorData);
+                                }
+                        });
+
+                }
+                catch (FileNotFoundException fnfe){
+                    System.err.println(fnfe.getMessage());
+                }
                 break;
             case 3:
                 break;
