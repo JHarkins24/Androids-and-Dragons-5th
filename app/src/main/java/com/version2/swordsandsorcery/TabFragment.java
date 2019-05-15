@@ -276,48 +276,12 @@ public class TabFragment extends Fragment {
             }
                 break;
             case 1: {
-                final Spinner selectionSpinnerRoll = (Spinner) view.findViewById(R.id.selection_type_roll);
-                LinkedList<String> selectionsRoll = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
-                ArrayAdapter<String> adapters1 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsRoll);
-                selectionSpinnerRoll.setAdapter(adapters1);
-                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                selectionSpinnerRoll.setOnItemSelectedListener(new OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                        SharedPreferences.Editor editor = selectionAbilityScorePreference.edit();
-                        editor.putString("selection", selectionSpinnerRoll.getSelectedItem().toString());
-                        Log.v("selection", (String) parent.getItemAtPosition(position));
-                        editor.apply();
-                        selectionAbilityScore = selectionAbilityScorePreference.getString("selection", "");
-//                        TabLayout tabs = getActivity().findViewById(R.id.selection_type_point_buy);
-//                        tabs.getTabAt(1).select();
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> parent) {
-                        // auto generated program stub will set the initial to the object at index 0,
-                        // could we make it so that there is some kind of interface between the settings
-                        // screen and the drop down interface here? Boolean?
-                    }
-                });
-
-
-//                final Spinner selectionSpinnerManual = (Spinner) view.findViewById(R.id.selection_type_manual);
-//                LinkedList<String> selectionsManual = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
-//                ArrayAdapter<String> adapters2 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsManual);
-//                selectionSpinnerManual.setAdapter(adapters2);
-
-//                final Spinner selectionSpinnerPointBuy = (Spinner) view.findViewById(R.id.selection_type_point_buy);
-//                LinkedList<String> selectionsPointBuy = new LinkedList<>(Arrays.asList("Point Buy" , "Manual" , "Roll"));
-//                ArrayAdapter<String> adapters3 = new ArrayAdapter<>(view.getContext(), android.R.layout.simple_spinner_item, selectionsPointBuy);
-//                selectionSpinnerPointBuy.setAdapter(adapters3);
-
 
 
                 final TextView rollType = view.findViewById(R.id.rollType);
-                abilityScorePreferences = PreferenceManager.getDefaultSharedPreferences(this.getContext());
-                String ability = abilityScorePreferences.getString("abilityScore", "");
-                if (selectionAbilityScore != null) {
+                selectionAbilityScorePreference = PreferenceManager.getDefaultSharedPreferences(this.getContext());
+                String ability = selectionAbilityScorePreference.getString("abilityScore", "");
+                if (ability != null) {
                     switch (ability) {
 
                         case "Point Buy": {
@@ -735,64 +699,64 @@ public class TabFragment extends Fragment {
             }
             break;
             case 2:
-                try{
-                    Scanner scanWeapons = new Scanner(new File("weapons.txt"));
-                    Scanner scanArmor = new Scanner(new File("armor.txt"));
-
-                    String weapon = "";
-                    String armor = "";
-
-                    List<String> tempWeapons = new ArrayList<String>();
-                    List<String> tempArmor = new ArrayList<String>();
-
-                    while (scanWeapons.hasNext()){
-                        weapon = scanWeapons.next();
-                        tempWeapons.add(weapon);
-                    }
-                    scanWeapons.close();;
-
-                    while (scanArmor.hasNext()){
-                        armor = scanArmor.next();
-                        tempArmor.add(armor);
-                    }
-                    scanArmor.close();
-
-                    final String[] weaponsList = tempWeapons.toArray(new String[0]);
-                    final String[] armorList = tempArmor.toArray(new String[0]);
-
-                    GridView weaponsTable = view.findViewById(R.id.weaponsTable);
-                    GridView armorTable = view.findViewById(R.id.armorTable);
-
-                    ArrayAdapter<String> weaponAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, weaponsList);
-                    ArrayAdapter<String> armorAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, armorList);
-
-                    weaponsTable.setAdapter(weaponAdapter);
-                    armorTable.setAdapter(armorAdapter);
-
-                    weaponsTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                                {
-                                    String weaponData = (String) parent.getItemAtPosition(position);
-                                    character.addEquipment(weaponData);
-                                }
-                        });
-
-                    armorTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
-                        {
-                            @Override
-                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                                {
-                                    String armorData = (String) parent.getItemAtPosition(position);
-                                    character.addEquipment(armorData);
-                                }
-                        });
-
-                }
-                catch (FileNotFoundException fnfe){
-                    System.err.println(fnfe.getMessage());
-                }
+//                try{
+//                    Scanner scanWeapons = new Scanner(new File("weapons.txt"));
+//                    Scanner scanArmor = new Scanner(new File("armor.txt"));
+//
+//                    String weapon = "";
+//                    String armor = "";
+//
+//                    List<String> tempWeapons = new ArrayList<String>();
+//                    List<String> tempArmor = new ArrayList<String>();
+//
+//                    while (scanWeapons.hasNext()){
+//                        weapon = scanWeapons.next();
+//                        tempWeapons.add(weapon);
+//                    }
+//                    scanWeapons.close();;
+//
+//                    while (scanArmor.hasNext()){
+//                        armor = scanArmor.next();
+//                        tempArmor.add(armor);
+//                    }
+//                    scanArmor.close();
+//
+//                    final String[] weaponsList = tempWeapons.toArray(new String[0]);
+//                    final String[] armorList = tempArmor.toArray(new String[0]);
+//
+//                    GridView weaponsTable = view.findViewById(R.id.weaponsTable);
+//                    GridView armorTable = view.findViewById(R.id.armorTable);
+//
+//                    ArrayAdapter<String> weaponAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, weaponsList);
+//                    ArrayAdapter<String> armorAdapter = new ArrayAdapter<String>(view.getContext(), android.R.layout.simple_list_item_1, armorList);
+//
+//                    weaponsTable.setAdapter(weaponAdapter);
+//                    armorTable.setAdapter(armorAdapter);
+//
+//                    weaponsTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
+//                        {
+//                            @Override
+//                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+//                                {
+//                                    String weaponData = (String) parent.getItemAtPosition(position);
+//                                    character.addEquipment(weaponData);
+//                                }
+//                        });
+//
+//                    armorTable.setOnItemClickListener(new AdapterView.OnItemClickListener()
+//                        {
+//                            @Override
+//                            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+//                                {
+//                                    String armorData = (String) parent.getItemAtPosition(position);
+//                                    character.addEquipment(armorData);
+//                                }
+//                        });
+//
+//                }
+//                catch (FileNotFoundException fnfe){
+//                    System.err.println(fnfe.getMessage());
+//                }
                 break;
             case 3:
                 break;

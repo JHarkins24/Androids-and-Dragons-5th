@@ -20,7 +20,7 @@ public class help extends AppCompatActivity {
         setContentView(R.layout.activity_help);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        Button trash = findViewById(R.id.deleteButtonView);
+//        Button trash = findViewById(R.id.deleteButtonView);
         //trash.setVisibility(View.INVISIBLE);
         Button action = findViewById(R.id.action_help);
         //action.setVisibility(View.INVISIBLE);

@@ -3,6 +3,7 @@
     <string name="level">Swords and Sorcery</string>
     <string name="abilityScore">Swords and Sorcery</string>
     <string name="app_name">Swords and Sorcery</string>
+    <string name="Save">Save</string>
 
     <string name="characterCreation">Character Creation</string>
     <string name="createNewCharacter">Create New Character</string>
@@ -37,7 +38,7 @@
     <string name="help">Help</string>
     <string name="Home">Home</string>
     <string name="back">Back</string>
-    <string name="Save">Save</string>
+    <string name="SaveToPDF">Save To PDF</string>
     <string name="overview">Overview</string>
     <string name="characterView">View</string>
     <string name="abilityScores">Ability Scores</string>
