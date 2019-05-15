@@ -141,6 +141,8 @@ public class MainActivity extends AppCompatActivity {
             CharacterDB character = new CharacterDB();
             character.setName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.NAME)));
             character.setClassName(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.CLASS_NAME)));
+            character.setRace(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.RACE)));
+            character.setBackground(AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.BACKGROUND)));
             String level = AllCharacter.getString(AllCharacter.getColumnIndex(CharacterDB.CharacterTable.CharactersColumns.LVL));
             String[] abilityScoresString;
             character.setLvl(Integer.parseInt(level));

@@ -219,7 +219,7 @@ public class characterCreationOverview extends AppCompatActivity {
     private void makePdf() throws IOException{
 
         InputStream oldFile = getPdf();
-        File file = getNewFile("test2.pdf");
+        File file = getNewFile(character.getName());
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         int currentChar = ',';
         while (currentChar != -1){
